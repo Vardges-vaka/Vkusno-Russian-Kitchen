@@ -1,0 +1,46 @@
+/* Sticks right below the site header; the offset is measured in
+   useMenu.js because the header height changes when it wraps on mobile. */
+.Menu_categoryTabs {
+  position: sticky;
+  top: var(--menu_header_offset, 72px);
+  z-index: 400; /* under the header (500), over the cards */
+  display: flex;
+  gap: 8px;
+  padding: 12px 4px;
+  overflow-x: auto;
+  background-color: var(--bg_color);
+  /* Hide the scrollbar: the strip is swipeable and the pills hint overflow */
+  scrollbar-width: none;
+}
+
+.Menu_categoryTabs::-webkit-scrollbar {
+  display: none;
+}
+
+.Menu_categoryTabs_tab {
+  flex-shrink: 0; /* pills keep their width, the strip scrolls instead */
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text_muted_color);
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.Menu_categoryTabs_tab:hover {
+  color: var(--accent_hover_color);
+  border-color: var(--accent_color);
+}
+
+.Menu_categoryTabs_tab--active {
+  color: var(--footer_text_color); /* warm off-white in both themes */
+  background-color: var(--accent_color);
+  border-color: var(--accent_color);
+}

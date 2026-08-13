@@ -1,0 +1,62 @@
+.Menu_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+.Menu_hero {
+  padding: 32px 0 8px;
+  text-align: center;
+}
+
+.Menu_hero_title {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: var(--text_color);
+}
+
+/* Small gold rule under the title echoes the footer's brand accent */
+.Menu_hero_title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  background-color: var(--gold_color);
+}
+
+.Menu_hero_subtitle {
+  margin: 12px 0 0;
+  font-size: 15px;
+  color: var(--text_muted_color);
+}
+
+.Menu_sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.Menu_emptyState {
+  margin: 64px 0;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text_muted_color);
+}
+
+@media (min-width: 768px) {
+  .Menu_container {
+    padding: 0 32px 64px;
+  }
+
+  .Menu_hero {
+    padding: 48px 0 16px;
+  }
+
+  .Menu_hero_title {
+    font-size: 40px;
+  }
+}

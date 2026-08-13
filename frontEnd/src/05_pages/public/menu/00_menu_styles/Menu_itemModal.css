@@ -1,0 +1,168 @@
+.Menu_itemModal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000; /* above the sticky header */
+  display: flex;
+  align-items: flex-end; /* bottom sheet on mobile */
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: menuModalFade 0.2s ease;
+}
+
+.Menu_itemModal_dialog {
+  position: relative;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  background-color: var(--surface_color);
+  color: var(--text_color);
+  border-radius: 16px 16px 0 0;
+  animation: menuModalRise 0.25s ease-out;
+}
+
+.Menu_itemModal_close {
+  position: absolute;
+  top: 12px;
+  inset-inline-end: 12px; /* logical property: stays on the "far" side in RTL */
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--footer_text_color);
+  background-color: rgba(0, 0, 0, 0.45);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.Menu_itemModal_close:hover {
+  background-color: var(--accent_color);
+}
+
+.Menu_itemModal_photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.Menu_itemModal_body {
+  padding: 20px;
+}
+
+.Menu_itemModal_titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.Menu_itemModal_name {
+  margin: 0;
+  font-size: 22px;
+}
+
+.Menu_itemModal_price {
+  margin: 0;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent_color);
+}
+
+.Menu_itemModal_description {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text_muted_color);
+}
+
+.Menu_itemModal_sectionTitle {
+  margin: 20px 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold_color);
+}
+
+.Menu_itemModal_nutrition {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Menu_itemModal_nutrition_pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 72px;
+  padding: 8px 12px;
+  background-color: var(--accent_soft_color);
+  border-radius: 10px;
+}
+
+.Menu_itemModal_nutrition_value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text_color);
+}
+
+.Menu_itemModal_nutrition_label {
+  font-size: 11px;
+  color: var(--text_muted_color);
+}
+
+.Menu_itemModal_ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Menu_itemModal_ingredient {
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--text_muted_color);
+  border: 1px solid var(--border_color);
+  border-radius: 999px;
+}
+
+@keyframes menuModalFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menuModalRise {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .Menu_itemModal {
+    align-items: center; /* centered dialog on larger screens */
+    padding: 24px;
+  }
+
+  .Menu_itemModal_dialog {
+    max-width: 640px;
+    border-radius: 16px;
+  }
+}

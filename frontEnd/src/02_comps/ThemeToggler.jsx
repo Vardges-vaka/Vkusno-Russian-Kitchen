@@ -3,7 +3,7 @@ import { useTheme } from "../03_context/_context.index.js";
 import "./00_comps_styles/themeToggler.css";
 
 const ThemeToggler = () => {
-  const { toggleTheme } = useTheme();
+  const { toggleTheme, isDarkMode } = useTheme();
 
   return (
     <>
@@ -15,7 +15,11 @@ const ThemeToggler = () => {
           type="checkbox"
           id="themeToggle"
           className="themeToggleInput"
+          // Controlled: on reload with a saved "dark" theme, the checkbox
+          // must start checked or the sun/moon animation runs inverted
+          checked={isDarkMode}
           onChange={toggleTheme}
+          aria-label="Toggle dark mode"
         />
         <svg
           width="18"

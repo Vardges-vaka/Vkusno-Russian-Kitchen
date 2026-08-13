@@ -1,0 +1,51 @@
+.errorBoundary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 100vh;
+  padding: 24px;
+  text-align: center;
+  /* Fallback colors in case the theme attribute was lost with the crash */
+  background-color: var(--bg_color, #faf6ef);
+  color: var(--text_color, #2b2118);
+}
+
+.errorBoundary__brand {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--gold_color, #c99a2e);
+}
+
+.errorBoundary__title {
+  margin: 0;
+  font-size: 26px;
+}
+
+.errorBoundary__message {
+  margin: 0;
+  max-width: 420px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text_muted_color, #7a6a5c);
+}
+
+.errorBoundary__reload {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--accent_color, #b3001b);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.errorBoundary__reload:hover {
+  background-color: var(--accent_hover_color, #8c0015);
+}

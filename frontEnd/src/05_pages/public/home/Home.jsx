@@ -4,7 +4,8 @@ import "./00_home_styles/Home.css";
 const Home = () => {
   return (
     <div className="home">
-      <BookShelfSection />
+      {/* <BookShelfSection /> */}
+      home
     </div>
   );
 };

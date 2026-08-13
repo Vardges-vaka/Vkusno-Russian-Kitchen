@@ -1,0 +1,35 @@
+.Menu_categorySection {
+  /* Keeps the section title visible below the sticky header + tab strip
+     when a tab click scrolls to it */
+  scroll-margin-top: calc(var(--menu_header_offset, 72px) + 64px);
+}
+
+.Menu_categorySection_title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: var(--text_color);
+}
+
+/* Thin rule stretching after the title — classic printed-menu look */
+.Menu_categorySection_title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--border_color);
+}
+
+.Menu_categorySection_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .Menu_categorySection_grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+  }
+}

@@ -1,0 +1,61 @@
+.Menu_searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 480px;
+  margin: 20px auto 0;
+}
+
+.Menu_searchBar_icon {
+  position: absolute;
+  inset-inline-start: 14px; /* flips to the right side in RTL */
+  color: var(--text_muted_color);
+  pointer-events: none; /* clicks fall through to the input */
+}
+
+.Menu_searchBar_input {
+  width: 100%;
+  padding: 11px 42px; /* symmetric so LTR and RTL both clear the icons */
+  font-size: 15px;
+  color: var(--text_color);
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 999px;
+  outline: none;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.Menu_searchBar_input::placeholder {
+  color: var(--text_muted_color);
+}
+
+.Menu_searchBar_input:focus {
+  border-color: var(--accent_color);
+  box-shadow: 0 0 0 3px var(--accent_soft_color);
+}
+
+.Menu_searchBar_clear {
+  position: absolute;
+  inset-inline-end: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  color: var(--text_muted_color);
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+}
+
+.Menu_searchBar_clear:hover {
+  color: var(--accent_color);
+  background-color: var(--accent_soft_color);
+}

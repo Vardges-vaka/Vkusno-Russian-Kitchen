@@ -7,6 +7,10 @@
       "en": "English",
       "ar": "Arabic",
       "ru": "Russian"
+    },
+    "click": "Change language",
+    "selector": {
+      "aria": "Select language"
     }
   },
   "header": {
@@ -15,6 +19,11 @@
       "menu": "Menu",
       "contact": "Contact"
     }
+  },
+  "error": {
+    "title": "Something went wrong",
+    "message": "An unexpected error occurred. Please reload the page or come back later.",
+    "reload": "Reload page"
   },
   "footer": {
     "nav_links": {

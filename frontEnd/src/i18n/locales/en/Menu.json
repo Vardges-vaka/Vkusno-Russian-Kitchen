@@ -1,4 +1,21 @@
 {
-    "something": {}
+  "menu": {
+    "title": "Our Menu",
+    "subtitle": "Homemade Russian & Uzbek dishes, cooked fresh every day",
+    "currency": "AED",
+    "close": "Close",
+    "search": {
+      "placeholder": "Search dishes...",
+      "noResults": "No dishes found for \"{{query}}\"",
+      "clear": "Clear search"
+    },
+    "ingredients": "Ingredients",
+    "nutrition": {
+      "title": "Nutrition",
+      "calories": "Calories",
+      "protein": "Protein",
+      "fat": "Fat",
+      "carbs": "Carbs"
+    }
   }
-  
+}
