@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import Borscht from "../../../../01_assets/_assets.index.js";
+import { Borscht } from "../../../../01_assets/_assets.index.js";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import "../00_home_styles/BookShelfSection.css";
 
 const BookShelfSection = ({ props }) => {
   const { t } = useTranslation("home");
