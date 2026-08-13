@@ -1,16 +1,7 @@
-import { PublicHeader, PublicFooter } from "../_shared_comps/_public.shared_comps.index.js";
-
+import "./00_menu_styles/Menu.css";
 
 const Menu = () => {
-    return (
-        <div className="menu">
-            <PublicHeader />
-            <div className="menu-content">
-                <h1>Menu</h1>
-            </div>
-            <PublicFooter />
-        </div>
-    )
-}
+  return <div className="menu">Menu Page</div>;
+};
 
 export default Menu;

@@ -1,0 +1,28 @@
+[data-theme="light"] {
+  --bg_color: var(--L_bg_color);
+  --text_color: var(--L_text_color);
+  --border_color: var(--L_border_color);
+  --header_bg_color: var(--L_header_bg_color);
+  --footer_bg_color: var(--L_footer_bg_color);
+  --Icon_bg_color: var(--L_Icon_bg_color);
+  --Icon_stroke_color: var(--L_Icon_stroke_color);
+  --Icon_border_color: var(--L_Icon_border_color);
+  --themeToggle_color: var(--L_themeToggle-color);
+}
+
+[data-theme="dark"] {
+  --bg_color: var(--D_bg_color);
+  --text_color: var(--D_text_color);
+  --border_color: var(--D_border_color);
+  --header_bg_color: var(--D_header_bg_color);
+  --footer_bg_color: var(--D_footer_bg_color);
+  --Icon_bg_color: var(--D_Icon_bg_color);
+  --Icon_stroke_color: var(--D_Icon_stroke_color);
+  --Icon_border_color: var(--D_Icon_border_color);
+  --themeToggle_color: var(--D_themeToggle-color);
+}
+
+body {
+  background-color: var(--bg_color);
+  color: var(--text_color);
+}

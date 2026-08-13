@@ -1,0 +1,38 @@
+.PublicHeader_navBar {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.PublicHeader_navBar_links {
+  display: flex;
+  list-style: none;
+  margin: 0 20px 0 0;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* No !important needed: .active_link below adds a class to this same element,
+   so it already outranks this rule on specificity. */
+.PublicHeader_navBar_link {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin: 0 15px;
+  transition: color 0.15s ease-in-out;
+}
+
+.PublicHeader_navBar_link:hover {
+  color: #b00020;
+}
+
+.PublicHeader_navBar_link.active_link {
+  color: red;
+  text-decoration: underline;
+}

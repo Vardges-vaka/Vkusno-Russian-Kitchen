@@ -1,0 +1,21 @@
+:root {
+  --L_bg_color: #ffffff;
+  --L_text_color: #000000;
+  --L_border_color: #000000;
+  --L_header_bg_color: #b7b6b6;
+  --L_footer_bg_color: #959393;
+  --L_Icon_bg_color: #000000;
+  --L_Icon_stroke_color: #000000;
+  --L_Icon_border_color: #000000;
+  --L_themeToggle_color: #063df0;
+
+  --D_bg_color: #000000;
+  --D_text_color: #ffffff;
+  --D_border_color: #000000;
+  --D_header_bg_color: #ff0000;
+  --D_footer_bg_color: #959393;
+  --D_Icon_bg_color: #000000;
+  --D_Icon_stroke_color: #000000;
+  --D_Icon_border_color: #000000;
+  --D_themeToggle_color: #f0b906;
+}

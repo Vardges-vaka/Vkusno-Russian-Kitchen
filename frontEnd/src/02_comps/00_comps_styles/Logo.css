@@ -1,0 +1,67 @@
+/* Container to center both logo and subtitle vertically */
+.vkusno-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Main logo styling: larger font */
+.vkusno-logo.main {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Subtitle styling: smaller font */
+.vkusno-logo.subtitle {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+/* Base styling for each letter – we hide the default fill */
+.letter {
+  position: relative;
+  display: inline-block;
+  color: transparent; /* Hide original fill */
+  margin: 0 3px;
+}
+
+/* The pseudo-element displays the animated fill */
+.letter::after {
+  content: attr(data-letter);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #1a365d;
+  text-shadow: 0 0 2px #00000056;
+  animation: fillHold 12s infinite ease-in-out;
+  animation-delay: var(--delay);
+}
+
+/* Keyframes for the fill, hold, and retract animation */
+@keyframes fillHold {
+  0% {
+    width: 0;
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  10% {
+    width: 100%;
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  90% {
+    width: 100%;
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
