@@ -1,38 +1,70 @@
+/* Nav sits on the header surface, so no own background/border */
 .PublicHeader_navBar {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
   align-items: center;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-bottom: 1px solid #e0e0e0;
+  justify-content: center;
 }
 
 .PublicHeader_navBar_links {
   display: flex;
-  list-style: none;
-  margin: 0 20px 0 0;
-  padding: 0;
-  text-align: center;
   align-items: center;
   justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.PublicHeader_navBar_link_item {
+  display: flex;
 }
 
 /* No !important needed: .active_link below adds a class to this same element,
    so it already outranks this rule on specificity. */
 .PublicHeader_navBar_link {
+  position: relative;
+  padding: 8px 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  margin: 0 15px;
-  transition: color 0.15s ease-in-out;
+  color: var(--text_color);
+  border-radius: 6px;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+}
+
+/* Animated underline: scaleX is GPU-cheap vs animating width */
+.PublicHeader_navBar_link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--accent_color);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease-in-out;
 }
 
 .PublicHeader_navBar_link:hover {
-  color: #b00020;
+  color: var(--accent_hover_color);
+  background-color: var(--accent_soft_color);
 }
 
 .PublicHeader_navBar_link.active_link {
-  color: red;
-  text-decoration: underline;
+  color: var(--accent_color);
+}
+
+.PublicHeader_navBar_link:hover::after,
+.PublicHeader_navBar_link.active_link::after {
+  transform: scaleX(1);
+}
+
+@media (min-width: 768px) {
+  .PublicHeader_navBar_links {
+    gap: 12px;
+  }
 }

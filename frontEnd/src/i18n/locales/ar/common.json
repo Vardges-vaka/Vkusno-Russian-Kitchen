@@ -1,17 +1,27 @@
 {
+  "language": {
+    "en": "الإنجليزية",
+    "ar": "العربية",
+    "ru": "الروسية",
+    "hover": {
+      "en": "الإنجليزية",
+      "ar": "العربية",
+      "ru": "الروسية"
+    }
+  },
   "header": {
     "nav_links": {
-      "home": "Home",
-      "menu": "Menu",
-      "contact": "Contact"
+      "home": "الرئيسية",
+      "menu": "القائمة",
+      "contact": "اتصل بنا"
     }
   },
   "footer": {
     "nav_links": {
-      "faq": "FAQ",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "copyright": "Copyright © 2026 Your Company. All rights reserved."
+      "faq": "الأسئلة الشائعة",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة",
+      "copyright": "حقوق النشر © 2026 فكوسنو. جميع الحقوق محفوظة."
     }
   }
 }

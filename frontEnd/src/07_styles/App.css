@@ -1,28 +1,80 @@
+/* =============================================================
+   Theme mapping layer.
+   Components only ever use the theme-neutral names below;
+   the raw L_/D_ values live in ColorVariables.css.
+   ============================================================= */
+
 [data-theme="light"] {
+  color-scheme: light; /* native scrollbars / form controls follow theme */
+
   --bg_color: var(--L_bg_color);
+  --surface_color: var(--L_surface_color);
   --text_color: var(--L_text_color);
+  --text_muted_color: var(--L_text_muted_color);
   --border_color: var(--L_border_color);
+  --shadow_color: var(--L_shadow_color);
+
+  --accent_color: var(--L_accent_color);
+  --accent_hover_color: var(--L_accent_hover_color);
+  --accent_soft_color: var(--L_accent_soft_color);
+  --gold_color: var(--L_gold_color);
+
   --header_bg_color: var(--L_header_bg_color);
+  --header_shadow_color: var(--L_header_shadow_color);
+
   --footer_bg_color: var(--L_footer_bg_color);
+  --footer_text_color: var(--L_footer_text_color);
+  --footer_muted_color: var(--L_footer_muted_color);
+  --footer_border_color: var(--L_footer_border_color);
+
+  --logo_text_color: var(--L_logo_text_color);
+  --logo_shadow_color: var(--L_logo_shadow_color);
+
   --Icon_bg_color: var(--L_Icon_bg_color);
   --Icon_stroke_color: var(--L_Icon_stroke_color);
   --Icon_border_color: var(--L_Icon_border_color);
-  --themeToggle_color: var(--L_themeToggle-color);
+  --themeToggle_color: var(--L_themeToggle_color);
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
+
   --bg_color: var(--D_bg_color);
+  --surface_color: var(--D_surface_color);
   --text_color: var(--D_text_color);
+  --text_muted_color: var(--D_text_muted_color);
   --border_color: var(--D_border_color);
+  --shadow_color: var(--D_shadow_color);
+
+  --accent_color: var(--D_accent_color);
+  --accent_hover_color: var(--D_accent_hover_color);
+  --accent_soft_color: var(--D_accent_soft_color);
+  --gold_color: var(--D_gold_color);
+
   --header_bg_color: var(--D_header_bg_color);
+  --header_shadow_color: var(--D_header_shadow_color);
+
   --footer_bg_color: var(--D_footer_bg_color);
+  --footer_text_color: var(--D_footer_text_color);
+  --footer_muted_color: var(--D_footer_muted_color);
+  --footer_border_color: var(--D_footer_border_color);
+
+  --logo_text_color: var(--D_logo_text_color);
+  --logo_shadow_color: var(--D_logo_shadow_color);
+
   --Icon_bg_color: var(--D_Icon_bg_color);
   --Icon_stroke_color: var(--D_Icon_stroke_color);
   --Icon_border_color: var(--D_Icon_border_color);
-  --themeToggle_color: var(--D_themeToggle-color);
+  --themeToggle_color: var(--D_themeToggle_color);
 }
 
 body {
+  margin: 0;
   background-color: var(--bg_color);
   color: var(--text_color);
+  -webkit-font-smoothing: antialiased;
+  /* Smooth swap when the theme toggles */
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }

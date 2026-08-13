@@ -36,8 +36,8 @@
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: #1a365d;
-  text-shadow: 0 0 2px #00000056;
+  color: var(--logo_text_color);
+  text-shadow: 0 0 2px var(--logo_shadow_color);
   animation: fillHold 12s infinite ease-in-out;
   animation-delay: var(--delay);
 }

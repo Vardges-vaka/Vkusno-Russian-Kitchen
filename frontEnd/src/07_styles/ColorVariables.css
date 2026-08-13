@@ -1,21 +1,79 @@
-:root {
-  --L_bg_color: #ffffff;
-  --L_text_color: #000000;
-  --L_border_color: #000000;
-  --L_header_bg_color: #b7b6b6;
-  --L_footer_bg_color: #959393;
-  --L_Icon_bg_color: #000000;
-  --L_Icon_stroke_color: #000000;
-  --L_Icon_border_color: #000000;
-  --L_themeToggle_color: #063df0;
+/* =============================================================
+   VKUSNO — Color palette
+   Raw color values only. L_ = light theme, D_ = dark theme.
+   Theme-neutral names are mapped in App.css via [data-theme].
+   Concept: warm "cream & charcoal" base, Russian-red accent,
+   gold as the secondary brand tone (samovar / khokhloma vibes).
+   ============================================================= */
 
-  --D_bg_color: #000000;
-  --D_text_color: #ffffff;
-  --D_border_color: #000000;
-  --D_header_bg_color: #ff0000;
-  --D_footer_bg_color: #959393;
-  --D_Icon_bg_color: #000000;
-  --D_Icon_stroke_color: #000000;
-  --D_Icon_border_color: #000000;
-  --D_themeToggle_color: #f0b906;
+:root {
+  /* ---------- LIGHT THEME ---------- */
+  /* Base surfaces & text */
+  --L_bg_color: #faf6ef; /* warm cream page background */
+  --L_surface_color: #ffffff; /* cards, dropdowns */
+  --L_text_color: #2b2118; /* warm near-black brown */
+  --L_text_muted_color: #7a6a5c; /* secondary text */
+  --L_border_color: #e4dacb;
+  --L_shadow_color: rgba(43, 33, 24, 0.1);
+
+  /* Brand accents */
+  --L_accent_color: #b3001b; /* Russian red — links, active states */
+  --L_accent_hover_color: #8c0015; /* darker red on hover (light bg) */
+  --L_accent_soft_color: rgba(179, 0, 27, 0.08); /* subtle red tint fills */
+  --L_gold_color: #c99a2e; /* secondary brand tone */
+
+  /* Header */
+  --L_header_bg_color: rgba(255, 253, 248, 0.92); /* translucent for blur */
+  --L_header_shadow_color: rgba(43, 33, 24, 0.08);
+
+  /* Footer — intentionally dark in BOTH themes (restaurant look) */
+  --L_footer_bg_color: #241b14;
+  --L_footer_text_color: #f2ece1;
+  --L_footer_muted_color: #b3a696;
+  --L_footer_border_color: rgba(242, 236, 225, 0.14);
+
+  /* Logo */
+  --L_logo_text_color: #100f0f; /* deep brand red */
+  --L_logo_shadow_color: rgba(43, 33, 24, 0.25);
+
+  /* Icons & controls */
+  --L_Icon_bg_color: #f1e9dc;
+  --L_Icon_stroke_color: #2b2118;
+  --L_Icon_border_color: #d8cbb8;
+  --L_themeToggle_color: #4a56c9; /* indigo moon on cream */
+
+  /* ---------- DARK THEME ---------- */
+  /* Base surfaces & text */
+  --D_bg_color: #16110d; /* warm near-black */
+  --D_surface_color: #211a14; /* cards, dropdowns */
+  --D_text_color: #f2ece1; /* warm off-white */
+  --D_text_muted_color: #a4937f;
+  --D_border_color: #382e24;
+  --D_shadow_color: rgba(0, 0, 0, 0.45);
+
+  /* Brand accents (lifted for contrast on dark bg) */
+  --D_accent_color: #e2574b;
+  --D_accent_hover_color: #f0776d; /* lighter red on hover (dark bg) */
+  --D_accent_soft_color: rgba(226, 87, 75, 0.12);
+  --D_gold_color: #e3b23c;
+
+  /* Header */
+  --D_header_bg_color: rgba(26, 20, 15, 0.92);
+  --D_header_shadow_color: rgba(0, 0, 0, 0.35);
+
+  /* Footer — one shade deeper than the page bg */
+  --D_footer_bg_color: #100c09;
+  --D_footer_text_color: #f2ece1;
+  --D_footer_muted_color: #9c8d7b;
+  --D_footer_border_color: rgba(242, 236, 225, 0.12);
+
+  /* Logo — gold reads better than red on dark */
+  --D_logo_text_color: #e3b23c;
+  --D_logo_shadow_color: rgba(0, 0, 0, 0.55);
+
+  /* Icons & controls */
+  --D_Icon_bg_color: #2a221a;
+  --D_Icon_stroke_color: #f2ece1;
+  --D_Icon_border_color: #453a2e;
+  --D_themeToggle_color: #f0b906; /* gold sun on charcoal */
 }

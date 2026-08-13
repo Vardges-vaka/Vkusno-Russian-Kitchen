@@ -1,5 +1,5 @@
 .PublicHeader_actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px; /* toggler & language select are scaled up, need breathing room */
 }
