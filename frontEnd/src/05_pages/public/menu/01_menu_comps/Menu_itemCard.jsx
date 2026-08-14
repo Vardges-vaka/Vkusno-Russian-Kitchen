@@ -4,7 +4,7 @@ import "../00_menu_styles/Menu_itemCard.css";
 
 // React.memo: 78 cards live on the page; without it every card re-renders
 // each time the active tab changes while scrolling.
-const Menu_itemCard = React.memo(({ item, lang, t, onClick }) => {
+const Menu_itemCard = React.memo(({ item, lang, t, onClick, onOrderClick }) => {
   const name = pickLocale(item.name, lang);
   const shortDescription = pickLocale(item.description?.short, lang);
 
@@ -15,6 +15,13 @@ const Menu_itemCard = React.memo(({ item, lang, t, onClick }) => {
     }
   };
 
+  // stopPropagation: the whole card opens the details modal, so the
+  // Order button must not bubble its click up to the card.
+  const handleOrderClick = (event) => {
+    event.stopPropagation();
+    onOrderClick(item);
+  };
+
   return (
     <article
       className="Menu_itemCard"
@@ -23,15 +30,14 @@ const Menu_itemCard = React.memo(({ item, lang, t, onClick }) => {
       aria-label={name}
       onClick={() => onClick(item)}
       onKeyDown={handleKeyDown}>
-      {/* Drinks have no photos yet — show a monogram tile instead */}
-      {item.images?.thumbnail ? (
+      {/* Full-size image: the card photo is now large, thumbnails look blurry.
+          loading="lazy" keeps the initial page load light despite the size. */}
+      {item.images?.full ? (
         <img
           className="Menu_itemCard_photo"
-          src={item.images.thumbnail}
+          src={item.images.full}
           alt={name}
           loading="lazy"
-          width="100"
-          height="100"
         />
       ) : (
         <div className="Menu_itemCard_photoFallback" aria-hidden="true">
@@ -44,10 +50,20 @@ const Menu_itemCard = React.memo(({ item, lang, t, onClick }) => {
         {shortDescription && (
           <p className="Menu_itemCard_description">{shortDescription}</p>
         )}
-        <p className="Menu_itemCard_price">
-          {item.price}
-          <span className="Menu_itemCard_currency">{t("menu.currency")}</span>
-        </p>
+
+        <div className="Menu_itemCard_footer">
+          <p className="Menu_itemCard_price">
+            {item.price}
+            <span className="Menu_itemCard_currency">{t("menu.currency")}</span>
+          </p>
+          <button
+            type="button"
+            className="Menu_itemCard_orderBtn"
+            aria-label={`${t("menu.order")} — ${name}`}
+            onClick={handleOrderClick}>
+            {t("menu.order")}
+          </button>
+        </div>
       </div>
     </article>
   );

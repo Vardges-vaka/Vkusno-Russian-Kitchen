@@ -6,6 +6,7 @@ import {
   ThemeProvider,
   LanguageProvider,
   ClientProvider,
+  MapProvider,
 } from "./03_context/_context.index.js";
 import { ErrorBoundary, PageLoader } from "./02_comps/_comps.index.js";
 import { UserRoutes } from "./06_routes/_routes.index.js";
@@ -16,26 +17,28 @@ function App() {
       <ClientProvider>
         <ThemeProvider>
           <LanguageProvider>
-            <Router>
-              <Suspense fallback={<PageLoader />}>
-                <Routes>
-                  <Route
-                    path="/*"
-                    element={
-                      <Routes>
-                        {UserRoutes.map((route) => (
-                          <Route
-                            key={route.path}
-                            path={route.path}
-                            element={route.element}
-                          />
-                        ))}
-                      </Routes>
-                    }
-                  />
-                </Routes>
-              </Suspense>
-            </Router>
+            <MapProvider>
+              <Router>
+                <Suspense fallback={<PageLoader />}>
+                  <Routes>
+                    <Route
+                      path="/*"
+                      element={
+                        <Routes>
+                          {UserRoutes.map((route) => (
+                            <Route
+                              key={route.path}
+                              path={route.path}
+                              element={route.element}
+                            />
+                          ))}
+                        </Routes>
+                      }
+                    />
+                  </Routes>
+                </Suspense>
+              </Router>
+            </MapProvider>
           </LanguageProvider>
         </ThemeProvider>
       </ClientProvider>

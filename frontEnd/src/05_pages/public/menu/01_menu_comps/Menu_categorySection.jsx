@@ -2,7 +2,7 @@ import Menu_itemCard from "./Menu_itemCard.jsx";
 import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_menu_styles/Menu_categorySection.css";
 
-const Menu_categorySection = ({ category, lang, t, onItemClick }) => {
+const Menu_categorySection = ({ category, lang, t, onItemClick, onOrderClick }) => {
   return (
     <section
       id={`menuCategory-${category.id}`}
@@ -20,6 +20,7 @@ const Menu_categorySection = ({ category, lang, t, onItemClick }) => {
             lang={lang}
             t={t}
             onClick={onItemClick}
+            onOrderClick={onOrderClick}
           />
         ))}
       </div>

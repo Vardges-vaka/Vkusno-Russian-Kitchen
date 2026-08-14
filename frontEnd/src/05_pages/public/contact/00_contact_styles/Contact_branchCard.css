@@ -1,0 +1,150 @@
+.Contact_branchCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    border-color 0.15s ease-out;
+}
+
+.Contact_branchCard:hover,
+.Contact_branchCard:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--gold_color);
+  box-shadow: 0 6px 18px var(--shadow_color);
+  outline: none;
+}
+
+.Contact_branchCard--selected {
+  border-color: var(--accent_color);
+  box-shadow: 0 0 0 3px var(--accent_soft_color);
+}
+
+/* Name + hours share one row; wraps gracefully when the name is long */
+.Contact_branchCard_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.Contact_branchCard_name {
+  margin: 0;
+  font-size: 17px;
+  color: var(--text_color);
+}
+
+.Contact_branchCard_hours {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent_color);
+  background-color: var(--accent_soft_color);
+  border-radius: 999px;
+}
+
+.Contact_branchCard_address {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text_muted_color);
+}
+
+.Contact_branchCard_addressIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent_color);
+}
+
+/* Pinned to the bottom so cards in one row stay aligned regardless
+   of how long the name/address above them runs */
+.Contact_branchCard_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border_color);
+}
+
+.Contact_branchCard_directions {
+  flex-shrink: 0;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text_color);
+  text-decoration: none;
+  border: 1px solid var(--border_color);
+  border-radius: 999px;
+  transition:
+    border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out;
+}
+
+.Contact_branchCard_directions:hover,
+.Contact_branchCard_directions:focus-visible {
+  color: var(--accent_color);
+  border-color: var(--accent_color);
+  outline: none;
+}
+
+.Contact_branchCard_aggregators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Borderless — the logos themselves carry the shape, so they can be
+   larger and actually recognizable */
+.Contact_branchCard_aggregator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: transform 0.15s ease-out;
+}
+
+.Contact_branchCard_aggregator:hover,
+.Contact_branchCard_aggregator:focus-visible {
+  transform: scale(1.12);
+  outline: none;
+}
+
+.Contact_branchCard_aggregatorLogo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Contact_branchCard,
+  .Contact_branchCard_directions,
+  .Contact_branchCard_aggregator {
+    transition: none;
+  }
+
+  .Contact_branchCard:hover,
+  .Contact_branchCard:focus-visible {
+    transform: none;
+  }
+
+  .Contact_branchCard_aggregator:hover,
+  .Contact_branchCard_aggregator:focus-visible {
+    transform: none;
+  }
+}

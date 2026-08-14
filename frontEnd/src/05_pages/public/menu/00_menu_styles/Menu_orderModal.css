@@ -1,0 +1,106 @@
+.Menu_orderModal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000; /* above the sticky header */
+  display: flex;
+  align-items: flex-end; /* bottom sheet on mobile */
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: menuOrderModalFade 0.2s ease;
+}
+
+.Menu_orderModal_dialog {
+  position: relative;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  background-color: var(--surface_color);
+  color: var(--text_color);
+  border-radius: 16px 16px 0 0;
+  animation: menuOrderModalRise 0.25s ease-out;
+}
+
+.Menu_orderModal_close {
+  position: absolute;
+  top: 12px;
+  inset-inline-end: 12px; /* logical property: stays on the "far" side in RTL */
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--text_color);
+  background-color: var(--accent_soft_color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.Menu_orderModal_close:hover {
+  color: var(--footer_text_color);
+  background-color: var(--accent_color);
+}
+
+.Menu_orderModal_body {
+  padding: 20px;
+}
+
+.Menu_orderModal_title {
+  margin: 0;
+  margin-inline-end: 36px; /* keeps the title clear of the close button in LTR and RTL */
+  font-size: 20px;
+}
+
+/* Dashed box marks the area the real content will occupy later */
+.Menu_orderModal_placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  margin-top: 16px;
+  padding: 20px;
+  border: 2px dashed var(--border_color);
+  border-radius: 12px;
+}
+
+.Menu_orderModal_placeholder_text {
+  margin: 0;
+  max-width: 320px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--text_muted_color);
+}
+
+@keyframes menuOrderModalFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menuOrderModalRise {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .Menu_orderModal {
+    align-items: center; /* centered dialog on larger screens */
+    padding: 24px;
+  }
+
+  .Menu_orderModal_dialog {
+    max-width: 560px;
+    border-radius: 16px;
+  }
+}

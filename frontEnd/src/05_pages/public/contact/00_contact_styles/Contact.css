@@ -1,0 +1,142 @@
+.Contact_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+.Contact_hero {
+  padding: 32px 0 8px;
+  text-align: center;
+}
+
+.Contact_hero_title {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: var(--text_color);
+}
+
+/* Small gold rule under the title echoes the Menu page's hero */
+.Contact_hero_title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  background-color: var(--gold_color);
+}
+
+.Contact_hero_subtitle {
+  margin: 12px 0 0;
+  font-size: 15px;
+  color: var(--text_muted_color);
+}
+
+/* ── Connect: contact panel + map ─────────────────────────────
+   Stacked on mobile; from tablet up the panel sits on one side
+   and the map fills the rest at equal height. */
+.Contact_connect {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.Contact_connect_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 16px;
+}
+
+.Contact_connect_heading {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text_muted_color);
+}
+
+/* margin-top:auto absorbs the free space, pinning the socials
+   block below it to the bottom of the panel */
+.Contact_connect_divider {
+  width: 100%;
+  height: 1px;
+  margin: auto 0 0;
+  border: none;
+  background-color: var(--border_color);
+}
+
+/* Flex wrapper lets the map component stretch to the row height */
+.Contact_connect_map {
+  display: flex;
+}
+
+/* ── Branches ─────────────────────────────────────────────── */
+.Contact_branches {
+  margin-top: 40px;
+}
+
+.Contact_branches_title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  color: var(--text_color);
+}
+
+.Contact_branches_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .Contact_branches_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .Contact_container {
+    padding: 0 32px 64px;
+  }
+
+  .Contact_hero {
+    padding: 48px 0 16px;
+  }
+
+  .Contact_hero_title {
+    font-size: 40px;
+  }
+
+  .Contact_connect {
+    grid-template-columns: minmax(300px, 380px) 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .Contact_connect_panel {
+    padding: 24px;
+  }
+
+  .Contact_branches {
+    margin-top: 48px;
+  }
+
+  .Contact_branches_title {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Contact_branches_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}

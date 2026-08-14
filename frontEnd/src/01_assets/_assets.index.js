@@ -5,3 +5,5 @@ import Borscht from "./borscht.jpg";
 
 export { RussianFlag, BritishFlag, ArabicFlag, Borscht };
 export * from "./menuItems/menuItemExports.js";
+export * from "./socialLogos/_socialLogos.index.js";
+export * from "./aggregatorLogos/_aggregatorLogos.index.js";

@@ -1,4 +1,24 @@
 {
-    "something": {}
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Reach out, or find the Vkusno branch closest to you",
+    "infoPanel": {
+      "label": "Contact details",
+      "phone": "Call us",
+      "WhatsApp": "Message us on WhatsApp",
+      "email": "Email us"
+    },
+    "socials": {
+      "label": "Follow us"
+    },
+    "branches": {
+      "label": "Our branches",
+      "mapLabel": "Map of our branches",
+      "mapLoading": "Loading the map…",
+      "mapUnavailable": "The map is temporarily unavailable. Use the \"Directions\" link on any branch below instead.",
+      "open24": "Open 24/7",
+      "hours": "Open {{open}} – {{close}}",
+      "directions": "Directions"
+    }
   }
-  
+}

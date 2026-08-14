@@ -1,0 +1,76 @@
+.Contact_infoPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.Contact_infoPanel_row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  color: var(--text_color);
+  text-decoration: none;
+  background-color: var(--bg_color);
+  border: 1px solid var(--border_color);
+  border-radius: 12px;
+  transition:
+    border-color 0.15s ease-in-out,
+    transform 0.15s ease-out;
+}
+
+.Contact_infoPanel_row:hover,
+.Contact_infoPanel_row:focus-visible {
+  border-color: var(--accent_color);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Soft accent chip keeps the three rows visually anchored */
+.Contact_infoPanel_iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent_soft_color);
+  border-radius: 10px;
+  color: var(--accent_color);
+}
+
+.Contact_infoPanel_icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.Contact_infoPanel_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.Contact_infoPanel_action {
+  font-size: 12px;
+  color: var(--text_muted_color);
+}
+
+.Contact_infoPanel_label {
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Contact_infoPanel_row {
+    transition: none;
+  }
+
+  .Contact_infoPanel_row:hover,
+  .Contact_infoPanel_row:focus-visible {
+    transform: none;
+  }
+}

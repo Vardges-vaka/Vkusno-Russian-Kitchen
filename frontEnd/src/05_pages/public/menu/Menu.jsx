@@ -3,6 +3,7 @@ import {
   Menu_categoryTabs,
   Menu_categorySection,
   Menu_itemModal,
+  Menu_orderModal,
   Menu_searchBar,
 } from "./01_menu_comps/_menu_comps.index.js";
 import "./00_menu_styles/Menu.css";
@@ -15,6 +16,7 @@ const Menu = () => {
     searchQuery,
     activeCategoryId,
     selectedItem,
+    orderItem,
     handlers,
   } = useMenu();
 
@@ -49,6 +51,7 @@ const Menu = () => {
                 lang={lang}
                 t={t}
                 onItemClick={handlers.handleItemOpen}
+                onOrderClick={handlers.handleOrderOpen}
               />
             ))}
           </main>
@@ -65,6 +68,15 @@ const Menu = () => {
           lang={lang}
           t={t}
           onClose={handlers.handleItemClose}
+        />
+      )}
+
+      {orderItem && (
+        <Menu_orderModal
+          item={orderItem}
+          lang={lang}
+          t={t}
+          onClose={handlers.handleOrderClose}
         />
       )}
     </div>

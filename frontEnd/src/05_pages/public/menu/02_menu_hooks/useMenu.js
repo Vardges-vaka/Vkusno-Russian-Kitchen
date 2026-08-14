@@ -9,6 +9,9 @@ export const useMenu = () => {
 
   const [activeCategoryId, setActiveCategoryId] = useState(Categories[0]?.id);
   const [selectedItem, setSelectedItem] = useState(null);
+  // Dish whose "Order" button was pressed — feeds the upcoming order modal
+  // (map, branches, aggregator links). The modal itself is built later.
+  const [orderItem, setOrderItem] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
   const normalizedQuery = searchQuery.trim().toLowerCase();
@@ -93,6 +96,14 @@ export const useMenu = () => {
     setSelectedItem(null);
   }, []);
 
+  const handleOrderOpen = useCallback((item) => {
+    setOrderItem(item);
+  }, []);
+
+  const handleOrderClose = useCallback(() => {
+    setOrderItem(null);
+  }, []);
+
   const handleSearchChange = useCallback((value) => {
     setSearchQuery(value);
   }, []);
@@ -104,10 +115,13 @@ export const useMenu = () => {
     searchQuery,
     activeCategoryId,
     selectedItem,
+    orderItem,
     handlers: {
       handleCategorySelect,
       handleItemOpen,
       handleItemClose,
+      handleOrderOpen,
+      handleOrderClose,
       handleSearchChange,
     },
   };

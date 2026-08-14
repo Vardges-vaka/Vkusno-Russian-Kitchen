@@ -21,15 +21,16 @@
   background-color: var(--border_color);
 }
 
+/* Vertical cards: two per row on phones, as many as fit on wider screens */
 .Menu_categorySection_grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
 @media (min-width: 768px) {
   .Menu_categorySection_grid {
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 16px;
   }
 }

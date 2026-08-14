@@ -1,0 +1,51 @@
+.Contact_socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Labeled pills — clearer than bare icons, and a bigger tap target */
+.Contact_socials_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  color: var(--text_color);
+  text-decoration: none;
+  background-color: var(--bg_color);
+  border: 1px solid var(--border_color);
+  border-radius: 999px;
+  transition:
+    border-color 0.15s ease-in-out,
+    transform 0.15s ease-out;
+}
+
+.Contact_socials_link:hover,
+.Contact_socials_link:focus-visible {
+  border-color: var(--accent_color);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.Contact_socials_logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.Contact_socials_name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Contact_socials_link {
+    transition: none;
+  }
+
+  .Contact_socials_link:hover,
+  .Contact_socials_link:focus-visible {
+    transform: none;
+  }
+}
