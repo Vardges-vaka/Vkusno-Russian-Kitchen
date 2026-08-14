@@ -118,6 +118,15 @@
   color: var(--text_muted_color);
 }
 
+/* Disclaimer kept subtle so it informs without competing with the data */
+.Menu_itemModal_nutrition_notice {
+  margin: 8px 0 0;
+  font-size: 11px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text_muted_color);
+}
+
 .Menu_itemModal_ingredients {
   display: flex;
   flex-wrap: wrap;

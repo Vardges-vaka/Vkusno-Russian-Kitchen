@@ -88,6 +88,9 @@ const Menu_itemModal = ({ item, lang, t, onClose }) => {
                   </li>
                 ))}
               </ul>
+              <p className="Menu_itemModal_nutrition_notice">
+                {t("menu.nutrition.notice")}
+              </p>
             </>
           )}
 

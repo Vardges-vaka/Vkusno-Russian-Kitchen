@@ -15,7 +15,8 @@
       "calories": "Calories",
       "protein": "Protein",
       "fat": "Fat",
-      "carbs": "Carbs"
+      "carbs": "Carbs",
+      "notice": "Nutritional values are approximate and may vary depending on portion size and preparation."
     }
   }
 }
