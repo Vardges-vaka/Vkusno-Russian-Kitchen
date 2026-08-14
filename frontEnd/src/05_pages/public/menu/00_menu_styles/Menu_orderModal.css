@@ -6,20 +6,24 @@
   align-items: flex-end;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
-  animation: menuOrderModalFade 0.2s ease;
+  animation: menuOrderModalFade 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .Menu_orderModal_dialog {
   position: relative;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 100%;
   max-height: 92vh;
   overflow: hidden;
   background-color: var(--surface_color);
   color: var(--text_color);
   border-radius: 16px 16px 0 0;
-  animation: menuOrderModalRise 0.25s ease-out;
+  animation: menuOrderModalRise 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom center;
+  will-change: transform, opacity;
 }
 
 .Menu_orderModal_handle {
@@ -87,12 +91,17 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 0;
   min-height: 0;
+  overflow: hidden;
 }
 
 .Menu_orderModal_map {
   flex-shrink: 0;
+  min-width: 0;
+  max-width: 100%;
   height: 200px;
+  overflow: hidden;
   border-block: 1px solid var(--border_color);
 }
 
@@ -102,13 +111,17 @@
   flex-direction: column;
   gap: 12px;
   flex: 1;
+  min-width: 0;
   min-height: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 12px 16px 16px;
 }
 
 .Menu_orderModal_kitchensBlock {
   flex-shrink: 0;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .Menu_orderModal_heading {
@@ -120,14 +133,16 @@
   color: var(--text_muted_color);
 }
 
-/* Horizontal snap-strip on phones */
+/* Horizontal snap-strip on phones — scroll stays inside this row */
 .Menu_orderModal_kitchens {
   display: flex;
   gap: 6px;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
@@ -153,14 +168,10 @@
   border-radius: 8px;
   cursor: pointer;
   transition:
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-}
-
-.Menu_orderModal_kitchen:hover,
-.Menu_orderModal_kitchen:focus-visible {
-  border-color: var(--gold_color);
-  outline: none;
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.22s ease;
 }
 
 .Menu_orderModal_kitchen--selected {
@@ -170,6 +181,8 @@
 
 .Menu_orderModal_kitchen_name {
   min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.3;
@@ -182,10 +195,35 @@
   color: var(--accent_color);
 }
 
+.Menu_orderModal_kitchen:hover,
+.Menu_orderModal_kitchen:focus-visible {
+  border-color: var(--gold_color);
+  outline: none;
+}
+
 .Menu_orderModal_orderOn {
+  display: grid;
+  grid-template-areas: "stack";
   flex-shrink: 0;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 88px;
   padding-top: 12px;
   border-top: 1px solid var(--border_color);
+  transition: min-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.Menu_orderModal_pickPrompt,
+.Menu_orderModal_appsWrap {
+  grid-area: stack;
+  align-self: start;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.Menu_orderModal_orderOn--ready {
+  min-height: 120px;
 }
 
 .Menu_orderModal_orderOn .Menu_orderModal_heading {
@@ -201,12 +239,29 @@
   background-color: var(--bg_color);
   border: 1px dashed var(--border_color);
   border-radius: 8px;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.Menu_orderModal_pickPrompt--hidden {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
+.Menu_orderModal_appsWrap {
+  animation: menuOrderAppsReveal 0.38s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .Menu_orderModal_apps {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 6px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .Menu_orderModal_app {
@@ -214,15 +269,20 @@
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  min-width: 0;
   padding: 8px 10px;
   color: var(--text_color);
   text-decoration: none;
   background-color: var(--bg_color);
   border: 1px solid var(--border_color);
   border-radius: 8px;
+  opacity: 0;
+  animation: menuOrderAppIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--app-index, 0) * 55ms + 80ms);
   transition:
-    border-color 0.15s ease-in-out,
-    transform 0.15s ease-out;
+    border-color 0.2s ease,
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s ease;
 }
 
 .Menu_orderModal_app:hover,
@@ -239,6 +299,9 @@
 }
 
 .Menu_orderModal_app_name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 12px;
   font-weight: 600;
 }
@@ -254,12 +317,34 @@
 
 @keyframes menuOrderModalRise {
   from {
-    transform: translateY(24px);
+    transform: translateY(100%);
     opacity: 0;
   }
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes menuOrderAppsReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuOrderAppIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -284,6 +369,8 @@
     max-width: 720px;
     max-height: 88vh;
     border-radius: 16px;
+    transform-origin: center center;
+    animation-name: menuOrderModalScaleIn;
   }
 
   .Menu_orderModal_handle {
@@ -333,19 +420,23 @@
 
   .Menu_orderModal_layout {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
     flex: 1;
+    min-width: 0;
     min-height: 0;
+    overflow: hidden;
   }
 
   .Menu_orderModal_map {
     height: auto;
+    min-width: 0;
     border-block: none;
     border-inline-end: 1px solid var(--border_color);
   }
 
   .Menu_orderModal_panel {
     gap: 16px;
+    min-width: 0;
     padding: 16px 20px 20px;
   }
 
@@ -363,13 +454,45 @@
   .Menu_orderModal,
   .Menu_orderModal_dialog,
   .Menu_orderModal_kitchen,
-  .Menu_orderModal_app {
+  .Menu_orderModal_app,
+  .Menu_orderModal_appsWrap,
+  .Menu_orderModal_pickPrompt,
+  .Menu_orderModal_orderOn {
     animation: none;
     transition: none;
+  }
+
+  .Menu_orderModal_kitchen--selected {
+    transform: none;
+  }
+
+  .Menu_orderModal_kitchen:hover,
+  .Menu_orderModal_kitchen:focus-visible {
+    transform: none;
+  }
+
+  .Menu_orderModal_app {
+    opacity: 1;
+  }
+
+  .Menu_orderModal_pickPrompt--hidden {
+    opacity: 0;
+    transform: none;
   }
 
   .Menu_orderModal_app:hover,
   .Menu_orderModal_app:focus-visible {
     transform: none;
+  }
+}
+
+@keyframes menuOrderModalScaleIn {
+  from {
+    transform: translateY(16px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }

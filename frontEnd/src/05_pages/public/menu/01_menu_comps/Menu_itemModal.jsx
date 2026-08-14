@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_menu_styles/Menu_itemModal.css";
 
-const Menu_itemModal = ({ item, lang, t, onClose }) => {
+const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
   // Esc closes the modal; page scroll is locked while it is open
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -35,6 +35,10 @@ const Menu_itemModal = ({ item, lang, t, onClose }) => {
       ]
     : [];
 
+  const handleOrderClick = () => {
+    onOrder(item);
+  };
+
   return (
     <div className="Menu_itemModal" onClick={onClose}>
       <div
@@ -62,9 +66,18 @@ const Menu_itemModal = ({ item, lang, t, onClose }) => {
         <div className="Menu_itemModal_body">
           <div className="Menu_itemModal_titleRow">
             <h2 className="Menu_itemModal_name">{name}</h2>
-            <p className="Menu_itemModal_price">
-              {item.price} {t("menu.currency")}
-            </p>
+            <div className="Menu_itemModal_actions">
+              <p className="Menu_itemModal_price">
+                {item.price} {t("menu.currency")}
+              </p>
+              <button
+                type="button"
+                className="Menu_itemModal_orderBtn"
+                aria-label={`${t("menu.order")} — ${name}`}
+                onClick={handleOrderClick}>
+                {t("menu.order")}
+              </button>
+            </div>
           </div>
 
           {longDescription && (

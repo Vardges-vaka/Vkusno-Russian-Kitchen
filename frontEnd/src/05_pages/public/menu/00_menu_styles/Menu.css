@@ -8,7 +8,7 @@
   /* max-width: 720px; */
   margin: 0 auto;
   padding: 32px 0 8px;
-  text-align: center;
+  text-align: left;
 }
 
 .Menu_hero_lead {
@@ -24,9 +24,9 @@
 .Menu_hero_lead::after {
   content: "";
   display: block;
-  width: 56px;
+  width: 80px;
   height: 3px;
-  margin: 14px auto 0;
+  margin: 14px 0 0 0;
   border-radius: 2px;
   background-color: var(--gold_color);
 }

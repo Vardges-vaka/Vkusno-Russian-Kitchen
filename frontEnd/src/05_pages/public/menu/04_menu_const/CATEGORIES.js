@@ -70,16 +70,8 @@ import {
   HouseSpecialSauce,
   MustardSauce,
   TomatoGarlicSauce,
-  Pepsi,
-  DietPepsi,
-  SevenUp,
-  DietSevenUp,
-  AquafinaWaterLarge,
-  AquafinaWaterSmall,
-  Mirinda,
   RaspberryMors,
   CranberyMors,
-  RedBull,
 } from "./menuItems.js";
 
 export const Categories = [
@@ -99,13 +91,12 @@ export const Categories = [
   },
   {
     id: 2,
-    name: { en: "Cold Appetizers", ar: "المقبلات الباردة", ru: "Холодные Закуски" },
-    menuItems: [
-      BeefTongue,
-      AssortedPickles,
-      Holodec,
-      EggplantRolls,
-    ],
+    name: {
+      en: "Cold Appetizers",
+      ar: "المقبلات الباردة",
+      ru: "Холодные Закуски",
+    },
+    menuItems: [BeefTongue, AssortedPickles, Holodec, EggplantRolls],
   },
   {
     id: 3,
@@ -147,7 +138,11 @@ export const Categories = [
   },
   {
     id: 6,
-    name: { en: "Hot Appetizers", ar: "المقبلات الساخنة", ru: "Горячие Закуски" },
+    name: {
+      en: "Hot Appetizers",
+      ar: "المقبلات الساخنة",
+      ru: "Горячие Закуски",
+    },
     menuItems: [
       RussianPancakesWithBeef,
       RussianPancakesWithMushroom,
@@ -174,12 +169,7 @@ export const Categories = [
   {
     id: 8,
     name: { en: "Desserts", ar: "الحلويات", ru: "Десерты" },
-    menuItems: [
-      Napoleon,
-      HoneyCake,
-      RussianPancakesWithCottageCheese,
-      Syrniki,
-    ],
+    menuItems: [Napoleon, HoneyCake, RussianPancakesWithCottageCheese, Syrniki],
   },
   {
     id: 9,
@@ -209,9 +199,7 @@ export const Categories = [
   {
     id: 11,
     name: { en: "Bread", ar: "الخبز", ru: "Хлеб" },
-    menuItems: [
-      UzbekFlatbread,
-    ],
+    menuItems: [UzbekFlatbread],
   },
   {
     id: 12,
@@ -225,18 +213,22 @@ export const Categories = [
   },
   {
     id: 13,
-    name: { en: "Fresh Juices and Soft Drinks", ar: "العصائر الطازجة والمشروبات الغازية", ru: "Напитки" },
+    name: {
+      en: "Fresh Juices and Soft Drinks",
+      ar: "العصائر الطازجة والمشروبات الغازية",
+      ru: "Напитки",
+    },
     menuItems: [
-      Pepsi,
-      DietPepsi,
-      SevenUp,
-      DietSevenUp,
-      AquafinaWaterLarge,
-      AquafinaWaterSmall,
-      Mirinda,
+      // Pepsi,
+      // DietPepsi,
+      // SevenUp,
+      // DietSevenUp,
+      // AquafinaWaterLarge,
+      // AquafinaWaterSmall,
+      // Mirinda,
+      // RedBull,
       RaspberryMors,
       CranberyMors,
-      RedBull,
     ],
   },
 ];

@@ -68,6 +68,7 @@ const Menu = () => {
           lang={lang}
           t={t}
           onClose={handlers.handleItemClose}
+          onOrder={handlers.handleOrderFromItem}
         />
       )}
 

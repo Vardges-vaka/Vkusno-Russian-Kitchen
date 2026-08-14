@@ -6,7 +6,7 @@
   align-items: flex-end; /* bottom sheet on mobile */
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
-  animation: menuModalFade 0.2s ease;
+  animation: menuModalFade 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .Menu_itemModal_dialog {
@@ -17,7 +17,9 @@
   background-color: var(--surface_color);
   color: var(--text_color);
   border-radius: 16px 16px 0 0;
-  animation: menuModalRise 0.25s ease-out;
+  animation: menuModalRise 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom center;
+  will-change: transform, opacity;
 }
 
 .Menu_itemModal_close {
@@ -54,7 +56,7 @@
 
 .Menu_itemModal_titleRow {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
 }
@@ -62,14 +64,44 @@
 .Menu_itemModal_name {
   margin: 0;
   font-size: 22px;
+  min-width: 0;
+}
+
+.Menu_itemModal_actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
 }
 
 .Menu_itemModal_price {
   margin: 0;
-  flex-shrink: 0;
   font-size: 18px;
   font-weight: 700;
   color: var(--accent_color);
+  white-space: nowrap;
+}
+
+.Menu_itemModal_orderBtn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--footer_text_color);
+  background-color: var(--accent_color);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color 0.15s ease-in-out,
+    transform 0.15s ease-out;
+}
+
+.Menu_itemModal_orderBtn:hover,
+.Menu_itemModal_orderBtn:focus-visible {
+  background-color: var(--gold_color);
+  transform: scale(1.04);
+  outline: none;
 }
 
 .Menu_itemModal_description {
@@ -155,11 +187,22 @@
 
 @keyframes menuModalRise {
   from {
-    transform: translateY(24px);
+    transform: translateY(100%);
     opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menuModalScaleIn {
+  from {
+    transform: translateY(16px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 }
@@ -173,5 +216,19 @@
   .Menu_itemModal_dialog {
     max-width: 640px;
     border-radius: 16px;
+    transform-origin: center center;
+    animation-name: menuModalScaleIn;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Menu_itemModal,
+  .Menu_itemModal_dialog {
+    animation: none;
+  }
+
+  .Menu_itemModal_orderBtn:hover,
+  .Menu_itemModal_orderBtn:focus-visible {
+    transform: none;
   }
 }

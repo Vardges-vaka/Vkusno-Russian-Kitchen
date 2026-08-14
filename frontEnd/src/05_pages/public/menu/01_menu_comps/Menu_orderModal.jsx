@@ -112,18 +112,33 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
               </ul>
             </div>
 
-            <div className="Menu_orderModal_orderOn">
-              {selectedBranch ? (
-                <>
+            <div
+              className={`Menu_orderModal_orderOn${
+                selectedBranch ? " Menu_orderModal_orderOn--ready" : ""
+              }`}>
+              <p
+                className={`Menu_orderModal_pickPrompt${
+                  selectedBranch ? " Menu_orderModal_pickPrompt--hidden" : ""
+                }`}
+                role="status"
+                aria-hidden={Boolean(selectedBranch)}>
+                {t("menu.orderModal.pickKitchenFirst")}
+              </p>
+
+              {selectedBranch && (
+                <div
+                  key={selectedBranch.id}
+                  className="Menu_orderModal_appsWrap">
                   <h3 className="Menu_orderModal_heading">
                     {t("menu.orderModal.orderFrom", { branch: selectedName })}
                   </h3>
 
                   <div className="Menu_orderModal_apps">
-                    {selectedBranch.aggregators.map((aggregator) => (
+                    {selectedBranch.aggregators.map((aggregator, index) => (
                       <a
                         key={aggregator.name}
                         className="Menu_orderModal_app"
+                        style={{ "--app-index": index }}
                         href={aggregator.link}
                         target="_blank"
                         rel="noreferrer"
@@ -142,11 +157,7 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
                       </a>
                     ))}
                   </div>
-                </>
-              ) : (
-                <p className="Menu_orderModal_pickPrompt" role="status">
-                  {t("menu.orderModal.pickKitchenFirst")}
-                </p>
+                </div>
               )}
             </div>
           </div>

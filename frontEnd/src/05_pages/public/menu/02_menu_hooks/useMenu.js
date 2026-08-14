@@ -135,6 +135,11 @@ export const useMenu = () => {
     setOrderItem(null);
   }, []);
 
+  const handleOrderFromItem = useCallback((item) => {
+    setSelectedItem(null);
+    setOrderItem(item);
+  }, []);
+
   const handleSearchChange = useCallback((value) => {
     setSearchQuery(value);
   }, []);
@@ -153,6 +158,7 @@ export const useMenu = () => {
       handleItemClose,
       handleOrderOpen,
       handleOrderClose,
+      handleOrderFromItem,
       handleSearchChange,
     },
   };
