@@ -1,7 +1,9 @@
 {
   "menu": {
-    "title": "Our Menu",
-    "subtitle": "Homemade Russian dishes, cooked fresh every day",
+    "hero": {
+      "lead": "Home-style Russian cuisine for every occasion",
+      "description": "Vkusno's menu is built around authentic, traditional, home-style recipes - from comforting soups and handmade dumplings to grills, baked favourites, and classic desserts."
+    },
     "currency": "AED",
     "close": "Close",
     "order": "Order",

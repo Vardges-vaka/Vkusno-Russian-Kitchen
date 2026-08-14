@@ -25,8 +25,8 @@ const Menu = () => {
   return (
     <div className="Menu_container">
       <header className="Menu_hero">
-        <h1 className="Menu_hero_title">{t("menu.title")}</h1>
-        <p className="Menu_hero_subtitle">{t("menu.subtitle")}</p>
+        <h1 className="Menu_hero_lead">{t("menu.hero.lead")}</h1>
+        <p className="Menu_hero_description">{t("menu.hero.description")}</p>
         <Menu_searchBar
           value={searchQuery}
           onChange={handlers.handleSearchChange}

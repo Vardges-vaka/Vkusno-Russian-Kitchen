@@ -1,0 +1,5 @@
+.PublicFooter_aside {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

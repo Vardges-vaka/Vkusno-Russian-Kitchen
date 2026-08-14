@@ -1,0 +1,50 @@
+.PublicFooter_contact_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.PublicFooter_contact_item + .PublicFooter_contact_item {
+  margin-top: 10px;
+}
+
+.PublicFooter_contact_link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--footer_text_color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.PublicFooter_contact_link:hover,
+.PublicFooter_contact_link:focus-visible {
+  color: var(--gold_color);
+  outline: none;
+}
+
+.PublicFooter_contact_icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--gold_color);
+}
+
+.PublicFooter_contact_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.PublicFooter_contact_action {
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--footer_muted_color);
+}
+
+.PublicFooter_contact_value {
+  font-size: 13px;
+  line-height: 1.35;
+  word-break: break-word;
+}

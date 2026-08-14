@@ -74,7 +74,45 @@ body {
   color: var(--text_color);
   -webkit-font-smoothing: antialiased;
   /* Smooth swap when the theme toggles */
+  /* max-width: 100%; */
+  /* overflow-x: hidden; */
+
   transition:
     background-color 0.25s ease,
     color 0.25s ease;
+}
+
+/* =============================================================
+   Page gutters — single horizontal inset for all public shells.
+   ============================================================= */
+:root {
+  --page_gutter-inline: 16px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page_gutter-inline: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --page_gutter-inline: 56px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --page_gutter-inline: 72px;
+  }
+}
+
+.PublicHeader_container,
+.Menu_container,
+.Contact_container,
+.Home_hero_content,
+.section-header,
+.homeFeaturedCarousel__header,
+.homeFeaturedCarousel__dots {
+  padding-inline: var(--page_gutter-inline);
 }

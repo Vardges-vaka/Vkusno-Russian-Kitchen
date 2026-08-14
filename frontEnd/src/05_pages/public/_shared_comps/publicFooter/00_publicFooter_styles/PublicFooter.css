@@ -1,42 +1,45 @@
-/* Footer stays dark in both themes (see ColorVariables.css),
-   so it only uses footer_* variables, never the page ones. */
+/* Footer stays dark in both themes (see ColorVariables.css). */
 .PublicFooter_container {
+  box-sizing: border-box;
+  max-width: 100%;
   background-color: var(--footer_bg_color);
   color: var(--footer_text_color);
-  /* Thin gold rule separates the footer from any page background */
   border-top: 3px solid var(--gold_color);
-  padding: 32px 16px 20px;
-  transition: background-color 0.25s ease;
+  padding-block: 32px 20px;
+  padding-inline: var(--page_gutter-inline);
 }
 
-/* Mobile-first: brand and nav stack, centered */
-.PublicFooter_top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  text-align: center;
+.PublicFooter_inner {
+  min-width: 0;
 }
 
-.PublicFooter_brand_name {
-  margin: 0;
-  font-size: 22px;
+.PublicFooter_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  min-width: 0;
+}
+
+.PublicFooter_grid > * {
+  min-width: 0;
+}
+
+.PublicFooter_sectionTitle {
+  margin: 0 0 14px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--gold_color);
 }
 
-.PublicFooter_brand_tagline {
-  margin: 4px 0 0;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--footer_muted_color);
-}
-
 .PublicFooter_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   margin-top: 28px;
-  padding-top: 16px;
+  padding-top: 18px;
   border-top: 1px solid var(--footer_border_color);
   text-align: center;
 }
@@ -47,14 +50,46 @@
   color: var(--footer_muted_color);
 }
 
+.PublicFooter_bottom .PublicFooter_navBar {
+  min-width: 0;
+}
+
+.PublicFooter_bottom .PublicFooter_navBar_links {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+}
+
+.PublicFooter_bottom .PublicFooter_navBar_link {
+  font-size: 12px;
+}
+
 @media (min-width: 768px) {
   .PublicFooter_container {
-    padding: 40px 32px 24px;
+    padding-block: 48px 24px;
   }
 
-  .PublicFooter_top {
+  .PublicFooter_grid {
+    grid-template-columns: 1.15fr 0.95fr 1fr;
+    gap: 32px 48px;
+    align-items: start;
+  }
+
+  .PublicFooter_bottom {
     flex-direction: row;
     justify-content: space-between;
-    text-align: start; /* start/end instead of left/right keeps RTL correct */
+    align-items: center;
+    text-align: start;
+  }
+
+  .PublicFooter_bottom .PublicFooter_navBar_links {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .PublicFooter_grid {
+    gap: 32px 64px;
   }
 }

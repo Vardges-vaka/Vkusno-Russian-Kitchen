@@ -1,5 +1,7 @@
 /* Mobile-first: logo on top, nav wraps below, actions stay right */
 .PublicHeader_container {
+  box-sizing: border-box;
+  max-width: 100%;
   position: sticky;
   top: 0;
   z-index: 500; /* above page content, below modals */
@@ -8,7 +10,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px 16px;
-  padding: 10px 16px;
+  padding-block: 10px;
+  padding-inline: var(--page_gutter-inline);
   background-color: var(--header_bg_color);
   border-bottom: 1px solid var(--border_color);
   box-shadow: 0 2px 14px var(--header_shadow_color);
@@ -23,6 +26,6 @@
 @media (min-width: 768px) {
   .PublicHeader_container {
     flex-wrap: nowrap;
-    padding: 12px 32px;
+    padding-block: 12px;
   }
 }
