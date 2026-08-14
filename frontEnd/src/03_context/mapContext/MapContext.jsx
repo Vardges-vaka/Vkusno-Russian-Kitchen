@@ -61,13 +61,13 @@ const MapProvider = ({ children }) => {
 
   const hasApiKey = Boolean(MAPS_API_KEY);
 
-  // No key configured (e.g. local dev before .env is set up) — skip loading
+  // No key configured (e.g. local dev before .env is set up) - skip loading
   // the script entirely and hand consumers a context they can use to show
   // a fallback UI instead of a broken map.
   if (!hasApiKey) {
     isMapContext_debug &&
       console.warn(
-        "MapContext: VITE_GOOGLE_MAPS_API_KEY is missing — map features are disabled.",
+        "MapContext: VITE_GOOGLE_MAPS_API_KEY is missing - map features are disabled.",
       );
 
     const fallbackValue = {

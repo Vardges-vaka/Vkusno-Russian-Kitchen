@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // Classes can't use the useTranslation hook, so we call the i18n
-// instance directly — fine here, an error screen doesn't need to
+// instance directly - fine here, an error screen doesn't need to
 // react to live language switches.
 import i18n from "../i18n/i18n.index.js";
 import "./00_comps_styles/errorBoundary.css";

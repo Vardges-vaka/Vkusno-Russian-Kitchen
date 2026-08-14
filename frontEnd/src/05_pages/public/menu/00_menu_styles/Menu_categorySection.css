@@ -13,7 +13,7 @@
   color: var(--text_color);
 }
 
-/* Thin rule stretching after the title — classic printed-menu look */
+/* Thin rule stretching after the title - classic printed-menu look */
 .Menu_categorySection_title::after {
   content: "";
   flex: 1;

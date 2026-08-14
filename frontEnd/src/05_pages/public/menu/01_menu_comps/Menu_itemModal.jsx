@@ -22,7 +22,7 @@ const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
   const name = pickLocale(item.name, lang);
   const longDescription = pickLocale(item.description?.long, lang);
 
-  // Drinks have null nutrition values — hide the whole block then
+  // Drinks have null nutrition values - hide the whole block then
   const hasNutrition = item.nutrition && item.nutrition.calories != null;
   const hasIngredients = item.ingredients && item.ingredients.length > 0;
 
@@ -73,7 +73,7 @@ const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
               <button
                 type="button"
                 className="Menu_itemModal_orderBtn"
-                aria-label={`${t("menu.order")} — ${name}`}
+                aria-label={`${t("menu.order")} - ${name}`}
                 onClick={handleOrderClick}>
                 {t("menu.order")}
               </button>

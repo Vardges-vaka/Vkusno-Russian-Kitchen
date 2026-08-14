@@ -77,3 +77,28 @@
   line-height: 1.45;
   color: var(--footer_muted_color);
 }
+
+@media (max-width: 767px) {
+  .PublicFooter_branches_header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .PublicFooter_branches_line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .PublicFooter_branches_dot {
+    display: none;
+  }
+
+  .PublicFooter_branches_item {
+    padding: 12px 0;
+  }
+
+  .PublicFooter_branches_address {
+    padding-inline-end: 4px;
+  }
+}

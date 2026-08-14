@@ -3,3 +3,22 @@
   flex-direction: column;
   gap: 24px;
 }
+
+@media (max-width: 767px) {
+  .PublicFooter_aside {
+    gap: 20px;
+    padding: 18px 16px 16px;
+    background-color: color-mix(in srgb, var(--footer_text_color) 5%, transparent);
+    border: 1px solid var(--footer_border_color);
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 767px) {
+  .PublicFooter_aside {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 20px 24px;
+    align-items: start;
+  }
+}

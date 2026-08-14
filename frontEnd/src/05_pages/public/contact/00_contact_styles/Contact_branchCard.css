@@ -108,7 +108,7 @@
   gap: 8px;
 }
 
-/* Borderless — the logos themselves carry the shape, so they can be
+/* Borderless - the logos themselves carry the shape, so they can be
    larger and actually recognizable */
 .Contact_branchCard_aggregator {
   display: flex;

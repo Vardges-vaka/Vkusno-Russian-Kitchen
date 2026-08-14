@@ -23,7 +23,7 @@ export const useHome = () => {
     setIsLoaded(true);
   }, []);
 
-  // Flatten the static menu into one long shelf — repeat real dishes until
+  // Flatten the static menu into one long shelf - repeat real dishes until
   // we have ~80 "books", same visual density as the old site.
   const bookshelfItems = useMemo(() => {
     const allMenuItems = Categories.flatMap(
@@ -46,7 +46,7 @@ export const useHome = () => {
     return expanded.slice(0, BOOKSHELF_TARGET);
   }, []);
 
-  // One dish per category for mobile/tablet carousel — no duplicates.
+  // One dish per category for mobile/tablet carousel - no duplicates.
   const featuredItems = useMemo(() => {
     const picked = [];
 

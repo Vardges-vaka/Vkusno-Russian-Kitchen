@@ -14,7 +14,7 @@ const Contact_infoPanel = ({ contactInfo, t }) => {
             href={item.link}
             target={opensNewTab ? "_blank" : undefined}
             rel={opensNewTab ? "noreferrer" : undefined}
-            aria-label={`${t(`contact.infoPanel.${item.name}`)} — ${item.label}`}>
+            aria-label={`${t(`contact.infoPanel.${item.name}`)} - ${item.label}`}>
             <span className="Contact_infoPanel_iconWrap" aria-hidden="true">
               <Icon className="Contact_infoPanel_icon" size={20} />
             </span>

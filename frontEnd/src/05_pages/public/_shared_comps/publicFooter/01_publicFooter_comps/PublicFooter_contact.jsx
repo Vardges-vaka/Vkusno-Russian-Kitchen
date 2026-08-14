@@ -22,7 +22,7 @@ const PublicFooter_contact = ({ tContact }) => {
                 href={item.link}
                 target={opensNewTab ? "_blank" : undefined}
                 rel={opensNewTab ? "noreferrer" : undefined}
-                aria-label={`${tContact(`contact.infoPanel.${item.name}`)} — ${item.label}`}>
+                aria-label={`${tContact(`contact.infoPanel.${item.name}`)} - ${item.label}`}>
                 <Icon className="PublicFooter_contact_icon" size={16} aria-hidden="true" />
                 <span className="PublicFooter_contact_text">
                   <span className="PublicFooter_contact_action">

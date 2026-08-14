@@ -12,7 +12,7 @@ const Contact_branchCard = ({ branch, lang, t, isSelected, onSelect }) => {
     }
   };
 
-  // Stops the click reaching the card's own onClick — links inside
+  // Stops the click reaching the card's own onClick - links inside
   // the card should navigate, not just re-select the already-selected branch.
   const stopCardClick = (event) => event.stopPropagation();
 

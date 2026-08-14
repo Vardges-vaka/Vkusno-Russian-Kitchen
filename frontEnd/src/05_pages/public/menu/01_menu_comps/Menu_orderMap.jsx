@@ -20,7 +20,7 @@ const formatHours = (timing, t) =>
       });
 
 // Lives inside <Map> so useMap() resolves to this instance. Pans when the
-// customer picks a kitchen from the list or a pin — not on every render.
+// customer picks a kitchen from the list or a pin - not on every render.
 const Menu_orderMap_panner = ({
   branches,
   selectedBranchId,
@@ -32,7 +32,7 @@ const Menu_orderMap_panner = ({
   useEffect(() => {
     if (!map) return;
 
-    // No kitchen picked — show all branches at the shared Dubai overview zoom.
+    // No kitchen picked - show all branches at the shared Dubai overview zoom.
     if (!selectedBranchId) {
       map.setCenter(dubaiCenter);
       map.setZoom(defaultZoom);

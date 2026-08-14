@@ -1,8 +1,7 @@
 .PublicFooter_about_brand {
   margin-bottom: 16px;
-  /* Footer-only: white animated logo on the dark footer bar */
   --logo_text_color: var(--footer_text_color);
-  --logo_shadow_color: rgba(255, 0, 0, 0.566);
+  --logo_shadow_color: rgba(0, 0, 0, 0.45);
 }
 
 .PublicFooter_about_brand .vkusno-logo-container {
@@ -37,6 +36,33 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--gold_color);
+}
+
+@media (max-width: 767px) {
+  .PublicFooter_about_brand {
+    margin-bottom: 14px;
+  }
+
+  .PublicFooter_about_brand .vkusno-logo-container {
+    align-items: center;
+  }
+
+  .PublicFooter_about_brand .vkusno-logo.main {
+    font-size: 22px;
+  }
+
+  .PublicFooter_about_brand .letter {
+    margin: 0 1px;
+  }
+
+  .PublicFooter_about_lead {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .PublicFooter_about_closing {
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {

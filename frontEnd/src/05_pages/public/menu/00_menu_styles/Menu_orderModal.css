@@ -105,7 +105,7 @@
   border-block: 1px solid var(--border_color);
 }
 
-/* Right column / bottom sheet body — scrolls as one block when content overflows */
+/* Right column / bottom sheet body - scrolls as one block when content overflows */
 .Menu_orderModal_panel {
   display: flex;
   flex-direction: column;
@@ -133,7 +133,7 @@
   color: var(--text_muted_color);
 }
 
-/* Horizontal snap-strip on phones — scroll stays inside this row */
+/* Horizontal snap-strip on phones - scroll stays inside this row */
 .Menu_orderModal_kitchens {
   display: flex;
   gap: 6px;

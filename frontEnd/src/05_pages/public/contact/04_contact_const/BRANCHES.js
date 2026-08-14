@@ -7,12 +7,12 @@ import {
 } from "../../../../01_assets/_assets.index.js";
 
 // Source: context/Details - Copy.xlsx ("Branches" sheet).
-// ru/ar branch names are a first draft translation — flagged for the
+// ru/ar branch names are a first draft translation - flagged for the
 // client to confirm/correct, per the plan.
 //
 // aggregators: only aggregators actually offered at a branch are listed.
 // "http://localhost:5173" is a placeholder for storefront URLs that
-// haven't been provided yet — swap in the real link when available.
+// haven't been provided yet - swap in the real link when available.
 const BRANCHES = [
   {
     id: "arjan",
@@ -81,8 +81,8 @@ const BRANCHES = [
   {
     id: "bbSolAvenue",
     name: {
-      en: "Business Bay — SOL Avenue",
-      ru: "Бизнес-Бэй — Sol Avenue",
+      en: "Business Bay - SOL Avenue",
+      ru: "Бизнес-Бэй - Sol Avenue",
       ar: "بيزنس باي - سول أفينيو",
     },
     location: {
@@ -109,8 +109,8 @@ const BRANCHES = [
   {
     id: "bbCuisinette",
     name: {
-      en: "Business Bay — Cuisinette",
-      ru: "Бизнес-Бэй — Cuisinette",
+      en: "Business Bay - Cuisinette",
+      ru: "Бизнес-Бэй - Cuisinette",
       ar: "بيزنس باي - كويزينيت",
     },
     location: {

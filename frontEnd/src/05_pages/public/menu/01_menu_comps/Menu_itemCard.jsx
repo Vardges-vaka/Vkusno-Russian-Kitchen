@@ -59,7 +59,7 @@ const Menu_itemCard = React.memo(({ item, lang, t, onClick, onOrderClick }) => {
           <button
             type="button"
             className="Menu_itemCard_orderBtn"
-            aria-label={`${t("menu.order")} — ${name}`}
+            aria-label={`${t("menu.order")} - ${name}`}
             onClick={handleOrderClick}>
             {t("menu.order")}
           </button>

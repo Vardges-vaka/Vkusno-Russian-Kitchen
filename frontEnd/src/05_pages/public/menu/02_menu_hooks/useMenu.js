@@ -20,7 +20,7 @@ export const useMenu = () => {
 
   const [activeCategoryId, setActiveCategoryId] = useState(Categories[0]?.id);
   const [selectedItem, setSelectedItem] = useState(null);
-  // Dish whose "Order" button was pressed — opens the map + aggregator modal.
+  // Dish whose "Order" button was pressed - opens the map + aggregator modal.
   const [orderItem, setOrderItem] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -68,7 +68,7 @@ export const useMenu = () => {
 
   // Highlight the tab of whichever category section currently sits in the
   // "reading band" just below the header. IntersectionObserver only fires
-  // when a section enters/leaves that band — far cheaper than a scroll handler.
+  // when a section enters/leaves that band - far cheaper than a scroll handler.
   // Re-runs when search changes the rendered sections, so we observe the
   // current DOM nodes rather than stale removed ones.
   useEffect(() => {
@@ -83,7 +83,7 @@ export const useMenu = () => {
           }
         });
       },
-      // Band = 25% from the top of the viewport down to 35% — roughly
+      // Band = 25% from the top of the viewport down to 35% - roughly
       // "what the eye is reading" once the sticky header/tabs are excluded.
       { rootMargin: "-25% 0px -65% 0px" },
     );

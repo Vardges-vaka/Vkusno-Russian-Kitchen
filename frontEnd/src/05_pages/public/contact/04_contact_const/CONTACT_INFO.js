@@ -4,8 +4,6 @@ import { Phone, Mail, MessageCircle } from "lucide-react";
 const PHONE_NUMBER = "+971 52 102 5674";
 const EMAIL_ADDRESS = "info@vkusno.ae";
 
-// All rows use lucide outline icons so the panel reads as one set —
-// MessageCircle stands in for the WhatsApp brand logo on purpose.
 const CONTACT_INFO = [
   {
     name: "phone",

@@ -83,7 +83,7 @@ body {
 }
 
 /* =============================================================
-   Page gutters — single horizontal inset for all public shells.
+   Page gutters - single horizontal inset for all public shells.
    ============================================================= */
 :root {
   --page_gutter-inline: 16px;

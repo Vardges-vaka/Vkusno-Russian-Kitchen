@@ -1,5 +1,5 @@
 /* =============================================================
-   VKUSNO — Color palette
+   VKUSNO - Color palette
    Raw color values only. L_ = light theme, D_ = dark theme.
    Theme-neutral names are mapped in App.css via [data-theme].
    Concept: warm "cream & charcoal" base, Russian-red accent,
@@ -17,7 +17,7 @@
   --L_shadow_color: rgba(43, 33, 24, 0.1);
 
   /* Brand accents */
-  --L_accent_color: #b3001b; /* Russian red — links, active states */
+  --L_accent_color: #b3001b; /* Russian red - links, active states */
   --L_accent_hover_color: #8c0015; /* darker red on hover (light bg) */
   --L_accent_soft_color: rgba(179, 0, 27, 0.08); /* subtle red tint fills */
   --L_gold_color: #c99a2e; /* secondary brand tone */
@@ -26,7 +26,7 @@
   --L_header_bg_color: rgba(255, 253, 248, 0.92); /* translucent for blur */
   --L_header_shadow_color: rgba(43, 33, 24, 0.08);
 
-  /* Footer — intentionally dark in BOTH themes (restaurant look) */
+  /* Footer - intentionally dark in BOTH themes (restaurant look) */
   --L_footer_bg_color: #241b14;
   --L_footer_text_color: #f2ece1;
   --L_footer_muted_color: #b3a696;
@@ -61,13 +61,13 @@
   --D_header_bg_color: rgba(26, 20, 15, 0.92);
   --D_header_shadow_color: rgba(0, 0, 0, 0.35);
 
-  /* Footer — one shade deeper than the page bg */
+  /* Footer - one shade deeper than the page bg */
   --D_footer_bg_color: #100c09;
   --D_footer_text_color: #f2ece1;
   --D_footer_muted_color: #9c8d7b;
   --D_footer_border_color: rgba(242, 236, 225, 0.12);
 
-  /* Logo — gold reads better than red on dark */
+  /* Logo - gold reads better than red on dark */
   --D_logo_text_color: #ffffff;
   --D_logo_shadow_color: rgba(255, 0, 0, 0.566);
 

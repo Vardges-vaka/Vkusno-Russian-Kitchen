@@ -29,3 +29,18 @@
   height: 20px;
   object-fit: contain;
 }
+
+@media (max-width: 767px) {
+  .PublicFooter_socials_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .PublicFooter_socials_link {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background-color: color-mix(in srgb, var(--footer_text_color) 4%, transparent);
+    border: 1px solid var(--footer_border_color);
+  }
+}

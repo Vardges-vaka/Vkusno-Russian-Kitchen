@@ -28,6 +28,7 @@
   margin: 0 0 14px;
   font-size: 12px;
   font-weight: 700;
+  line-height: 1.35;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold_color);
@@ -63,6 +64,40 @@
 
 .PublicFooter_bottom .PublicFooter_navBar_link {
   font-size: 12px;
+}
+
+/* ── Mobile: clearer section rhythm and compact connect block ── */
+@media (max-width: 767px) {
+  .PublicFooter_container {
+    padding-block: 28px 18px;
+  }
+
+  .PublicFooter_grid {
+    gap: 0;
+  }
+
+  .PublicFooter_grid > * + *:not(.PublicFooter_aside) {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--footer_border_color);
+  }
+
+  .PublicFooter_grid > .PublicFooter_aside {
+    margin-top: 28px;
+  }
+
+  .PublicFooter_sectionTitle {
+    margin-bottom: 12px;
+  }
+
+  .PublicFooter_bottom {
+    margin-top: 32px;
+    gap: 14px;
+  }
+
+  .PublicFooter_bottom .PublicFooter_navBar_links {
+    gap: 6px 12px;
+  }
 }
 
 @media (min-width: 768px) {
