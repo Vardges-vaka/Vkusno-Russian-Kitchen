@@ -8,8 +8,7 @@ import "../00_publicHeader_styles/PublicHeader_actions.css";
 const PublicHeader_actions = () => {
   return (
     <aside className="PublicHeader_actions">
-      <ThemeToggler />
-      <LanguageSelect />
+      <LanguageSelect /> <ThemeToggler />
     </aside>
   );
 };

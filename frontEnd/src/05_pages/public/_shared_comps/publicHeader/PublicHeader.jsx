@@ -10,7 +10,9 @@ const PublicHeader = () => {
   const { handlers, t } = usePublicHeader();
   return (
     <div className="PublicHeader_container">
-      <Logo onClick={handlers.handleLogoClick} />
+      <div className="PublicHeader_logo">
+        <Logo onClick={handlers.handleLogoClick} />
+      </div>
       <PublicHeader_navBar t={t} />
       <PublicHeader_actions t={t} />
     </div>

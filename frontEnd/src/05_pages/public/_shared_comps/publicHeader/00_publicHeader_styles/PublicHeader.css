@@ -1,15 +1,17 @@
-/* Mobile-first: logo on top, nav wraps below, actions stay right */
+/* Mobile: logo + actions on row 1, nav full-width on row 2 */
 .PublicHeader_container {
   box-sizing: border-box;
   max-width: 100%;
   position: sticky;
   top: 0;
   z-index: 500; /* above page content, below modals */
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "logo actions"
+    "nav nav";
   align-items: center;
-  justify-content: space-between;
-  gap: 8px 16px;
+  gap: 10px 12px;
   padding-block: 10px;
   padding-inline: var(--page_gutter-inline);
   background-color: var(--header_bg_color);
@@ -23,9 +25,54 @@
     border-color 0.25s ease;
 }
 
+.PublicHeader_logo {
+  grid-area: logo;
+  min-width: 0;
+}
+
+.PublicHeader_logo .vkusno-logo-container {
+  align-items: flex-start;
+}
+
+.PublicHeader_logo .vkusno-logo.main {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.PublicHeader_logo .vkusno-logo.subtitle {
+  font-size: 9px;
+}
+
+.PublicHeader_logo .letter {
+  margin: 0 1px;
+}
+
+.PublicHeader_container .PublicHeader_navBar {
+  grid-area: nav;
+}
+
+.PublicHeader_container .PublicHeader_actions {
+  grid-area: actions;
+}
+
 @media (min-width: 768px) {
   .PublicHeader_container {
-    flex-wrap: nowrap;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo nav actions";
+    gap: 8px 24px;
     padding-block: 12px;
+  }
+
+  .PublicHeader_logo .vkusno-logo.main {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .PublicHeader_logo .vkusno-logo.subtitle {
+    font-size: 10px;
+  }
+
+  .PublicHeader_logo .letter {
+    margin: 0 3px;
   }
 }

@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
 }
 
 .PublicHeader_navBar_links {
@@ -61,6 +62,38 @@
 .PublicHeader_navBar_link:hover::after,
 .PublicHeader_navBar_link.active_link::after {
   transform: scaleX(1);
+}
+
+@media (max-width: 767px) {
+  .PublicHeader_navBar {
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid var(--border_color);
+  }
+
+  .PublicHeader_navBar_links {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .PublicHeader_navBar_link_item {
+    flex: 1;
+  }
+
+  .PublicHeader_navBar_link {
+    display: block;
+    width: 100%;
+    padding: 10px 8px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: color-mix(in srgb, var(--text_color) 4%, transparent);
+  }
+
+  .PublicHeader_navBar_link::after {
+    left: 20%;
+    right: 20%;
+    bottom: 4px;
+  }
 }
 
 @media (min-width: 768px) {

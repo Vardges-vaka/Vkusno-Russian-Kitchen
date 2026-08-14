@@ -13,7 +13,6 @@ const PublicHeader_navBar = ({ t }) => {
           <li key={to} className="PublicHeader_navBar_link_item">
             <NavLink
               to={to}
-              end={to === "/"}
               className={({ isActive }) =>
                 isActive
                   ? "PublicHeader_navBar_link active_link"

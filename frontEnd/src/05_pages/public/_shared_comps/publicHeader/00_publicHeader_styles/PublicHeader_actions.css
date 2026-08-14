@@ -3,3 +3,21 @@
   align-items: center;
   gap: 14px; /* toggler & language select are scaled up, need breathing room */
 }
+
+@media (max-width: 767px) {
+  .PublicHeader_actions {
+    gap: 6px;
+  }
+
+  .PublicHeader_actions .languageSwitcher {
+    transform: scale(1.15);
+  }
+
+  .PublicHeader_actions .themeToggle {
+    transform: scale(1.15);
+  }
+
+  .PublicHeader_actions .themeToggle:hover {
+    transform: scale(1.25);
+  }
+}
