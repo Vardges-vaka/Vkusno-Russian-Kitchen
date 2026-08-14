@@ -1,21 +1,13 @@
 .PublicFooter_about_brand {
   margin-bottom: 16px;
+  /* Footer-only: white animated logo on the dark footer bar */
+  --logo_text_color: var(--footer_text_color);
+  --logo_shadow_color: rgba(255, 0, 0, 0.566);
 }
 
-.PublicFooter_about_name {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.24em;
-  color: var(--gold_color);
-}
-
-.PublicFooter_about_tagline {
-  margin: 6px 0 0;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--footer_muted_color);
+.PublicFooter_about_brand .vkusno-logo-container {
+  align-items: flex-start;
+  cursor: default;
 }
 
 .PublicFooter_about_lead {
@@ -23,7 +15,7 @@
   font-size: 1.05rem;
   font-style: italic;
   line-height: 1.45;
-  color: var(--footer_text_color);
+  color: var(--gold_color);
 }
 
 .PublicFooter_about_story {

@@ -68,8 +68,8 @@
   --D_footer_border_color: rgba(242, 236, 225, 0.12);
 
   /* Logo — gold reads better than red on dark */
-  --D_logo_text_color: #e3b23c;
-  --D_logo_shadow_color: rgba(0, 0, 0, 0.55);
+  --D_logo_text_color: #ffffff;
+  --D_logo_shadow_color: rgba(255, 0, 0, 0.566);
 
   /* Icons & controls */
   --D_Icon_bg_color: #2a221a;

@@ -1,11 +1,11 @@
+import { Logo } from "../../../../../02_comps/_comps.index.js";
 import "../00_publicFooter_styles/PublicFooter_about.css";
 
 const PublicFooter_about = ({ t }) => {
   return (
     <section className="PublicFooter_about" aria-label={t("footer.about.label")}>
       <div className="PublicFooter_about_brand">
-        <p className="PublicFooter_about_name">VKUSNO</p>
-        <p className="PublicFooter_about_tagline">Russian Kitchen</p>
+        <Logo />
       </div>
 
       <p className="PublicFooter_about_lead">{t("footer.about.lead")}</p>

@@ -10,6 +10,7 @@ import {
 } from "./03_context/_context.index.js";
 import { ErrorBoundary, PageLoader } from "./02_comps/_comps.index.js";
 import { UserRoutes } from "./06_routes/_routes.index.js";
+import ScrollToTop from "./06_routes/ScrollToTop.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <LanguageProvider>
             <MapProvider>
               <Router>
+                <ScrollToTop />
                 <Suspense fallback={<PageLoader />}>
                   <Routes>
                     <Route
