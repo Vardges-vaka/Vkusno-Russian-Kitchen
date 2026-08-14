@@ -3,7 +3,7 @@
   inset: 0;
   z-index: 1000; /* above the sticky header */
   display: flex;
-  align-items: flex-end; /* bottom sheet on mobile */
+  align-items: flex-end;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
   animation: menuOrderModalFade 0.2s ease;
@@ -11,20 +11,31 @@
 
 .Menu_orderModal_dialog {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-height: 92vh;
-  overflow-y: auto;
+  overflow: hidden;
   background-color: var(--surface_color);
   color: var(--text_color);
   border-radius: 16px 16px 0 0;
   animation: menuOrderModalRise 0.25s ease-out;
 }
 
+.Menu_orderModal_handle {
+  flex-shrink: 0;
+  width: 40px;
+  height: 4px;
+  margin: 10px auto 0;
+  background-color: var(--border_color);
+  border-radius: 2px;
+}
+
 .Menu_orderModal_close {
   position: absolute;
   top: 12px;
-  inset-inline-end: 12px; /* logical property: stays on the "far" side in RTL */
-  z-index: 1;
+  inset-inline-end: 12px;
+  z-index: 2;
   width: 36px;
   height: 36px;
   font-size: 22px;
@@ -37,40 +48,199 @@
   transition: background-color 0.15s ease-in-out;
 }
 
-.Menu_orderModal_close:hover {
+.Menu_orderModal_close:hover,
+.Menu_orderModal_close:focus-visible {
   color: var(--footer_text_color);
   background-color: var(--accent_color);
+  outline: none;
 }
 
-.Menu_orderModal_body {
-  padding: 20px;
+.Menu_orderModal_header {
+  flex-shrink: 0;
+  padding: 8px 20px 10px;
+  padding-inline-end: 52px;
+}
+
+.Menu_orderModal_eyebrow {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold_color);
 }
 
 .Menu_orderModal_title {
-  margin: 0;
-  margin-inline-end: 36px; /* keeps the title clear of the close button in LTR and RTL */
-  font-size: 20px;
+  margin: 2px 0 0;
+  font-size: 22px;
+  line-height: 1.2;
 }
 
-/* Dashed box marks the area the real content will occupy later */
-.Menu_orderModal_placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 220px;
-  margin-top: 16px;
-  padding: 20px;
-  border: 2px dashed var(--border_color);
-  border-radius: 12px;
-}
-
-.Menu_orderModal_placeholder_text {
-  margin: 0;
-  max-width: 320px;
-  font-size: 14px;
-  line-height: 1.6;
-  text-align: center;
+.Menu_orderModal_subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
   color: var(--text_muted_color);
+}
+
+.Menu_orderModal_layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.Menu_orderModal_map {
+  flex-shrink: 0;
+  height: 200px;
+  border-block: 1px solid var(--border_color);
+}
+
+/* Right column / bottom sheet body — scrolls as one block when content overflows */
+.Menu_orderModal_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px 16px 16px;
+}
+
+.Menu_orderModal_kitchensBlock {
+  flex-shrink: 0;
+}
+
+.Menu_orderModal_heading {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text_muted_color);
+}
+
+/* Horizontal snap-strip on phones */
+.Menu_orderModal_kitchens {
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.Menu_orderModal_kitchens li {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.Menu_orderModal_kitchen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 200px;
+  padding: 7px 10px;
+  color: var(--text_color);
+  text-align: start;
+  background-color: var(--bg_color);
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.Menu_orderModal_kitchen:hover,
+.Menu_orderModal_kitchen:focus-visible {
+  border-color: var(--gold_color);
+  outline: none;
+}
+
+.Menu_orderModal_kitchen--selected {
+  border-color: var(--accent_color);
+  box-shadow: 0 0 0 2px var(--accent_soft_color);
+}
+
+.Menu_orderModal_kitchen_name {
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.Menu_orderModal_kitchen_hours {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent_color);
+}
+
+.Menu_orderModal_orderOn {
+  flex-shrink: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border_color);
+}
+
+.Menu_orderModal_orderOn .Menu_orderModal_heading {
+  margin-bottom: 8px;
+}
+
+.Menu_orderModal_pickPrompt {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text_muted_color);
+  background-color: var(--bg_color);
+  border: 1px dashed var(--border_color);
+  border-radius: 8px;
+}
+
+.Menu_orderModal_apps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.Menu_orderModal_app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  color: var(--text_color);
+  text-decoration: none;
+  background-color: var(--bg_color);
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+  transition:
+    border-color 0.15s ease-in-out,
+    transform 0.15s ease-out;
+}
+
+.Menu_orderModal_app:hover,
+.Menu_orderModal_app:focus-visible {
+  border-color: var(--accent_color);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.Menu_orderModal_app_logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.Menu_orderModal_app_name {
+  font-size: 12px;
+  font-weight: 600;
 }
 
 @keyframes menuOrderModalFade {
@@ -93,14 +263,113 @@
   }
 }
 
+@media (min-width: 480px) {
+  .Menu_orderModal_apps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .Menu_orderModal_app_logo {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 @media (min-width: 768px) {
   .Menu_orderModal {
-    align-items: center; /* centered dialog on larger screens */
+    align-items: center;
     padding: 24px;
   }
 
   .Menu_orderModal_dialog {
-    max-width: 560px;
+    max-width: 720px;
+    max-height: 88vh;
     border-radius: 16px;
+  }
+
+  .Menu_orderModal_handle {
+    display: none;
+  }
+
+  .Menu_orderModal_header {
+    padding: 20px 24px 10px;
+  }
+
+  .Menu_orderModal_title {
+    font-size: 24px;
+  }
+
+  .Menu_orderModal_map {
+    height: 240px;
+  }
+
+  .Menu_orderModal_panel {
+    gap: 14px;
+    padding: 14px 20px 18px;
+  }
+
+  .Menu_orderModal_kitchens {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .Menu_orderModal_kitchens li {
+    min-width: 0;
+  }
+
+  .Menu_orderModal_kitchen {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Menu_orderModal_dialog {
+    max-width: 960px;
+    height: min(620px, 88vh);
+  }
+
+  .Menu_orderModal_layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .Menu_orderModal_map {
+    height: auto;
+    border-block: none;
+    border-inline-end: 1px solid var(--border_color);
+  }
+
+  .Menu_orderModal_panel {
+    gap: 16px;
+    padding: 16px 20px 20px;
+  }
+
+  .Menu_orderModal_kitchens {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .Menu_orderModal_apps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Menu_orderModal,
+  .Menu_orderModal_dialog,
+  .Menu_orderModal_kitchen,
+  .Menu_orderModal_app {
+    animation: none;
+    transition: none;
+  }
+
+  .Menu_orderModal_app:hover,
+  .Menu_orderModal_app:focus-visible {
+    transform: none;
   }
 }

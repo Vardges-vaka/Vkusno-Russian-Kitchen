@@ -1,4 +1,21 @@
 {
-    "something": {}
+  "hero": {
+    "tagline": "Authentic Flavors",
+    "description": "Delicious meals delivered straight to your door. Experience our premium meals from the comfort of your home.",
+    "cta": "View Our Menu"
+  },
+  "bookShelf": {
+    "title": "Our Menu",
+    "description": "Explore our delicious menu and find your favorite dishes.",
+    "cta": "Show More",
+    "currency": "AED",
+    "fallbackDescription": "A delicious traditional dish from our special menu collection."
+  },
+  "featured": {
+    "title": "Featured Dishes",
+    "description": "Swipe through our favorites and tap Show More for full details.",
+    "swipeHint": "Swipe to explore →",
+    "prev": "Previous dish",
+    "next": "Next dish"
   }
-  
+}

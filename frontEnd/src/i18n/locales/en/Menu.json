@@ -1,12 +1,21 @@
 {
   "menu": {
     "title": "Our Menu",
-    "subtitle": "Homemade Russian & Uzbek dishes, cooked fresh every day",
+    "subtitle": "Homemade Russian dishes, cooked fresh every day",
     "currency": "AED",
     "close": "Close",
     "order": "Order",
     "orderModal": {
-      "placeholder": "Our map, branch locations and delivery links will appear here soon."
+      "subtitle": "Choose a kitchen, then order on a delivery app",
+      "pickKitchen": "Kitchens",
+      "pickKitchenFirst": "Pick a kitchen above to see delivery options",
+      "orderFrom": "Order from {{branch}}",
+      "mapLabel": "Map of kitchens",
+      "mapLoading": "Loading the map…",
+      "mapUnavailable": "The map is temporarily unavailable. Pick a kitchen below.",
+      "open24": "Open 24/7",
+      "hours": "{{open}} – {{close}}",
+      "orderOn": "Order on {{app}}"
     },
     "search": {
       "placeholder": "Search dishes...",

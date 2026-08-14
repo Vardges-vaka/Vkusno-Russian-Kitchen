@@ -1,0 +1,76 @@
+.Menu_orderMap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  overflow: hidden;
+  background-color: var(--bg_color);
+}
+
+.Menu_orderMap_canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.Menu_orderMap_fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text_muted_color);
+  background-color: var(--bg_color);
+}
+
+/* Google's InfoWindow chrome is always light, so this bubble uses a
+   fixed warm palette rather than theme tokens */
+.Menu_orderMap_infoWindow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+  color: #2b2118;
+}
+
+.Menu_orderMap_infoWindow_name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.Menu_orderMap_infoWindow_hours {
+  margin: 0;
+  font-size: 12px;
+  color: #7a6a5c;
+}
+
+.Menu_orderMap_infoWindow_apps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.Menu_orderMap_infoWindow_app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.Menu_orderMap_infoWindow_app:hover,
+.Menu_orderMap_infoWindow_app:focus-visible {
+  outline: 2px solid #b3001b;
+  outline-offset: 1px;
+}
+
+.Menu_orderMap_infoWindow_logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}

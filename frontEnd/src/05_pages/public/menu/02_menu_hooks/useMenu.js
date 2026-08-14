@@ -1,16 +1,26 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Categories } from "../04_menu_const/CATEGORIES.js";
+
+const findMenuItemById = (itemId) => {
+  for (const category of Categories) {
+    const item = category.menuItems.find((menuItem) => menuItem.id === itemId);
+    if (item) return { item, categoryId: category.id };
+  }
+  return null;
+};
 
 export const useMenu = () => {
   const { t, i18n } = useTranslation("Menu");
+  const location = useLocation();
+  const navigate = useNavigate();
   // "en-US" -> "en" so it matches the data's locale keys (en / ar / ru)
   const lang = (i18n.language || "en").split("-")[0];
 
   const [activeCategoryId, setActiveCategoryId] = useState(Categories[0]?.id);
   const [selectedItem, setSelectedItem] = useState(null);
-  // Dish whose "Order" button was pressed — feeds the upcoming order modal
-  // (map, branches, aggregator links). The modal itself is built later.
+  // Dish whose "Order" button was pressed — opens the map + aggregator modal.
   const [orderItem, setOrderItem] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -81,6 +91,27 @@ export const useMenu = () => {
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, [visibleCategories]);
+
+  // Home bookshelf "Show More" lands here with { openItemId } in location state.
+  useEffect(() => {
+    const openItemId = location.state?.openItemId;
+    if (!openItemId) return;
+
+    const match = findMenuItemById(openItemId);
+    if (match) {
+      setSelectedItem(match.item);
+      setActiveCategoryId(match.categoryId);
+
+      requestAnimationFrame(() => {
+        const section = document.getElementById(
+          `menuCategory-${match.categoryId}`,
+        );
+        section?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+
+    navigate(location.pathname, { replace: true, state: null });
+  }, [location.pathname, location.state, navigate]);
 
   const handleCategorySelect = useCallback((categoryId) => {
     setActiveCategoryId(categoryId);
