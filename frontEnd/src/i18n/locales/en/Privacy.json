@@ -1,3 +1,102 @@
 {
-  "something": {}
+  "title": "Privacy Policy",
+  "lastUpdated": "Last updated: 15 August 2026",
+  "intro": "This Privacy Policy explains how Vkusno (“we”, “us”, “our”) handles information when you visit our website at vkusno.ae. We keep this policy clear and proportionate to what our site actually does: showcase our menu and locations and help you reach us or order through trusted delivery partners.",
+  "sections": [
+    {
+      "title": "1. Who we are",
+      "paragraphs": [
+        "Vkusno Russian Kitchen operates restaurants in the United Arab Emirates. Our website is an informational site for our brand, menu, branch locations, and contact details.",
+        "If you have questions about this policy or your personal data, you can reach us using the contact details at the end of this page."
+      ]
+    },
+    {
+      "title": "2. What this policy covers",
+      "paragraphs": [
+        "This policy applies to your use of our website. It does not govern third-party delivery apps, payment platforms, or social networks that you may visit when you leave our site-for example, when you tap a delivery-app link in our order flow. Those services have their own privacy policies."
+      ]
+    },
+    {
+      "title": "3. Information we collect",
+      "paragraphs": [
+        "We do not require you to create an account to browse our website, and we do not operate online checkout on vkusno.ae.",
+        "Depending on how you use the site, we may process the following:"
+      ],
+      "bullets": [
+        "Preferences you choose on the site, such as language and light/dark theme, stored in your browser’s local storage so your choices are remembered on return visits.",
+        "Basic technical information that browsers and hosting services typically generate automatically, such as IP address, device type, browser type, and pages viewed. This helps keep the site secure and running reliably.",
+        "Information you choose to share when you contact us by phone, email, or WhatsApp-for example, your name, phone number, or the content of your message."
+      ]
+    },
+    {
+      "title": "4. How we use information",
+      "paragraphs": [
+        "We use information only for legitimate business purposes related to operating and improving our website and responding to customer enquiries, including:"
+      ],
+      "bullets": [
+        "Displaying the site in your preferred language and theme.",
+        "Showing branch locations on maps and helping you choose a kitchen for ordering.",
+        "Answering questions and providing customer support when you contact us.",
+        "Protecting the security and performance of the website."
+      ],
+      "paragraphsAfter": [
+        "We do not sell your personal data."
+      ]
+    },
+    {
+      "title": "5. Third-party services",
+      "paragraphs": [
+        "Some features rely on trusted third parties. When you use them, those providers may collect information under their own policies:"
+      ],
+      "bullets": [
+        "Google Maps - used to display branch locations and maps on our Menu and Contact pages. Google’s privacy policy applies to map-related data processing.",
+        "Delivery aggregators - when you select a kitchen and open a delivery app (such as Talabat, Deliveroo, or similar partners listed on our site), you leave vkusno.ae and become subject to that app’s terms and privacy policy.",
+        "WhatsApp, phone, and email - if you contact us through these channels, your communication is handled according to the provider’s policies as well as ours.",
+        "Social media - links to platforms such as Instagram or LinkedIn are provided for convenience; those platforms process data under their own rules."
+      ]
+    },
+    {
+      "title": "6. Cookies and local storage",
+      "paragraphs": [
+        "Our site uses your browser’s local storage to remember language and theme preferences. i18next may also use storage mechanisms to remember your language choice.",
+        "We do not currently use advertising or cross-site tracking cookies on this website. If we introduce analytics or marketing tools in the future, we will update this policy and, where required, ask for your consent."
+      ]
+    },
+    {
+      "title": "7. How long we keep information",
+      "paragraphs": [
+        "Preference data stored in your browser remains until you clear your browser storage or change your settings.",
+        "If you contact us directly, we keep your message and contact details only as long as needed to respond, maintain business records, and meet applicable legal or regulatory requirements."
+      ]
+    },
+    {
+      "title": "8. Your rights",
+      "paragraphs": [
+        "Under applicable UAE data-protection laws, including the UAE Personal Data Protection Law (PDPL) where it applies to our processing, you may have rights to access, correct, delete, or restrict certain uses of your personal data, and to object to processing in some cases.",
+        "To exercise these rights, contact us using the details below. We may need to verify your request before responding."
+      ]
+    },
+    {
+      "title": "9. Children",
+      "paragraphs": [
+        "Our website is not directed at children under 13, and we do not knowingly collect personal data from children. If you believe a child has provided us with personal information, please contact us so we can take appropriate steps."
+      ]
+    },
+    {
+      "title": "10. International processing",
+      "paragraphs": [
+        "Some third-party providers (for example, Google) may process data on servers located outside the UAE. Where required, we rely on appropriate safeguards permitted under applicable law."
+      ]
+    },
+    {
+      "title": "11. Changes to this policy",
+      "paragraphs": [
+        "We may update this Privacy Policy from time to time. When we do, we will revise the “Last updated” date at the top of this page. Continued use of the website after changes are posted means you accept the updated policy."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "12. Contact us",
+    "body": "For privacy-related questions or requests, email us at {{email}} or call {{phone}}."
+  }
 }

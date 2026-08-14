@@ -6,7 +6,7 @@ export const i18nConfig = {
     loadPath: "/src/i18n/locales/{{lng}}/{{ns}}.json",
   },
 
-  ns: ["common", "Home", "Contact", "Menu", "FAQ", "Privacy", "TnC"],
+  ns: ["common", "Home", "Contact", "Menu", "FAQ", "Privacy"],
   defaultNS: "common",
 
   interpolation: {
