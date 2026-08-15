@@ -12,6 +12,17 @@ dist
 dist-ssr
 *.local
 
+# Environment / secrets
+# frontEnd/.env is the file that actually holds VITE_GOOGLE_MAPS_API_KEY.
+# Repeated here so this directory is self-sufficient and does not depend on
+# the root .gitignore to keep secrets out.
+.env
+.env.*
+!.env.example
+
+# Vercel CLI
+.vercel
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

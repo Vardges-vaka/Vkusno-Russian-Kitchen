@@ -1,10 +1,36 @@
-node_modules
-dist
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment / secrets
+# Every .env variant is ignored. Vite bakes these into the bundle at build
+# time, so the real values live in the Vercel dashboard, never in the repo.
+# .env.example is the one exception - it documents the required keys.
 .env
-.env.local
+.env.*
+!.env.example
+
+# Vercel CLI - writes project + org IDs into .vercel/project.json
+.vercel
+
+# Logs
 *.log
-.DS_Store
-.vscode
-.cursor
-.context
+
+# Editor / assistant tooling
+.vscode/
+.idea/
+.cursor/
+.claude/
+
+# Local planning + context notes, not part of the deliverable
+.context/
+.plans/
 plan.md
+
+# OS junk (Windows / OneDrive / macOS)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
