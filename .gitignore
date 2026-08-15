@@ -34,3 +34,4 @@ plan.md
 Thumbs.db
 ehthumbs.db
 desktop.ini
+*.stackdump
