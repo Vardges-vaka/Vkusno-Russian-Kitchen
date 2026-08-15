@@ -1,9 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
 import { useMapContext } from "../../../../03_context/_context.index.js";
-import { BRANCHES } from "../../contact/04_contact_const/_contact_const.index.js";
+import {
+  BRANCHES,
+  CONTACT_INFO,
+  DIRECT_ORDER,
+} from "../../contact/04_contact_const/_contact_const.index.js";
 import Menu_orderMap from "./Menu_orderMap.jsx";
 import "../00_menu_styles/Menu_orderModal.css";
+
+const PHONE_CONTACT = CONTACT_INFO.find((item) => item.name === "phone");
+const WHATSAPP_CONTACT = CONTACT_INFO.find((item) => item.name === "WhatsApp");
 
 const formatHours = (timing, t) =>
   timing.is24Hours
@@ -15,7 +22,6 @@ const formatHours = (timing, t) =>
 
 const Menu_orderModal = ({ item, lang, t, onClose }) => {
   const { selectedBranchId, selectBranch } = useMapContext();
-
   const name = pickLocale(item.name, lang);
   const selectedBranch = BRANCHES.find(
     (branch) => branch.id === selectedBranchId,
@@ -23,10 +29,58 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
   const selectedName = selectedBranch
     ? pickLocale(selectedBranch.name, lang)
     : null;
+  const orderOnMeasureRef = useRef(null);
+  const [orderOnHeight, setOrderOnHeight] = useState(0);
+  const [canAnimateOrderOnHeight, setCanAnimateOrderOnHeight] = useState(false);
 
-  // Esc closes; page scroll is locked. Start with no kitchen selected so the
-  // map opens at dubaiCenter + defaultZoom, then clear on unmount so Contact
-  // doesn't inherit this modal's pin.
+  // Animate panel height to the real content size (max-height transitions feel abrupt).
+  useLayoutEffect(() => {
+    const measureEl = orderOnMeasureRef.current;
+    if (!measureEl) return;
+
+    const readHeight = () => measureEl.offsetHeight;
+
+    const applyHeight = (animate) => {
+      const nextHeight = readHeight();
+
+      if (!animate) {
+        setOrderOnHeight(nextHeight);
+        return;
+      }
+
+      // Wait one painted frame with the previous height so CSS can interpolate.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setOrderOnHeight(readHeight());
+        });
+      });
+    };
+
+    applyHeight(canAnimateOrderOnHeight);
+
+    const resizeObserver = new ResizeObserver(() => {
+      setOrderOnHeight(readHeight());
+    });
+    resizeObserver.observe(measureEl);
+
+    return () => resizeObserver.disconnect();
+  }, [
+    selectedBranchId,
+    lang,
+    selectedBranch?.aggregators.length,
+    canAnimateOrderOnHeight,
+  ]);
+
+  useLayoutEffect(() => {
+    const frameId = requestAnimationFrame(() => {
+      setCanAnimateOrderOnHeight(true);
+    });
+
+    return () => cancelAnimationFrame(frameId);
+  }, []);
+
+  // Esc closes; page scroll is locked. No branch pre-selected.
+  // Clear on unmount so Contact doesn't inherit this modal's pin.
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") onClose();
@@ -64,13 +118,47 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
 
         <header className="Menu_orderModal_header">
           <p className="Menu_orderModal_eyebrow">{t("menu.order")}</p>
-          <h2 id="Menu_orderModal_title" className="Menu_orderModal_title">
-            {name}
-          </h2>
-          <p className="Menu_orderModal_subtitle">
-            {t("menu.orderModal.subtitle")}
-          </p>
+          <div className="Menu_orderModal_headerMain">
+            <h2 id="Menu_orderModal_title" className="Menu_orderModal_title">
+              {name}
+            </h2>
+            <p className="Menu_orderModal_subtitle">
+              {t("menu.orderModal.subtitle")}
+            </p>
+          </div>
         </header>
+
+        <div className="Menu_orderModal_directWrap">
+          <div className="Menu_orderModal_directRow">
+            <p className="Menu_orderModal_directLabel">
+              {t("menu.orderModal.orderDirectlyFromUs")}
+            </p>
+            <div className="Menu_orderModal_directActions">
+              <a
+                className="Menu_orderModal_directAction Menu_orderModal_directAction--online"
+                href={DIRECT_ORDER.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t("menu.orderModal.orderFromUsAria")}>
+                {t("menu.orderModal.online")}
+              </a>
+              <a
+                className="Menu_orderModal_directAction"
+                href={PHONE_CONTACT.link}
+                aria-label={`${t("menu.orderModal.phone")} — ${PHONE_CONTACT.label}`}>
+                {t("menu.orderModal.phone")}
+              </a>
+              <a
+                className="Menu_orderModal_directAction"
+                href={WHATSAPP_CONTACT.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${t("menu.orderModal.whatsApp")} — ${WHATSAPP_CONTACT.label}`}>
+                {t("menu.orderModal.whatsApp")}
+              </a>
+            </div>
+          </div>
+        </div>
 
         <div className="Menu_orderModal_layout">
           <div
@@ -116,49 +204,64 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
               className={`Menu_orderModal_orderOn${
                 selectedBranch ? " Menu_orderModal_orderOn--ready" : ""
               }`}>
-              <p
-                className={`Menu_orderModal_pickPrompt${
-                  selectedBranch ? " Menu_orderModal_pickPrompt--hidden" : ""
+              <div
+                className={`Menu_orderModal_orderOnBody${
+                  canAnimateOrderOnHeight
+                    ? " Menu_orderModal_orderOnBody--animate"
+                    : ""
                 }`}
-                role="status"
-                aria-hidden={Boolean(selectedBranch)}>
-                {t("menu.orderModal.pickKitchenFirst")}
-              </p>
-
-              {selectedBranch && (
+                style={{ height: orderOnHeight }}>
                 <div
-                  key={selectedBranch.id}
-                  className="Menu_orderModal_appsWrap">
-                  <h3 className="Menu_orderModal_heading">
-                    {t("menu.orderModal.orderFrom", { branch: selectedName })}
-                  </h3>
+                  ref={orderOnMeasureRef}
+                  className="Menu_orderModal_orderOnMeasure">
+                  {!selectedBranch && (
+                    <p className="Menu_orderModal_pickPrompt" role="status">
+                      {t("menu.orderModal.pickKitchenFirst")}
+                    </p>
+                  )}
 
-                  <div className="Menu_orderModal_apps">
-                    {selectedBranch.aggregators.map((aggregator, index) => (
-                      <a
-                        key={aggregator.name}
-                        className="Menu_orderModal_app"
-                        style={{ "--app-index": index }}
-                        href={aggregator.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={t("menu.orderModal.orderOn", {
-                          app: aggregator.name,
-                        })}>
-                        <img
-                          className="Menu_orderModal_app_logo"
-                          src={aggregator.logo}
-                          alt=""
-                          aria-hidden="true"
-                        />
-                        <span className="Menu_orderModal_app_name">
-                          {aggregator.name}
-                        </span>
-                      </a>
-                    ))}
-                  </div>
+                  {selectedBranch && (
+                    <div
+                      key={selectedBranch.id}
+                      className="Menu_orderModal_appsWrap">
+                      <h3 className="Menu_orderModal_heading">
+                        {t("menu.orderModal.orderFrom", {
+                          branch: selectedName,
+                        })}
+                      </h3>
+
+                      {selectedBranch.aggregators.length > 0 && (
+                        <div className="Menu_orderModal_apps">
+                          {selectedBranch.aggregators.map(
+                            (aggregator, index) => (
+                              <a
+                                key={aggregator.name}
+                                className="Menu_orderModal_app"
+                                style={{ "--app-index": index }}
+                                href={aggregator.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label={t("menu.orderModal.orderOn", {
+                                  app: aggregator.name,
+                                })}>
+                                <img
+                                  className="Menu_orderModal_app_logo"
+                                  src={aggregator.logo}
+                                  alt=""
+                                  aria-hidden="true"
+                                />
+                                <span className="Menu_orderModal_app_name">
+                                  {aggregator.name}
+                                </span>
+                              </a>
+                            ),
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>

@@ -17,7 +17,12 @@
       "mapUnavailable": "الخريطة غير متاحة حالياً. يرجى اختيار مطبخ من القائمة.",
       "open24": "مفتوح 24/7",
       "hours": "{{open}} – {{close}}",
-      "orderOn": "اطلب عبر {{app}}"
+      "orderOn": "اطلب عبر {{app}}",
+      "orderFromUsAria": "اطلب مباشرة من Vkusno عبر الإنترنت",
+      "orderDirectlyFromUs": "اطلب مباشرة",
+      "online": "عبر الإنترنت",
+      "phone": "الهاتف",
+      "whatsApp": "WhatsApp"
     },
     "search": {
       "placeholder": "ابحث عن الأطباق...",

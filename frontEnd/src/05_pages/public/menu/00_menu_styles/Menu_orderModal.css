@@ -16,11 +16,14 @@
   flex-direction: column;
   width: 100%;
   max-width: 100%;
-  max-height: 92vh;
+  max-height: 960px !important;
+  height: max-content !important;
   overflow: hidden;
+  interpolate-size: allow-keywords;
+  transition: height 0.75s cubic-bezier(0.22, 1, 0.36, 1);
   background-color: var(--surface_color);
   color: var(--text_color);
-  border-radius: 16px 16px 0 0;
+  border-radius: 10px !important;
   animation: menuOrderModalRise 0.42s cubic-bezier(0.16, 1, 0.3, 1);
   transform-origin: bottom center;
   will-change: transform, opacity;
@@ -65,6 +68,14 @@
   padding-inline-end: 52px;
 }
 
+.Menu_orderModal_headerMain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-top: 2px;
+}
+
 .Menu_orderModal_eyebrow {
   margin: 0;
   font-size: 11px;
@@ -75,16 +86,26 @@
 }
 
 .Menu_orderModal_title {
-  margin: 2px 0 0;
+  margin: 0;
+  flex-shrink: 0;
   font-size: 22px;
   line-height: 1.2;
 }
 
 .Menu_orderModal_subtitle {
-  margin: 4px 0 0;
+  margin: 0;
+  flex: 1 1 160px;
+  min-width: 0;
   font-size: 13px;
   line-height: 1.4;
   color: var(--text_muted_color);
+}
+
+.Menu_orderModal_directWrap {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px 12px;
 }
 
 .Menu_orderModal_layout {
@@ -204,29 +225,35 @@
 }
 
 .Menu_orderModal_orderOn {
-  display: grid;
-  grid-template-areas: "stack";
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
   min-width: 0;
   max-width: 100%;
-  min-height: 88px;
-  padding-top: 10px;
+  padding-top: 8px;
   border-top: 1px solid var(--border_color);
-  transition: min-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.Menu_orderModal_orderOnBody {
+  overflow: hidden;
+  height: 0;
+}
+
+.Menu_orderModal_orderOnBody--animate {
+  transition: height 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.Menu_orderModal_orderOnMeasure {
+  width: 100%;
+  min-width: 0;
 }
 
 .Menu_orderModal_pickPrompt,
 .Menu_orderModal_appsWrap {
-  grid-area: stack;
-  align-self: start;
   box-sizing: border-box;
   width: 100%;
   min-width: 0;
   max-width: 100%;
-}
-
-.Menu_orderModal_orderOn--ready {
-  min-height: 120px;
 }
 
 .Menu_orderModal_orderOn .Menu_orderModal_heading {
@@ -244,21 +271,239 @@
   border: 1px dashed var(--border_color);
   border-radius: 8px;
   word-break: break-word;
-  opacity: 1;
-  transform: translateY(0);
-  transition:
-    opacity 0.28s ease,
-    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.Menu_orderModal_pickPrompt--hidden {
-  opacity: 0;
-  transform: translateY(-6px);
-  pointer-events: none;
+  animation: menuOrderSlotIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
 .Menu_orderModal_appsWrap {
-  animation: menuOrderAppsReveal 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: menuOrderSlotIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+/* Direct order block — label on top, actions below */
+.Menu_orderModal_directRow {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background:
+    linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--gold_color) 16%, var(--surface_color)),
+        var(--surface_color) 45%,
+        color-mix(in srgb, var(--accent_color) 12%, var(--surface_color))
+      )
+      padding-box,
+    linear-gradient(
+        90deg,
+        var(--gold_color),
+        #ffb347,
+        #ff7043,
+        var(--accent_color),
+        #ff5ebc,
+        #ffd700,
+        #ff8f6b,
+        var(--gold_color)
+      )
+      border-box;
+  background-size:
+    100% 100%,
+    360% 100%;
+  animation: menuOrderDirectRowSweep 4.5s linear infinite;
+  /* box-shadow:
+    0 0 14px rgba(255, 193, 7, 0.48),
+    0 0 28px rgba(255, 112, 67, 0.34),
+    0 0 42px rgba(179, 0, 27, 0.22); */
+}
+
+[data-theme="dark"] .Menu_orderModal_directRow {
+  background:
+    linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--gold_color) 28%, var(--surface_color)),
+        color-mix(in srgb, var(--accent_color) 16%, var(--surface_color)) 55%,
+        color-mix(in srgb, var(--gold_color) 20%, var(--surface_color))
+      )
+      padding-box,
+    linear-gradient(
+        90deg,
+        #ffe066,
+        #ffb347,
+        #ff7043,
+        var(--accent_color),
+        #ff5ebc,
+        #ffd700,
+        #ff9f43,
+        #ffe066
+      )
+      border-box;
+  background-size:
+    100% 100%,
+    360% 100%;
+}
+
+.Menu_orderModal_directLabel {
+  margin: 0;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    var(--gold_color),
+    #ff8f42,
+    var(--accent_color),
+    var(--gold_color)
+  );
+  background-size: 200% 100%;
+  animation: menuOrderDirectLabelShine 4s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* Menu_orderModal_directAction Menu_orderModal_directAction--online */
+.Menu_orderModal_directActions {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  min-width: 0;
+}
+
+.Menu_orderModal_directAction {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 11px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text_color);
+  background-color: color-mix(
+    in srgb,
+    var(--surface_color) 88%,
+    var(--bg_color)
+  );
+  border: 1px solid var(--border_color);
+  border-radius: 6px;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.Menu_orderModal_directAction:hover,
+.Menu_orderModal_directAction:focus-visible {
+  border-color: var(--accent_color);
+  color: var(--accent_color);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent_color) 35%, transparent);
+  outline: none;
+}
+
+/* Online — primary CTA with vivid multi-color neon sweep */
+.Menu_orderModal_directAction--online {
+  position: relative;
+  isolation: isolate;
+  font-weight: 800;
+  color: #fff8e7;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--gold_color) 55%, #2b2118),
+        color-mix(in srgb, var(--accent_color) 45%, #2b2118)
+      )
+      padding-box,
+    linear-gradient(
+        90deg,
+        #ffd700,
+        #ffb347,
+        #ff5722,
+        var(--accent_color),
+        #ff1493,
+        #00e5ff,
+        #ffd700,
+        #ff8f42,
+        #ffd700
+      )
+      border-box;
+  background-size:
+    100% 100%,
+    320% 100%;
+  animation: menuOrderDirectNeonSweep 1.75s linear infinite;
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.75),
+    0 0 22px rgba(255, 87, 34, 0.55),
+    0 0 36px rgba(255, 20, 147, 0.35),
+    inset 0 0 14px rgba(255, 215, 0, 0.12);
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.65),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .Menu_orderModal_directAction--online {
+  color: #fffaf0;
+  background:
+    linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--gold_color) 72%, #5c3d00),
+        color-mix(in srgb, var(--accent_color) 58%, #5c0505)
+      )
+      padding-box,
+    linear-gradient(
+        90deg,
+        #ffd700,
+        #ffb347,
+        #ff5722,
+        var(--accent_color),
+        #ff1493,
+        #00bcd4,
+        #ffd700,
+        #ff8f42,
+        #ffd700
+      )
+      border-box;
+  background-size:
+    100% 100%,
+    320% 100%;
+}
+
+[data-theme="dark"] .Menu_orderModal_directAction--online {
+  box-shadow:
+    0 0 12px rgba(255, 224, 102, 0.85),
+    0 0 26px rgba(255, 112, 67, 0.65),
+    0 0 42px rgba(255, 20, 147, 0.45),
+    inset 0 0 16px rgba(255, 224, 102, 0.16);
+}
+
+.Menu_orderModal_directAction--online:hover,
+.Menu_orderModal_directAction--online:focus-visible {
+  border-color: transparent;
+  color: #fff;
+  box-shadow:
+    0 0 14px rgba(255, 215, 0, 0.9),
+    0 0 28px rgba(255, 87, 34, 0.7),
+    0 0 44px rgba(255, 20, 147, 0.5),
+    inset 0 0 18px rgba(255, 215, 0, 0.2);
+  outline: none;
+}
+
+.Menu_orderModal_subheading {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text_muted_color);
 }
 
 .Menu_orderModal_apps {
@@ -311,6 +556,51 @@
   font-weight: 600;
 }
 
+@keyframes menuOrderDirectRowSweep {
+  0% {
+    background-position:
+      0 0,
+      100% 0;
+  }
+
+  100% {
+    background-position:
+      0 0,
+      -260% 0;
+  }
+}
+
+@keyframes menuOrderDirectLabelShine {
+  0%,
+  100% {
+    background-position: 0% 0;
+  }
+  75% {
+    background-position: 50% 0;
+  }
+
+  50% {
+    background-position: 75% 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes menuOrderDirectNeonSweep {
+  0% {
+    background-position:
+      0 0,
+      100% 0;
+  }
+
+  100% {
+    background-position:
+      0 0,
+      -220% 0;
+  }
+}
+
 @keyframes menuOrderModalFade {
   from {
     opacity: 0;
@@ -328,6 +618,18 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes menuOrderSlotIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -386,8 +688,21 @@
     padding: 20px 24px 10px;
   }
 
+  .Menu_orderModal_headerMain {
+    gap: 6px 16px;
+  }
+
   .Menu_orderModal_title {
     font-size: 24px;
+  }
+
+  .Menu_orderModal_subtitle {
+    font-size: 14px;
+  }
+
+  .Menu_orderModal_directAction {
+    padding: 12px 14px;
+    font-size: 15px;
   }
 
   .Menu_orderModal_map {
@@ -464,8 +779,8 @@
   .Menu_orderModal_app,
   .Menu_orderModal_appsWrap,
   .Menu_orderModal_pickPrompt,
-  .Menu_orderModal_orderOn {
-    animation: none;
+  .Menu_orderModal_orderOn,
+  .Menu_orderModal_orderOnBody--animate {
     transition: none;
   }
 
@@ -482,14 +797,68 @@
     opacity: 1;
   }
 
-  .Menu_orderModal_pickPrompt--hidden {
-    opacity: 0;
-    transform: none;
-  }
-
   .Menu_orderModal_app:hover,
   .Menu_orderModal_app:focus-visible {
     transform: none;
+  }
+
+  .Menu_orderModal_directRow,
+  .Menu_orderModal_directLabel,
+  .Menu_orderModal_directAction--online {
+    animation: none;
+  }
+
+  .Menu_orderModal_directRow {
+    background:
+      linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--gold_color) 18%, var(--surface_color)),
+          var(--surface_color)
+        )
+        padding-box,
+      linear-gradient(
+          90deg,
+          var(--gold_color),
+          #ffb347,
+          var(--accent_color),
+          #ff5ebc,
+          var(--gold_color)
+        )
+        border-box;
+    background-size:
+      100% 100%,
+      100% 100%;
+    /* box-shadow: 0 0 12px rgba(255, 193, 7, 0.45); */
+  }
+
+  .Menu_orderModal_directLabel {
+    background: linear-gradient(90deg, var(--gold_color), var(--accent_color));
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .Menu_orderModal_directAction--online {
+    background:
+      linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--gold_color) 60%, #2b2118),
+          color-mix(in srgb, var(--accent_color) 50%, #2b2118)
+        )
+        padding-box,
+      linear-gradient(
+          90deg,
+          #ffd700,
+          #ffb347,
+          var(--accent_color),
+          #ff5ebc,
+          #ffd700
+        )
+        border-box;
+    background-size:
+      100% 100%,
+      100% 100%;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.65);
   }
 }
 

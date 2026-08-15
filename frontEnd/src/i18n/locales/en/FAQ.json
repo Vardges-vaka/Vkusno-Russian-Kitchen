@@ -10,8 +10,16 @@
           "answer": "Open our Menu, choose the dish you want, and tap Order. Pick the kitchen closest to you, then select a delivery app shown for that branch. You complete payment and delivery through that app-not on vkusno.ae."
         },
         {
+          "question": "Can I order directly from Vkusno?",
+          "answer": "Yes! In the Menu order flow, use Order directly to order online via RestHero, call us, or WhatsApp. Even phone orders are placed through the RestHero platform so your order reaches our kitchen directly."
+        },
+        {
+          "question": "How far does direct delivery from Arjan reach?",
+          "answer": "Direct delivery from our Arjan kitchen covers roughly 30 km (delivered via RestHero using Careem or Slider riders). During peak hours the radius may be slightly reduced. For areas outside that range, choose another branch or a delivery app that serves your area."
+        },
+        {
           "question": "Can I order directly on vkusno.ae?",
-          "answer": "Not yet. Our website helps you explore the menu and find the right kitchen, but checkout happens on partner delivery platforms such as Talabat, Careem, Deliveroo, Noon, or Keeta."
+          "answer": "For Arjan, yes - use Order from us in the Menu order modal to reach our RestHero ordering page. Other branches use partner apps such as Talabat, Careem, Deliveroo, Noon, or Keeta. Our site helps you explore the menu and pick the right kitchen."
         },
         {
           "question": "Which delivery apps do you use?",

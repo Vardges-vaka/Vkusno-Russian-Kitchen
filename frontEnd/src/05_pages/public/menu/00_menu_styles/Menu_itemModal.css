@@ -12,7 +12,7 @@
 .Menu_itemModal_dialog {
   position: relative;
   width: 100%;
-  max-height: 92vh;
+  max-height: 756px;
   overflow-y: auto;
   background-color: var(--surface_color);
   color: var(--text_color);
@@ -51,7 +51,7 @@
 }
 
 .Menu_itemModal_body {
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .Menu_itemModal_titleRow {
@@ -89,7 +89,7 @@
   color: var(--footer_text_color);
   background-color: var(--accent_color);
   border: none;
-  border-radius: 999px;
+  border-radius: 8px;
   cursor: pointer;
   white-space: nowrap;
   transition:
@@ -105,14 +105,14 @@
 }
 
 .Menu_itemModal_description {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   font-size: 14px;
   line-height: 1.6;
   color: var(--text_muted_color);
 }
 
 .Menu_itemModal_sectionTitle {
-  margin: 20px 0 10px;
+  margin: 18px 0 10px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;

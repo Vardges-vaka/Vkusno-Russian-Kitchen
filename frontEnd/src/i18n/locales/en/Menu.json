@@ -17,7 +17,12 @@
       "mapUnavailable": "The map is temporarily unavailable. Pick a kitchen below.",
       "open24": "Open 24/7",
       "hours": "{{open}} – {{close}}",
-      "orderOn": "Order on {{app}}"
+      "orderOn": "Order on {{app}}",
+      "orderFromUsAria": "Order directly from Vkusno online",
+      "orderDirectlyFromUs": "Order directly",
+      "online": "Online",
+      "phone": "Phone",
+      "whatsApp": "WhatsApp"
     },
     "search": {
       "placeholder": "Search dishes...",

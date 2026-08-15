@@ -17,7 +17,12 @@
       "mapUnavailable": "Карта временно недоступна. Выберите кухню из списка.",
       "open24": "Открыто 24/7",
       "hours": "{{open}} – {{close}}",
-      "orderOn": "Заказать в {{app}}"
+      "orderOn": "Заказать в {{app}}",
+      "orderFromUsAria": "Заказать напрямую у Vkusno онлайн",
+      "orderDirectlyFromUs": "Заказать напрямую",
+      "online": "Онлайн",
+      "phone": "Телефон",
+      "whatsApp": "WhatsApp"
     },
     "search": {
       "placeholder": "Поиск блюд...",
