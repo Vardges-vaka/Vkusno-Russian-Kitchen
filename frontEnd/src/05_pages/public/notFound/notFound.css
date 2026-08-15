@@ -1,0 +1,125 @@
+.notFound {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: min(56vh, 520px);
+  padding-block: 48px 64px;
+}
+
+.notFound_container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.notFound_code {
+  margin: 0;
+  font-size: clamp(72px, 18vw, 120px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  background: linear-gradient(
+    135deg,
+    var(--gold_color),
+    color-mix(in srgb, var(--accent_color) 70%, var(--gold_color))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.92;
+}
+
+.notFound_hero {
+  margin-top: 8px;
+}
+
+.notFound_title {
+  margin: 0;
+  font-size: clamp(24px, 5vw, 32px);
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: var(--text_color);
+}
+
+.notFound_title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 14px auto 0;
+  border-radius: 2px;
+  background-color: var(--gold_color);
+}
+
+.notFound_message {
+  margin: 18px auto 0;
+  max-width: 42ch;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text_muted_color);
+}
+
+.notFound_actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.notFound_action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text_color);
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.notFound_action:hover,
+.notFound_action:focus-visible {
+  border-color: var(--gold_color);
+  color: var(--accent_color);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent_soft_color);
+}
+
+.notFound_action--primary {
+  color: var(--footer_text_color);
+  background-color: var(--accent_color);
+  border-color: var(--accent_color);
+}
+
+.notFound_action--primary:hover,
+.notFound_action--primary:focus-visible {
+  color: var(--footer_text_color);
+  background-color: var(--accent_hover_color);
+  border-color: var(--accent_hover_color);
+  box-shadow: 0 0 0 2px var(--accent_soft_color);
+}
+
+@media (min-width: 768px) {
+  .notFound {
+    min-height: min(50vh, 480px);
+    padding-block: 64px 80px;
+  }
+
+  .notFound_actions {
+    gap: 12px;
+    margin-top: 32px;
+  }
+}

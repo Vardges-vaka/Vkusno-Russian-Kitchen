@@ -9,6 +9,7 @@ const Menu = lazy(() => import("../05_pages/public/menu/Menu.jsx"));
 const Contact = lazy(() => import("../05_pages/public/contact/Contact.jsx"));
 const Privacy = lazy(() => import("../05_pages/public/legal/Privacy.jsx"));
 const FAQ = lazy(() => import("../05_pages/public/legal/FAQ.jsx"));
+const NotFound = lazy(() => import("../05_pages/public/notFound/NotFound.jsx"));
 
 const UserRoutes = [
   {
@@ -57,6 +58,16 @@ const UserRoutes = [
       <>
         <PublicHeader />
         <FAQ />
+        <PublicFooter />
+      </>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <>
+        <PublicHeader />
+        <NotFound />
         <PublicFooter />
       </>
     ),
