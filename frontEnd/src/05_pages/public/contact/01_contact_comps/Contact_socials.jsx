@@ -1,3 +1,8 @@
+import PropTypes from "prop-types";
+import {
+  socialShape,
+  translateFn,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_contact_styles/Contact_socials.css";
 
 const Contact_socials = ({ socials, t }) => {
@@ -21,6 +26,11 @@ const Contact_socials = ({ socials, t }) => {
       ))}
     </div>
   );
+};
+
+Contact_socials.propTypes = {
+  socials: PropTypes.arrayOf(socialShape).isRequired,
+  t: translateFn.isRequired,
 };
 
 export default Contact_socials;

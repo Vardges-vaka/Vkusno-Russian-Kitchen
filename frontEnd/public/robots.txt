@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Locale JSON is fetched by the app at runtime; it is not a page.
+Disallow: /locales/
+
+Sitemap: https://vkusno.ae/sitemap.xml

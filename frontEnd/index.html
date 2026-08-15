@@ -2,9 +2,99 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+
+    <!-- React 19 PREPENDS a hoisted <title>, so PageMeta's per-route title wins
+         over this one. It stays as the pre-hydration fallback. -->
+    <title>Vkusno — Russian Kitchen in Dubai</title>
+
+    <!-- description and canonical are deliberately NOT here.
+         React 19 APPENDS hoisted <meta>/<link> rather than replacing them, so a
+         static copy would sit earlier in <head> and win - leaving every page
+         with the site-wide description and a canonical pointing at "/". They
+         are emitted per route by 02_comps/PageMeta.jsx instead. -->
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Matches the two page backgrounds in ColorVariables.css, so the mobile
+         browser chrome follows the theme instead of fighting it. -->
+    <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16110d" media="(prefers-color-scheme: dark)" />
+
+    <!-- Open Graph / Twitter stay STATIC and site-level, on purpose.
+         WhatsApp, Facebook and Slack scrapers do not execute JavaScript, so
+         they can only ever see these tags - a React-injected per-route og:title
+         is invisible to exactly the audience Open Graph exists for. Emitting
+         both would only duplicate tags for no gain. Genuine per-route link
+         previews need prerendering or SSR; that is not in this app's scope. -->
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:site_name" content="Vkusno" />
+    <meta property="og:title" content="Vkusno — Russian Kitchen in Dubai" />
+    <meta
+      property="og:description"
+      content="Home-style Russian cooking in Dubai. Five kitchens, delivery, pickup and self-service seating." />
+    <meta property="og:url" content="https://vkusno.ae/" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:locale:alternate" content="ru" />
+    <meta property="og:locale:alternate" content="ar" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script>
+      // Runs before React mounts and before first paint.
+      //
+      // Without this the page renders with the default theme and LTR layout,
+      // then swaps once React reads localStorage - a visible flash for dark-mode
+      // users and a full layout jump for Arabic readers.
+      //
+      // The theme resolution order MUST match resolveInitialTheme() in
+      // 03_context/themeContext/ThemeContext.jsx. If the two disagree the page
+      // paints one theme and then switches to the other.
+      (function () {
+        var THEMES = ["light", "dark"];
+        var LANGS = ["en", "ar", "ru"];
+        var root = document.documentElement;
+
+        try {
+          var savedTheme = localStorage.getItem("theme");
+          var theme =
+            THEMES.indexOf(savedTheme) !== -1
+              ? savedTheme
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          root.setAttribute("data-theme", theme);
+
+          // Language precedence, highest first:
+          //   1. the /:lang segment in the URL - a shared /ar/menu link must
+          //      open in Arabic even if this browser last chose English, and
+          //      it must do so before first paint or the layout jumps
+          //   2. the saved choice (i18next-browser-languagedetector's key)
+          //   3. the browser's own preference
+          //   4. English
+          // This order mirrors LanguageLayout, which treats the URL as the
+          // source of truth once React is running.
+          var urlLang = location.pathname.split("/")[1];
+          var savedLang = localStorage.getItem("language");
+          var navLang = (navigator.language || "en").slice(0, 2);
+
+          var lang =
+            LANGS.indexOf(urlLang) !== -1
+              ? urlLang
+              : LANGS.indexOf(savedLang) !== -1
+                ? savedLang
+                : LANGS.indexOf(navLang) !== -1
+                  ? navLang
+                  : "en";
+
+          root.setAttribute("lang", lang);
+          root.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+        } catch (e) {
+          // Private mode can throw on localStorage - fall back to the markup
+          // defaults rather than leaving the page unstyled.
+          root.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

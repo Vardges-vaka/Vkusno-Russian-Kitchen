@@ -13,12 +13,31 @@
     border-color 0.15s ease-out;
 }
 
+/* :focus-within, not :focus-visible - the card is a plain container now and
+   the name button inside it is what actually takes focus. */
 .Contact_branchCard:hover,
-.Contact_branchCard:focus-visible {
+.Contact_branchCard:focus-within {
   transform: translateY(-2px);
   border-color: var(--gold_color);
   box-shadow: 0 6px 18px var(--shadow_color);
-  outline: none;
+}
+
+/* Looks exactly like the heading text it replaced; it is a button so that
+   selecting a branch works from the keyboard. */
+.Contact_branchCard_nameBtn {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: start;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Contact_branchCard_nameBtn:focus-visible {
+  outline: 2px solid var(--accent_color);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .Contact_branchCard--selected {

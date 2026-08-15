@@ -5,6 +5,8 @@ import {
   Contact_branchesMap,
   Contact_branchCard,
 } from "./01_contact_comps/_contact_comps.index.js";
+import { PageMeta } from "../../../02_comps/_comps.index.js";
+import { graph, organisationNode, restaurantNode } from "../../../04_hlprs/_hlprs.index.js";
 import "./00_contact_styles/Contact.css";
 
 const Contact = () => {
@@ -20,6 +22,15 @@ const Contact = () => {
 
   return (
     <div className="Contact_container">
+      <PageMeta
+        title={t("meta.title")}
+        description={t("meta.description")}
+        jsonLd={graph(
+          organisationNode(lang),
+          branches.map((branch) => restaurantNode(branch, lang, contactInfo)),
+        )}
+      />
+
       <header className="Contact_hero">
         <h1 className="Contact_hero_title">{t("contact.title")}</h1>
         <p className="Contact_hero_subtitle">{t("contact.subtitle")}</p>

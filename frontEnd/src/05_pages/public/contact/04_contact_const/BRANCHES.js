@@ -7,8 +7,8 @@ import {
 } from "../../../../01_assets/_assets.index.js";
 
 // Source: context/Details - Copy.xlsx ("Branches" sheet).
-// ru/ar branch names are a first draft translation - flagged for the
-// client to confirm/correct, per the plan.
+// ru/ar branch names and addresses are a first draft translation -
+// flagged for the client to confirm/correct, per the plan.
 //
 // aggregators: only aggregators actually offered at a branch are listed.
 // "http://localhost:5173" is a placeholder for storefront URLs that
@@ -22,7 +22,11 @@ const BRANCHES = [
       ar: "أرجان",
     },
     location: {
-      address: "Rose Palace Residences, Arjan, Shop 19",
+      address: {
+        en: "Rose Palace Residences, Arjan, Shop 19",
+        ru: "Rose Palace Residences, Арджан, магазин 19",
+        ar: "روز بالاس ريزيدنسز، أرجان، محل 19",
+      },
       googleMapsLink: "https://maps.app.goo.gl/FC3oBdAUzxtjvCGGA",
       coordinates: {
         latitude: 25.0675273075463,
@@ -54,7 +58,11 @@ const BRANCHES = [
       ar: "دبي مارينا",
     },
     location: {
-      address: "Marsa Dubai - Dubai Marina - Dubai",
+      address: {
+        en: "Marsa Dubai - Dubai Marina - Dubai",
+        ru: "Марса Дубай - Дубай Марина - Дубай",
+        ar: "مرسى دبي - دبي مارينا - دبي",
+      },
       googleMapsLink: "https://maps.app.goo.gl/9cureScPsEri3YWS6",
       coordinates: {
         latitude: 25.0793896378215,
@@ -86,7 +94,11 @@ const BRANCHES = [
       ar: "بيزنس باي - سول أفينيو",
     },
     location: {
-      address: "Sol Avenue - Business Bay - Dubai",
+      address: {
+        en: "Sol Avenue - Business Bay - Dubai",
+        ru: "Sol Avenue - Бизнес-Бэй - Дубай",
+        ar: "سول أفينيو - بيزنس باي - دبي",
+      },
       googleMapsLink: "https://maps.app.goo.gl/qzprpsttPoS2EAQH8",
       coordinates: {
         latitude: 25.179827838664799,
@@ -114,7 +126,11 @@ const BRANCHES = [
       ar: "بيزنس باي - كويزينيت",
     },
     location: {
-      address: "Marasi Dr - Business Bay - Dubai",
+      address: {
+        en: "Marasi Dr - Business Bay - Dubai",
+        ru: "Мараси Драйв - Бизнес-Бэй - Дубай",
+        ar: "شارع مراسي - بيزنس باي - دبي",
+      },
       googleMapsLink: "https://maps.app.goo.gl/HhooNnxAnfo2pFMj7",
       coordinates: {
         latitude: 25.1892761497006,
@@ -141,7 +157,11 @@ const BRANCHES = [
       ar: "واحة دبي للسيليكون (DSO)",
     },
     location: {
-      address: "Nadd Hessa - Dubai Silicon Oasis - Dubai",
+      address: {
+        en: "Nadd Hessa - Dubai Silicon Oasis - Dubai",
+        ru: "Надд Хесса - Дубай Силикон Оазис - Дубай",
+        ar: "ند حصة - واحة دبي للسيليكون - دبي",
+      },
       googleMapsLink: "https://maps.app.goo.gl/QmCkv4KTTSAMV9mN6",
       coordinates: {
         latitude: 25.128185885366602,

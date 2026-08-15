@@ -100,6 +100,25 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  /* The Order CTA is an <a>, the Menu CTA a <button> - normalise both
+     so they sit on the same baseline and share one hover treatment. */
+  display: inline-block;
+  text-decoration: none;
+  font-family: inherit;
+  line-height: normal;
+}
+
+/* Primary of the two: solid fill so "Order Now" wins over "View Our Menu". */
+.Home_hero_cta--order {
+  background-color: var(--accent_color);
+  border-color: var(--accent_color);
+  color: #fff;
+}
+
+.Home_hero_cta--order:hover,
+.Home_hero_cta--order:focus-visible {
+  background-color: var(--accent_hover_color);
+  border-color: var(--accent_hover_color);
 }
 
 .Home_hero_cta::before {

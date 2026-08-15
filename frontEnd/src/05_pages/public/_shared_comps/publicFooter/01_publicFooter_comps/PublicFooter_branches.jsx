@@ -1,6 +1,12 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { BRANCHES } from "../../../contact/04_contact_const/_contact_const.index.js";
-import { pickLocale } from "../../../../../04_hlprs/_hlprs.index.js";
+import { localePath } from "../../../../../00_config/_config.index.js";
+import {
+  branchShape,
+  langShape,
+  translateFn,
+  pickLocale,
+} from "../../../../../04_hlprs/_hlprs.index.js";
 import "../00_publicFooter_styles/PublicFooter_branches.css";
 
 const PublicFooter_branches = ({ branches, lang, tContact, t }) => {
@@ -12,7 +18,7 @@ const PublicFooter_branches = ({ branches, lang, tContact, t }) => {
         <h2 className="PublicFooter_sectionTitle">
           {tContact("contact.branches.label")}
         </h2>
-        <Link className="PublicFooter_branches_viewAll" to="/contact">
+        <Link className="PublicFooter_branches_viewAll" to={localePath(lang, "contact")}>
           {t("footer.viewContact")}
         </Link>
       </div>
@@ -43,7 +49,7 @@ const PublicFooter_branches = ({ branches, lang, tContact, t }) => {
                 <span className="PublicFooter_branches_hours">{hoursLabel}</span>
               </p>
               <p className="PublicFooter_branches_address">
-                {branch.location.address}
+                {pickLocale(branch.location.address, lang)}
               </p>
             </li>
           );
@@ -51,6 +57,13 @@ const PublicFooter_branches = ({ branches, lang, tContact, t }) => {
       </ul>
     </section>
   );
+};
+
+PublicFooter_branches.propTypes = {
+  branches: PropTypes.arrayOf(branchShape).isRequired,
+  lang: langShape.isRequired,
+  tContact: translateFn.isRequired,
+  t: translateFn.isRequired,
 };
 
 export default PublicFooter_branches;

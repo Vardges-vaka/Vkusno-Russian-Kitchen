@@ -1,8 +1,14 @@
+import PropTypes from "prop-types";
 import Menu_itemCard from "./Menu_itemCard.jsx";
-import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  categoryShape,
+  langShape,
+  translateFn,
+  pickLocale,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_menu_styles/Menu_categorySection.css";
 
-const Menu_categorySection = ({ category, lang, t, onItemClick, onOrderClick }) => {
+const Menu_categorySection = ({ category, lang, t, onOrderClick }) => {
   return (
     <section
       id={`menuCategory-${category.id}`}
@@ -19,13 +25,19 @@ const Menu_categorySection = ({ category, lang, t, onItemClick, onOrderClick }) 
             item={item}
             lang={lang}
             t={t}
-            onClick={onItemClick}
             onOrderClick={onOrderClick}
           />
         ))}
       </div>
     </section>
   );
+};
+
+Menu_categorySection.propTypes = {
+  category: categoryShape.isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
+  onOrderClick: PropTypes.func.isRequired,
 };
 
 export default Menu_categorySection;

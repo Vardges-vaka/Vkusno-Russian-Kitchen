@@ -1,9 +1,10 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "../03_context/_context.index.js";
 import "./00_comps_styles/themeToggler.css";
 
 const ThemeToggler = () => {
   const { toggleTheme, isDarkMode } = useTheme();
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -19,7 +20,7 @@ const ThemeToggler = () => {
           // must start checked or the sun/moon animation runs inverted
           checked={isDarkMode}
           onChange={toggleTheme}
-          aria-label="Toggle dark mode"
+          aria-label={t("a11y.toggleTheme")}
         />
         <svg
           width="18"

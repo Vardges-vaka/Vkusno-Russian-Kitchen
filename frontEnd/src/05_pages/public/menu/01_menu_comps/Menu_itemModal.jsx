@@ -1,8 +1,22 @@
+import PropTypes from "prop-types";
 import { useEffect } from "react";
-import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  menuItemShape,
+  langShape,
+  translateFn,
+  pickLocale,
+  useFocusTrap,
+} from "../../../../04_hlprs/_hlprs.index.js";
+import Menu_itemDetail from "./Menu_itemDetail.jsx";
 import "../00_menu_styles/Menu_itemModal.css";
 
+// Overlay presentation of a dish. The content itself lives in Menu_itemDetail,
+// shared with the standalone /{lang}/menu/{slug} page so the two cannot drift.
 const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
+  // Moves focus into the dialog, keeps Tab inside it, and hands focus back to
+  // whatever opened it on close.
+  const dialogRef = useFocusTrap();
+
   // Esc closes the modal; page scroll is locked while it is open
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -20,28 +34,12 @@ const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
   }, [onClose]);
 
   const name = pickLocale(item.name, lang);
-  const longDescription = pickLocale(item.description?.long, lang);
-
-  // Drinks have null nutrition values - hide the whole block then
-  const hasNutrition = item.nutrition && item.nutrition.calories != null;
-  const hasIngredients = item.ingredients && item.ingredients.length > 0;
-
-  const NUTRITION_ROWS = hasNutrition
-    ? [
-        { key: "calories", value: item.nutrition.calories },
-        { key: "protein", value: `${item.nutrition.protein} g` },
-        { key: "fat", value: `${item.nutrition.fat} g` },
-        { key: "carbs", value: `${item.nutrition.carbs} g` },
-      ]
-    : [];
-
-  const handleOrderClick = () => {
-    onOrder(item);
-  };
 
   return (
     <div className="Menu_itemModal" onClick={onClose}>
       <div
+        ref={dialogRef}
+        tabIndex={-1}
         className="Menu_itemModal_dialog"
         role="dialog"
         aria-modal="true"
@@ -55,76 +53,24 @@ const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
           ×
         </button>
 
-        {item.images?.full && (
-          <img
-            className="Menu_itemModal_photo"
-            src={item.images.full}
-            alt={name}
-          />
-        )}
-
-        <div className="Menu_itemModal_body">
-          <div className="Menu_itemModal_titleRow">
-            <h2 className="Menu_itemModal_name">{name}</h2>
-            <div className="Menu_itemModal_actions">
-              <p className="Menu_itemModal_price">
-                {item.price} {t("menu.currency")}
-              </p>
-              <button
-                type="button"
-                className="Menu_itemModal_orderBtn"
-                aria-label={`${t("menu.order")} - ${name}`}
-                onClick={handleOrderClick}>
-                {t("menu.order")}
-              </button>
-            </div>
-          </div>
-
-          {longDescription && (
-            <p className="Menu_itemModal_description">{longDescription}</p>
-          )}
-
-          {hasNutrition && (
-            <>
-              <h3 className="Menu_itemModal_sectionTitle">
-                {t("menu.nutrition.title")}
-              </h3>
-              <ul className="Menu_itemModal_nutrition">
-                {NUTRITION_ROWS.map(({ key, value }) => (
-                  <li key={key} className="Menu_itemModal_nutrition_pill">
-                    <span className="Menu_itemModal_nutrition_value">
-                      {value}
-                    </span>
-                    <span className="Menu_itemModal_nutrition_label">
-                      {t(`menu.nutrition.${key}`)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="Menu_itemModal_nutrition_notice">
-                {t("menu.nutrition.notice")}
-              </p>
-            </>
-          )}
-
-          {hasIngredients && (
-            <>
-              <h3 className="Menu_itemModal_sectionTitle">
-                {t("menu.ingredients")}
-              </h3>
-              <ul className="Menu_itemModal_ingredients">
-                {item.ingredients.map((ingredient) => (
-                  <li key={ingredient} className="Menu_itemModal_ingredient">
-                    {ingredient}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-        </div>
+        <Menu_itemDetail
+          item={item}
+          lang={lang}
+          t={t}
+          onOrder={onOrder}
+          headingLevel="h2"
+        />
       </div>
     </div>
   );
+};
+
+Menu_itemModal.propTypes = {
+  item: menuItemShape.isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onOrder: PropTypes.func.isRequired,
 };
 
 export default Menu_itemModal;

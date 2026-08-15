@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 import {
   Map,
@@ -8,7 +9,12 @@ import {
   useAdvancedMarkerRef,
 } from "@vis.gl/react-google-maps";
 import { useMapContext } from "../../../../03_context/_context.index.js";
-import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  branchShape,
+  langShape,
+  translateFn,
+  pickLocale,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_contact_styles/Contact_branchesMap.css";
 
 // Lives inside <Map> so useMap() resolves to that map instance. Re-centers
@@ -143,6 +149,26 @@ const Contact_branchesMap = ({ branches, lang, t }) => {
       </Map>
     </div>
   );
+};
+
+Contact_branchesMap_panner.propTypes = {
+  branches: PropTypes.arrayOf(branchShape).isRequired,
+  selectedBranchId: PropTypes.string,
+};
+
+Contact_branchesMap_marker.propTypes = {
+  branch: branchShape.isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
+  isSelected: PropTypes.bool,
+  onSelect: PropTypes.func.isRequired,
+  onDeselect: PropTypes.func.isRequired,
+};
+
+Contact_branchesMap.propTypes = {
+  branches: PropTypes.arrayOf(branchShape).isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
 };
 
 export default Contact_branchesMap;

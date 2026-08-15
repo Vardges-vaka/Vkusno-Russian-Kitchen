@@ -1,34 +1,43 @@
+import PropTypes from "prop-types";
 import { MapPin } from "lucide-react";
-import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  branchShape,
+  langShape,
+  translateFn,
+  pickLocale,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_contact_styles/Contact_branchCard.css";
 
 const Contact_branchCard = ({ branch, lang, t, isSelected, onSelect }) => {
   const name = pickLocale(branch.name, lang);
 
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      onSelect(branch.id);
-    }
-  };
-
   // Stops the click reaching the card's own onClick - links inside
   // the card should navigate, not just re-select the already-selected branch.
   const stopCardClick = (event) => event.stopPropagation();
 
+  // The card used to be role="button" with <a> links inside it - interactive
+  // nested in interactive. Now it is a plain container: the branch name is the
+  // real control, and the whole-card click stays purely as a mouse shortcut
+  // (keyboard and screen-reader users get the same action from the name).
   return (
     <article
       className={`Contact_branchCard${
         isSelected ? " Contact_branchCard--selected" : ""
       }`}
-      tabIndex={0}
-      role="button"
-      aria-pressed={isSelected}
-      aria-label={name}
-      onClick={() => onSelect(branch.id)}
-      onKeyDown={handleKeyDown}>
+      onClick={() => onSelect(branch.id)}>
       <div className="Contact_branchCard_header">
-        <h3 className="Contact_branchCard_name">{name}</h3>
+        <h3 className="Contact_branchCard_name">
+          <button
+            type="button"
+            className="Contact_branchCard_nameBtn"
+            aria-pressed={isSelected}
+            onClick={(event) => {
+              stopCardClick(event);
+              onSelect(branch.id);
+            }}>
+            {name}
+          </button>
+        </h3>
         <p className="Contact_branchCard_hours">
           {branch.timing.is24Hours
             ? t("contact.branches.open24")
@@ -45,7 +54,7 @@ const Contact_branchCard = ({ branch, lang, t, isSelected, onSelect }) => {
           size={15}
           aria-hidden="true"
         />
-        {branch.location.address}
+        {pickLocale(branch.location.address, lang)}
       </p>
 
       {/* margin-top:auto in CSS pins the footer to the bottom, so cards
@@ -82,6 +91,14 @@ const Contact_branchCard = ({ branch, lang, t, isSelected, onSelect }) => {
       </div>
     </article>
   );
+};
+
+Contact_branchCard.propTypes = {
+  branch: branchShape.isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
+  isSelected: PropTypes.bool,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default Contact_branchCard;

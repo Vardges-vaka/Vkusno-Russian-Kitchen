@@ -1,0 +1,67 @@
+{
+  "menu": {
+    "hero": {
+      "lead": "Home-style Russian cuisine for every occasion",
+      "description": "Vkusno's menu is built around authentic, traditional, home-style recipes - from comforting soups and handmade dumplings to grills, baked favourites, and classic desserts."
+    },
+    "currency": "AED",
+    "close": "Close",
+    "order": "Order",
+    "orderModal": {
+      "subtitle": "Choose a kitchen, then order on a delivery app",
+      "pickKitchen": "Kitchens",
+      "pickKitchenFirst": "Pick a kitchen above to see delivery options",
+      "orderFrom": "Order from {{branch}}",
+      "mapLabel": "Map of kitchens",
+      "mapLoading": "Loading the map…",
+      "mapUnavailable": "The map is temporarily unavailable. Pick a kitchen below.",
+      "open24": "Open 24/7",
+      "hours": "{{open}} – {{close}}",
+      "orderOn": "Order on {{app}}",
+      "orderFromUsAria": "Order directly from Vkusno online",
+      "orderDirectlyFromUs": "Order directly",
+      "online": "Online",
+      "phone": "Phone",
+      "whatsApp": "WhatsApp"
+    },
+    "search": {
+      "placeholder": "Search dishes...",
+      "noResults": "No dishes found for \"{{query}}\"",
+      "clear": "Clear search"
+    },
+    "ingredients": "Ingredients",
+    "nutrition": {
+      "title": "Nutrition",
+      "calories": "Calories",
+      "protein": "Protein",
+      "fat": "Fat",
+      "carbs": "Carbs",
+      "notice": "Nutritional values are approximate and may vary depending on portion size and preparation."
+    },
+    "a11y": {
+      "categoryNav": "Menu categories"
+    },
+    "filters": {
+      "title": "Filters",
+      "results_one": "{{count}} dish",
+      "results_other": "{{count}} dishes",
+      "sort": "Sort by",
+      "with": "Contains",
+      "without": "Without",
+      "clear": "Clear filters",
+      "sortOptions": {
+        "default": "Menu order",
+        "priceAsc": "Price: low to high",
+        "priceDesc": "Price: high to low"
+      },
+      "selectAll": "Select all",
+      "deselectAll": "Clear",
+      "searchIngredients": "Search ingredients",
+      "noIngredients": "No ingredients match"
+    }
+  },
+  "meta": {
+    "title": "Menu",
+    "description": "70 home-style Russian dishes - soups, dumplings, grills, baked favourites and classic desserts. Prices in AED."
+  }
+}

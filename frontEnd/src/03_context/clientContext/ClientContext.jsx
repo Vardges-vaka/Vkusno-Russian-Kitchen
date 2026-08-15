@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 
 const ClientContext = createContext();
@@ -16,6 +16,12 @@ const getDeviceType = () => {
   if (width >= TABLET_MIN_WIDTH) return "tablet";
   return "mobile";
 };
+
+// Touch is independent from screen size (e.g. touch-screen laptops), and it
+// cannot change during a session - so it is read once at module load rather
+// than recomputed on every render.
+const IS_TOUCH_DEVICE =
+  "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
 const ClientProvider = ({ children }) => {
   const [deviceType, setDeviceType] = useState(getDeviceType);
@@ -41,18 +47,17 @@ const ClientProvider = ({ children }) => {
     };
   }, []);
 
-  // Touch is independent from screen size (e.g. touch-screen laptops),
-  // so it's a separate flag rather than folded into deviceType.
-  const isTouchDevice =
-    "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-  const contextValue = {
-    deviceType, // "mobile" | "tablet" | "desktop"
-    isMobile: deviceType === "mobile",
-    isTablet: deviceType === "tablet",
-    isDesktop: deviceType === "desktop",
-    isTouchDevice,
-  };
+  // Memoised so consumers only re-render when the breakpoint actually changes.
+  const contextValue = useMemo(
+    () => ({
+      deviceType, // "mobile" | "tablet" | "desktop"
+      isMobile: deviceType === "mobile",
+      isTablet: deviceType === "tablet",
+      isDesktop: deviceType === "desktop",
+      isTouchDevice: IS_TOUCH_DEVICE,
+    }),
+    [deviceType],
+  );
 
   return (
     <ClientContext.Provider value={contextValue}>

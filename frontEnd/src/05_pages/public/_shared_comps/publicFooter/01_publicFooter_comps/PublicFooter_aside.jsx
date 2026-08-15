@@ -1,4 +1,7 @@
 import {
+  translateFn,
+} from "../../../../../04_hlprs/_hlprs.index.js";
+import {
   PublicFooter_contact,
   PublicFooter_socials,
 } from "./_publicFooter_comps.index.js";
@@ -11,6 +14,10 @@ const PublicFooter_aside = ({ tContact }) => {
       <PublicFooter_socials tContact={tContact} />
     </div>
   );
+};
+
+PublicFooter_aside.propTypes = {
+  tContact: translateFn.isRequired,
 };
 
 export default PublicFooter_aside;

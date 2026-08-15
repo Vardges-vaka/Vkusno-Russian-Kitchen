@@ -1,155 +1,233 @@
 // Auto-generated from the source files in this folder:
 //   - Real_Menu_Items.xlsx            -> names (EN/RU/AR), prices, categories, AR descriptions
-//   - Menu Items By Categories/**     -> short + long descriptions (EN/RU), ingredients, nutrition
+//   - Menu Items By Categories/**     -> short + long descriptions (EN/RU)
+//   Long descriptions live in public/locales/{lng}/MenuItems.json, keyed by
+//   item id - ~95 KB across three languages, rendered only in the dish
+//   detail, so bundling all three here made every page pay for them.
+//   AR long descriptions were written from the EN source (they previously
+//   duplicated the AR short description on all 70 items)., ingredients, nutrition
 //   - menuItems/menuItemExports.js    -> thumbnail (100x100) and full (1200x900) photos
 //
-// Prices are in AED. 78 items across 13 categories.
+// Prices are in AED. 70 active items across 13 categories.
+//
+// `slug` is the URL segment for /{lang}/menu/{slug}. One per language so a
+// Russian reader gets /ru/menu/pelmeni-s-myasom rather than an English path.
+// Arabic slugs are Latin transliterations, not Arabic script: these links get
+// pasted into WhatsApp, where percent-encoded Arabic renders as garbage.
 
 import {
-  scrambledEggsThumbnail,
+  scrambledEggsCard,
+  scrambledEggsCard2x,
   scrambledEggsFull,
-  omeletteThumbnail,
+  omeletteCard,
+  omeletteCard2x,
   omeletteFull,
-  pancakesWithCondensedMilkThumbnail,
+  pancakesWithCondensedMilkCard,
+  pancakesWithCondensedMilkCard2x,
   pancakesWithCondensedMilkFull,
-  pancakesWithJamThumbnail,
+  pancakesWithJamCard,
+  pancakesWithJamCard2x,
   pancakesWithJamFull,
-  ryeBreadJamThumbnail,
+  ryeBreadJamCard,
+  ryeBreadJamCard2x,
   ryeBreadJamFull,
-  ricePorridgeThumbnail,
+  ricePorridgeCard,
+  ricePorridgeCard2x,
   ricePorridgeFull,
-  buckwheatPorridgeThumbnail,
+  buckwheatPorridgeCard,
+  buckwheatPorridgeCard2x,
   buckwheatPorridgeFull,
-  oatmealPorridgeThumbnail,
+  oatmealPorridgeCard,
+  oatmealPorridgeCard2x,
   oatmealPorridgeFull,
-  beefTongueThumbnail,
-  beefTongueFull,
-  assortedPicklesThumbnail,
+  assortedPicklesCard,
+  assortedPicklesCard2x,
   assortedPicklesFull,
-  holodecThumbnail,
+  holodecCard,
+  holodecCard2x,
   holodecFull,
-  eggplantRollsThumbnail,
+  eggplantRollsCard,
+  eggplantRollsCard2x,
   eggplantRollsFull,
-  russianBorschtThumbnail,
+  russianBorschtCard,
+  russianBorschtCard2x,
   russianBorschtFull,
-  chickenNoodlesSoupThumbnail,
+  chickenNoodlesSoupCard,
+  chickenNoodlesSoupCard2x,
   chickenNoodlesSoupFull,
-  meatballSoupThumbnail,
+  meatballSoupCard,
+  meatballSoupCard2x,
   meatballSoupFull,
-  okroshkaThumbnail,
+  okroshkaCard,
+  okroshkaCard2x,
   okroshkaFull,
-  solyankaThumbnail,
+  solyankaCard,
+  solyankaCard2x,
   solyankaFull,
-  russianOlivierSaladThumbnail,
+  russianOlivierSaladCard,
+  russianOlivierSaladCard2x,
   russianOlivierSaladFull,
-  vinegretThumbnail,
+  vinegretCard,
+  vinegretCard2x,
   vinegretFull,
-  russianHerringSaladShubaThumbnail,
+  russianHerringSaladShubaCard,
+  russianHerringSaladShubaCard2x,
   russianHerringSaladShubaFull,
-  shakarobThumbnail,
+  shakarobCard,
+  shakarobCard2x,
   shakarobFull,
-  uzbekAchichukThumbnail,
+  uzbekAchichukCard,
+  uzbekAchichukCard2x,
   uzbekAchichukFull,
-  carrotSaladThumbnail,
+  carrotSaladCard,
+  carrotSaladCard2x,
   carrotSaladFull,
-  greekSaladThumbnail,
+  greekSaladCard,
+  greekSaladCard2x,
   greekSaladFull,
-  spicySteakSaladThumbnail,
+  spicySteakSaladCard,
+  spicySteakSaladCard2x,
   spicySteakSaladFull,
-  bakedRussianPieWithCabbageThumbnail,
+  bakedRussianPieWithCabbageCard,
+  bakedRussianPieWithCabbageCard2x,
   bakedRussianPieWithCabbageFull,
-  beetrootSaladThumbnail,
+  beetrootSaladCard,
+  beetrootSaladCard2x,
   beetrootSaladFull,
-  bakedRussianPieWithPotatoAndMushroomThumbnail,
+  bakedRussianPieWithPotatoAndMushroomCard,
+  bakedRussianPieWithPotatoAndMushroomCard2x,
   bakedRussianPieWithPotatoAndMushroomFull,
-  samsaWithMeatThumbnail,
+  samsaWithMeatCard,
+  samsaWithMeatCard2x,
   samsaWithMeatFull,
-  bunsWithJamThumbnail,
+  bunsWithJamCard,
+  bunsWithJamCard2x,
   bunsWithJamFull,
-  bakedHotDogThumbnail,
+  bakedHotDogCard,
+  bakedHotDogCard2x,
   bakedHotDogFull,
-  vatrushkaThumbnail,
+  vatrushkaCard,
+  vatrushkaCard2x,
   vatrushkaFull,
-  russianPancakesWithBeefThumbnail,
+  russianPancakesWithBeefCard,
+  russianPancakesWithBeefCard2x,
   russianPancakesWithBeefFull,
-  russianPancakesWithMushroomThumbnail,
+  russianPancakesWithMushroomCard,
+  russianPancakesWithMushroomCard2x,
   russianPancakesWithMushroomFull,
-  varenikiWithPotatoThumbnail,
+  varenikiWithPotatoCard,
+  varenikiWithPotatoCard2x,
   varenikiWithPotatoFull,
-  pelmeniWithMeatThumbnail,
+  pelmeniWithMeatCard,
+  pelmeniWithMeatCard2x,
   pelmeniWithMeatFull,
-  dranikiThumbnail,
+  dranikiCard,
+  dranikiCard2x,
   dranikiFull,
-  mantiWithMeatThumbnail,
+  mantiWithMeatCard,
+  mantiWithMeatCard2x,
   mantiWithMeatFull,
-  cheburekWithMeatThumbnail,
+  cheburekWithMeatCard,
+  cheburekWithMeatCard2x,
   cheburekWithMeatFull,
-  beefCutletsThumbnail,
+  beefCutletsCard,
+  beefCutletsCard2x,
   beefCutletsFull,
-  chickenCutletsThumbnail,
+  chickenCutletsCard,
+  chickenCutletsCard2x,
   chickenCutletsFull,
-  uzbekBeefPlovThumbnail,
+  uzbekBeefPlovCard,
+  uzbekBeefPlovCard2x,
   uzbekBeefPlovFull,
-  cabbageRollsWithRiceAndMincedMeatThumbnail,
+  cabbageRollsWithRiceAndMincedMeatCard,
+  cabbageRollsWithRiceAndMincedMeatCard2x,
   cabbageRollsWithRiceAndMincedMeatFull,
-  hotPanThumbnail,
+  hotPanCard,
+  hotPanCard2x,
   hotPanFull,
-  beefStroganoffThumbnail,
+  beefStroganoffCard,
+  beefStroganoffCard2x,
   beefStroganoffFull,
-  chickenKievThumbnail,
+  chickenKievCard,
+  chickenKievCard2x,
   chickenKievFull,
-  napoleonThumbnail,
+  napoleonCard,
+  napoleonCard2x,
   napoleonFull,
-  honeyCakeThumbnail,
+  honeyCakeCard,
+  honeyCakeCard2x,
   honeyCakeFull,
-  russianPancakesWithCottageCheeseThumbnail,
+  russianPancakesWithCottageCheeseCard,
+  russianPancakesWithCottageCheeseCard2x,
   russianPancakesWithCottageCheeseFull,
-  syrnikiThumbnail,
+  syrnikiCard,
+  syrnikiCard2x,
   syrnikiFull,
-  chickenSkewerThumbnail,
+  chickenSkewerCard,
+  chickenSkewerCard2x,
   chickenSkewerFull,
-  beefSkewerThumbnail,
+  beefSkewerCard,
+  beefSkewerCard2x,
   beefSkewerFull,
-  lambSkewerThumbnail,
+  lambSkewerCard,
+  lambSkewerCard2x,
   lambSkewerFull,
-  mixedGrillThumbnail,
-  mixedGrillFull,
-  buckwheatThumbnail,
+  // mixedGrillFull,
+  buckwheatCard,
+  buckwheatCard2x,
   buckwheatFull,
-  lyulyaKebabThumbnail,
+  lyulyaKebabCard,
+  lyulyaKebabCard2x,
   lyulyaKebabFull,
-  lambChopsThumbnail,
-  lambChopsFull,
-  boiledRiceThumbnail,
+  // lambChopsFull,
+  boiledRiceCard,
+  boiledRiceCard2x,
   boiledRiceFull,
-  grilledVegetableThumbnail,
+  grilledVegetableCard,
+  grilledVegetableCard2x,
   grilledVegetableFull,
-  sweetPotatoFriesThumbnail,
+  sweetPotatoFriesCard,
+  sweetPotatoFriesCard2x,
   sweetPotatoFriesFull,
-  mashedPotatoesThumbnail,
+  mashedPotatoesCard,
+  mashedPotatoesCard2x,
   mashedPotatoesFull,
-  frenchFriesThumbnail,
+  frenchFriesCard,
+  frenchFriesCard2x,
   frenchFriesFull,
-  homeStylePotatoWithMushroomThumbnail,
+  homeStylePotatoWithMushroomCard,
+  homeStylePotatoWithMushroomCard2x,
   homeStylePotatoWithMushroomFull,
-  uzbekFlatbreadThumbnail,
+  uzbekFlatbreadCard,
+  uzbekFlatbreadCard2x,
   uzbekFlatbreadFull,
-  adjikaSauceThumbnail,
+  adjikaSauceCard,
+  adjikaSauceCard2x,
   adjikaSauceFull,
-  houseSpecialSauceThumbnail,
+  houseSpecialSauceCard,
+  houseSpecialSauceCard2x,
   houseSpecialSauceFull,
-  mustardSauceThumbnail,
+  mustardSauceCard,
+  mustardSauceCard2x,
   mustardSauceFull,
-  tomatoGarlicSauceThumbnail,
+  tomatoGarlicSauceCard,
+  tomatoGarlicSauceCard2x,
   tomatoGarlicSauceFull,
-  raspberryMorsThumbnail,
+  raspberryMorsCard,
+  raspberryMorsCard2x,
   raspberryMorsFull,
-  cranberyMorsThumbnail,
+  cranberyMorsCard,
+  cranberyMorsCard2x,
   cranberyMorsFull,
 } from "../../../../01_assets/_assets.index.js";
 
 export const ScrambledEggs = {
   id: 1,
+  slug: {
+    en: "scrambled-eggs",
+    ru: "yaichnitsa",
+    ar: "bayd-makhfuq",
+  },
   name: {
     en: "Scrambled Eggs",
     ar: "بيض مخفوق",
@@ -162,15 +240,11 @@ export const ScrambledEggs = {
       ar: "بيض مخفوق هش على خبز الجاودار الشهي.",
       ru: "Нежная яичница-скрэмбл на ржаном тосте.",
     },
-    long: {
-      en: "Slow-cooked with butter and a dash of cream, these scrambled eggs stay velvety and rich, forming soft, glossy curds. A sprinkle of salt and pepper is all they need. Spoon them onto a slice of warm rye for a cosy 180 g breakfast that feels both indulgent and effortless.",
-      ar: "بيض مخفوق هش على خبز الجاودار الشهي.",
-      ru: "Медленно приготовленная на сливочном масле и с каплей сливок, эта яичница-скрэмбл остаётся шелковистой и нежной, образуя мягкие глянцевые сгустки. Лишь щепотка соли и перца. Подайте на тёплом ржаном тосте - 180 г уютного, по-домашнему вкусного завтрака.",
-    },
   },
   price: 33,
   images: {
-    thumbnail: scrambledEggsThumbnail,
+    card: scrambledEggsCard,
+    card2x: scrambledEggsCard2x,
     full: scrambledEggsFull,
   },
   nutrition: {
@@ -191,6 +265,11 @@ export const ScrambledEggs = {
 
 export const Omelette = {
   id: 2,
+  slug: {
+    en: "omelette",
+    ru: "omlet",
+    ar: "omlet",
+  },
   name: {
     en: "Omelette",
     ar: "أومليت",
@@ -203,15 +282,11 @@ export const Omelette = {
       ar: "أومليت خفيف مع البصل والطماطم.",
       ru: "Пышный омлет с томатом и луком.",
     },
-    long: {
-      en: "Two eggs whipped with a splash of cream cook into a light, custardy omelette studded with sweet tomato dice and soft onion. A quick fold in the pan seals in steam, keeping the centre moist while the outside stays buttery-gold. Served with a slice of toasted rye, it’s a simple 200 g breakfast that balances richness with fresh vegetable brightness.",
-      ar: "أومليت خفيف مع البصل والطماطم.",
-      ru: "Два яйца со сливками превращаются в мягкий, воздушный омлет с кусочками сладкого томата и нежного лука. Быстрая складка удерживает пар внутри, сохраняет сочность и покрывает омлет золотистым масляным слоем. Подаётся с тостом из ржаного хлеба - 200 г сытного, но свежего завтрака.",
-    },
   },
   price: 33,
   images: {
-    thumbnail: omeletteThumbnail,
+    card: omeletteCard,
+    card2x: omeletteCard2x,
     full: omeletteFull,
   },
   nutrition: {
@@ -234,6 +309,11 @@ export const Omelette = {
 
 export const PancakesWithCondensedMilk = {
   id: 3,
+  slug: {
+    en: "pancakes-with-condensed-milk",
+    ru: "bliny-so-sgushchenkoy",
+    ar: "fatair-bil-halib-al-mukathaf",
+  },
   name: {
     en: "Pancakes with Condensed Milk",
     ar: "فطائر بالحليب المكثف",
@@ -246,15 +326,11 @@ export const PancakesWithCondensedMilk = {
       ar: "ثلاث فطائر مع حليب مكثف محلى.",
       ru: "Тонкие блины со сгущёнкой.",
     },
-    long: {
-      en: "Three paper-thin pancakes arrive folded and still warm, ready to be drenched in velvety condensed milk. The custardy crêpes are light yet rich, their edges faintly crisp from butter in the pan. Dip or drizzle-the sweet milk adds creamy caramel notes that turn a simple breakfast into a nostalgic treat.",
-      ar: "ثلاث فطائر مع حليب مكثف محلى.",
-      ru: "Три тонких блинчика подаются тёплыми и сложенными, чтобы их можно было щедро полить густой сгущёнкой. Воздушное тесто с лёгкой масляной корочкой подчёркивает карамельную сладость молока, превращая простой завтрак в тёплое воспоминание детства.",
-    },
   },
   price: 27,
   images: {
-    thumbnail: pancakesWithCondensedMilkThumbnail,
+    card: pancakesWithCondensedMilkCard,
+    card2x: pancakesWithCondensedMilkCard2x,
     full: pancakesWithCondensedMilkFull,
   },
   nutrition: {
@@ -276,6 +352,11 @@ export const PancakesWithCondensedMilk = {
 
 export const PancakesWithJam = {
   id: 4,
+  slug: {
+    en: "pancakes-with-jam",
+    ru: "bliny-s-dzhemom",
+    ar: "fatair-bil-murabba",
+  },
   name: {
     en: "Pancakes with Jam",
     ar: "فطائر بالمربى",
@@ -288,15 +369,11 @@ export const PancakesWithJam = {
       ar: "ثلاث فطائر مع مربى حلو.",
       ru: "Тонкие блины с ягодным джемом.",
     },
-    long: {
-      en: "Three golden crêpes fold around a pool of bright berry jam, the tart-sweet spread seeping into the soft layers. Butter-kissed edges contrast with fruity freshness, delivering a balanced 230 g breakfast or dessert.",
-      ar: "ثلاث فطائر مع مربى حلو.",
-      ru: "Три румяных блинчика сочетаются с ярким ягодным джемом, который пропитывает нежное тесто. Лёгкая масляная корочка и кисло-сладкие ягоды создают гармоничный, 230-граммовый завтрак или десерт.",
-    },
   },
   price: 29,
   images: {
-    thumbnail: pancakesWithJamThumbnail,
+    card: pancakesWithJamCard,
+    card2x: pancakesWithJamCard2x,
     full: pancakesWithJamFull,
   },
   nutrition: {
@@ -310,6 +387,11 @@ export const PancakesWithJam = {
 
 export const RyeBreadJam = {
   id: 5,
+  slug: {
+    en: "rye-bread-jam",
+    ru: "rzhanoy-khleb-s-dzhemom",
+    ar: "khubz-al-jawdar-bil-murabba",
+  },
   name: {
     en: "Rye Bread Jam",
     ar: "خبز الجاودار بالمربى",
@@ -322,15 +404,11 @@ export const RyeBreadJam = {
       ar: "خبز الجاودار مع مربى التوت الأزرق محلي الصنع.",
       ru: "Ржаной тост с ягодным джемом.",
     },
-    long: {
-      en: "Two slices of hearty rye bread are lightly toasted, then lavishly spread with smooth berry jam. The contrast of tangy dark crumb and sweet fruit makes for a quick, satisfying 130 g start to the day.",
-      ar: "خبز الجاودار مع مربى التوت الأزرق محلي الصنع.",
-      ru: "Два ломтика ароматного ржаного хлеба слегка поджариваются и щедро покрываются ягодным джемом. Кисловатый тёмный мякиш и сладкие ягоды создают быстрый и вкусный завтрак весом 130 г.",
-    },
   },
   price: 21,
   images: {
-    thumbnail: ryeBreadJamThumbnail,
+    card: ryeBreadJamCard,
+    card2x: ryeBreadJamCard2x,
     full: ryeBreadJamFull,
   },
   nutrition: {
@@ -344,6 +422,11 @@ export const RyeBreadJam = {
 
 export const RicePorridge = {
   id: 6,
+  slug: {
+    en: "rice-porridge",
+    ru: "risovaya-kasha",
+    ar: "asidat-al-aruz",
+  },
   name: {
     en: "Rice Porridge",
     ar: "عصيدة الأرز",
@@ -356,15 +439,11 @@ export const RicePorridge = {
       ar: "عصيدة أرز كريمية مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.",
       ru: "Тёплая рисовая каша с мёдом и орехами.",
     },
-    long: {
-      en: "A comforting 500 g bowl of tender rice grains cooked in milk and water until velvety-soft. Drizzled with golden honey, it offers gentle sweetness and a glossy finish, while crunchy chopped walnuts add nutty depth and textural contrast. Served warm, this classic Russian breakfast feels soothing and nourishing from the first spoonful.",
-      ar: "عصيدة أرز كريمية مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.",
-      ru: "Тёплая порция рисовой каши весом около 500 г сочетает нежные зерна риса, медленно томящиеся в молоке и воде до бархатистой мягкости, с тонким ароматом цветов мёда. Золотистый мёд придаёт лёгкую сладость и приглушённый блеск, а крупно нарубленные грецкие орехи добавляют глубокий ореховый аромат и приятный хруст. Каждая ложка дарит уют и сытность, напоминая домашний завтрак в кругу семьи.",
-    },
   },
   price: 26,
   images: {
-    thumbnail: ricePorridgeThumbnail,
+    card: ricePorridgeCard,
+    card2x: ricePorridgeCard2x,
     full: ricePorridgeFull,
   },
   nutrition: {
@@ -378,6 +457,11 @@ export const RicePorridge = {
 
 export const BuckwheatPorridge = {
   id: 7,
+  slug: {
+    en: "buckwheat-porridge",
+    ru: "grechnevaya-kasha",
+    ar: "asidat-al-hinta-al-sawda",
+  },
   name: {
     en: "Buckwheat Porridge",
     ar: "عصيدة الحنطة السوداء",
@@ -390,15 +474,11 @@ export const BuckwheatPorridge = {
       ar: "عصيدة حنطة سوداء شهية مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.",
       ru: "Кремовая гречневая каша с мёдом и орехами.",
     },
-    long: {
-      en: "This warm 500 g bowl of buckwheat porridge blends the nutty flavour of groats with sweet honey and crunchy walnuts. Simmered in milk for a smooth finish, it’s a hearty, comforting way to start the day.",
-      ar: "عصيدة حنطة سوداء شهية مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.",
-      ru: "Тёплая гречневая каша весом 500 г объединяет насыщенный вкус крупы, мягкость молока и сладость мёда. Ореховая крошка придаёт текстуру и аромат, делая завтрак сытным, простым и по-настоящему домашним.",
-    },
   },
   price: 27,
   images: {
-    thumbnail: buckwheatPorridgeThumbnail,
+    card: buckwheatPorridgeCard,
+    card2x: buckwheatPorridgeCard2x,
     full: buckwheatPorridgeFull,
   },
   nutrition: {
@@ -419,6 +499,11 @@ export const BuckwheatPorridge = {
 
 export const OatmealPorridge = {
   id: 8,
+  slug: {
+    en: "oatmeal-porridge",
+    ru: "ovsyanaya-kasha",
+    ar: "asidat-al-shufan",
+  },
   name: {
     en: "Oatmeal Porridge",
     ar: "عصيدة الشوفان",
@@ -431,15 +516,11 @@ export const OatmealPorridge = {
       ar: "عصيدة شوفان ناعمة مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.",
       ru: "Овсяная каша с мёдом и орехами.",
     },
-    long: {
-      en: "A comforting 500 g bowl pairs creamy milk-slow-cooked oats with a drizzle of floral honey and a scatter of crunchy walnuts. The result is softly sweet, nutty and richly satisfying-perfect fuel for an energetic morning.",
-      ar: "عصيدة شوفان ناعمة مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.",
-      ru: "Сытная порция в 500 г объединяет нежные овсяные хлопья, томлённые в молоке, ароматный мёд и хруст грецких орехов. Лёгкая сладость и ореховый акцент создают идеальный завтрак, дарящий тепло и заряд энергии.",
-    },
   },
   price: 34,
   images: {
-    thumbnail: oatmealPorridgeThumbnail,
+    card: oatmealPorridgeCard,
+    card2x: oatmealPorridgeCard2x,
     full: oatmealPorridgeFull,
   },
   nutrition: {
@@ -457,54 +538,61 @@ export const OatmealPorridge = {
   ],
 };
 
-export const BeefTongue = {
-  id: 9,
-  name: {
-    en: "Beef Tongue",
-    ar: "لسان بقري",
-    ru: "Говяжьи язык",
-  },
-  categories: [
-    { en: "Cold Appetizers", ar: "المقبلات الباردة", ru: "Холодные Закуски" },
-  ],
-  description: {
-    short: {
-      en: "Tender chilled slices of beef tongue with mustard sauce on the side.",
-      ar: "لسان بقري مقطع مع صلصة الخردل الروسي.",
-      ru: "Нежные ломтики говяжьего языка с горчичным соусом.",
-    },
-    long: {
-      en: "Slowly simmered in a fragrant broth of onion, garlic, bay leaf and peppercorns, our beef tongue turns meltingly tender. Served in 7–10 slices, tender slices, total of approximately 150–160 g. Each slice tastes delicately beefy, melting gently on the palate. A dab of sharp mustard brightens the flavour, while crisp coins of pickled cucumber cut through the richness with a refreshing crunch. A classic Russian cold appetiser that feels both honest and refined.",
-      ar: "لسان بقري مقطع مع صلصة الخردل الروسي.",
-      ru: "Охлаждённый говяжий язык, подается примерно 7–10 кусками общей массой 150- 160 граммов. Вареный пряном бульоне с луком, чесноком, лавровым листом и перцем, это классическая холодная закуска, которая одинаково уместна и на домашнем обеде, и на праздничном застолье.",
-    },
-  },
-  price: 38,
-  images: {
-    thumbnail: beefTongueThumbnail,
-    full: beefTongueFull,
-  },
-  nutrition: {
-    calories: 450,
-    protein: 30,
-    fat: 35,
-    carbs: 0,
-  },
-  ingredients: [
-    "Beef tongue",
-    "Onion",
-    "Garlic",
-    "Bay leaf",
-    "Black peppercorns",
-    "Carrot",
-    "Celery",
-    "Salt (Estimated)",
-    "Water (Estimated)",
-  ],
-};
+// Off the menu temporarily (expected back within the year). Commented out
+// rather than deleted so its translated copy in MenuItems.json stays valid -
+// same treatment as MixedGrill and LambChops below.
+// export const BeefTongue = {
+//   id: 9,
+//   slug: {
+//     en: "beef-tongue",
+//     ru: "govyazhi-yazyk",
+//     ar: "lisan-baqari",
+//   },
+//   name: {
+//     en: "Beef Tongue",
+//     ar: "لسان بقري",
+//     ru: "Говяжьи язык",
+//   },
+//   categories: [
+//     { en: "Cold Appetizers", ar: "المقبلات الباردة", ru: "Холодные Закуски" },
+//   ],
+//   description: {
+//     short: {
+//       en: "Tender chilled slices of beef tongue with mustard sauce on the side.",
+//       ar: "لسان بقري مقطع مع صلصة الخردل الروسي.",
+//       ru: "Нежные ломтики говяжьего языка с горчичным соусом.",
+//     },
+//   },
+//   price: 38,
+//   images: {
+//     full: beefTongueFull,
+//   },
+//   nutrition: {
+//     calories: 450,
+//     protein: 30,
+//     fat: 35,
+//     carbs: 0,
+//   },
+//   ingredients: [
+//     "Beef tongue",
+//     "Onion",
+//     "Garlic",
+//     "Bay leaf",
+//     "Black peppercorns",
+//     "Carrot",
+//     "Celery",
+//     "Salt (Estimated)",
+//     "Water (Estimated)",
+//   ],
+// };
 
 export const AssortedPickles = {
   id: 10,
+  slug: {
+    en: "assorted-pickles",
+    ru: "assorti-iz-soleniy",
+    ar: "mukhallalat-mutanawwia",
+  },
   name: {
     en: "Assorted Pickles",
     ar: "مخللات متنوعة",
@@ -519,15 +607,11 @@ export const AssortedPickles = {
       ar: "ملفوف أبيض وأحمر مخلل، خيار وطماطم.",
       ru: "Ассорти хрустящих домашних солений.",
     },
-    long: {
-      en: "Crunchy cucumbers, tangy white and red cabbage, sweet green apple, juicy tomato and earthy beetroot are lightly brined overnight with garlic, dill and peppercorns. Gentle acidity highlights each vegetable’s natural sweetness, keeping every bite crisp and refreshing. Served chilled as a classic Russian zakuska, it awakens the palate and pairs well with hearty dishes.",
-      ar: "ملفوف أبيض وأحمر مخلل، خيار وطماطم.",
-      ru: "Хрустящие огурцы, кисло-сладкая белокочанная и красная капуста, зелёное яблоко, сочный томат и ароматная свёкла томятся в лёгком рассоле с укропом, чесноком и перцем. Лёгкая кислинка подчёркивает естественную сладость овощей, сохраняя их свежесть и упругость. Подаётся охлаждённым как традиционная закуска, пробуждающая аппетит и отлично оттеняющая сытные блюда.",
-    },
   },
   price: 42,
   images: {
-    thumbnail: assortedPicklesThumbnail,
+    card: assortedPicklesCard,
+    card2x: assortedPicklesCard2x,
     full: assortedPicklesFull,
   },
   nutrition: {
@@ -556,6 +640,11 @@ export const AssortedPickles = {
 
 export const Holodec = {
   id: 11,
+  slug: {
+    en: "holodec",
+    ru: "kholodets",
+    ar: "holodek",
+  },
   name: {
     en: "Holodec",
     ar: "هولوديك",
@@ -570,15 +659,11 @@ export const Holodec = {
       ar: "مرق لحم، فيليه بقري، بيض مسلوق وجزر مسلوق.",
       ru: "Классический говяжий холодец.",
     },
-    long: {
-      en: "Our Holodec sets shredded beef in a crystal-clear, savoury meat jelly for a cool about 400 gram a portion. The meat is tender yet springy, suspended in silky jelly that carries gentle hints of garlic and bay leaf. Each bite offers mellow beef flavour balanced by the clean, briny snap of a gherkin and the sharp heat of mustard on the side-an authentic Russian appetiser that refreshes the palate and invites the next course.",
-      ar: "مرق لحم، فيليه بقري، بيض مسلوق وجزر مسلوق.",
-      ru: "Нежные волокна говядины застывают в прозрачном, ароматном желе, образуя плотный ломоть весом около 400 г. Шёлковистый холодец удерживает лёгкий вкус чеснока и лавра, подчёркивая естественную мясную сладость. Подаётся с остро-пикантной горчицей, классическая русская закуска, охлаждающая и пробуждающая аппетит перед основным блюдом.",
-    },
   },
   price: 42,
   images: {
-    thumbnail: holodecThumbnail,
+    card: holodecCard,
+    card2x: holodecCard2x,
     full: holodecFull,
   },
   nutrition: {
@@ -602,6 +687,11 @@ export const Holodec = {
 
 export const EggplantRolls = {
   id: 12,
+  slug: {
+    en: "eggplant-rolls",
+    ru: "rulety-iz-baklazhana",
+    ar: "lafaif-badhinjan",
+  },
   name: {
     en: "Eggplant Rolls",
     ar: "لفائف باذنجان",
@@ -616,15 +706,11 @@ export const EggplantRolls = {
       ar: "خمس قطع محشوة بالطماطم، البقدونس، مايونيز الثوم، صلصة الرمان والجوز.",
       ru: "Рулеты из баклажана с чесночным кремом.",
     },
-    long: {
-      en: "Five neat eggplant rolls, about 170 - 190 g total. Showcase smoky fried aubergine wrapped around a cool, creamy garlic-mayonnaise spread. Inside each roll a juicy tomato strip and hint of fresh dill add brightness, while a drizzle of tangy pomegranate molasses and a sprinkle of crushed walnuts bring sweet-sour sparkle and gentle crunch. A vibrant cold appetiser that balances richness with refreshing textures.",
-      ar: "خمس قطع محشوة بالطماطم، البقدونس، مايونيز الثوم، صلصة الرمان والجوز.",
-      ru: "33",
-    },
   },
   price: 40,
   images: {
-    thumbnail: eggplantRollsThumbnail,
+    card: eggplantRollsCard,
+    card2x: eggplantRollsCard2x,
     full: eggplantRollsFull,
   },
   nutrition: {
@@ -649,6 +735,11 @@ export const EggplantRolls = {
 
 export const RussianBorscht = {
   id: 13,
+  slug: {
+    en: "russian-borscht",
+    ru: "borshch",
+    ar: "borsh-rusi",
+  },
   name: {
     en: "Russian Borscht",
     ar: "بورش روسي",
@@ -661,15 +752,11 @@ export const RussianBorscht = {
       ar: "بورش غني بلحم البقر والشمندر مع الشبت.",
       ru: "Сытный борщ с говядиной и свёклой.",
     },
-    long: {
-      en: "A steaming 500 g bowl of deep-ruby borscht pairs tender beef cubes with sweet beetroot, carrot and potato, all swimming in a lightly tangy broth brightened by tomato paste and a splash of vinegar. Shredded cabbage adds gentle crunch, while fresh dill and a dollop of sour cream round out the classic Slavic flavours. Comforting, colourful and satisfyingly earthy.",
-      ar: "بورش غني بلحم البقر والشمندر مع الشبت.",
-      ru: "Горячая порция борща весом 500 г объединяет мягкие кусочки говядины и сладковатую свеклу с морковью, картофелем и капустой в ароматном кисловатом бульоне с томатной ноткой. Свежий укроп и ложка сметаны завершают вкус, делая этот яркий суп по-домашнему уютным и насыщенным.",
-    },
   },
   price: 41,
   images: {
-    thumbnail: russianBorschtThumbnail,
+    card: russianBorschtCard,
+    card2x: russianBorschtCard2x,
     full: russianBorschtFull,
   },
   nutrition: {
@@ -700,6 +787,11 @@ export const RussianBorscht = {
 
 export const ChickenNoodlesSoup = {
   id: 14,
+  slug: {
+    en: "chicken-noodles-soup",
+    ru: "kurinyy-sup-s-lapshoy",
+    ar: "shurbat-al-dajaj-bil-shairiya",
+  },
   name: {
     en: "Chicken Noodles Soup",
     ar: "شوربة الدجاج بالشعيرية",
@@ -712,15 +804,11 @@ export const ChickenNoodlesSoup = {
       ar: "شوربة دجاج منزلية بالشعيرية والشبت.",
       ru: "Домашний куриный суп с лапшой и укропом.",
     },
-    long: {
-      en: "A comforting 500 g bowl features tender egg noodles, sweet carrot and bell pepper, and shreds of succulent chicken swimming in clear golden broth. Fresh dill lends a bright herbal lift, while a touch of black pepper warms every spoonful. It’s the classic cure-all soup: light yet satisfying, perfect for any day that needs a little home-cooked warmth.",
-      ar: "شوربة دجاج منزلية بالشعيرية والشبت.",
-      ru: "Сытная порция в 500 г сочетает нежную яичную лапшу, сладковатую морковь и перец, а также сочные волокна куриного мяса в прозрачном золотистом бульоне. Свежий укроп придаёт яркий аромат, а щепотка чёрного перца согревает вкус. Настоящий «бабушкин» суп, лёгкий и в то же время питательный - идеален, когда хочется домашнего уюта.",
-    },
   },
   price: 37,
   images: {
-    thumbnail: chickenNoodlesSoupThumbnail,
+    card: chickenNoodlesSoupCard,
+    card2x: chickenNoodlesSoupCard2x,
     full: chickenNoodlesSoupFull,
   },
   nutrition: {
@@ -746,6 +834,11 @@ export const ChickenNoodlesSoup = {
 
 export const MeatballSoup = {
   id: 15,
+  slug: {
+    en: "meatball-soup",
+    ru: "sup-s-frikadelkami",
+    ar: "shurbat-kurat-al-lahm",
+  },
   name: {
     en: "Meatball Soup",
     ar: "شوربة كرات اللحم",
@@ -758,15 +851,11 @@ export const MeatballSoup = {
       ar: "شوربة دافئة بكرات اللحم مع الخضار والشبت.",
       ru: "Домашний суп с фрикадельками, овощами и укропом.",
     },
-    long: {
-      en: "A hearty 500 g bowl of meatball soup delivers tender beef meatballs alongside diced potato, carrot, onion, and bell pepper in a savoury broth. Fresh dill adds an aromatic finish, lifting each spoonful with herbal brightness. Simple, wholesome, and deeply comforting, it’s the kind of soup that warms from within and feels just like home.",
-      ar: "شوربة دافئة بكرات اللحم مع الخضار والشبت.",
-      ru: "Порция в 500 г ароматного супа с нежными говяжьими фрикадельками, кубиками картофеля, сладкой морковью, болгарским перцем и репчатым луком в прозрачном бульоне. Свежий укроп завершает композицию лёгким ароматом и придаёт блюду приятную свежесть. Домашний и сытный суп, дарящий уют и тепло каждому.",
-    },
   },
   price: 41,
   images: {
-    thumbnail: meatballSoupThumbnail,
+    card: meatballSoupCard,
+    card2x: meatballSoupCard2x,
     full: meatballSoupFull,
   },
   nutrition: {
@@ -791,6 +880,11 @@ export const MeatballSoup = {
 
 export const Okroshka = {
   id: 16,
+  slug: {
+    en: "okroshka",
+    ru: "okroshka",
+    ar: "okroshka",
+  },
   name: {
     en: "Okroshka",
     ar: "أوكروشكا",
@@ -803,15 +897,11 @@ export const Okroshka = {
       ar: "شوربة زبادي باردة ومنعشة مع لحم البقر والشبت.",
       ru: "Освежающая окрошка с говядиной и укропом.",
     },
-    long: {
-      en: "A chilled 500 g bowl of Okroshka combines tender cubes of cooked beef, boiled potatoes, crisp cucumber, and chopped eggs in a tangy yogurt broth, gently fizzed with soda water. Fresh dill and creamy sour cream round out the flavours, creating a vibrant, refreshing soup perfect for warm days. Every spoonful offers creamy coolness and a satisfying crunch.",
-      ar: "شوربة زبادي باردة ومنعشة مع لحم البقر والشبت.",
-      ru: "Порция холодной окрошки весом 500 г объединяет кусочки сочной говядины, отварного картофеля, свежего огурца и рубленого яйца в освежающем йогуртовом бульоне с лёгкими пузырьками газированной воды. Свежий укроп и нежная сметана идеально дополняют вкус, делая блюдо ярким, освежающим и сытным одновременно. Идеальный суп для жарких дней.",
-    },
   },
   price: 37,
   images: {
-    thumbnail: okroshkaThumbnail,
+    card: okroshkaCard,
+    card2x: okroshkaCard2x,
     full: okroshkaFull,
   },
   nutrition: {
@@ -836,6 +926,11 @@ export const Okroshka = {
 
 export const Solyanka = {
   id: 17,
+  slug: {
+    en: "solyanka",
+    ru: "solyanka",
+    ar: "solyanka",
+  },
   name: {
     en: "Solyanka",
     ar: "سوليانكا",
@@ -848,15 +943,11 @@ export const Solyanka = {
       ar: "شوربة سوليانكا حامضة بلحم البقر والمخللات.",
       ru: "Кисло-пряная солянка с мясом и огурцами.",
     },
-    long: {
-      en: "A hearty 340 g bowl of solyanka layers tender beef cubes and smoky sausages in a bright tomato broth sharpened with pickled cucumbers, olives and a squeeze of lemon. Each spoonful delivers a lively balance of savoury meat, briny vegetables and fresh dill aroma-comforting yet refreshingly tangy.",
-      ar: "شوربة سوليانكا حامضة بلحم البقر والمخللات.",
-      ru: "Сытная порция (≈ 340 г) солянки объединяет нежные кусочки говядины и копчёные колбасы в томатном бульоне с яркой кислинкой маринованных огурцов и оливок. Ломтик лимона и свежий укроп придают блюду освежающий аромат, а богатый мясной вкус создаёт идеальное сочетание пряности и домашнего уюта.",
-    },
   },
   price: 48,
   images: {
-    thumbnail: solyankaThumbnail,
+    card: solyankaCard,
+    card2x: solyankaCard2x,
     full: solyankaFull,
   },
   nutrition: {
@@ -884,6 +975,11 @@ export const Solyanka = {
 
 export const RussianOlivierSalad = {
   id: 18,
+  slug: {
+    en: "russian-olivier-salad",
+    ru: "olive",
+    ar: "salatat-olivye-al-rusiya",
+  },
   name: {
     en: "Russian Olivier Salad",
     ar: "سلطة أوليفييه الروسية",
@@ -896,15 +992,11 @@ export const RussianOlivierSalad = {
       ar: "سلطة روسية تقليدية مع لحم، بيض مسلوق، بطاطا مسلوقة، بازلاء، مخلل، ومايونيز.",
       ru: "Классический Оливье с говядиной и овощами.",
     },
-    long: {
-      en: "About 300 g of colourful diced potatoes, carrots and sweet green peas mingle with tangy gherkins, tender cubes of beef and chopped egg. A smooth, lightly seasoned mayonnaise ties everything together, adding gentle richness without masking the fresh crunch. Each spoonful balances savoury meat, vegetable sweetness and a bright hint of pickle brine-Russia’s beloved holiday salad, cooling yet hearty.",
-      ar: "سلطة روسية تقليدية مع لحم، بيض مسلوق، بطاطا مسلوقة، بازلاء، مخلل، ومايونيز.",
-      ru: "Порция около 300 г состоит из мелко нарезанного картофеля, моркови и зелёного горошка, к которым добавлены хрустящие корнишоны, сочная отварная говядина и рубленое яйцо. Нежный майонез придаёт салату кремовую гармонию, не заглушая овощную свежесть. Каждая ложка сочетает мясную насыщенность, сладость овощей и лёгкую кислинку маринада - культовый российский салат для любого застолья.",
-    },
   },
   price: 38,
   images: {
-    thumbnail: russianOlivierSaladThumbnail,
+    card: russianOlivierSaladCard,
+    card2x: russianOlivierSaladCard2x,
     full: russianOlivierSaladFull,
   },
   nutrition: {
@@ -928,6 +1020,11 @@ export const RussianOlivierSalad = {
 
 export const Vinegret = {
   id: 19,
+  slug: {
+    en: "vinegret",
+    ru: "vinegret",
+    ar: "salatat-vinegret",
+  },
   name: {
     en: "Vinegret",
     ar: "سلطة فينيغريت",
@@ -940,15 +1037,11 @@ export const Vinegret = {
       ar: "سلطة روسية كلاسيكية مع شمندر مشوي وزيت دوار الشمس.",
       ru: "Яркий винегрет с овощами и соленьями.",
     },
-    long: {
-      en: "A 300 g bowl of classic vinegret layers jewel-red beetroot, tender potato and carrot with tangy gherkins and sauerkraut. Fresh dill and a splash of vinegar lift the earthy sweetness, while sunflower oil gives a silky finish. Every forkful delivers crisp, briny pops against mellow root-veg cubes-refreshing yet satisfying, and a beloved staple of Russian home cooking.",
-      ar: "سلطة روسية كلاسيكية مع شمندر مشوي وزيت دوار الشمس.",
-      ru: "В порции 300 г сочетаются рубиновые кубики свёклы, мягкий картофель и морковь, хрустящие корнишоны и квашеная капуста. Аромат укропа, лёгкая кислинка уксуса и бархатистость подсолнечного масла объединяют вкусы. Хрустит, освежает и одновременно насыщает - классический винегрет, знакомый каждому русскому столу.",
-    },
   },
   price: 35,
   images: {
-    thumbnail: vinegretThumbnail,
+    card: vinegretCard,
+    card2x: vinegretCard2x,
     full: vinegretFull,
   },
   nutrition: {
@@ -973,6 +1066,11 @@ export const Vinegret = {
 
 export const RussianHerringSaladShuba = {
   id: 20,
+  slug: {
+    en: "russian-herring-salad-shuba",
+    ru: "seld-pod-shuboy",
+    ar: "salatat-al-ringa-shuba",
+  },
   name: {
     en: "Russian Herring Salad - Shuba",
     ar: "سلطة الرنجة الروسية - شوبا",
@@ -985,15 +1083,11 @@ export const RussianHerringSaladShuba = {
       ar: "شرائح رنجة مخللة، بصل مفروم ناعماً، شمندر، جزر، بطاطا، وصلصة مايونيز.",
       ru: "Слоёная «Сельдь под шубой» с майонезом.",
     },
-    long: {
-      en: "A neat 300 g round reveals classic Shuba layers: soft potato base, sweet carrot, salty diced herring and vivid beetroot, all lightly bound with mayonnaise and finished with fluffy grated egg. The cool slice offers earthy sweetness, gentle brine and creamy richness in every forkful-a festive burst of colour and unmistakably Russian flavour.",
-      ar: "شرائح رنجة مخللة، بصل مفروم ناعماً، شمندر، جزر، بطاطا، وصلصة مايونيز.",
-      ru: "Аккуратный 300-граммовый круг раскрывает традиционные слои «шубы»: мягкий картофель, сладковатая морковь, солёная сельдь, сочная свёкла и лёгкий майонез, увенчанные воздушной крошкой яйца. Охлаждённая порция сочетает земляную сладость овощей, пикантную рыбную солёность и деликатную кремовость - яркая классика русских праздников.",
-    },
   },
   price: 42,
   images: {
-    thumbnail: russianHerringSaladShubaThumbnail,
+    card: russianHerringSaladShubaCard,
+    card2x: russianHerringSaladShubaCard2x,
     full: russianHerringSaladShubaFull,
   },
   nutrition: {
@@ -1015,6 +1109,11 @@ export const RussianHerringSaladShuba = {
 
 export const Shakarob = {
   id: 21,
+  slug: {
+    en: "shakarob",
+    ru: "shakarob",
+    ar: "shakarob",
+  },
   name: {
     en: "Shakarob",
     ar: "شاكاروب",
@@ -1027,15 +1126,11 @@ export const Shakarob = {
       ar: "طماطم، خيار، بصل، وأعشاب طازجة.",
       ru: "Освежающий узбекский Шакароб из огурцов, помидоров и лука.",
     },
-    long: {
-      en: "A crisp 300 g serving of shakarob marries equal parts juicy tomato, crunchy cucumber and fragrant onion ribbons. Fresh dill threads through the mix, while a simple splash of olive oil and vinegar adds silky body and gentle tang. Light, vibrant and irresistibly refreshing, this Central-Asian staple wakes up the palate and pairs beautifully with grilled meats or hearty mains.",
-      ar: "طماطم، خيار، بصل، وأعشاب طازجة.",
-      ru: "300-граммовая порция Шакароба объединяет сочные кубики помидоров, хрустящие огурцы и тонкие полукольца лука, переплетённые ароматом свежего укропа. Лёгкая заправка из оливкового масла и уксуса обволакивает овощи, придавая салату мягкую кислинку и шелковистость. Лёгкий, яркий и бодрящий узбекский салат, который отлично оттеняет блюда на гриле и сытные горячие закуски.",
-    },
   },
   price: 27,
   images: {
-    thumbnail: shakarobThumbnail,
+    card: shakarobCard,
+    card2x: shakarobCard2x,
     full: shakarobFull,
   },
   nutrition: {
@@ -1058,6 +1153,11 @@ export const Shakarob = {
 
 export const UzbekAchichuk = {
   id: 22,
+  slug: {
+    en: "uzbek-achichuk",
+    ru: "achichuk",
+    ar: "achichuk-uzbaki",
+  },
   name: {
     en: "Uzbek Achichuk",
     ar: "أتشيتشوك الأوزبكي",
@@ -1070,15 +1170,11 @@ export const UzbekAchichuk = {
       ar: "بصل وطماطم.",
       ru: "Острый узбекский салат из томатов и огурцов.",
     },
-    long: {
-      en: "A lively 300 g mix of paper-thin tomato and cucumber slices is laced with sharp onion and fresh chili rings. A quick salt toss draws out natural juices, creating a light, tangy dressing that lets garden freshness shine while adding a gentle bite of heat. Crisp, juicy and wonderfully simple, Achichuk is the perfect cool counterpart to rich plov or grilled meats.",
-      ar: "بصل وطماطم.",
-      ru: "Тончайшие ломтики томата и огурца (300 г) сочетаются с острыми перьями лука и колечками свежего чили. Лишь щепотка соли - и овощи пускают сок, образуя естественную лёгкую заправку. Хруст, сочность и приятная жгучесть делают ачичук идеальным освежающим гарниром к плову или шашлыку.",
-    },
   },
   price: 28,
   images: {
-    thumbnail: uzbekAchichukThumbnail,
+    card: uzbekAchichukCard,
+    card2x: uzbekAchichukCard2x,
     full: uzbekAchichukFull,
   },
   nutrition: {
@@ -1098,6 +1194,11 @@ export const UzbekAchichuk = {
 
 export const CarrotSalad = {
   id: 23,
+  slug: {
+    en: "carrot-salad",
+    ru: "salat-iz-morkovi",
+    ar: "salatat-al-jazar",
+  },
   name: {
     en: "Carrot Salad",
     ar: "سلطة الجزر",
@@ -1110,15 +1211,11 @@ export const CarrotSalad = {
       ar: "سلطة جزر متبلة حارة.",
       ru: "Хрустящий морковный салат с кориандром.",
     },
-    long: {
-      en: "A bright 300 g heap of freshly grated carrots glistens in a light sunflower-oil dressing sharpened with white vinegar and scented with warm ground coriander. Tiny flecks of sweet onion tuck between the strands, adding a gentle bite. The result is crunchy, lightly tangy and herb-fragrant-a simple Russian salad that cleanses the palate and pairs effortlessly with rich main courses.",
-      ar: "سلطة جزر متبلة حارة.",
-      ru: "300 г сочной тёртой моркови, заправленной нежным подсолнечным маслом и белым уксусом с ароматом молотого кориандра. Мелкие кусочки сладкого лука придают лёгкую остринку, сохраняя хрустящую текстуру овощей. Яркий, освежающий салат, который прекрасно оттеняет сытные блюда и поднимает аппетит.",
-    },
   },
   price: 26,
   images: {
-    thumbnail: carrotSaladThumbnail,
+    card: carrotSaladCard,
+    card2x: carrotSaladCard2x,
     full: carrotSaladFull,
   },
   nutrition: {
@@ -1140,6 +1237,11 @@ export const CarrotSalad = {
 
 export const GreekSalad = {
   id: 24,
+  slug: {
+    en: "greek-salad",
+    ru: "grecheskiy-salat",
+    ar: "salata-yunaniya",
+  },
   name: {
     en: "Greek Salad",
     ar: "سلطة يونانية",
@@ -1152,15 +1254,11 @@ export const GreekSalad = {
       ar: "فلفل رومي، خيار، طماطم، بصل، وجبنة فيتا مع ليمون وزيت زيتون.",
       ru: "Классический греческий салат с фетой и оливками.",
     },
-    long: {
-      en: "A generous 400 g bowl overflows with juicy tomatoes, crisp cucumber and sweet bell pepper, offset by ribbons of pungent red onion. Briny Kalamata-style olives and creamy feta cubes lend salty depth, while a bright dressing of extra-virgin olive oil, lemon juice and oregano lightly coats every bite. Fresh, colourful and perfectly balanced, this timeless Mediterranean salad brings sunny flavours to any table.",
-      ar: "فلفل رومي، خيار، طماطم، بصل، وجبنة فيتا مع ليمون وزيت زيتون.",
-      ru: "Сочный микс из помидоров, огурцов и сладкого перца (400 г) дополняют тонкие слайсы красного лука, пряные оливки и мягкие кубики феты. Лёгкая заправка из оливкового масла, лимонного сока и орегано объединяет ингредиенты, сохраняя их естественную хрусткость. Яркий, свежий и гармоничный - греческий салат оживляет меню летними средиземноморскими красками.",
-    },
   },
   price: 32,
   images: {
-    thumbnail: greekSaladThumbnail,
+    card: greekSaladCard,
+    card2x: greekSaladCard2x,
     full: greekSaladFull,
   },
   nutrition: {
@@ -1186,6 +1284,11 @@ export const GreekSalad = {
 
 export const SpicySteakSalad = {
   id: 25,
+  slug: {
+    en: "spicy-steak-salad",
+    ru: "ostryy-steyk-salat",
+    ar: "salatat-sharaih-al-lahm-al-harra",
+  },
   name: {
     en: "Spicy Steak Salad",
     ar: "سلطة شرائح اللحم الحارة",
@@ -1198,15 +1301,11 @@ export const SpicySteakSalad = {
       ar: "قطع خضراوات طازجة، شرائح فيليه مشوية، وصلصة الشيف.",
       ru: "Остро-пряный салат со стейком.",
     },
-    long: {
-      en: "Warm, pepper-seared beef slices crown a colourful mix of cucumber, bell pepper, tomato and onion. A tangy soy-chili-lime dressing adds heat and brightness, turning the 330 g bowl into a lively balance of juicy meat and crunchy vegetables-light enough for lunch, bold enough to satisfy a steak craving.",
-      ar: "قطع خضراوات طازجة، شرائح فيليه مشوية، وصلصة الشيف.",
-      ru: "Тёплые ломтики говядины с перечной корочкой лежат на хрустящей подушке из огурца, сладкого перца, томата и лука. Пикантная заправка из соевого соуса, сладкого чили и лайма придаёт салату остроту и цитрусовую свежесть. Порция ~330 г сочетает сочное мясо и яркие овощи - лёгкий, но насыщенный вкус.",
-    },
   },
   price: 50,
   images: {
-    thumbnail: spicySteakSaladThumbnail,
+    card: spicySteakSaladCard,
+    card2x: spicySteakSaladCard2x,
     full: spicySteakSaladFull,
   },
   nutrition: {
@@ -1233,6 +1332,11 @@ export const SpicySteakSalad = {
 
 export const BakedRussianPieWithCabbage = {
   id: 26,
+  slug: {
+    en: "baked-russian-pie-with-cabbage",
+    ru: "pirozhki-s-kapustoy",
+    ar: "fatira-rusiya-bil-malfuf",
+  },
   name: {
     en: "Baked Russian Pie With Cabbage",
     ar: "فطيرة روسية مخبوزة مع ملفوف",
@@ -1245,15 +1349,11 @@ export const BakedRussianPieWithCabbage = {
       ar: "قطعة واحدة",
       ru: "Золотистый пирожок с капустой.",
     },
-    long: {
-      en: "A crisp, glossy crust gives way to a moist, mildly sweet filling of sautéed white cabbage, carrot and a whisper of fresh dill. The tender yeast-raised dough bakes up airy yet resilient, keeping every bite light while adding a gentle buttery note. Served warm, this 160 g Russian pie delivers comforting home-kitchen flavours-earthy vegetables wrapped in flaky bread, perfect for breakfast or a quick snack on the go.",
-      ar: "قطعة واحدة",
-      ru: "Хрустящая, румяная корочка скрывает сочную начинку из мягкой капусты с морковью и ароматом укропа. Воздушное дрожжевое тесто остаётся нежным и слегка сливочным, делая каждую вилку лёгкой, но сытной. Тёплый пирожок весом 160 г дарит вкус домашней выпечки: простая капустная начинка в золотом «конверте» - идеальный перекус или дополнение к чаю.",
-    },
   },
   price: 14,
   images: {
-    thumbnail: bakedRussianPieWithCabbageThumbnail,
+    card: bakedRussianPieWithCabbageCard,
+    card2x: bakedRussianPieWithCabbageCard2x,
     full: bakedRussianPieWithCabbageFull,
   },
   nutrition: {
@@ -1280,6 +1380,11 @@ export const BakedRussianPieWithCabbage = {
 
 export const BeetrootSalad = {
   id: 27,
+  slug: {
+    en: "beetroot-salad",
+    ru: "svekolnyy-salat",
+    ar: "salatat-al-shamandar",
+  },
   name: {
     en: "Beetroot Salad",
     ar: "سلطة الشمندر",
@@ -1292,15 +1397,11 @@ export const BeetrootSalad = {
       ar: "ثوم، مايونيز، شمندر، برقوق مجفف، وجبنة فيتا.",
       ru: "Яркий свекольный салат с фетой и орехами.",
     },
-    long: {
-      en: "A 300 g mound of sweet, ruby beetroot is gently bound with creamy mayonnaise and dotted with soft diced prunes for a subtle fruit note. Tangy feta slices crown the top, while chopped walnuts add a toasty crunch. Earthy sweetness, mellow creaminess and nutty depth mingle in every forkful, making this colourful Russian classic an instant table brightener.",
-      ar: "ثوم، مايونيز، شمندر، برقوق مجفف، وجبنة فيتا.",
-      ru: "300-граммовая порция тёртой свёклы в нежном майонезе, с лёгкими акцентами сочных черносливин. Сверху - ломтики пикантной феты и хруст рублёных грецких орехов. Землистая сладость свёклы сочетается с кремовой мягкостью соуса и ореховым послевкусием, превращая простой салат в выразительную русскую закуску, которая оживит любой стол.",
-    },
   },
   price: 31,
   images: {
-    thumbnail: beetrootSaladThumbnail,
+    card: beetrootSaladCard,
+    card2x: beetrootSaladCard2x,
     full: beetrootSaladFull,
   },
   nutrition: {
@@ -1322,6 +1423,11 @@ export const BeetrootSalad = {
 
 export const BakedRussianPieWithPotatoAndMushroom = {
   id: 28,
+  slug: {
+    en: "baked-russian-pie-with-potato-and-mushroom",
+    ru: "pirozhki-s-kartoshkoy-i-gribami",
+    ar: "fatira-rusiya-bil-batata-wal-fitr",
+  },
   name: {
     en: "Baked Russian Pie With Potato And Mushroom",
     ar: "فطيرة روسية مخبوزة مع بطاطا وفطر",
@@ -1334,15 +1440,11 @@ export const BakedRussianPieWithPotatoAndMushroom = {
       ar: "قطعة واحدة",
       ru: "Пирожок с картофелем и грибами.",
     },
-    long: {
-      en: "A 160 g golden pie hides a cosy filling of buttery potato, sautéed mushrooms and fresh dill. The lightly sweet yeast dough bakes up airy yet sturdy, offering a soft crumb beneath its crisp, egg-washed crust. Earthy vegetables and fragrant herbs meet gentle sweetness in each bite, making this baked Russian classic perfect for breakfast on the go or a comforting snack with tea.",
-      ar: "قطعة واحدة",
-      ru: "Румяный пирожок весом 160 г укрывает начинку из нежного картофеля, жареных грибов и ароматного укропа. Лёгкое дрожжевое тесто остаётся воздушным и мягким внутри, а сверху покрывается хрустящей глянцевой корочкой. Землистые овощи и свежая зелень гармонируют с деликатной сладостью теста, превращая традиционную русскую выпечку в идеальный перекус к чашке чая.",
-    },
   },
   price: 15,
   images: {
-    thumbnail: bakedRussianPieWithPotatoAndMushroomThumbnail,
+    card: bakedRussianPieWithPotatoAndMushroomCard,
+    card2x: bakedRussianPieWithPotatoAndMushroomCard2x,
     full: bakedRussianPieWithPotatoAndMushroomFull,
   },
   nutrition: {
@@ -1369,6 +1471,11 @@ export const BakedRussianPieWithPotatoAndMushroom = {
 
 export const SamsaWithMeat = {
   id: 29,
+  slug: {
+    en: "samsa-with-meat",
+    ru: "samsa-iz-govyadiny",
+    ar: "sambusa-bil-lahm",
+  },
   name: {
     en: "Samsa With Meat",
     ar: "سمبوسة باللحم",
@@ -1381,15 +1488,11 @@ export const SamsaWithMeat = {
       ar: "قطعة واحدة",
       ru: "Слоёная самса с пряной говядиной.",
     },
-    long: {
-      en: "A golden, 160 g samsa features crisp, flaky pastry wrapped around juicy ground beef, sweet onion and warm cumin. Each bite delivers buttery layers that shatter to reveal savoury filling, lightly perfumed with spice and black pepper heat. Enjoy fresh from the oven with a side of fiery ajika for a true Central-Asian street-stall experience.",
-      ar: "قطعة واحدة",
-      ru: "Золотистая самса весом 160 г сочетает рассыпчатое слоистое тесто и сочную начинку из говядины, лука и ароматного кумина. Хрупкая корочка раскрывает пряное, нежное мясо с лёгкой остротой чёрного перца. Подавайте горячей с острым аджикой, чтобы почувствовать настоящий вкус центральноазиатской выпечки.",
-    },
   },
   price: 17,
   images: {
-    thumbnail: samsaWithMeatThumbnail,
+    card: samsaWithMeatCard,
+    card2x: samsaWithMeatCard2x,
     full: samsaWithMeatFull,
   },
   nutrition: {
@@ -1413,6 +1516,11 @@ export const SamsaWithMeat = {
 
 export const BunsWithJam = {
   id: 30,
+  slug: {
+    en: "buns-with-jam",
+    ru: "bulochka-s-dzhemom",
+    ar: "khubz-bil-murabba",
+  },
   name: {
     en: "Buns With Jam",
     ar: "خبز مع مربى",
@@ -1425,15 +1533,11 @@ export const BunsWithJam = {
       ar: "قطعة واحدة",
       ru: "Рогалик с ягодным джемом.",
     },
-    long: {
-      en: "A crescent of fluffy milk dough hides a ribbon of sweet-tart berry jam. Sesame-dusted crust gives gentle crunch, while the inside remains light and slightly chewy-perfect with morning coffee or as an afternoon treat.",
-      ar: "قطعة واحدة",
-      ru: "Пышное молочное тесто свёрнуто полумесяцем и наполнено кисло-сладким ягодным джемом. Семена кунжута добавляют деликатный хруст, а мякиш остаётся мягким и чуть тягучим - идеальная пара к утреннему кофе или для сладкого перекуса.",
-    },
   },
   price: 11,
   images: {
-    thumbnail: bunsWithJamThumbnail,
+    card: bunsWithJamCard,
+    card2x: bunsWithJamCard2x,
     full: bunsWithJamFull,
   },
   nutrition: {
@@ -1447,6 +1551,11 @@ export const BunsWithJam = {
 
 export const BakedHotDog = {
   id: 31,
+  slug: {
+    en: "baked-hot-dog",
+    ru: "khot-dog",
+    ar: "hot-dog-makhbuz",
+  },
   name: {
     en: "Baked Hot Dog",
     ar: "هوت دوغ مخبوز",
@@ -1459,15 +1568,11 @@ export const BakedHotDog = {
       ar: "قطعة واحدة",
       ru: "Хот-дог в мягком дрожжевом тесте.",
     },
-    long: {
-      en: "A juicy chicken frank is spiralled in sweet, buttery milk dough and baked until the crust turns shiny amber. Inside, the bread stays pillow-soft, sealing in sausage juices so every bite offers savoury snap and airy crumb-street-food comfort straight from the oven.",
-      ar: "قطعة واحدة",
-      ru: "Сочная куриная сосиска завернута в нежное молочное дрожжевое тесто и запечена до глянцевой янтарной корочки. Внутри хлеб остаётся пушистым и впитывает соки сосиски, даря сочетание сытного вкуса и лёгкого мякиша - тёплый уличный перекус прямо из печи.",
-    },
   },
   price: 11,
   images: {
-    thumbnail: bakedHotDogThumbnail,
+    card: bakedHotDogCard,
+    card2x: bakedHotDogCard2x,
     full: bakedHotDogFull,
   },
   nutrition: {
@@ -1492,6 +1597,11 @@ export const BakedHotDog = {
 
 export const Vatrushka = {
   id: 32,
+  slug: {
+    en: "vatrushka",
+    ru: "vatrushka",
+    ar: "vatrushka",
+  },
   name: {
     en: "Vatrushka",
     ar: "فاتروشكا",
@@ -1504,15 +1614,11 @@ export const Vatrushka = {
       ar: "قطعة واحدة",
       ru: "Сладкая ватрушка с творогом.",
     },
-    long: {
-      en: "A round milk-dough bun cradles a creamy filling of lightly sweetened cottage cheese. Baked until the rim turns glossy amber and the centre sets souffle-soft, this 170 g pastry offers contrasting textures: pillowy crumb, silky cheese and a kiss of powdered sugar.",
-      ar: "قطعة واحدة",
-      ru: "Круглая молочная булочка с нежной творожной начинкой запекается до золотистой корочки, а центр схватывается, оставаясь кремово-лаком. 170-граммовая ватрушка сочетает воздушный мякиш, шёлковый творожный крем и лёгкую пудровую сладость.",
-    },
   },
   price: 13,
   images: {
-    thumbnail: vatrushkaThumbnail,
+    card: vatrushkaCard,
+    card2x: vatrushkaCard2x,
     full: vatrushkaFull,
   },
   nutrition: {
@@ -1532,6 +1638,11 @@ export const Vatrushka = {
 
 export const RussianPancakesWithBeef = {
   id: 33,
+  slug: {
+    en: "russian-pancakes-with-beef",
+    ru: "bliny-s-govyadinoy",
+    ar: "fatair-rusiya-bil-lahm-al-baqari",
+  },
   name: {
     en: "Russian Pancakes with Beef",
     ar: "فطائر روسية باللحم البقري",
@@ -1546,15 +1657,11 @@ export const RussianPancakesWithBeef = {
       ar: "ثلاث قطع من لحم البقر المفروم الطري، مع التوابل والبصل الذهبي.",
       ru: "Блины с говяжьей начинкой и сметаной.",
     },
-    long: {
-      en: "Three tender Russian crêpes, rolled around savoury shredded beef, make up a satisfying ≈ 290 g serving. The paper-thin pancakes stay soft yet slightly crisp at the edges, while the warm meat filling lends hearty richness. A cool spoonful of sour cream on the side adds creamy tang, turning this simple street-style snack into true comfort food.",
-      ar: "ثلاث قطع من لحم البقر المفروم الطري، مع التوابل والبصل الذهبي.",
-      ru: "Три тонких блина с сочной говяжьей начинкой образуют порцию около 290 г. Мягкие блинчики слегка хрустят по краю, а тёплая мясная начинка дарит насыщенный вкус. Подаются со сметаной, которая придаёт лёгкую кислинку и делает классическое русское угощение ещё более домашним и уютным.",
-    },
   },
   price: 37,
   images: {
-    thumbnail: russianPancakesWithBeefThumbnail,
+    card: russianPancakesWithBeefCard,
+    card2x: russianPancakesWithBeefCard2x,
     full: russianPancakesWithBeefFull,
   },
   nutrition: {
@@ -1578,6 +1685,11 @@ export const RussianPancakesWithBeef = {
 
 export const RussianPancakesWithMushroom = {
   id: 34,
+  slug: {
+    en: "russian-pancakes-with-mushroom",
+    ru: "bliny-s-gribami",
+    ar: "fatair-rusiya-bil-fitr",
+  },
   name: {
     en: "Russian Pancakes with Mushroom",
     ar: "فطائر روسية بالفطر",
@@ -1592,15 +1704,11 @@ export const RussianPancakesWithMushroom = {
       ar: "ثلاث قطع.",
       ru: "Блины с грибной начинкой и сметаной.",
     },
-    long: {
-      en: "Three delicate crêpes, rolled around savoury sautéed mushrooms, make a comforting ≈ 290 g serving. The pancakes stay tender with lightly crisp edges, while the earthy mushroom filling adds umami depth. A cool spoonful of sour cream lends creamy tang, turning this homestyle Russian favourite into a simple yet satisfying bite.",
-      ar: "ثلاث قطع.",
-      ru: "Три тонких блина с ароматной грибной начинкой образуют порцию около 290 г. Мягкие блинчики слегка хрустят по краям, а сочные грибы придают насыщенный лесной вкус. Подаются с холодной сметаной, которая добавляет лёгкую кислинку и подчёркивает домашний характер этого русского угощения.",
-    },
   },
   price: 37,
   images: {
-    thumbnail: russianPancakesWithMushroomThumbnail,
+    card: russianPancakesWithMushroomCard,
+    card2x: russianPancakesWithMushroomCard2x,
     full: russianPancakesWithMushroomFull,
   },
   nutrition: {
@@ -1624,6 +1732,11 @@ export const RussianPancakesWithMushroom = {
 
 export const VarenikiWithPotato = {
   id: 35,
+  slug: {
+    en: "vareniki-with-potato",
+    ru: "vareniki",
+    ar: "vareniki-bil-batata",
+  },
   name: {
     en: "Vareniki With Potato",
     ar: "فارينيكي بالبطاطا",
@@ -1638,15 +1751,11 @@ export const VarenikiWithPotato = {
       ar: "عشر قطع من الزلابية المحشوة بالبطاطا.",
       ru: "Нежные вареники с картофелем и сметаной.",
     },
-    long: {
-      en: "A generous ≈ 380 g helping of vareniki delivers pillowy dough pockets stuffed with creamy potato, sweet onion and a hint of dill. Each dumpling is boiled until tender, then glossed with melted butter so the wrappers stay silky. Add a spoon of cool sour cream for contrast and you get the ultimate Slavic comfort-simple, soothing and impossible to stop at one.",
-      ar: "عشر قطع من الزلابية المحشوة بالبطاطا.",
-      ru: "Щедрая порция (около 380 г) мягких вареников скрывает внутри пюре из картофеля с луком и укропом. Тонкое тесто деликатно обволакивает нежную начинку, а после варки вареники смазываются маслом, оставаясь шелковистыми. Ложка холодной сметаны добавляет лёгкую кислинку и завершает образ классического, по-домашнему уютного блюда.",
-    },
   },
   price: 40,
   images: {
-    thumbnail: varenikiWithPotatoThumbnail,
+    card: varenikiWithPotatoCard,
+    card2x: varenikiWithPotatoCard2x,
     full: varenikiWithPotatoFull,
   },
   nutrition: {
@@ -1672,6 +1781,11 @@ export const VarenikiWithPotato = {
 
 export const PelmeniWithMeat = {
   id: 36,
+  slug: {
+    en: "pelmeni-with-meat",
+    ru: "pelmeni",
+    ar: "pelmeni-bil-lahm",
+  },
   name: {
     en: "Pelmeni with meat",
     ar: "بيلميني باللحم",
@@ -1686,15 +1800,11 @@ export const PelmeniWithMeat = {
       ar: "اثنا عشر قطعة من الزلابية الروسية التقليدية المحشوة باللحم، مع الزبدة والقشدة الحامضة.",
       ru: "Нежные пельмени с говядиной и сметаной.",
     },
-    long: {
-      en: "A hearty 360 g bowl holds about twenty petite pelmeni: thin, springy dough envelopes juicy minced beef scented with onion, garlic and a whisper of cumin. Each dumpling bursts with savoury broth as you bite, while a slick of sunflower oil keeps the wrappers silky. Pair them with a cool spoon of sour cream for classic Russian comfort that’s equal parts delicate and satisfying.",
-      ar: "اثنا عشر قطعة من الزلابية الروسية التقليدية المحشوة باللحم، مع الزبدة والقشدة الحامضة.",
-      ru: "Щедрая порция (≈ 360 г) насчитывает около двадцати маленьких пельменей: тонкое эластичное тесто скрывает сочный фарш из говядины с луком, чесноком и лёгкой ноткой кумина. При укусе выделяется ароматный мясной сок, а капля подсолнечного масла делает оболочку шелковистой. Дополните холодной сметаной - и получите традиционное русское блюдо, простое и невероятно уютное.",
-    },
   },
   price: 45,
   images: {
-    thumbnail: pelmeniWithMeatThumbnail,
+    card: pelmeniWithMeatCard,
+    card2x: pelmeniWithMeatCard2x,
     full: pelmeniWithMeatFull,
   },
   nutrition: {
@@ -1719,6 +1829,11 @@ export const PelmeniWithMeat = {
 
 export const Draniki = {
   id: 37,
+  slug: {
+    en: "draniki",
+    ru: "draniki",
+    ar: "draniki",
+  },
   name: {
     en: "Draniki",
     ar: "درانيكي",
@@ -1733,15 +1848,11 @@ export const Draniki = {
       ar: "فطائر البطاطا المقلية.",
       ru: "Хрустящие белорусские драники со сметаной.",
     },
-    long: {
-      en: "Three golden-edged draniki-together about 280 g-deliver the comforting crunch of grated potatoes bound with a hint of onion. The interior stays soft and fluffy, while the outside turns addictively crisp from a quick pan-fry. A cool spoonful of rich sour cream melts over the hot surface, adding creamy tang that lifts the mild earthy flavour. Simple, satisfying and perfect straight from the skillet.",
-      ar: "فطائر البطاطا المقلية.",
-      ru: "Три румяных драника весом примерно 280 г сочетают хрустящую корочку и нежную картофельную сердцевину с лёгкой сладостью лука. Горячие оладьи обмакивают в густую сметану, которая тает, придавая блюду сливочную кислинку и подчёркивая домашний вкус. Лаконичная, но сытная закуска, любимая во многих славянских кухнях.",
-    },
   },
   price: 34,
   images: {
-    thumbnail: dranikiThumbnail,
+    card: dranikiCard,
+    card2x: dranikiCard2x,
     full: dranikiFull,
   },
   nutrition: {
@@ -1764,6 +1875,11 @@ export const Draniki = {
 
 export const MantiWithMeat = {
   id: 38,
+  slug: {
+    en: "manti-with-meat",
+    ru: "manty-iz-govyadiny",
+    ar: "manti-bil-lahm",
+  },
   name: {
     en: "Manti With Meat",
     ar: "مانتي باللحم",
@@ -1778,15 +1894,11 @@ export const MantiWithMeat = {
       ar: "خمس قطع من الزلابية الأوزبكية المحشوة باللحم المتبل.",
       ru: "Паровые манты с говядиной и сметаной.",
     },
-    long: {
-      en: "A hearty 450 g plate brings four-to-five plump manti: silky, springy dough parcels stuffed with juicy minced beef, sweet onion and warm cumin. Steaming locks the flavours inside, so each bite releases aromatic juices that mingle with a gloss of melted butter. A cool spoon of sour cream on the side adds creamy tang, turning this Central-Asian classic into pure comfort.",
-      ar: "خمس قطع من الزلابية الأوزبكية المحشوة باللحم المتبل.",
-      ru: "На тарелке - 4–5 пухлых мант весом около 450 г. Тонкое эластичное тесто скрывает сочный фарш из говядины с луком и ароматом кумина. При варке на пару соки сохраняются внутри, а сверху манты смазываются растопленным маслом. Подаются со сметаной, которая добавляет мягкую кислинку и подчёркивает насыщенный мясной вкус.",
-    },
   },
   price: 46,
   images: {
-    thumbnail: mantiWithMeatThumbnail,
+    card: mantiWithMeatCard,
+    card2x: mantiWithMeatCard2x,
     full: mantiWithMeatFull,
   },
   nutrition: {
@@ -1810,6 +1922,11 @@ export const MantiWithMeat = {
 
 export const CheburekWithMeat = {
   id: 39,
+  slug: {
+    en: "cheburek-with-meat",
+    ru: "cheburek-iz-govyadiny",
+    ar: "cheburek-bil-lahm",
+  },
   name: {
     en: "Cheburek With Meat",
     ar: "تشيبوريك باللحم",
@@ -1824,15 +1941,11 @@ export const CheburekWithMeat = {
       ar: "لحم بقري مفروم وبصل.",
       ru: "Хрустящий говяжий чебурек.",
     },
-    long: {
-      en: "A single 170 g cheburek arrives piping-hot: a thin, blistered pastry pocket that crackles as you bite. Inside, juicy minced beef mingles with sweet onion and warm cumin, releasing aromatic steam. The dough is light yet sturdy, holding savoury juices without turning greasy. Served with zingy adjika on the side, this Uzbek-inspired street classic is all about crispy crust and flavour-packed meat.",
-      ar: "لحم بقري مفروم وبصل.",
-      ru: "Горячий чебурек весом около 170 г впечатляет тонким, пузырчатым тестом, которое аппетитно хрустит при укусе. Внутри - сочный фарш из говядины с луком и кумином, дарящий пряный аромат и богатый мясной вкус. Корочка остаётся лёгкой и сухой, удерживая соки начинки. Подаётся с острым аджикой - сытная восточная закуска, в которой идеально сочетаются хруст и насыщенность.",
-    },
   },
   price: 26,
   images: {
-    thumbnail: cheburekWithMeatThumbnail,
+    card: cheburekWithMeatCard,
+    card2x: cheburekWithMeatCard2x,
     full: cheburekWithMeatFull,
   },
   nutrition: {
@@ -1857,6 +1970,11 @@ export const CheburekWithMeat = {
 
 export const BeefCutlets = {
   id: 40,
+  slug: {
+    en: "beef-cutlets",
+    ru: "govyazhi-kotlety",
+    ar: "sharaih-lahm-baqari",
+  },
   name: {
     en: "Beef Cutlets",
     ar: "شرائح لحم بقري",
@@ -1871,15 +1989,11 @@ export const BeefCutlets = {
       ar: "شريحة لحم بقري على الطريقة الروسية التقليدية مع اختيارك من الأطباق الجانبية.",
       ru: "Сочные говяжьи котлеты со специями.",
     },
-    long: {
-      en: "Two pan-seared 100 g beef cutlets stay tender thanks to a splash of cream and grated onion worked into the mince. Ground cumin and coriander lend gentle warmth, while a quick fry in oil gives a crisp, golden crust that seals in the juices. Pair them with either buttery mashed potato or nutty buckwheat and a spoon of mushroom sauce for a classic Russian main that balances comfort and spice.",
-      ar: "شريحة لحم بقري على الطريقة الروسية التقليدية مع اختيارك من الأطباق الجانبية.",
-      ru: "Две румяные котлеты по 100 г каждая остаются сочными благодаря сливкам и луку, добавленным в фарш. Тмин и кориандр придают мягкую пряность, а быстрая обжарка создаёт аппетитную корочку и сохраняет соки внутри. Подавайте с картофельным пюре или рассыпчатой гречкой и грибным соусом - традиционное горячее блюдо, сочетающее уют домашней кухни и аромат специй.",
-    },
   },
   price: 53,
   images: {
-    thumbnail: beefCutletsThumbnail,
+    card: beefCutletsCard,
+    card2x: beefCutletsCard2x,
     full: beefCutletsFull,
   },
   nutrition: {
@@ -1903,6 +2017,11 @@ export const BeefCutlets = {
 
 export const ChickenCutlets = {
   id: 41,
+  slug: {
+    en: "chicken-cutlets",
+    ru: "kurinye-kotlety",
+    ar: "sharaih-dajaj",
+  },
   name: {
     en: "Chicken Cutlets",
     ar: "شرائح دجاج",
@@ -1917,15 +2036,11 @@ export const ChickenCutlets = {
       ar: "قطعتان من شرائح الدجاج المطهوة على البخار، مع اختيارك من الأطباق الجانبية.",
       ru: "Сочные куриные котлеты со специями.",
     },
-    long: {
-      en: "Two 100 g chicken cutlets stay tender thanks to cream and onion blended into the mince, while a pinch of cumin and coriander adds subtle warmth. Quickly pan-seared for a crisp bronze crust, they’re finished through so the centre stays moist. Pair them with creamy mashed potato or nutty buckwheat and a spoon of mushroom sauce for a comforting, homestyle main.",
-      ar: "قطعتان من شرائح الدجاج المطهوة على البخار، مع اختيارك من الأطباق الجانبية.",
-      ru: "Два румяных куриных котлета по 100 г остаются удивительно сочными благодаря сливкам и луку в фарше. Лёгкая пряность кумина и кориандра придаёт деликатный аромат, а быстрая обжарка формирует аппетитную корочку. Подавайте с воздушным картофельным пюре или рассыпчатой гречкой и грибным соусом - уютное, домашнее блюдо на каждый день.",
-    },
   },
   price: 49,
   images: {
-    thumbnail: chickenCutletsThumbnail,
+    card: chickenCutletsCard,
+    card2x: chickenCutletsCard2x,
     full: chickenCutletsFull,
   },
   nutrition: {
@@ -1949,6 +2064,11 @@ export const ChickenCutlets = {
 
 export const UzbekBeefPlov = {
   id: 42,
+  slug: {
+    en: "uzbek-beef-plov",
+    ru: "uzbekskiy-plov",
+    ar: "plov-lahm-baqari-uzbaki",
+  },
   name: {
     en: "Uzbek Beef Plov",
     ar: "بلوف لحم بقري أوزبكي",
@@ -1963,15 +2083,11 @@ export const UzbekBeefPlov = {
       ar: "أرز، لحم بقري، جزر، وتوابل.",
       ru: "Ароматный узбекский плов с говядиной.",
     },
-    long: {
-      en: "Tender beef cubes, sweet julienned carrots and nutty chickpeas simmer beneath a blanket of cumin-scented rice, absorbing rich beef broth and the perfume of a whole garlic head. Each forkful delivers fluffy grains, juicy meat and gentle spice-comforting yet deeply aromatic. Enjoy the 400 g mound piping-hot with a side of refreshing achichuk salad for true Uzbek hospitality.",
-      ar: "أرز، لحم بقري، جزر، وتوابل.",
-      ru: "Нежные кусочки говядины, сладкая морковь и нут томятся под слоем риса, пропитанного бульоном, ароматом кумина и цельной головки чеснока. Каждое зерно остаётся рассыпчатым, а мясо - сочным, создавая гармонию пряностей и домашнего уюта. Подавайте 400-граммовую порцию плова горячей с освежающим салатом ачичук - классика узбекского гостеприимства.",
-    },
   },
   price: 50,
   images: {
-    thumbnail: uzbekBeefPlovThumbnail,
+    card: uzbekBeefPlovCard,
+    card2x: uzbekBeefPlovCard2x,
     full: uzbekBeefPlovFull,
   },
   nutrition: {
@@ -1997,6 +2113,11 @@ export const UzbekBeefPlov = {
 
 export const CabbageRollsWithRiceAndMincedMeat = {
   id: 43,
+  slug: {
+    en: "cabbage-rolls-with-rice-and-minced-meat",
+    ru: "golubtsy",
+    ar: "malfuf-mahshi-bil-aruz-wal-lahm",
+  },
   name: {
     en: "Cabbage Rolls With Rice And Minced Meat",
     ar: "ملفوف محشو بالأرز واللحم المفروم",
@@ -2011,15 +2132,11 @@ export const CabbageRollsWithRiceAndMincedMeat = {
       ar: "ثلاث قطع من أوراق الكرنب مع لحم بقري وأرز.",
       ru: "Сытные голубцы с говядиной и рисом.",
     },
-    long: {
-      en: "Tender cabbage leaves wrap a savory blend of minced beef, rice and sweet onion, then slow-bake for two hours in a light tomato broth until everything melds into silky comfort. Each 400 g serving delivers juicy meat, fluffy grains and melt-soft cabbage bathed in tangy sauce - a Russian-style classic perfect for chilly days.",
-      ar: "ثلاث قطع من أوراق الكرنب مع لحم بقري وأرز.",
-      ru: "Нежные листья капусты окутывают сочную начинку из говядины, риса и лука и томятся два часа в лёгком томатном соусе. В результате 400-граммовая порция голубцов становится удивительно мягкой: ароматное мясо, рассыпчатый рис и тающая капуста в кисловатом соусе создают уютное, домашнее блюдо для прохладных вечеров.",
-    },
   },
   price: 52,
   images: {
-    thumbnail: cabbageRollsWithRiceAndMincedMeatThumbnail,
+    card: cabbageRollsWithRiceAndMincedMeatCard,
+    card2x: cabbageRollsWithRiceAndMincedMeatCard2x,
     full: cabbageRollsWithRiceAndMincedMeatFull,
   },
   nutrition: {
@@ -2042,6 +2159,11 @@ export const CabbageRollsWithRiceAndMincedMeat = {
 
 export const HotPan = {
   id: 44,
+  slug: {
+    en: "hot-pan",
+    ru: "zharkoe-iz-govyadiny",
+    ar: "miqla-sakhina",
+  },
   name: {
     en: "Hot Pan",
     ar: "مقلاة ساخنة",
@@ -2056,15 +2178,11 @@ export const HotPan = {
       ar: "لحم بقري، بطاطا، فطر، وبصل.",
       ru: "Жаркое из говядины и картофеля.",
     },
-    long: {
-      en: "Arriving on a steaming cast-iron pan, this 400 g “hot-pan” mingles seared beef strips with golden potato cubes, earthy mushrooms and sweet onion. A quick toss with fresh spring onion and dill lifts the hearty flavours, while a light gloss of vegetable oil keeps each bite juicy and fragrant. Simple, rustic and deeply satisfying, it’s comfort food that crackles all the way to the table.",
-      ar: "لحم بقري، بطاطا، فطر، وبصل.",
-      ru: "На раскалённой сковороде подают 400 г ароматного жаркого: румяные кубики картофеля, сочные кусочки говядины, шампиньоны и луковая сладость. Свежий зелёный лук и укроп завершают блюдо яркими нотками, а лёгкая масляная глазурь сохраняет сочность. Домашнее, простое и очень сытное блюдо, шипящее до самого стола.",
-    },
   },
   price: 54,
   images: {
-    thumbnail: hotPanThumbnail,
+    card: hotPanCard,
+    card2x: hotPanCard2x,
     full: hotPanFull,
   },
   nutrition: {
@@ -2088,6 +2206,11 @@ export const HotPan = {
 
 export const BeefStroganoff = {
   id: 45,
+  slug: {
+    en: "beef-stroganoff",
+    ru: "befstroganov",
+    ar: "stroganoff-lahm-baqari",
+  },
   name: {
     en: "Beef Stroganoff",
     ar: "ستروجانوف لحم بقري",
@@ -2102,15 +2225,11 @@ export const BeefStroganoff = {
       ar: "شريحة لحم بقري طرية سوتيه تقدم مع صلصة كريمة وبطاطا مهروسة.",
       ru: "Классический бефстроганов.",
     },
-    long: {
-      en: "Thin ribbons of tenderloin are flash-seared, then finished in a silky mushroom-cream sauce scented with sweet onions. Rich yet quick-cooked, the dish melts in the mouth and begs to be paired with a soft bed of mashed potato or nutty buckwheat-two traditional sides that soak up every drop of sauce.",
-      ar: "شريحة لحم بقري طرية سوتيه تقدم مع صلصة كريمة وبطاطا مهروسة.",
-      ru: "Тонкие полоски говядины быстро обжариваются и соединяются с нежным грибно-сливочным соусом, ароматизированным луком. Бархатистое, насыщенное блюдо идеально сочетается либо с воздушным картофельным пюре, либо с рассыпчатой гречкой, которые впитывают каждый глоток ароматного соуса.",
-    },
   },
   price: 67,
   images: {
-    thumbnail: beefStroganoffThumbnail,
+    card: beefStroganoffCard,
+    card2x: beefStroganoffCard2x,
     full: beefStroganoffFull,
   },
   nutrition: {
@@ -2131,6 +2250,11 @@ export const BeefStroganoff = {
 
 export const ChickenKiev = {
   id: 46,
+  slug: {
+    en: "chicken-kiev",
+    ru: "kotleta-po-po-kievski",
+    ar: "dajaj-kiev",
+  },
   name: {
     en: "Chicken Kiev",
     ar: "دجاج كييف",
@@ -2145,15 +2269,11 @@ export const ChickenKiev = {
       ar: "دجاج منزوع العظم مغطى بصلصة زبدة البقدونس الكريمية المتبلة. يقدم مع اختيارك من الأطباق الجانبية.",
       ru: "Золотистая котлета по-киевски.",
     },
-    long: {
-      en: "Crisp breadcrumb crust hides a pocket of herb-dill butter that melts into juicy chicken with the first cut. Lightly spiced and pan-fried, then finished in the oven, this 220 g Kiev balances crunchy exterior with rich, aromatic centre. Pair it with creamy mash or nutty buckwheat to soak up every drop of sizzling butter.",
-      ar: "دجاج منزوع العظم مغطى بصلصة زبدة البقدونس الكريمية المتبلة. يقدم مع اختيارك من الأطباق الجانبية.",
-      ru: "Под хрустящей панировкой скрывается ароматное сливочно-укропное масло, которое тает, пропитывая сочное куриное филе. Котлету обжаривают до румяной корочки и доводят в духовке, сохраняя внутри всю нежность. Дополните блюдо воздушным пюре или рассыпчатой гречкой, чтобы насладиться каждым граммом тающей начинки.",
-    },
   },
   price: 54,
   images: {
-    thumbnail: chickenKievThumbnail,
+    card: chickenKievCard,
+    card2x: chickenKievCard2x,
     full: chickenKievFull,
   },
   nutrition: {
@@ -2176,6 +2296,11 @@ export const ChickenKiev = {
 
 export const Napoleon = {
   id: 47,
+  slug: {
+    en: "napoleon",
+    ru: "napoleon",
+    ar: "napoleon",
+  },
   name: {
     en: "Napoleon",
     ar: "نابليون",
@@ -2188,15 +2313,11 @@ export const Napoleon = {
       ar: "معجنات روسية رقيقة وهشة محشوة بالكريمة.",
       ru: "Слойка «Наполеон» с ореховым кремом.",
     },
-    long: {
-      en: "Dozens of feather-light puff-pastry layers cradle a buttery caramel cream enriched with toasted walnuts. Each 200 g slice marries crisp, shattering sheets with a nut-speckled filling that melts into mellow sweetness, giving the classic Napoleon a subtle crunch and deep, creamy finish. Best after a slow chill, when the pastry softens just enough to cut cleanly while still delivering its signature flake.",
-      ar: "معجنات روسية رقيقة وهشة محشوة بالكريمة.",
-      ru: "Тончайшие слои слоёного теста сочетаются с нежным карамельным кремом из сгущёнки и дроблёных грецких орехов. В 200-граммовом кусочке «Наполеона» хрустящая корочка и мягкая начинка образуют гармонию сладости и лёгкого орехового послевкусия. Десерт набирает вкус после охлаждения, когда крем пропитывает коржи, но сохраняет характерный воздушный «хруст» классической слойки.",
-    },
   },
   price: 32,
   images: {
-    thumbnail: napoleonThumbnail,
+    card: napoleonCard,
+    card2x: napoleonCard2x,
     full: napoleonFull,
   },
   nutrition: {
@@ -2216,6 +2337,11 @@ export const Napoleon = {
 
 export const HoneyCake = {
   id: 48,
+  slug: {
+    en: "honey-cake",
+    ru: "medovik",
+    ar: "kaakat-al-asal",
+  },
   name: {
     en: "Honey Cake",
     ar: "كعكة العسل",
@@ -2228,15 +2354,11 @@ export const HoneyCake = {
       ar: "عسل، كريمة، وتوت طازج.",
       ru: "Нежный медовый бисквит с карамельной глазурью.",
     },
-    long: {
-      en: "A moist 160 g slice of honey cake greets you with buttery aroma and a warm amber crumb. Gentle notes of floral honey run through the tender sponge, while tiny dice of prune add soft pockets of fruity sweetness. A whisper-thin caramel glaze seals the top, giving each bite a glossy finish that melts on the tongue. Enjoy on its own or with a spoon of thick sour cream for a truly nostalgic Russian dessert.",
-      ar: "عسل، كريمة، وتوت طازج.",
-      ru: "Ломтик весом около 160 г удивляет мягким, влажным мякишем янтарного цвета и тонким ароматом мёда. Сливочное тесто пропитано нежной медовой сладостью, а крошечные кусочки чернослива дарят лёгкий фруктовый акцент. Сверху - тонкая карамельная глазурь, которая тает во рту. Подавайте торт сам по себе или со сметаной, чтобы ощутить настоящий вкус домашнего «Медовика».",
-    },
   },
   price: 26,
   images: {
-    thumbnail: honeyCakeThumbnail,
+    card: honeyCakeCard,
+    card2x: honeyCakeCard2x,
     full: honeyCakeFull,
   },
   nutrition: {
@@ -2264,6 +2386,11 @@ export const HoneyCake = {
 
 export const RussianPancakesWithCottageCheese = {
   id: 49,
+  slug: {
+    en: "russian-pancakes-with-cottage-cheese",
+    ru: "bliny-s-tvorogom",
+    ar: "fatair-rusiya-bil-jibn",
+  },
   name: {
     en: "Russian Pancakes with cottage cheese",
     ar: "فطائر روسية مع جبن قريش",
@@ -2276,15 +2403,11 @@ export const RussianPancakesWithCottageCheese = {
       ar: "٣ قطع.",
       ru: "Блины c творожной начинкой и вареньем.",
     },
-    long: {
-      en: "Three delicate Russian crêpes, rolled around mildly sweet cottage cheese, create a cosy ≈ 280 g treat. The pancakes stay tender with lacy edges, while the creamy filling adds gentle tang and protein-rich body. Finish with a splash of berry jam or condensed milk for a touch of sweetness, and you have a comforting dessert that feels both light and nostalgic.",
-      ar: "٣ قطع.",
-      ru: "Три тонких блина с нежной творожной начинкой формируют порцию около 280 г. Мягкое тесто с кружевными краями обволакивает кремовый творог с лёгкой сладостью. Ложка варенья или сгущёнки придаёт десерту праздничную ноту, превращая простое русское лакомство в тёплое воспоминание детства.",
-    },
   },
   price: 42,
   images: {
-    thumbnail: russianPancakesWithCottageCheeseThumbnail,
+    card: russianPancakesWithCottageCheeseCard,
+    card2x: russianPancakesWithCottageCheeseCard2x,
     full: russianPancakesWithCottageCheeseFull,
   },
   nutrition: {
@@ -2308,6 +2431,11 @@ export const RussianPancakesWithCottageCheese = {
 
 export const Syrniki = {
   id: 50,
+  slug: {
+    en: "syrniki",
+    ru: "syrniki",
+    ar: "syrniki",
+  },
   name: {
     en: "Syrniki",
     ar: "سيرنيكي",
@@ -2320,15 +2448,11 @@ export const Syrniki = {
       ar: "٣ قطع من فطائر الجبن القريش التقليدية من شرق أوروبا مع اختيارك من الصلصة.",
       ru: "Сладкие сырники, обжаренные до золотистой корочки.",
     },
-    long: {
-      en: "Five petite syrniki - a cosy ≈ 150 g portion - pair a fluffy cottage-cheese centre with a delicate, caramel-kissed crust. Lightly sweet and scented with vanilla, each cake offers creamy tang inside and gentle crunch outside. Finish with a spoon of sour cream, berry jam or silky condensed milk for a timeless Slavic dessert that feels both wholesome and indulgent.",
-      ar: "٣ قطع من فطائر الجبن القريش التقليدية من شرق أوروبا مع اختيارك من الصلصة.",
-      ru: "Пять нежных сырников весом около 150 г сочетают воздушную творожную середину и тонкую румяную корочку. Лёгкая сладость и аромат ванили подчёркивают сливочный вкус, а жарка на сковороде дарит приятный хруст. Дополните сметаной, вареньем или сгущённым молоком - и получите классический десерт, простой и по-домашнему уютный.",
-    },
   },
   price: 42,
   images: {
-    thumbnail: syrnikiThumbnail,
+    card: syrnikiCard,
+    card2x: syrnikiCard2x,
     full: syrnikiFull,
   },
   nutrition: {
@@ -2351,6 +2475,11 @@ export const Syrniki = {
 
 export const ChickenSkewer = {
   id: 51,
+  slug: {
+    en: "chicken-skewer",
+    ru: "kurinyy-shashlyk",
+    ar: "sikh-dajaj",
+  },
   name: {
     en: "Chicken Skewer",
     ar: "سيخ دجاج",
@@ -2363,15 +2492,11 @@ export const ChickenSkewer = {
       ar: "مكعبات صدور دجاج متبلة مشوية. تقدم مع بطاطا مقلية.",
       ru: "Куриный шашлык с кориандром и лимоном.",
     },
-    long: {
-      en: "A single 220 g skewer of chicken breast is marinated in lemon juice, Dijon and fragrant coriander, then char-grilled until the edges caramelise while the inside stays juicy. The creamy mayo glaze locks in moisture and carries the citrus-pepper tang into every bite. Finish with tomato-garlic sauce or crisp veggies for a bright, protein-packed grill favourite.",
-      ar: "مكعبات صدور دجاج متبلة مشوية. تقدم مع بطاطا مقلية.",
-      ru: "Шампур весом 220 г объединяет нежную куриную грудку, пропитанную лимонным соком, дижонской горчицей и кориандром. Обжаренный на углях шашлык получает аппетитную румяную корочку, сохраняя сочность внутри. Лёгкая майонезная глазурь удерживает соки и подчёркивает пряно-цитрусовый вкус. Подавайте с томатно-чесночным соусом и свежими овощами - простое и яркое блюдо с мангала.",
-    },
   },
   price: 53,
   images: {
-    thumbnail: chickenSkewerThumbnail,
+    card: chickenSkewerCard,
+    card2x: chickenSkewerCard2x,
     full: chickenSkewerFull,
   },
   nutrition: {
@@ -2393,6 +2518,11 @@ export const ChickenSkewer = {
 
 export const BeefSkewer = {
   id: 52,
+  slug: {
+    en: "beef-skewer",
+    ru: "govyazhiy-shashlyk",
+    ar: "sikh-lahm-baqari",
+  },
   name: {
     en: "Beef Skewer",
     ar: "سيخ لحم بقري",
@@ -2405,15 +2535,11 @@ export const BeefSkewer = {
       ar: "مكعبات لحم بقري طري مشوية. تقدم مع بطاطا مقلية.",
       ru: "Сочный говяжий шашлык на гриле.",
     },
-    long: {
-      en: "A single 220 g skewer showcases pepper-rubbed beef tenderloin seared over open flame. The quick marinade of oil, salt and black pepper lets the natural richness of the meat shine, while high-heat grilling creates a smoky crust and rosy, tender centre. Rested briefly to keep the juices in, it’s ready for dipping in tomato-garlic sauce or pairing with crisp vegetables.",
-      ar: "مكعبات لحم بقري طري مشوية. تقدم مع بطاطا مقلية.",
-      ru: "Один шампур весом ≈ 220 г - это нежная вырезка, пропитанная смесью масла, соли и чёрного перца, а затем обжаренная на раскалённых углях. Снаружи образуется аппетитная корочка со слегка дымным ароматом, внутри мясо остаётся сочным и мягким. Подаётся горячим, отлично сочетается с томатно-чесночным соусом и свежими овощами.",
-    },
   },
   price: 65,
   images: {
-    thumbnail: beefSkewerThumbnail,
+    card: beefSkewerCard,
+    card2x: beefSkewerCard2x,
     full: beefSkewerFull,
   },
   nutrition: {
@@ -2432,6 +2558,11 @@ export const BeefSkewer = {
 
 export const LambSkewer = {
   id: 53,
+  slug: {
+    en: "lamb-skewer",
+    ru: "baraniy-shashlyk",
+    ar: "sikh-lahm-dhan",
+  },
   name: {
     en: "Lamb Skewer",
     ar: "سيخ لحم ضأن",
@@ -2444,15 +2575,11 @@ export const LambSkewer = {
       ar: "مكعبات لحم ضأن متبلة مشوية. تقدم مع بطاطا مقلية.",
       ru: "Пряный бараний шашлык с кумином.",
     },
-    long: {
-      en: "A 220 g skewer of lamb tenderloin is marinated in creamy mayo, Dijon and a bold mix of cumin and coriander, then seared over open flame until the edges char and the centre stays juicy. The warm spices infuse each bite with earthy aroma, while the light glaze keeps the meat succulent. Pair with tomato-garlic sauce or crisp vegetables for a richly flavoured grill favourite.",
-      ar: "مكعبات لحم ضأن متبلة مشوية. تقدم مع بطاطا مقلية.",
-      ru: "Шампур весом 220 г объединяет сочную баранину и ароматную смесь майонеза, дижонской горчицы, кумина и кориандра. Обжаренный на углях шашлык приобретает аппетитную корочку и сохраняет мягкий розовый сок внутри. Тёплые специи наполняют мясо глубоким вкусом, а лёгкая глазурь удерживает сочность. Подавайте с томатно-чесночным соусом и свежими овощами для полного удовольствия.",
-    },
   },
   price: 61,
   images: {
-    thumbnail: lambSkewerThumbnail,
+    card: lambSkewerCard,
+    card2x: lambSkewerCard2x,
     full: lambSkewerFull,
   },
   nutrition: {
@@ -2472,51 +2599,55 @@ export const LambSkewer = {
   ],
 };
 
-export const MixedGrill = {
-  id: 54,
-  name: {
-    en: "Mixed Grill",
-    ar: "مشويات مشكلة",
-    ru: "Ассорти из шашлыков",
-  },
-  categories: [{ en: "Mix Grill", ar: "المشاوي", ru: "Шашлыки" }],
-  description: {
-    short: {
-      en: "1 kg mixed grill: beef, chicken, lamb & lyulya.",
-      ar: "مشاوي مشكلة ١ كغ: لحم بقري ودجاج وضأن وكباب ليليا.",
-      ru: "Ассорти 1 кг: говядина, курица, баранина, люля.",
-    },
-    long: {
-      en: "A full-kilogram platter brings the best of the grill: peppery beef tenderloin skewer, zesty lemon-coriander chicken, spice-rubbed lamb, a juicy lyulya kebab and a perfectly charred lamb chop. Each cut is cooked over open flame, rested for peak juiciness, then served together for easy sharing. Paired with tomato-garlic sauce, fries and crisp cucumber–onion salad, this feast offers smoky aromas, varied textures and bold, harmonious flavours in every bite.",
-      ar: "مشاوي مشكلة ١ كغ: لحم بقري ودجاج وضأن وكباب ليليا.",
-      ru: "Килограммовое ассорти объединяет всё лучшее с мангала: сочный говяжий шашлык, курицу с лимоном и кориандром, пряную баранину, ароматный люля-кебаб и румяную баранюю отбивную. Каждое мясо прожарено на углях и отдохнуло для сохранения соков, после чего подаётся на одном блюде для дружеского разделения. Дополните томатно-чесночным соусом, хрустящей картошкой-фри и свежим салатом из огурцов и лука - насыщенный вкус и разнообразная текстура гарантированы.",
-    },
-  },
-  price: 214,
-  images: {
-    thumbnail: mixedGrillThumbnail,
-    full: mixedGrillFull,
-  },
-  nutrition: {
-    calories: 2380,
-    protein: 199,
-    fat: 162,
-    carbs: 7,
-  },
-  ingredients: [
-    "Beef skewer",
-    "Chicken skewer",
-    "Lamb skewer",
-    "Lyulya kebab",
-    "Lamb chop",
-    "Cooking oil (Est.)",
-    "Salt (Est.)",
-    "Black pepper (Est.)",
-  ],
-};
+// export const MixedGrill = {
+//   id: 54,
+//   slug: {
+//     en: "mixed-grill",
+//     ru: "assorti-iz-shashlykov",
+//     ar: "mashwiyat-mushakkala",
+//   },
+//   name: {
+//     en: "Mixed Grill",
+//     ar: "مشويات مشكلة",
+//     ru: "Ассорти из шашлыков",
+//   },
+//   categories: [{ en: "Mix Grill", ar: "المشاوي", ru: "Шашлыки" }],
+//   description: {
+//     short: {
+//       en: "1 kg mixed grill: beef, chicken, lamb & lyulya.",
+//       ar: "مشاوي مشكلة ١ كغ: لحم بقري ودجاج وضأن وكباب ليليا.",
+//       ru: "Ассорти 1 кг: говядина, курица, баранина, люля.",
+//     },
+//   },
+//   price: 214,
+//   images: {
+//     full: mixedGrillFull,
+//   },
+//   nutrition: {
+//     calories: 2380,
+//     protein: 199,
+//     fat: 162,
+//     carbs: 7,
+//   },
+//   ingredients: [
+//     "Beef skewer",
+//     "Chicken skewer",
+//     "Lamb skewer",
+//     "Lyulya kebab",
+//     "Lamb chop",
+//     "Cooking oil (Est.)",
+//     "Salt (Est.)",
+//     "Black pepper (Est.)",
+//   ],
+// };
 
 export const Buckwheat = {
   id: 55,
+  slug: {
+    en: "buckwheat",
+    ru: "grechka",
+    ar: "hinta-sawda",
+  },
   name: {
     en: "Buckwheat",
     ar: "الحنطة السوداء",
@@ -2529,15 +2660,11 @@ export const Buckwheat = {
       ar: "دقيق الحنطة السوداء، ماء وملح.",
       ru: "Рассыпчатая гречка с маслом.",
     },
-    long: {
-      en: "Nutty buckwheat is gently simmered until each grain turns tender but remains distinct, then finished with a pat of butter for silky richness. The 300 g bowl delivers earthy flavour, light texture and satisfying warmth-an ideal Russian side that pairs effortlessly with stews, cutlets or grilled meats.",
-      ar: "دقيق الحنطة السوداء، ماء وملح.",
-      ru: "Рассыпчатые зерна гречки томятся до мягкости, а затем заправляются кусочком сливочного масла, которое обволакивает каждое зёрнышко лёгкой сливочной ноткой. Порция 300 г даёт насыщенный ореховый вкус и приятную текстуру - универсальный гарнир к рагу, котлетам или шашлыку.",
-    },
   },
   price: 20,
   images: {
-    thumbnail: buckwheatThumbnail,
+    card: buckwheatCard,
+    card2x: buckwheatCard2x,
     full: buckwheatFull,
   },
   nutrition: {
@@ -2551,6 +2678,11 @@ export const Buckwheat = {
 
 export const LyulyaKebab = {
   id: 56,
+  slug: {
+    en: "lyulya-kebab",
+    ru: "lyulya-kebab",
+    ar: "lyulya-kebab",
+  },
   name: {
     en: "Lyulya Kebab",
     ar: "كباب ليليا",
@@ -2563,15 +2695,11 @@ export const LyulyaKebab = {
       ar: "لحم بقري ولحم ضأن مفروم مشوي. يقدم مع بطاطا مقلية.",
       ru: "Ароматный люля-кебаб из говядины и курицы.",
     },
-    long: {
-      en: "A 200 g lyulya kebab blends beef topside and chicken breast with sweet onion, cumin and coriander, then grills over open flame until the outside chars and the inside stays juicy. The mix of meats gives balanced richness and tenderness, while warm spices leave a subtle, earthy aroma. Serve straight off the skewer with tomato-garlic sauce and crisp veggies for a true Caucasian-style grill experience.",
-      ar: "لحم بقري ولحم ضأن مفروم مشوي. يقدم مع بطاطا مقلية.",
-      ru: "200-граммовый люля-кебаб сочетает сочную говядину и нежное куриное филе, смешанные с луком, кумином и кориандром. Обжаренный на углях, шашлык покрывается аппетитной корочкой, оставаясь сочным внутри. Пряный аромат и дымок мангала делают люля идеальным дополнением к томатно-чесночному соусу и свежим овощам.",
-    },
   },
   price: 57,
   images: {
-    thumbnail: lyulyaKebabThumbnail,
+    card: lyulyaKebabCard,
+    card2x: lyulyaKebabCard2x,
     full: lyulyaKebabFull,
   },
   nutrition: {
@@ -2592,47 +2720,51 @@ export const LyulyaKebab = {
   ],
 };
 
-export const LambChops = {
-  id: 57,
-  name: {
-    en: "Lamb Chops",
-    ar: "ريش ضأن",
-    ru: "Бараньи отбивные",
-  },
-  categories: [{ en: "Mix Grill", ar: "المشاوي", ru: "Шашлыки" }],
-  description: {
-    short: {
-      en: "Char-grilled lamb chops, simply seasoned.",
-      ar: "يقدم مع بطاطا مقلية.",
-      ru: "Сочные бараньи отбивные на гриле.",
-    },
-    long: {
-      en: "Two thick lamb chops-about 380 g total-are brushed with oil, salt and cracked pepper, then seared over open flame until the fat crisps and the meat turns blush-pink inside. The minimal seasoning lets the natural, slightly sweet flavour of young lamb shine, while a brief rest keeps each bite juicy. Pair with tomato-garlic sauce and crisp veggies for a rustic mixed-grill classic.",
-      ar: "يقدم مع بطاطا مقلية.",
-      ru: "Две сочные бараньи отбивные (≈ 380 г) слегка смазаны маслом, посолены и поперчены, а затем обжарены на углях до румяной хрустящей корочки и розового, сочного центра. Минимум приправ подчёркивает естественную сладость молодого мяса, а короткий отдых сохраняет соки. Подавайте с томатно-чесночным соусом и свежими овощами - классика шашлычного ассорти.",
-    },
-  },
-  price: 87,
-  images: {
-    thumbnail: lambChopsThumbnail,
-    full: lambChopsFull,
-  },
-  nutrition: {
-    calories: 930,
-    protein: 75,
-    fat: 80,
-    carbs: 0,
-  },
-  ingredients: [
-    "Lamb chops (raw)",
-    "Cooking oil",
-    "Salt (Est.)",
-    "Black pepper (Est.)",
-  ],
-};
+// export const LambChops = {
+//   id: 57,
+//   slug: {
+//     en: "lamb-chops",
+//     ru: "barani-otbivnye",
+//     ar: "rish-dhan",
+//   },
+//   name: {
+//     en: "Lamb Chops",
+//     ar: "ريش ضأن",
+//     ru: "Бараньи отбивные",
+//   },
+//   categories: [{ en: "Mix Grill", ar: "المشاوي", ru: "Шашлыки" }],
+//   description: {
+//     short: {
+//       en: "Char-grilled lamb chops, simply seasoned.",
+//       ar: "يقدم مع بطاطا مقلية.",
+//       ru: "Сочные бараньи отбивные на гриле.",
+//     },
+//   },
+//   price: 87,
+//   images: {
+//     full: lambChopsFull,
+//   },
+//   nutrition: {
+//     calories: 930,
+//     protein: 75,
+//     fat: 80,
+//     carbs: 0,
+//   },
+//   ingredients: [
+//     "Lamb chops (raw)",
+//     "Cooking oil",
+//     "Salt (Est.)",
+//     "Black pepper (Est.)",
+//   ],
+// };
 
 export const BoiledRice = {
   id: 58,
+  slug: {
+    en: "boiled-rice",
+    ru: "varenyy-ris",
+    ar: "aruz-masluq",
+  },
   name: {
     en: "Boiled Rice",
     ar: "الأرز المسلوق",
@@ -2645,15 +2777,11 @@ export const BoiledRice = {
       ar: "أرز أبيض مسلوق.",
       ru: "Рассыпчатый рис с маслом.",
     },
-    long: {
-      en: "Tender long-grain rice is gently steamed, then finished with a pat of butter for a silky sheen and subtle richness. The 300 g side delivers perfectly separate grains with a light, buttery aroma-an adaptable pairing for stews, grills or sautéed vegetables.",
-      ar: "أرز أبيض مسلوق.",
-      ru: "Нежные зёрна длинного риса медленно томятся до мягкости, а затем заправляются кусочком сливочного масла. Рассыпчатая, ароматная порция 300 г идеально дополняет рагу, блюда на гриле или овощи на сковороде.",
-    },
   },
   price: 20,
   images: {
-    thumbnail: boiledRiceThumbnail,
+    card: boiledRiceCard,
+    card2x: boiledRiceCard2x,
     full: boiledRiceFull,
   },
   nutrition: {
@@ -2672,6 +2800,11 @@ export const BoiledRice = {
 
 export const GrilledVegetable = {
   id: 59,
+  slug: {
+    en: "grilled-vegetable",
+    ru: "ovoshchi-na-grile",
+    ar: "khudar-mashwiya",
+  },
   name: {
     en: "Grilled Vegetable",
     ar: "خضار مشوية",
@@ -2684,15 +2817,11 @@ export const GrilledVegetable = {
       ar: "تشكيلة من الخضراوات المشوية.",
       ru: "Овощное ассорти на гриле с масляной глазурью.",
     },
-    long: {
-      en: "A colourful medley of peppers, onion, tomato and mushrooms hits the grill, picking up charred edges and sweet smoky notes. Finished with a gloss of melted butter, the vegetables stay juicy inside while the skins blister for extra flavour. This 350 g side dish brings brightness, texture and a hint of fire-kissed richness to any main course.",
-      ar: "تشكيلة من الخضراوات المشوية.",
-      ru: "Яркие кусочки перца, лука, томата и шампиньоны обжариваются на гриле до лёгкой дымной корочки и сочной сердцевины, а затем покрываются тонким слоем растопленного сливочного масла. 350-граммовое овощное ассорти добавит свежести, цвета и гриль-аромата к любому основному блюду.",
-    },
   },
   price: 24,
   images: {
-    thumbnail: grilledVegetableThumbnail,
+    card: grilledVegetableCard,
+    card2x: grilledVegetableCard2x,
     full: grilledVegetableFull,
   },
   nutrition: {
@@ -2718,6 +2847,11 @@ export const GrilledVegetable = {
 
 export const SweetPotatoFries = {
   id: 60,
+  slug: {
+    en: "sweet-potato-fries",
+    ru: "sladkiy-kartofel-fri",
+    ar: "batata-hilwa-maqliya",
+  },
   name: {
     en: "Sweet Potato Fries",
     ar: "بطاطس حلوة مقلية",
@@ -2730,15 +2864,11 @@ export const SweetPotatoFries = {
       ar: "استمتعوا بالتوازن المثالي بين القرمشة والطراوة مع بطاطسنا الحلوة المقلية، المتبّلة بخبرة والمُحمّرة بلون ذهبي خفيف، لتُقدّم لكم تجربة شهية ستجعلكم تتوقون إلى حلاوتها اللذيذة مع كل قضمة.",
       ru: "Хрустящий батат-фри из духовки.",
     },
-    long: {
-      en: "Slim wedges of sweet potato are tossed in light oil and smoked paprika, then roasted until caramel-edged and tender inside. The result is a 200 g basket of naturally sweet, gently spiced fries with a crisp bite-perfect alongside burgers, grilled meats or enjoyed solo with your favourite dip.",
-      ar: "استمتعوا بالتوازن المثالي بين القرمشة والطراوة مع بطاطسنا الحلوة المقلية، المتبّلة بخبرة والمُحمّرة بلون ذهبي خفيف، لتُقدّم لكم تجربة شهية ستجعلكم تتوقون إلى حلاوتها اللذيذة مع كل قضمة.",
-      ru: "Ломтики батата покрывают тонким слоем масла и копчёной паприки, затем запекают до румяной корочки и мягкой сердцевины. Получается порция 200 г сладковатого, слегка пряного фри - отличный гарнир к бургерам, мясу на гриле или самостоятельная закуска с соусом.",
-    },
   },
   price: 24,
   images: {
-    thumbnail: sweetPotatoFriesThumbnail,
+    card: sweetPotatoFriesCard,
+    card2x: sweetPotatoFriesCard2x,
     full: sweetPotatoFriesFull,
   },
   nutrition: {
@@ -2758,6 +2888,11 @@ export const SweetPotatoFries = {
 
 export const MashedPotatoes = {
   id: 61,
+  slug: {
+    en: "mashed-potatoes",
+    ru: "kartofelnoe-pyure",
+    ar: "batatis-mahrusa",
+  },
   name: {
     en: "Mashed Potatoes",
     ar: "بطاطس مهروسة",
@@ -2770,15 +2905,11 @@ export const MashedPotatoes = {
       ar: "جرّبوا بطاطسنا المهروسة، المصنوعة من بطاطس ناعمة وهشة، مخفوقة مع الزبدة الكريمية والحليب الغني، لتُشكّل طبقًا جانبيًا شهيًا يُكمّل أي وجبة.",
       ru: "Нежное картофельное пюре с маслом.",
     },
-    long: {
-      en: "Fluffy, velvety potatoes are whipped with sweet cream and a generous knob of butter to create a silky purée that melts on the tongue. A pinch of salt and cracked pepper lift the natural earthy sweetness, making this 300 g side the perfect partner for rich mains or a comforting bite all on its own.",
-      ar: "جرّبوا بطاطسنا المهروسة، المصنوعة من بطاطس ناعمة وهشة، مخفوقة مع الزبدة الكريمية والحليب الغني، لتُشكّل طبقًا جانبيًا شهيًا يُكمّل أي وجبة.",
-      ru: "Воздушное картофельное пюре взбито со сливками и доброй порцией сливочного масла, приобретая бархатную текстуру и тающий вкус. Щепотка соли и свежий перец подчёркивают мягкую сладость картофеля. Порция 300 г - идеальный гарнир к сытным блюдам или домашний уют в чистом виде.",
-    },
   },
   price: 20,
   images: {
-    thumbnail: mashedPotatoesThumbnail,
+    card: mashedPotatoesCard,
+    card2x: mashedPotatoesCard2x,
     full: mashedPotatoesFull,
   },
   nutrition: {
@@ -2798,6 +2929,11 @@ export const MashedPotatoes = {
 
 export const FrenchFries = {
   id: 62,
+  slug: {
+    en: "french-fries",
+    ru: "kartofel-fri",
+    ar: "batatis-maqliya",
+  },
   name: {
     en: "French Fries",
     ar: "بطاطس مقلية عادية",
@@ -2810,15 +2946,11 @@ export const FrenchFries = {
       ar: "مقلية حتى تصبح ذهبية مقرمشة ومتبلة بشكل مثالي، تُعدّ إضافة رائعة لأي وجبة.",
       ru: "Классический картофель фри.",
     },
-    long: {
-      en: "Twice-fried for perfect crunch, these 200 g fries boast a shatter-crisp exterior and fluffy centre. A quick soak removes starch, while the two-stage fry-first low, then hot-locks in golden colour and irresistible texture. Sprinkle with salt and enjoy on their own or alongside your favourite main.",
-      ar: "مقلية حتى تصبح ذهبية مقرمشة ومتبلة بشكل مثالي، تُعدّ إضافة رائعة لأي وجبة.",
-      ru: "Двойная обжарка придаёт 200-граммовой порции картофеля фри хрустящую корочку и нежную, воздушную середину. Замачивание в воде убирает лишний крахмал, а поэтапное жарение - сначала при низкой, затем при высокой температуре - обеспечивает равномерный золотистый цвет. Посыпьте солью и подавайте как самостоятельную закуску или гарнир.",
-    },
   },
   price: 19,
   images: {
-    thumbnail: frenchFriesThumbnail,
+    card: frenchFriesCard,
+    card2x: frenchFriesCard2x,
     full: frenchFriesFull,
   },
   nutrition: {
@@ -2837,6 +2969,11 @@ export const FrenchFries = {
 
 export const HomeStylePotatoWithMushroom = {
   id: 63,
+  slug: {
+    en: "home-style-potato-with-mushroom",
+    ru: "kartoshka-po-domashnemu-s-gribami",
+    ar: "batatis-manziliya-bil-fitr",
+  },
   name: {
     en: "Home Style Potato With Mushroom",
     ar: "بطاطس منزلية مع الفطر",
@@ -2849,15 +2986,11 @@ export const HomeStylePotatoWithMushroom = {
       ar: "فطر وبصل وبطاطا مقلية مع أعشاب طازجة.",
       ru: "Картошка по-домашнему с грибами и укропом.",
     },
-    long: {
-      en: "Pan-fried potato cubes mingle with juicy mushrooms, sweet onion and bright spring onion, all tossed in aromatic oil and finished with fresh dill. The result is a generous, about-500 g side: crisp-edged potatoes outside, fluffy within, balanced by earthy mushroom depth and a herbal lift-pure homestyle comfort alongside any grilled meat or enjoyed on its own.",
-      ar: "فطر وبصل وبطاطا مقلية مع أعشاب طازجة.",
-      ru: "Румяные кубики картофеля жарятся до золотистой корочки, затем соединяются с сочными грибами, ароматным луком и зелёным луком, а свежий укроп придаёт блюду яркий акцент. Получается щедрая порция (~500 г): хрустящие снаружи и мягкие внутри кусочки картофеля с нежным грибным вкусом и лёгкой травянистой ноткой-идеальный гарнир или самостоятельное домашнее блюдо.",
-    },
   },
   price: 24,
   images: {
-    thumbnail: homeStylePotatoWithMushroomThumbnail,
+    card: homeStylePotatoWithMushroomCard,
+    card2x: homeStylePotatoWithMushroomCard2x,
     full: homeStylePotatoWithMushroomFull,
   },
   nutrition: {
@@ -2880,6 +3013,11 @@ export const HomeStylePotatoWithMushroom = {
 
 export const UzbekFlatbread = {
   id: 64,
+  slug: {
+    en: "uzbek-flatbread",
+    ru: "lepeshka",
+    ar: "khubz-musattah-uzbaki",
+  },
   name: {
     en: "Uzbek Flatbread",
     ar: "خبز مسطح أوزبكي",
@@ -2892,15 +3030,11 @@ export const UzbekFlatbread = {
       ar: "خبز مسطح",
       ru: "Узбекская лепёшка с кунжутом.",
     },
-    long: {
-      en: "Fresh from the oven, this 160 g round flatbread boasts a chewy, airy crumb and a lightly blistered crust dotted with nutty sesame seeds. Brushed with sunflower oil for softness, it offers a gentle sweetness from milk and sugar balanced by a savoury edge of sea salt. Tear it apart to reveal steam and enjoy alongside soups, grilled meats or simply on its own.",
-      ar: "خبز مسطح",
-      ru: "Горячая узбекская лепёшка весом около 160 г радует воздушным мякишем и тонкой румяной коркой с ароматом кунжута. Лёгкая сладость молока и сахара сочетается с солоноватым оттенком, а кисточка масла делает корочку мягкой. Отрывайте тёплые кусочки и подавайте к супам, шашлыку или просто так - вкус домашней выпечки в каждом ломтике.",
-    },
   },
   price: 8,
   images: {
-    thumbnail: uzbekFlatbreadThumbnail,
+    card: uzbekFlatbreadCard,
+    card2x: uzbekFlatbreadCard2x,
     full: uzbekFlatbreadFull,
   },
   nutrition: {
@@ -2923,6 +3057,11 @@ export const UzbekFlatbread = {
 
 export const AdjikaSauce = {
   id: 65,
+  slug: {
+    en: "adjika-sauce",
+    ru: "adzhika",
+    ar: "salsat-adjika",
+  },
   name: {
     en: "Adjika Sauce",
     ar: "صلصة أدجيكا",
@@ -2935,15 +3074,11 @@ export const AdjikaSauce = {
       ar: "صلصة أدجيكا جورجية حارة.",
       ru: "Острая аджика.",
     },
-    long: {
-      en: "A punchy blend of bell pepper, hot chili and garlic, brightened with herbs and vinegar. Spoon over grilled meats or flatbread for an instant hit of heat and freshness.",
-      ar: "صلصة أدجيكا جورجية حارة.",
-      ru: "Яркое пюре из сладкого перца, острого чили и чеснока, усиленное травами и уксусом. Ложка аджики мгновенно оживит мясо с гриля или лепёшку.",
-    },
   },
   price: 9,
   images: {
-    thumbnail: adjikaSauceThumbnail,
+    card: adjikaSauceCard,
+    card2x: adjikaSauceCard2x,
     full: adjikaSauceFull,
   },
   nutrition: {
@@ -2967,6 +3102,11 @@ export const AdjikaSauce = {
 
 export const HouseSpecialSauce = {
   id: 66,
+  slug: {
+    en: "house-special-sauce",
+    ru: "firmennyy-sous",
+    ar: "salsa-khassa",
+  },
   name: {
     en: "House Special Sauce",
     ar: "صلصة خاصة بالمطعم",
@@ -2979,15 +3119,11 @@ export const HouseSpecialSauce = {
       ar: "صلصة البيت الكريمية بالكاتشب والمايونيز.",
       ru: "Кремовый фирменный соус.",
     },
-    long: {
-      en: "Tangy ketchup meets silky mayo, crunchy pickle and a hint of paprika: a versatile, mildly sweet sauce that flatters burgers, grilled meats or fried potatoes.",
-      ar: "صلصة البيت الكريمية بالكاتشب والمايونيز.",
-      ru: "Пикантный кетчуп соединяется с нежным майонезом, хрустящим огурчиком и щепоткой паприки. Универсальный, слегка сладковатый соус для бургеров, шашлыка или картофеля.",
-    },
   },
   price: 9,
   images: {
-    thumbnail: houseSpecialSauceThumbnail,
+    card: houseSpecialSauceCard,
+    card2x: houseSpecialSauceCard2x,
     full: houseSpecialSauceFull,
   },
   nutrition: {
@@ -3010,6 +3146,11 @@ export const HouseSpecialSauce = {
 
 export const MustardSauce = {
   id: 67,
+  slug: {
+    en: "mustard-sauce",
+    ru: "gorchitsa",
+    ar: "salsat-al-khardal",
+  },
   name: {
     en: "Mustard Sauce",
     ar: "صلصة الخردل",
@@ -3022,15 +3163,11 @@ export const MustardSauce = {
       ar: "صلصة الخردل بالعسل للغمس.",
       ru: "Медово-горчичный соус.",
     },
-    long: {
-      en: "Smooth Dijon and creamy mayo meet honey’s sweetness and vinegary bite, creating a balanced mustard sauce that pairs with chicken cutlets, fries or grilled veg.",
-      ar: "صلصة الخردل بالعسل للغمس.",
-      ru: "Гладкая дижонская горчица и майонез соединяются с мёдом и уксусом, образуя гармоничный соус, который идеально подходит к куриным котлетам, картофелю фри или овощам-гриль.",
-    },
   },
   price: 9,
   images: {
-    thumbnail: mustardSauceThumbnail,
+    card: mustardSauceCard,
+    card2x: mustardSauceCard2x,
     full: mustardSauceFull,
   },
   nutrition: {
@@ -3052,6 +3189,11 @@ export const MustardSauce = {
 
 export const TomatoGarlicSauce = {
   id: 68,
+  slug: {
+    en: "tomato-garlic-sauce",
+    ru: "tomatno-chesnochnyy-sous",
+    ar: "salsat-al-tamatim-wal-thum",
+  },
   name: {
     en: "Tomato-Garlic Sauce",
     ar: "صلصة الطماطم والثوم",
@@ -3064,15 +3206,11 @@ export const TomatoGarlicSauce = {
       ar: "صلصة غنية بالطماطم والثوم.",
       ru: "Насыщенный томатно-чесночный соус.",
     },
-    long: {
-      en: "Slow-simmered ketchup and paste gain depth from fresh garlic, vinegar and herbs. Ideal with skewers, fries or baked pies.",
-      ar: "صلصة غنية بالطماطم والثوم.",
-      ru: "Кетчуп и томатная паста томятся с чесноком, уксусом и зеленью, образуя густой соус к шашлыку, картошке фри или пирожкам.",
-    },
   },
   price: 9,
   images: {
-    thumbnail: tomatoGarlicSauceThumbnail,
+    card: tomatoGarlicSauceCard,
+    card2x: tomatoGarlicSauceCard2x,
     full: tomatoGarlicSauceFull,
   },
   nutrition: {
@@ -3096,6 +3234,11 @@ export const TomatoGarlicSauce = {
 
 export const RaspberryMors = {
   id: 76,
+  slug: {
+    en: "raspberry-mors",
+    ru: "malinovyy-mors",
+    ar: "mors-al-tut",
+  },
   name: {
     en: "Raspberry Mors",
     ar: "مورس التوت",
@@ -3114,15 +3257,11 @@ export const RaspberryMors = {
       ar: "مورس التوت المنعش بطعم حامض خفيف.",
       ru: "Свежий малиновый морс.",
     },
-    long: {
-      en: "A chilled 250 ml glass of raspberry mors bursts with the vivid colour and sweet-tart flavour of summer berries. Lightly sweetened and gently extracted, it offers a refreshing sip that quenches thirst while delivering a subtle hint of natural fruit pulp.",
-      ar: "مورس التوت المنعش بطعم حامض خفيف.",
-      ru: "Охлаждённый бокал (250 мл) малинового морса радует ярким цветом и кисло-сладким вкусом спелой малины. Лёгкая сладость подчёркивает природную свежесть ягод, делая напиток освежающим и утоляющим жажду.",
-    },
   },
   price: 21,
   images: {
-    thumbnail: raspberryMorsThumbnail,
+    card: raspberryMorsCard,
+    card2x: raspberryMorsCard2x,
     full: raspberryMorsFull,
   },
   nutrition: {
@@ -3136,6 +3275,11 @@ export const RaspberryMors = {
 
 export const CranberyMors = {
   id: 77,
+  slug: {
+    en: "cranbery-mors",
+    ru: "klyukvennyy-mors",
+    ar: "mors-al-tut-al-barri",
+  },
   name: {
     en: "Cranbery Mors",
     ar: "مورس التوت البري",
@@ -3154,15 +3298,11 @@ export const CranberyMors = {
       ar: "مورس التوت البري المنزلي المنعش.",
       ru: "Домашний клюквенный морс.",
     },
-    long: {
-      en: "A chilled 250 ml glass of ruby-red mors delivers the pure, tart essence of cranberries balanced by a touch of sugar. Light, fruity and thirst-quenching, it’s the classic Russian way to cool down and boost your vitamin C.",
-      ar: "مورس التوت البري المنزلي المنعش.",
-      ru: "Охлаждённый бокал (250 мл) рубинового морса сочетает яркую кислинку клюквы и лёгкую сладость сахара. Лёгкий, освежающий и богатый витамином C напиток - традиционный русский способ утолить жажду.",
-    },
   },
   price: 21,
   images: {
-    thumbnail: cranberyMorsThumbnail,
+    card: cranberyMorsCard,
+    card2x: cranberyMorsCard2x,
     full: cranberyMorsFull,
   },
   nutrition: {
@@ -3183,7 +3323,6 @@ export const MenuItems = [
   RicePorridge,
   BuckwheatPorridge,
   OatmealPorridge,
-  BeefTongue,
   AssortedPickles,
   Holodec,
   EggplantRolls,
@@ -3228,10 +3367,10 @@ export const MenuItems = [
   ChickenSkewer,
   BeefSkewer,
   LambSkewer,
-  MixedGrill,
+  // MixedGrill,
   Buckwheat,
   LyulyaKebab,
-  LambChops,
+  // LambChops,
   BoiledRice,
   GrilledVegetable,
   SweetPotatoFries,

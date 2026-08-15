@@ -1,0 +1,28 @@
+{
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Reach out, or find the Vkusno branch closest to you. A flexible model keeps quality close to demand. Delivery — available through leading delivery platforms across the active kitchen network. Pickup — customers can order for convenient in-store collection at all listed locations. Self-service seating — selected locations provide casual seating for counter-order customers, without table service. Five locations keep Russian comfort food within reach.",
+    "infoPanel": {
+      "label": "Contact details",
+      "phone": "Call us",
+      "WhatsApp": "Message us on WhatsApp",
+      "email": "Email us"
+    },
+    "socials": {
+      "label": "Follow us"
+    },
+    "branches": {
+      "label": "Our branches",
+      "mapLabel": "Map of our branches",
+      "mapLoading": "Loading the map…",
+      "mapUnavailable": "The map is temporarily unavailable. Use the \"Directions\" link on any branch below instead.",
+      "open24": "Open 24/7",
+      "hours": "Open {{open}} – {{close}}",
+      "directions": "Directions"
+    }
+  },
+  "meta": {
+    "title": "Contact & Branches",
+    "description": "Five Vkusno kitchens across Dubai. Addresses, opening hours, map and direct contact."
+  }
+}

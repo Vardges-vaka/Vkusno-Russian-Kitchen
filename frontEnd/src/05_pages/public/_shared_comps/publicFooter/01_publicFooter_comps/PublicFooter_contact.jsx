@@ -1,3 +1,6 @@
+import {
+  translateFn,
+} from "../../../../../04_hlprs/_hlprs.index.js";
 import { CONTACT_INFO } from "../../../contact/04_contact_const/_contact_const.index.js";
 import "../00_publicFooter_styles/PublicFooter_contact.css";
 
@@ -37,6 +40,10 @@ const PublicFooter_contact = ({ tContact }) => {
       </ul>
     </section>
   );
+};
+
+PublicFooter_contact.propTypes = {
+  tContact: translateFn.isRequired,
 };
 
 export default PublicFooter_contact;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 import {
   Map,
@@ -8,7 +9,12 @@ import {
   useAdvancedMarkerRef,
 } from "@vis.gl/react-google-maps";
 import { useMapContext } from "../../../../03_context/_context.index.js";
-import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  branchShape,
+  langShape,
+  translateFn,
+  pickLocale,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_menu_styles/Menu_orderMap.css";
 
 const formatHours = (timing, t) =>
@@ -170,6 +176,30 @@ const Menu_orderMap = ({ branches, lang, t }) => {
       </Map>
     </div>
   );
+};
+
+Menu_orderMap_panner.propTypes = {
+  branches: PropTypes.arrayOf(branchShape).isRequired,
+  selectedBranchId: PropTypes.string,
+  dubaiCenter: PropTypes.shape({
+    lat: PropTypes.number.isRequired,
+    lng: PropTypes.number.isRequired,
+  }).isRequired,
+  defaultZoom: PropTypes.number.isRequired,
+};
+
+Menu_orderMap_marker.propTypes = {
+  branch: branchShape.isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
+  isSelected: PropTypes.bool,
+  onSelect: PropTypes.func.isRequired,
+};
+
+Menu_orderMap.propTypes = {
+  branches: PropTypes.arrayOf(branchShape).isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
 };
 
 export default Menu_orderMap;

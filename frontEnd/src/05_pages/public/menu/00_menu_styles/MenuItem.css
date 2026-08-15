@@ -1,0 +1,55 @@
+/* Standalone dish page at /{lang}/menu/{slug}.
+   Reuses the modal's inner styles (Menu_itemModal.css, imported by
+   Menu_itemDetail) and only supplies the page shell around them, so the
+   overlay and the page look identical below the heading. */
+
+.MenuItem_container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding-block: 24px 64px;
+  padding-inline: var(--page_gutter-inline);
+  scroll-margin-top: var(--menu_header_offset, 0px);
+}
+
+.MenuItem_breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  color: var(--text_muted_color);
+}
+
+.MenuItem_breadcrumb a {
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+.MenuItem_breadcrumb a:hover,
+.MenuItem_breadcrumb a:focus-visible {
+  text-decoration: underline;
+}
+
+.MenuItem_breadcrumb [aria-current="page"] {
+  color: var(--text_color);
+}
+
+/* Same surface treatment as the modal dialog, minus the overlay. */
+.MenuItem_card {
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow_color);
+}
+
+@media (max-width: 768px) {
+  .MenuItem_container {
+    padding-block: 16px 48px;
+  }
+
+  .MenuItem_card {
+    border-radius: 10px;
+  }
+}

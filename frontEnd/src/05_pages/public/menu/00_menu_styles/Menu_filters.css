@@ -1,0 +1,138 @@
+/* Optional filter panel under the menu search box. Collapsed by default, so
+   the menu still reads as a menu. Logical properties throughout, per #21. */
+
+.Menu_filters {
+  margin-block-start: 14px;
+}
+
+.Menu_filters_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.Menu_filters_toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text_color);
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.Menu_filters_toggle:hover,
+.Menu_filters_toggle:focus-visible {
+  border-color: var(--gold_color);
+}
+
+.Menu_filters_toggle--active {
+  border-color: var(--accent_color);
+  background-color: var(--accent_soft_color);
+}
+
+/* Marks "filters are narrowing this list" without needing a number. */
+.Menu_filters_dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent_color);
+}
+
+.Menu_filters_count {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text_muted_color);
+}
+
+.Menu_filters_panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* start, not end: the two ingredient pickers are much taller than the sort
+     select, and bottom-aligning would strand it halfway down the row. */
+  align-items: start;
+  gap: 12px 16px;
+  margin-block-start: 12px;
+  padding: 16px;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 12px;
+}
+
+.Menu_filters_panel[hidden] {
+  display: none;
+}
+
+/* Sort is a single control; the two ingredient pickers are much taller, so
+ * the sort field aligns to the top of the row rather than stretching. */
+.Menu_filters_field--sort {
+  align-self: start;
+}
+
+.Menu_filters_field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.Menu_filters_label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text_muted_color);
+}
+
+.Menu_filters_select {
+  width: 100%;
+  padding: 9px 10px;
+  font-size: 14px;
+  color: var(--text_color);
+  background-color: var(--bg_color);
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.Menu_filters_select:focus-visible {
+  outline: 2px solid var(--accent_color);
+  outline-offset: 1px;
+}
+
+.Menu_filters_reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  align-self: end;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent_color);
+  background: none;
+  border: 1px solid var(--accent_color);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.Menu_filters_reset:hover,
+.Menu_filters_reset:focus-visible {
+  background-color: var(--accent_soft_color);
+}
+
+@media (max-width: 768px) {
+  .Menu_filters_panel {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+}

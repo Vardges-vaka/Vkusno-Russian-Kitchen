@@ -1,3 +1,8 @@
+import PropTypes from "prop-types";
+import {
+  contactInfoShape,
+  translateFn,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_contact_styles/Contact_infoPanel.css";
 
 const Contact_infoPanel = ({ contactInfo, t }) => {
@@ -31,6 +36,11 @@ const Contact_infoPanel = ({ contactInfo, t }) => {
       })}
     </div>
   );
+};
+
+Contact_infoPanel.propTypes = {
+  contactInfo: PropTypes.arrayOf(contactInfoShape).isRequired,
+  t: translateFn.isRequired,
 };
 
 export default Contact_infoPanel;

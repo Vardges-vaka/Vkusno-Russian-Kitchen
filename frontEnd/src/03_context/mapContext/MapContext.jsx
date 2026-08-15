@@ -1,8 +1,11 @@
-import { createContext, useState, useCallback } from "react";
+import { createContext, useState, useCallback, useMemo } from "react";
 import PropTypes from "prop-types";
 import { APIProvider, useApiIsLoaded } from "@vis.gl/react-google-maps";
+import { IS_DEBUG } from "../../00_config/_config.index.js";
 
-const isMapContext_debug = true;
+// Driven by VITE_IS_DEBUG in .env (see IS_DEBUG in 00_config). This used to be
+// a hardcoded `true`, so every production visitor logged the Maps load.
+const isMapContext_debug = IS_DEBUG;
 
 const MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 const MAPS_MAP_ID = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
@@ -20,15 +23,20 @@ const MapContext = createContext();
 const MapContextBridge = ({ selectedBranchId, selectBranch, children }) => {
   const isMapReady = useApiIsLoaded();
 
-  const contextValue = {
-    mapId: MAPS_MAP_ID,
-    hasApiKey: true,
-    isMapReady,
-    dubaiCenter: DUBAI_CENTER,
-    defaultZoom: DUBAI_DEFAULT_ZOOM,
-    selectedBranchId,
-    selectBranch,
-  };
+  // Memoised: the map and every branch card read this value, so an unmemoised
+  // object would re-render all of them on any parent render.
+  const contextValue = useMemo(
+    () => ({
+      mapId: MAPS_MAP_ID,
+      hasApiKey: true,
+      isMapReady,
+      dubaiCenter: DUBAI_CENTER,
+      defaultZoom: DUBAI_DEFAULT_ZOOM,
+      selectedBranchId,
+      selectBranch,
+    }),
+    [isMapReady, selectedBranchId, selectBranch],
+  );
 
   return (
     <MapContext.Provider value={contextValue}>{children}</MapContext.Provider>
@@ -61,6 +69,21 @@ const MapProvider = ({ children }) => {
 
   const hasApiKey = Boolean(MAPS_API_KEY);
 
+  // Memoised above the early return - hooks cannot run conditionally, so this
+  // is computed on every render and only used on the no-key path below.
+  const fallbackValue = useMemo(
+    () => ({
+      mapId: MAPS_MAP_ID,
+      hasApiKey: false,
+      isMapReady: false,
+      dubaiCenter: DUBAI_CENTER,
+      defaultZoom: DUBAI_DEFAULT_ZOOM,
+      selectedBranchId,
+      selectBranch,
+    }),
+    [selectedBranchId, selectBranch],
+  );
+
   // No key configured (e.g. local dev before .env is set up) - skip loading
   // the script entirely and hand consumers a context they can use to show
   // a fallback UI instead of a broken map.
@@ -69,16 +92,6 @@ const MapProvider = ({ children }) => {
       console.warn(
         "MapContext: VITE_GOOGLE_MAPS_API_KEY is missing - map features are disabled.",
       );
-
-    const fallbackValue = {
-      mapId: MAPS_MAP_ID,
-      hasApiKey: false,
-      isMapReady: false,
-      dubaiCenter: DUBAI_CENTER,
-      defaultZoom: DUBAI_DEFAULT_ZOOM,
-      selectedBranchId,
-      selectBranch,
-    };
 
     return (
       <MapContext.Provider value={fallbackValue}>

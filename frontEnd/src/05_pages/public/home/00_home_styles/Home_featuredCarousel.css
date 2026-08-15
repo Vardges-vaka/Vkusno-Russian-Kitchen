@@ -183,7 +183,7 @@
 .homeFeaturedCarousel__category {
   position: absolute;
   top: 14px;
-  left: 14px;
+  inset-inline-start: 14px;
   z-index: 1;
   padding: 6px 10px;
   border-radius: 999px;
@@ -198,7 +198,7 @@
 
 .homeFeaturedCarousel__priceBadge {
   position: absolute;
-  right: 14px;
+  inset-inline-end: 14px;
   bottom: 14px;
   z-index: 1;
   padding: 8px 12px;

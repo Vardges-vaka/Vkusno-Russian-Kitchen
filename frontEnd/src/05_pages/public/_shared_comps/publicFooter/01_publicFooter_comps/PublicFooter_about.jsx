@@ -1,3 +1,6 @@
+import {
+  translateFn,
+} from "../../../../../04_hlprs/_hlprs.index.js";
 import { Logo } from "../../../../../02_comps/_comps.index.js";
 import "../00_publicFooter_styles/PublicFooter_about.css";
 
@@ -19,6 +22,10 @@ const PublicFooter_about = ({ t }) => {
       <p className="PublicFooter_about_closing">{t("footer.about.closing")}</p>
     </section>
   );
+};
+
+PublicFooter_about.propTypes = {
+  t: translateFn.isRequired,
 };
 
 export default PublicFooter_about;

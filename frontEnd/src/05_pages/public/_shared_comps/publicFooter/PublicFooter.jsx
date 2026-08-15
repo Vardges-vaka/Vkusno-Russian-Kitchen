@@ -32,7 +32,7 @@ const PublicFooter = () => {
         <p className="PublicFooter_copyright">
           {t("footer.nav_links.copyright")}
         </p>
-        <PublicFooter_navBar t={t} />
+        <PublicFooter_navBar t={t} lang={lang} />
       </div>
     </div>
   );

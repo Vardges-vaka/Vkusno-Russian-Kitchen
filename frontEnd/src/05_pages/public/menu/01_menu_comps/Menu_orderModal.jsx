@@ -1,5 +1,12 @@
+import PropTypes from "prop-types";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  menuItemShape,
+  langShape,
+  translateFn,
+  pickLocale,
+  useFocusTrap,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import { useMapContext } from "../../../../03_context/_context.index.js";
 import {
   BRANCHES,
@@ -9,8 +16,26 @@ import {
 import Menu_orderMap from "./Menu_orderMap.jsx";
 import "../00_menu_styles/Menu_orderModal.css";
 
-const PHONE_CONTACT = CONTACT_INFO.find((item) => item.name === "phone");
-const WHATSAPP_CONTACT = CONTACT_INFO.find((item) => item.name === "WhatsApp");
+// Direct-order actions, derived from CONTACT_INFO rather than looked up by
+// hardcoded name.
+//
+// This used to be two module-scope `.find()` calls whose results were then
+// dereferenced as PHONE_CONTACT.link - so renaming or removing an entry in
+// CONTACT_INFO.js took the whole order modal down with a TypeError at import
+// time, before any error boundary could catch it. Filtering means a missing
+// entry just drops one button.
+//
+// `newTab` is per-channel: tel: and mailto: should stay in the current tab,
+// wa.me should not.
+const DIRECT_CHANNELS = [
+  { name: "phone", labelKey: "menu.orderModal.phone", newTab: false },
+  { name: "WhatsApp", labelKey: "menu.orderModal.whatsApp", newTab: true },
+];
+
+const DIRECT_ACTIONS = DIRECT_CHANNELS.map((channel) => {
+  const contact = CONTACT_INFO.find((item) => item.name === channel.name);
+  return contact ? { ...channel, link: contact.link, value: contact.label } : null;
+}).filter(Boolean);
 
 const formatHours = (timing, t) =>
   timing.is24Hours
@@ -21,6 +46,8 @@ const formatHours = (timing, t) =>
       });
 
 const Menu_orderModal = ({ item, lang, t, onClose }) => {
+  // Focus goes into the dialog, Tab stays inside, and returns on close.
+  const dialogRef = useFocusTrap();
   const { selectedBranchId, selectBranch } = useMapContext();
   const name = pickLocale(item.name, lang);
   const selectedBranch = BRANCHES.find(
@@ -101,6 +128,8 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
   return (
     <div className="Menu_orderModal" onClick={onClose}>
       <div
+        ref={dialogRef}
+        tabIndex={-1}
         className="Menu_orderModal_dialog"
         role="dialog"
         aria-modal="true"
@@ -142,20 +171,17 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
                 aria-label={t("menu.orderModal.orderFromUsAria")}>
                 {t("menu.orderModal.online")}
               </a>
-              <a
-                className="Menu_orderModal_directAction"
-                href={PHONE_CONTACT.link}
-                aria-label={`${t("menu.orderModal.phone")} — ${PHONE_CONTACT.label}`}>
-                {t("menu.orderModal.phone")}
-              </a>
-              <a
-                className="Menu_orderModal_directAction"
-                href={WHATSAPP_CONTACT.link}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`${t("menu.orderModal.whatsApp")} — ${WHATSAPP_CONTACT.label}`}>
-                {t("menu.orderModal.whatsApp")}
-              </a>
+              {DIRECT_ACTIONS.map((action) => (
+                <a
+                  key={action.name}
+                  className="Menu_orderModal_directAction"
+                  href={action.link}
+                  target={action.newTab ? "_blank" : undefined}
+                  rel={action.newTab ? "noreferrer" : undefined}
+                  aria-label={`${t(action.labelKey)} — ${action.value}`}>
+                  {t(action.labelKey)}
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -268,6 +294,13 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
       </div>
     </div>
   );
+};
+
+Menu_orderModal.propTypes = {
+  item: menuItemShape.isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default Menu_orderModal;

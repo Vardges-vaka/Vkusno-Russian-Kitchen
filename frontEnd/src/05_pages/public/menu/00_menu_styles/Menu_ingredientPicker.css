@@ -1,0 +1,156 @@
+/* Multi-select ingredient list with its own search box.
+   Logical properties throughout so it mirrors under dir="rtl". */
+
+.Menu_ingredientPicker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.Menu_ingredientPicker_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Count of ticked ingredients - the list is scrolled, so the number is often
+   the only way to see that something is selected further down. */
+.Menu_ingredientPicker_badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  margin-inline-start: 6px;
+  padding: 0 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--footer_text_color);
+  background-color: var(--accent_color);
+  border-radius: 999px;
+}
+
+.Menu_ingredientPicker_actions {
+  display: flex;
+  gap: 6px;
+}
+
+.Menu_ingredientPicker_action {
+  padding: 3px 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent_color);
+  background: none;
+  border: 1px solid var(--border_color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.Menu_ingredientPicker_action:hover:not(:disabled),
+.Menu_ingredientPicker_action:focus-visible:not(:disabled) {
+  border-color: var(--accent_color);
+  background-color: var(--accent_soft_color);
+}
+
+.Menu_ingredientPicker_action:disabled {
+  color: var(--text_muted_color);
+  cursor: default;
+  opacity: 0.6;
+}
+
+.Menu_ingredientPicker_search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  color: var(--text_muted_color);
+  background-color: var(--bg_color);
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+}
+
+.Menu_ingredientPicker_search:focus-within {
+  border-color: var(--accent_color);
+}
+
+.Menu_ingredientPicker_searchInput {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  color: var(--text_color);
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Chrome draws its own clear affordance on type=search; we provide one. */
+.Menu_ingredientPicker_searchInput::-webkit-search-cancel-button {
+  display: none;
+}
+
+.Menu_ingredientPicker_clearSearch {
+  display: inline-flex;
+  padding: 2px;
+  color: var(--text_muted_color);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Menu_ingredientPicker_clearSearch:hover,
+.Menu_ingredientPicker_clearSearch:focus-visible {
+  color: var(--accent_color);
+}
+
+/* Capped height with its own scroll: 209 ingredients would otherwise push the
+   whole menu off screen when the panel opens. */
+.Menu_ingredientPicker_list {
+  max-height: 190px;
+  margin: 0;
+  padding: 4px;
+  overflow-y: auto;
+  list-style: none;
+  background-color: var(--bg_color);
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+}
+
+.Menu_ingredientPicker_row + .Menu_ingredientPicker_row {
+  border-block-start: 1px solid var(--border_color);
+}
+
+.Menu_ingredientPicker_option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 7px;
+  font-size: 13.5px;
+  color: var(--text_color);
+  cursor: pointer;
+}
+
+.Menu_ingredientPicker_option:hover {
+  background-color: var(--accent_soft_color);
+  border-radius: 5px;
+}
+
+.Menu_ingredientPicker_option input {
+  flex-shrink: 0;
+  accent-color: var(--accent_color);
+  cursor: pointer;
+}
+
+.Menu_ingredientPicker_option:focus-within {
+  outline: 2px solid var(--accent_color);
+  outline-offset: -2px;
+  border-radius: 5px;
+}
+
+.Menu_ingredientPicker_empty {
+  padding: 10px 8px;
+  font-size: 13px;
+  color: var(--text_muted_color);
+}

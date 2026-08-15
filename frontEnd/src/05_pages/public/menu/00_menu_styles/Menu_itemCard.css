@@ -12,20 +12,106 @@
     border-color 0.15s ease-out;
 }
 
+/* The card is a plain container now - the dish name inside it is the real
+   link. :focus-within carries the hover treatment so keyboard focus on that
+   link still lights up the whole card. */
+.Menu_itemCard {
+  position: relative;
+}
+
 .Menu_itemCard:hover,
-.Menu_itemCard:focus-visible {
+.Menu_itemCard:focus-within {
   transform: translateY(-2px);
   border-color: var(--gold_color);
   box-shadow: 0 6px 18px var(--shadow_color);
-  outline: none;
+}
+
+.Menu_itemCard_nameLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Stretches the name link over the entire card so the click target is
+   unchanged from when the card itself was clickable. */
+.Menu_itemCard_nameLink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.Menu_itemCard_nameLink:focus-visible {
+  outline: 2px solid var(--accent_color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Sits above the stretched link so Order stays independently clickable. */
+.Menu_itemCard_orderBtn {
+  position: relative;
+  z-index: 2;
 }
 
 /* Photo spans the full card width; fixed ratio keeps every card equal height */
-.Menu_itemCard_photo {
-  display: block;
+/* Skeleton: holds the photo's exact footprint and shimmers until the image
+   decodes, so the grid never reflows and empty cards do not read as broken.
+
+   The shimmer sits UNDER the photo rather than gating its opacity. An opacity
+   gate would depend on the onLoad handler firing - and for an image already in
+   cache the load event can beat React attaching the handler, leaving the photo
+   invisible for good. Here the photo simply paints over the shimmer, so the
+   worst a missed event can do is leave an animation running behind an opaque
+   image. The --loaded class is a CPU optimisation, not a correctness gate. */
+.Menu_itemCard_photoWrap {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
+  background-color: var(--Icon_bg_color);
+  overflow: hidden;
+}
+
+.Menu_itemCard_photoWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--surface_color),
+    transparent
+  );
+  opacity: 0.55;
+  transform: translateX(-100%);
+  animation: Menu_itemCard_shimmer 1.4s ease-in-out infinite;
+}
+
+/* Photo has decoded - stop animating a layer nobody can see any more. */
+.Menu_itemCard_photoWrap--loaded::after {
+  content: none;
+}
+
+.Menu_itemCard_photo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+@keyframes Menu_itemCard_shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* The shimmer is decorative motion; the photo still fades in. */
+@media (prefers-reduced-motion: reduce) {
+  .Menu_itemCard_photoWrap::after {
+    animation: none;
+  }
 }
 
 /* Monogram tile for items without a photo (drinks) */

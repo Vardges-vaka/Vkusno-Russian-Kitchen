@@ -1,8 +1,12 @@
 import { useTranslation } from "react-i18next";
+import { CONTACT_INFO } from "../contact/04_contact_const/_contact_const.index.js";
+import { PageMeta } from "../../../02_comps/_comps.index.js";
 import "./00_legal_styles/Privacy.css";
 
-const CONTACT_EMAIL = "info@vkusno.ae";
-const CONTACT_PHONE = "+971 52 102 5674";
+// Single source of truth - these used to be redeclared here, so the phone
+// number lived in two files and drifted the moment one of them changed.
+const CONTACT_EMAIL = CONTACT_INFO.find((item) => item.name === "email")?.label;
+const CONTACT_PHONE = CONTACT_INFO.find((item) => item.name === "phone")?.label;
 
 const Privacy = () => {
   const { t } = useTranslation("Privacy");
@@ -10,6 +14,8 @@ const Privacy = () => {
 
   return (
     <div className="Privacy_container">
+      <PageMeta title={t("meta.title")} description={t("meta.description")} />
+
       <header className="Privacy_hero">
         <h1 className="Privacy_hero_title">{t("title")}</h1>
         <p className="Privacy_hero_meta">{t("lastUpdated")}</p>

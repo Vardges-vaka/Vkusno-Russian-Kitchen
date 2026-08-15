@@ -1,4 +1,5 @@
 import { Logo } from "../../../../02_comps/_comps.index.js";
+import { localePath } from "../../../../00_config/_config.index.js";
 import { usePublicHeader } from "./02_publicHeader_hooks/_publicHeader_hooks.index.js";
 import {
   PublicHeader_navBar,
@@ -7,14 +8,14 @@ import {
 import "./00_publicHeader_styles/PublicHeader.css";
 
 const PublicHeader = () => {
-  const { handlers, t } = usePublicHeader();
+  const { headerRef, lang, t } = usePublicHeader();
   return (
-    <div className="PublicHeader_container">
+    <div className="PublicHeader_container" ref={headerRef}>
       <div className="PublicHeader_logo">
-        <Logo onClick={handlers.handleLogoClick} />
+        <Logo to={localePath(lang)} />
       </div>
-      <PublicHeader_navBar t={t} />
-      <PublicHeader_actions t={t} />
+      <PublicHeader_navBar t={t} lang={lang} />
+      <PublicHeader_actions />
     </div>
   );
 };

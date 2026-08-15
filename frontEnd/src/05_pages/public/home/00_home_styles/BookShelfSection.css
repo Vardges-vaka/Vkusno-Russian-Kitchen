@@ -58,7 +58,14 @@
   padding: 0;
   position: relative;
   perspective: 1000px;
-  overflow-x: hidden;
+  /* Both axes, explicitly.
+     `overflow-x: hidden` alone is a trap: per spec, when one axis is hidden
+     and the other is `visible`, the visible one computes to `auto`. So this
+     was silently a vertically-scrollable box, and anything spilling past the
+     shelf - the over-long spine titles, the -15px hover lift - gave the wheel
+     something to scroll. Hovering a book and scrolling moved the whole shelf. */
+  overflow: hidden;
+  overscroll-behavior: contain;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* IE and Edge */
@@ -129,12 +136,12 @@
 }
 
 .bookshelf-nav.prev {
-  left: 400px;
+  inset-inline-start: 400px;
   top: 710px;
 }
 
 .bookshelf-nav.next {
-  right: 400px;
+  inset-inline-end: 400px;
   top: 710px;
 }
 
@@ -422,20 +429,32 @@ div.specialty-card.book-spine-14 {
 }
 
 /* Book spine title - adjusted for variable heights */
+/* The spine title, rotated to run along the book.
+
+   `width` is the length of the text ALONG the spine once rotated, so it has to
+   stay inside the book's 300px height. It was 250px with white-space: nowrap
+   and no overflow rule, so a long dish name - "Baked Russian Pie With Potato
+   And Mushroom" - simply ran past the box and out the bottom of the shelf.
+   Clipping with an ellipsis keeps every spine tidy; the full name is still on
+   the card that opens on hover. */
 .specialty-card::before {
   content: attr(data-title);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateZ(90deg);
-  width: 250px;
+  width: 280px;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.85rem;
+  /* Set per book from the dish name's length - see spineFontSize in
+     BookShelfSection.jsx. The fallback is the size short names use. */
+  font-size: var(--spine_title_size, 0.85rem);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   /* Text stroke for better readability */
   -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.3);
@@ -460,7 +479,7 @@ div.specialty-card.book-spine-14 {
 .specialty-card-content {
   position: absolute;
   top: -20px;
-  left: 100%;
+  inset-inline-start: 100%;
   width: 280px;
   height: auto;
   max-height: 380px;

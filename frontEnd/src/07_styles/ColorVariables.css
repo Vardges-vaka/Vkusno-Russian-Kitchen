@@ -6,6 +6,32 @@
    gold as the secondary brand tone (samovar / khokhloma vibes).
    ============================================================= */
 
+/* =============================================================
+   Typefaces - raw stacks only, same pattern as the colours above.
+   Applied in App.css.
+
+   No single family covers Latin + Cyrillic + Arabic well, so this
+   is a per-script stack switched on <html lang>:
+
+     Playfair Display  display / headings  (latin + cyrillic)
+     Golos Text        body                (latin + cyrillic, drawn
+                                            Russian-first by ParaType)
+     IBM Plex Sans Arabic  everything under lang="ar"
+
+   Self-hosted via @fontsource - no CDN, no privacy concern, and Vite
+   fingerprints them. Each package ships per-subset files with
+   unicode-range, so a visitor only downloads the scripts they render.
+   ============================================================= */
+
+:root {
+  --font_display_latin: "Playfair Display Variable", "Playfair Display",
+    Georgia, "Times New Roman", serif;
+  --font_body_latin: "Golos Text Variable", "Golos Text", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font_arabic: "IBM Plex Sans Arabic", "Noto Naskh Arabic", "Segoe UI",
+    Tahoma, sans-serif;
+}
+
 :root {
   /* ---------- LIGHT THEME ---------- */
   /* Base surfaces & text */

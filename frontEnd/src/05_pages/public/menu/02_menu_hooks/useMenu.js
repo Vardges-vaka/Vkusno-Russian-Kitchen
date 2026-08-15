@@ -1,70 +1,40 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { resolveLanguage } from "../../../../00_config/_config.index.js";
 import { Categories } from "../04_menu_const/CATEGORIES.js";
-
-const findMenuItemById = (itemId) => {
-  for (const category of Categories) {
-    const item = category.menuItems.find((menuItem) => menuItem.id === itemId);
-    if (item) return { item, categoryId: category.id };
-  }
-  return null;
-};
+import {
+  DEFAULT_FILTERS,
+  countItems,
+  filterCategories,
+  hasActiveFilters,
+} from "../03_menu_hlprs/_menu_hlprs.index.js";
 
 export const useMenu = () => {
   const { t, i18n } = useTranslation("Menu");
-  const location = useLocation();
-  const navigate = useNavigate();
-  // "en-US" -> "en" so it matches the data's locale keys (en / ar / ru)
-  const lang = (i18n.language || "en").split("-")[0];
+  const { lang: langParam } = useParams();
+  const lang = resolveLanguage(langParam, i18n.language);
 
   const [activeCategoryId, setActiveCategoryId] = useState(Categories[0]?.id);
-  const [selectedItem, setSelectedItem] = useState(null);
   // Dish whose "Order" button was pressed - opens the map + aggregator modal.
+  // Transient action rather than a destination, so it stays local state.
   const [orderItem, setOrderItem] = useState(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
-  const normalizedQuery = searchQuery.trim().toLowerCase();
+  // Search + ingredient filters + sort, all in one pass. The matching itself
+  // lives in 03_menu_hlprs: it indexes every dish across ALL three languages,
+  // so the query language is independent of the UI language - typing "Борщ"
+  // while browsing in English still finds Borscht.
+  const visibleCategories = useMemo(() => filterCategories(filters), [filters]);
+  const resultCount = useMemo(
+    () => countItems(visibleCategories),
+    [visibleCategories],
+  );
+  const filtersActive = hasActiveFilters(filters);
 
-  // Categories narrowed by the search query. Matches the dish name in the
-  // current language AND in English (so "plov" works while browsing in
-  // Russian), plus the short description. Empty categories drop out.
-  const visibleCategories = useMemo(() => {
-    if (!normalizedQuery) return Categories;
-
-    return Categories.map((category) => ({
-      ...category,
-      menuItems: category.menuItems.filter((item) => {
-        const haystack = [
-          item.name?.[lang],
-          item.name?.en,
-          item.description?.short?.[lang],
-        ]
-          .filter(Boolean)
-          .join(" ")
-          .toLowerCase();
-        return haystack.includes(normalizedQuery);
-      }),
-    })).filter((category) => category.menuItems.length > 0);
-  }, [normalizedQuery, lang]);
-
-  // The header is sticky with a variable height (it wraps on mobile),
-  // so we measure it and expose the value to CSS. The category tabs use
-  // it as their sticky "top" and sections as their scroll-margin.
-  useEffect(() => {
-    const header = document.querySelector(".PublicHeader_container");
-
-    const setHeaderOffset = () => {
-      document.documentElement.style.setProperty(
-        "--menu_header_offset",
-        `${header ? header.offsetHeight : 0}px`,
-      );
-    };
-
-    setHeaderOffset();
-    window.addEventListener("resize", setHeaderOffset);
-    return () => window.removeEventListener("resize", setHeaderOffset);
-  }, []);
+  // --menu_header_offset (the sticky "top" for the category tabs and the
+  // scroll-margin for sections) is published by PublicHeader itself, via
+  // usePublicHeader.
 
   // Highlight the tab of whichever category section currently sits in the
   // "reading band" just below the header. IntersectionObserver only fires
@@ -92,39 +62,10 @@ export const useMenu = () => {
     return () => observer.disconnect();
   }, [visibleCategories]);
 
-  // Home bookshelf "Show More" lands here with { openItemId } in location state.
-  useEffect(() => {
-    const openItemId = location.state?.openItemId;
-    if (!openItemId) return;
-
-    const match = findMenuItemById(openItemId);
-    if (match) {
-      setSelectedItem(match.item);
-      setActiveCategoryId(match.categoryId);
-
-      requestAnimationFrame(() => {
-        const section = document.getElementById(
-          `menuCategory-${match.categoryId}`,
-        );
-        section?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    }
-
-    navigate(location.pathname, { replace: true, state: null });
-  }, [location.pathname, location.state, navigate]);
-
   const handleCategorySelect = useCallback((categoryId) => {
     setActiveCategoryId(categoryId);
     const section = document.getElementById(`menuCategory-${categoryId}`);
     if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
-
-  const handleItemOpen = useCallback((item) => {
-    setSelectedItem(item);
-  }, []);
-
-  const handleItemClose = useCallback(() => {
-    setSelectedItem(null);
   }, []);
 
   const handleOrderOpen = useCallback((item) => {
@@ -135,31 +76,37 @@ export const useMenu = () => {
     setOrderItem(null);
   }, []);
 
-  const handleOrderFromItem = useCallback((item) => {
-    setSelectedItem(null);
-    setOrderItem(item);
+  const handleSearchChange = useCallback((value) => {
+    setFilters((current) => ({ ...current, query: value }));
   }, []);
 
-  const handleSearchChange = useCallback((value) => {
-    setSearchQuery(value);
+  const handleFilterChange = useCallback((patch) => {
+    setFilters((current) => ({ ...current, ...patch }));
+  }, []);
+
+  // Resets the filters but keeps the search box - clearing "without: Pork"
+  // should not also throw away what the reader typed.
+  const handleFilterReset = useCallback(() => {
+    setFilters((current) => ({ ...DEFAULT_FILTERS, query: current.query }));
   }, []);
 
   return {
     t,
     lang,
     categories: visibleCategories,
-    searchQuery,
+    filters,
+    searchQuery: filters.query,
+    resultCount,
+    filtersActive,
     activeCategoryId,
-    selectedItem,
     orderItem,
     handlers: {
       handleCategorySelect,
-      handleItemOpen,
-      handleItemClose,
       handleOrderOpen,
       handleOrderClose,
-      handleOrderFromItem,
       handleSearchChange,
+      handleFilterChange,
+      handleFilterReset,
     },
   };
 };

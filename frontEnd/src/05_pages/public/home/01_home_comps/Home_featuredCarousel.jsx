@@ -1,9 +1,18 @@
+import PropTypes from "prop-types";
+import { localePath } from "../../../../00_config/_config.index.js";
+import { menuItemSlug } from "../../menu/03_menu_hlprs/_menu_hlprs.index.js";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Borscht } from "../../../../01_assets/_assets.index.js";
-import { pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
+import { dishPlaceholder } from "../../../../01_assets/_assets.index.js";
+import {
+  menuItemShape,
+  langShape,
+  translateFn,
+  refShape,
+  pickLocale,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_home_styles/Home_featuredCarousel.css";
 
 const Home_featuredCarousel = ({
@@ -12,16 +21,26 @@ const Home_featuredCarousel = ({
   featuredItems,
   lang,
   t,
+  shouldReduceMotion,
 }) => {
   const navigate = useNavigate();
   const trackRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // See Home_hero: framer-motion props are invisible to the CSS
+  // prefers-reduced-motion queries, so the gate lives here.
+  const enter = (offset) => (shouldReduceMotion ? false : { opacity: 0, y: offset });
+  const settle = (visible, offset) =>
+    shouldReduceMotion
+      ? { opacity: 1, y: 0 }
+      : { opacity: visible ? 1 : 0, y: visible ? 0 : offset };
+
+  // Full dish page - see the note in BookShelfSection.
   const handleShowMore = useCallback(
-    (itemId) => {
-      navigate("/menu", { state: { openItemId: itemId } });
+    (item) => {
+      navigate(localePath(lang, `menu/${menuItemSlug(item, lang)}`));
     },
-    [navigate],
+    [navigate, lang],
   );
 
   const updateActiveIndex = useCallback(() => {
@@ -83,7 +102,7 @@ const Home_featuredCarousel = ({
   };
 
   const handleImageError = (event) => {
-    event.target.src = Borscht;
+    event.target.src = dishPlaceholder;
     event.target.onerror = null;
   };
 
@@ -93,9 +112,11 @@ const Home_featuredCarousel = ({
 
       <motion.div
         className="homeFeaturedCarousel__header"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
-        transition={{ duration: 0.7, delay: 0.1 }}>
+        initial={enter(40)}
+        animate={settle(isInView, 40)}
+        transition={
+          shouldReduceMotion ? { duration: 0 } : { duration: 0.7, delay: 0.1 }
+        }>
         <div className="homeFeaturedCarousel__headerTop">
           <div>
             <p className="homeFeaturedCarousel__eyebrow">
@@ -146,20 +167,21 @@ const Home_featuredCarousel = ({
               <motion.article
                 key={item.id}
                 className={`homeFeaturedCarousel__card${isActive ? " homeFeaturedCarousel__card--active" : ""}`}
-                initial={{ opacity: 0, y: 28 }}
-                animate={{
-                  opacity: isInView ? 1 : 0,
-                  y: isInView ? 0 : 28,
-                }}
-                transition={{ duration: 0.45, delay: 0.06 + index * 0.04 }}
-                onClick={() => isActive && handleShowMore(item.id)}
+                initial={enter(28)}
+                animate={settle(isInView, 28)}
+                transition={
+                  shouldReduceMotion
+                    ? { duration: 0 }
+                    : { duration: 0.45, delay: 0.06 + index * 0.04 }
+                }
+                onClick={() => isActive && handleShowMore(item)}
                 onKeyDown={(event) => {
                   if (
                     isActive &&
                     (event.key === "Enter" || event.key === " ")
                   ) {
                     event.preventDefault();
-                    handleShowMore(item.id);
+                    handleShowMore(item);
                   }
                 }}
                 tabIndex={isActive ? 0 : -1}
@@ -170,7 +192,7 @@ const Home_featuredCarousel = ({
                 <div className="homeFeaturedCarousel__imageWrap">
                   <img
                     className="homeFeaturedCarousel__image"
-                    src={item.images?.full || Borscht}
+                    src={item.images?.card || item.images?.full || dishPlaceholder}
                     alt=""
                     loading="lazy"
                     onError={handleImageError}
@@ -205,7 +227,7 @@ const Home_featuredCarousel = ({
                     className="homeFeaturedCarousel__cta"
                     onClick={(event) => {
                       event.stopPropagation();
-                      handleShowMore(item.id);
+                      handleShowMore(item);
                     }}>
                     {t("bookShelf.cta")}
                   </button>
@@ -216,18 +238,20 @@ const Home_featuredCarousel = ({
         </div>
       </div>
 
+      {/* Same reasoning as Menu_categoryTabs: these are scroll shortcuts, not
+          tabs. role="tab" without arrow-key navigation and matching tabpanels
+          promises assistive tech behaviour that is not there. */}
       <div
         className="homeFeaturedCarousel__dots"
-        role="tablist"
+        role="group"
         aria-label={t("featured.title")}>
         {featuredItems.map((item, index) => (
           <button
             key={item.id}
             type="button"
-            role="tab"
             className={`homeFeaturedCarousel__dot${index === activeIndex ? " homeFeaturedCarousel__dot--active" : ""}`}
             aria-label={`${pickLocale(item.name, lang)} (${index + 1}/${featuredItems.length})`}
-            aria-selected={index === activeIndex}
+            aria-current={index === activeIndex ? "true" : undefined}
             onClick={() => scrollToIndex(index)}
           />
         ))}
@@ -236,11 +260,20 @@ const Home_featuredCarousel = ({
       <button
         type="button"
         className="homeFeaturedCarousel__viewAll"
-        onClick={() => navigate("/menu")}>
+        onClick={() => navigate(localePath(lang, "menu"))}>
         {t("featured.viewAll")}
       </button>
     </section>
   );
+};
+
+Home_featuredCarousel.propTypes = {
+  sectionRef: refShape,
+  isInView: PropTypes.bool,
+  featuredItems: PropTypes.arrayOf(menuItemShape).isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
+  shouldReduceMotion: PropTypes.bool,
 };
 
 export default Home_featuredCarousel;

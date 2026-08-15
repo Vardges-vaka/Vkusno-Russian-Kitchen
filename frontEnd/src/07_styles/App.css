@@ -68,10 +68,28 @@
   --themeToggle_color: var(--D_themeToggle_color);
 }
 
+/* =============================================================
+   Typeface mapping. Latin/Cyrillic by default; Arabic swaps both
+   roles to one family, because pairing a Latin display serif with
+   an Arabic body face reads as a mismatch rather than a pairing.
+   `lang` is stamped on <html> before first paint by the inline
+   script in index.html, so this resolves without a flash.
+   ============================================================= */
+:root {
+  --font_display: var(--font_display_latin);
+  --font_body: var(--font_body_latin);
+}
+
+:root:lang(ar) {
+  --font_display: var(--font_arabic);
+  --font_body: var(--font_arabic);
+}
+
 body {
   margin: 0;
   background-color: var(--bg_color);
   color: var(--text_color);
+  font-family: var(--font_body);
   -webkit-font-smoothing: antialiased;
   /* Smooth swap when the theme toggles */
   /* max-width: 100%; */
@@ -80,6 +98,26 @@ body {
   transition:
     background-color 0.25s ease,
     color 0.25s ease;
+}
+
+/* Headings carry the display face. Component CSS already owns size,
+   weight and spacing - this only sets the family. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.vkusno-logo {
+  font-family: var(--font_display);
+}
+
+/* Form controls do not inherit font-family from body by default. */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }
 
 /* =============================================================
