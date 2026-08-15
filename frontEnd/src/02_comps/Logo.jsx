@@ -4,7 +4,7 @@ import "./00_comps_styles/Logo.css";
 
 const MAIN_TEXT = "VKUSNO";
 const SUBTITLE_TEXT = "Russian Kitchen";
-const LABEL = `${MAIN_TEXT} — ${SUBTITLE_TEXT}`;
+const LABEL = `${MAIN_TEXT} - ${SUBTITLE_TEXT}`;
 
 // The wordmark is split into one <span> per letter so each can animate its
 // fill independently. Two consequences to handle:

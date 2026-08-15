@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import {
   Map,
   AdvancedMarker,
@@ -32,11 +32,22 @@ const Menu_orderMap_panner = ({
   selectedBranchId,
   dubaiCenter,
   defaultZoom,
+  cameFromPinRef,
 }) => {
   const map = useMap();
 
   useEffect(() => {
     if (!map) return;
+
+    // A pin tap already puts that kitchen under the customer's finger, so the
+    // camera stays where it is. Moving it here is exactly what made the pins
+    // look broken: selecting one re-centred and zoomed the map to 13, which
+    // pushed the other four kitchens off screen where they could not be
+    // tapped at all - so the list became the only way to change branch.
+    if (cameFromPinRef.current) {
+      cameFromPinRef.current = false;
+      return;
+    }
 
     // No kitchen picked - show all branches at the shared Dubai overview zoom.
     if (!selectedBranchId) {
@@ -48,12 +59,13 @@ const Menu_orderMap_panner = ({
     const branch = branches.find((item) => item.id === selectedBranchId);
     if (!branch) return;
 
+    // Pan only, never zoom in. This map is a picker rather than something to
+    // explore, so every kitchen has to stay on screen and reachable.
     map.panTo({
       lat: branch.location.coordinates.latitude,
       lng: branch.location.coordinates.longitude,
     });
-    if (map.getZoom() < 12) map.setZoom(13);
-  }, [map, branches, selectedBranchId, dubaiCenter, defaultZoom]);
+  }, [map, branches, selectedBranchId, dubaiCenter, defaultZoom, cameFromPinRef]);
 
   return null;
 };
@@ -129,6 +141,18 @@ const Menu_orderMap = ({ branches, lang, t }) => {
     selectBranch,
   } = useMapContext();
 
+  // Flags the next selection as coming from a pin tap rather than the kitchen
+  // list, so the panner above knows to leave the camera alone.
+  const cameFromPinRef = useRef(false);
+
+  const selectFromPin = useCallback(
+    (branchId) => {
+      cameFromPinRef.current = true;
+      selectBranch(branchId);
+    },
+    [selectBranch],
+  );
+
   if (!hasApiKey) {
     return (
       <div className="Menu_orderMap">
@@ -162,6 +186,7 @@ const Menu_orderMap = ({ branches, lang, t }) => {
           selectedBranchId={selectedBranchId}
           dubaiCenter={dubaiCenter}
           defaultZoom={defaultZoom}
+          cameFromPinRef={cameFromPinRef}
         />
         {branches.map((branch) => (
           <Menu_orderMap_marker
@@ -170,7 +195,7 @@ const Menu_orderMap = ({ branches, lang, t }) => {
             lang={lang}
             t={t}
             isSelected={selectedBranchId === branch.id}
-            onSelect={selectBranch}
+            onSelect={selectFromPin}
           />
         ))}
       </Map>
@@ -186,6 +211,7 @@ Menu_orderMap_panner.propTypes = {
     lng: PropTypes.number.isRequired,
   }).isRequired,
   defaultZoom: PropTypes.number.isRequired,
+  cameFromPinRef: PropTypes.shape({ current: PropTypes.bool }).isRequired,
 };
 
 Menu_orderMap_marker.propTypes = {

@@ -6,7 +6,7 @@
 
     <!-- React 19 PREPENDS a hoisted <title>, so PageMeta's per-route title wins
          over this one. It stays as the pre-hydration fallback. -->
-    <title>Vkusno — Russian Kitchen in Dubai</title>
+    <title>Vkusno - Russian Kitchen in Dubai</title>
 
     <!-- description and canonical are deliberately NOT here.
          React 19 APPENDS hoisted <meta>/<link> rather than replacing them, so a
@@ -14,12 +14,18 @@
          with the site-wide description and a canonical pointing at "/". They
          are emitted per route by 02_comps/PageMeta.jsx instead. -->
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/Vkusno_logo.svg" />
 
     <!-- Matches the two page backgrounds in ColorVariables.css, so the mobile
          browser chrome follows the theme instead of fighting it. -->
-    <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#16110d" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="theme-color"
+      content="#faf6ef"
+      media="(prefers-color-scheme: light)" />
+    <meta
+      name="theme-color"
+      content="#16110d"
+      media="(prefers-color-scheme: dark)" />
 
     <!-- Open Graph / Twitter stay STATIC and site-level, on purpose.
          WhatsApp, Facebook and Slack scrapers do not execute JavaScript, so
@@ -29,7 +35,7 @@
          previews need prerendering or SSR; that is not in this app's scope. -->
     <meta property="og:type" content="restaurant.restaurant" />
     <meta property="og:site_name" content="Vkusno" />
-    <meta property="og:title" content="Vkusno — Russian Kitchen in Dubai" />
+    <meta property="og:title" content="Vkusno - Russian Kitchen in Dubai" />
     <meta
       property="og:description"
       content="Home-style Russian cooking in Dubai. Five kitchens, delivery, pickup and self-service seating." />

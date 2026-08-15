@@ -13,7 +13,7 @@ const NotFound = () => {
       {/* Client-side routing means the server answers 200 for every path, so a
           missing page is a soft 404. React 19 hoists these into <head>; the
           noindex is what actually keeps it out of the index. */}
-      <title>{`${t("title")} — Vkusno`}</title>
+      <title>{`${t("title")} - Vkusno`}</title>
       <meta name="robots" content="noindex, follow" />
 
       <div className="notFound_container">

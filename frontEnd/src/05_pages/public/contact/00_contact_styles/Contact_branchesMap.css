@@ -30,31 +30,38 @@
   color: var(--text_muted_color);
 }
 
+/* Google renders the InfoWindow bubble on its own always-white chrome, in BOTH
+   themes. These used to be theme tokens, so in dark mode the text resolved to
+   near-white on that white bubble and the branch details were unreadable.
+   The L_ (light) tokens are declared on :root and stay available whichever
+   theme is active, so the bubble keeps a legible light-on-white palette and
+   still tracks the design system. Same approach as Menu_orderMap.css. */
 .Contact_branchesMap_infoWindow {
   display: flex;
   flex-direction: column;
   gap: 6px;
   min-width: 180px;
   padding: 2px;
+  color: var(--L_text_color);
 }
 
 .Contact_branchesMap_infoWindow_name {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
-  color: var(--text_color);
+  color: var(--L_text_color);
 }
 
 .Contact_branchesMap_infoWindow_hours {
   margin: 0;
   font-size: 13px;
-  color: var(--text_muted_color);
+  color: var(--L_text_muted_color);
 }
 
 .Contact_branchesMap_infoWindow_directions {
   font-size: 13px;
   font-weight: 600;
-  color: var(--accent_color);
+  color: var(--L_accent_color);
 }
 
 @media (min-width: 768px) {

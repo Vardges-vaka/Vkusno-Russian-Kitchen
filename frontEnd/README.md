@@ -1,4 +1,4 @@
-# Vkusno — frontend
+# Vkusno - frontend
 
 Marketing and menu site for Vkusno, a Russian kitchen with five branches in
 Dubai. Trilingual (English / Russian / Arabic, with RTL), light and dark
@@ -29,10 +29,10 @@ VITE_IS_DEBUG=true
 | --- | --- |
 | `VITE_GOOGLE_MAPS_API_KEY` | Branch maps on Contact and in the order modal. Without it those render a text fallback rather than breaking. |
 | `VITE_GOOGLE_MAPS_MAP_ID` | Cloud-styled map id used by the Advanced Markers. |
-| `VITE_IS_DEBUG` | `true` / `1` / `yes` enables context debug logging. **Compared as a string** — Vite inlines env vars as strings, so `=== true` would never match. |
+| `VITE_IS_DEBUG` | `true` / `1` / `yes` enables context debug logging. **Compared as a string** - Vite inlines env vars as strings, so `=== true` would never match. |
 
 `.env` is gitignored. The Maps key is bundled into the client (any `VITE_`
-variable is), so it must be restricted by HTTP referrer in Google Cloud —
+variable is), so it must be restricted by HTTP referrer in Google Cloud -
 that restriction is the only thing protecting it.
 
 ## Scripts
@@ -42,7 +42,7 @@ that restriction is the only thing protecting it.
 | `npm run dev` | Vite dev server |
 | `npm run build` | Runs `prebuild` (translation check + sitemap), then builds |
 | `npm run preview` | Serve the production build locally |
-| `npm run lint` | ESLint — expected to be clean |
+| `npm run lint` | ESLint - expected to be clean |
 | `npm run check:i18n` | Translation integrity check (see below) |
 | `npm run sitemap` | Regenerate `public/sitemap.xml` |
 | `node scripts/convertMenuImagesToWebp.mjs` | Regenerate WebP from source JPEGs |
@@ -76,7 +76,7 @@ Each **feature** repeats the same numbered shape:
 05_pages/public/menu/
   00_menu_styles/    one CSS file per component
   01_menu_comps/     components, named Menu_thing.jsx
-  02_menu_hooks/     useMenu.js — all state and handlers for the page
+  02_menu_hooks/     useMenu.js - all state and handlers for the page
   03_menu_hlprs/     feature-specific logic (search, filter, item lookup)
   04_menu_const/     data (CATEGORIES, menuItems, INGREDIENTS)
   Menu.jsx           the page: composition only
@@ -98,7 +98,7 @@ Conventions worth knowing before editing:
 
 Three languages: `en`, `ru`, `ar`. Arabic is RTL.
 
-**Translations live in `public/locales/{lng}/{namespace}.json`** — not in
+**Translations live in `public/locales/{lng}/{namespace}.json`** - not in
 `src/`. This matters: `src/` is build *input* and does not exist at runtime, so
 a loader path pointing there works in dev and 404s in production.
 
@@ -107,7 +107,7 @@ Namespaces: `common`, `Home`, `Menu`, `MenuItems`, `Contact`, `FAQ`,
 
 ### Language is in the URL
 
-Every route is `/{lang}/…` — `/en/menu`, `/ru/menu/pelmeni`,
+Every route is `/{lang}/…` - `/en/menu`, `/ru/menu/pelmeni`,
 `/ar/menu/pelmeni-bil-lahm`. The URL is the source of truth; `localStorage` is
 only a fallback for `/`.
 
@@ -126,7 +126,7 @@ jumping.
 1. Add it to `public/locales/en/<ns>.json`, then `ru` and `ar`.
 2. `npm run check:i18n`.
 
-Build internal links with `localePath(lang, "menu")` — never a bare
+Build internal links with `localePath(lang, "menu")` - never a bare
 `"/menu"`, or the link silently drops the language.
 
 ### Adding a language
@@ -134,7 +134,7 @@ Build internal links with `localePath(lang, "menu")` — never a bare
 1. Add the code to `SUPPORTED_LANGUAGES` in `00_config/_config.index.js` and to
    `supportedLngs` in `src/i18n/i18n.Config.js`.
 2. Create `public/locales/<code>/` with all eight namespaces.
-3. Add an endonym to `LANGUAGE_ENDONYMS` in `02_comps/LanguageSelect.jsx` —
+3. Add an endonym to `LANGUAGE_ENDONYMS` in `02_comps/LanguageSelect.jsx` -
    written in its own language, since that control is for people who cannot
    read the current one.
 4. Add a `slug` and `name` entry per dish in `menuItems.js`.
@@ -152,7 +152,7 @@ Two deliberate exceptions:
 - **Plural variants may omit a variable, never invent one.** Arabic
   `results_one` ("طبق واحد") and the dual `results_two` ("طبقان") encode the
   count in the wording, so demanding `{{count}}` would force unidiomatic copy.
-- **`MenuItems` skips key-parity** — it is keyed by numeric dish id, not by
+- **`MenuItems` skips key-parity** - it is keyed by numeric dish id, not by
   translation key, and is validated separately against `menuItems.js`.
 
 ---
@@ -179,23 +179,23 @@ export const PelmeniWithMeat = {
 Things that are not obvious:
 
 - **Long descriptions are NOT here.** They live in
-  `public/locales/{lng}/MenuItems.json` keyed by dish id — ~95 KB across three
+  `public/locales/{lng}/MenuItems.json` keyed by dish id - ~95 KB across three
   languages, rendered only in the dish detail, so bundling them made every page
   pay for copy it never showed.
 - **Ingredients are English keys**, translated at render time through
   `04_menu_const/INGREDIENTS.js`. That file also strips the spreadsheet's
   `(Est.)` provenance notes, which were reaching customers as `Salt (Est.)`.
 - **Slugs are per language** and Arabic ones are Latin transliterations, not
-  Arabic script — these links get pasted into WhatsApp, where percent-encoded
+  Arabic script - these links get pasted into WhatsApp, where percent-encoded
   Arabic renders as garbage.
 - **Thumbnails are on disk but not imported.** Nothing renders them, and at
   ~3.8 KB each they sat under Vite's inline limit and were base64-embedded into
-  the menu chunk — 268 KB of it. `assetsInlineLimit: 0` now prevents a repeat.
+  the menu chunk - 268 KB of it. `assetsInlineLimit: 0` now prevents a repeat.
 
 ### Taking a dish off the menu
 
 Comment out its block in `menuItems.js` **and** its entries in `CATEGORIES.js`
-(both the import and the category's `menuItems` array) — that is how the drinks
+(both the import and the category's `menuItems` array) - that is how the drinks
 are disabled. Then delete its id from the three `MenuItems.json` files, or
 `check:i18n` will flag the orphan. `npm run sitemap` picks up the change; the
 generator ignores commented-out blocks so a removed dish is not advertised.
@@ -235,14 +235,14 @@ typeface stacks. `App.css` maps them to semantic names (`--bg_color`,
 `--font_body`) under `[data-theme]`. **Components only ever use the semantic
 names.**
 
-Fonts are self-hosted via `@fontsource` — Playfair Display (display) and Golos
+Fonts are self-hosted via `@fontsource` - Playfair Display (display) and Golos
 Text (body) for Latin/Cyrillic, IBM Plex Sans Arabic for everything under
 `lang="ar"`. Per-subset `unicode-range` files mean an Arabic visitor downloads
 no Latin font at all.
 
 **Use logical properties** (`inset-inline-start`, `padding-inline`) for anything
 directional, so Arabic mirrors automatically. Physical `left`/`right` remain
-only where they are genuinely non-directional — centring pairs, full-bleed
+only where they are genuinely non-directional - centring pairs, full-bleed
 backgrounds, the button shimmer.
 
 ---
@@ -250,12 +250,12 @@ backgrounds, the button shimmer.
 ## Deployment
 
 Vercel. `vercel.json` holds the SPA rewrite and cache headers: `/assets/*` is
-immutable (content-hashed), `/locales/*` must revalidate — otherwise a
+immutable (content-hashed), `/locales/*` must revalidate - otherwise a
 translation fix sits behind a stale cache.
 
 Staging is `live.vkusno.ae`, production `vkusno.ae`. Canonical URLs are
 hardcoded to production in `00_config`, so staging pages point their canonical
-at the real site — which is what stops staging competing in search. **Staging
+at the real site - which is what stops staging competing in search. **Staging
 must also carry `X-Robots-Tag: noindex`.**
 
 404s are soft: client routing means the server answers 200 for any path, so the
@@ -268,7 +268,7 @@ NotFound page carries `noindex, follow`.
 - Menu images ship at 1200×900 (above).
 - No dietary or allergen tags. Allergens are derivable from `ingredients`;
   **halal status and vegetarian are not** and need kitchen confirmation.
-- No analytics. Note that the privacy policy currently states none are used —
+- No analytics. Note that the privacy policy currently states none are used -
   that copy must change first, in all three languages.
 - Open Graph tags are static and site-level. Scrapers such as WhatsApp do not
   run JavaScript, so per-route previews would need prerendering.

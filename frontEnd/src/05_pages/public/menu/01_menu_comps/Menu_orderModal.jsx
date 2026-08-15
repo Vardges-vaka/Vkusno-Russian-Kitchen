@@ -178,7 +178,7 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
                   href={action.link}
                   target={action.newTab ? "_blank" : undefined}
                   rel={action.newTab ? "noreferrer" : undefined}
-                  aria-label={`${t(action.labelKey)} — ${action.value}`}>
+                  aria-label={`${t(action.labelKey)} - ${action.value}`}>
                   {t(action.labelKey)}
                 </a>
               ))}

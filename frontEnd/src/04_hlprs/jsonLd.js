@@ -41,7 +41,7 @@ export const restaurantNode = (branch, lang, contactInfo = []) => {
   return {
     "@type": "Restaurant",
     "@id": `${SITE_URL}/#branch-${branch.id}`,
-    name: `Vkusno — ${pickLocale(branch.name, lang)}`,
+    name: `Vkusno - ${pickLocale(branch.name, lang)}`,
     servesCuisine: ["Russian", "Central Asian"],
     priceRange: "$$",
     url: absoluteUrl(localePath(lang, "contact")),

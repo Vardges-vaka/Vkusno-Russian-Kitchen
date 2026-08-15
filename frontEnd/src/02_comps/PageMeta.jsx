@@ -37,7 +37,7 @@ const PageMeta = ({ title, description, jsonLd, noindex, alternates }) => {
   // hreflang must reference the canonical URL directly.
   const pathFor = (lang) => alternates?.[lang] ?? localePath(lang, routePath);
 
-  const fullTitle = title ? `${title} — Vkusno` : "Vkusno — Russian Kitchen in Dubai";
+  const fullTitle = title ? `${title} - Vkusno` : "Vkusno - Russian Kitchen in Dubai";
 
   return (
     <>
