@@ -44,10 +44,22 @@ const BRANCHES = [
         logo: Talabat_Logo,
         link: "https://www.talabat.com/uae/vkusno-russian-kitchen",
       },
-      { name: "Careem", logo: Careem_Logo, link: "http://localhost:5173" },
-      { name: "Deliveroo", logo: Deliveroo_Logo, link: "http://localhost:5173" },
+      {
+        name: "Careem",
+        logo: Careem_Logo,
+        link: "https://link.careem.com/hGNRxUDIQGDqX",
+      },
+      {
+        name: "Deliveroo",
+        logo: Deliveroo_Logo,
+        link: "http://localhost:5173",
+      },
       { name: "Noon", logo: Noon_Logo, link: "http://localhost:5173" },
-      { name: "Keeta", logo: Keeta_Logo, link: "http://localhost:5173" },
+      {
+        name: "Keeta",
+        logo: Keeta_Logo,
+        link: "https://url-eu.mykeeta.com/ehRjhhxz",
+      },
     ],
   },
   {
@@ -80,10 +92,22 @@ const BRANCHES = [
         logo: Talabat_Logo,
         link: "https://www.talabat.com/uae/vkusno-russian-kitchen",
       },
-      { name: "Careem", logo: Careem_Logo, link: "http://localhost:5173" },
-      { name: "Deliveroo", logo: Deliveroo_Logo, link: "http://localhost:5173" },
+      {
+        name: "Careem",
+        logo: Careem_Logo,
+        link: "https://link.careem.com/c6GwllBNioQiL",
+      },
+      {
+        name: "Deliveroo",
+        logo: Deliveroo_Logo,
+        link: "http://localhost:5173",
+      },
       { name: "Noon", logo: Noon_Logo, link: "http://localhost:5173" },
-      { name: "Keeta", logo: Keeta_Logo, link: "http://localhost:5173" },
+      {
+        name: "Keeta",
+        logo: Keeta_Logo,
+        link: "https://url-eu.mykeeta.com/oVkSlSkz",
+      },
     ],
   },
   {
@@ -143,10 +167,22 @@ const BRANCHES = [
       closeTime: null,
     },
     aggregators: [
-      { name: "Careem", logo: Careem_Logo, link: "http://localhost:5173" },
-      { name: "Deliveroo", logo: Deliveroo_Logo, link: "http://localhost:5173" },
+      {
+        name: "Careem",
+        logo: Careem_Logo,
+        link: "https://link.careem.com/DZuSNM9UDT7Fc",
+      },
+      {
+        name: "Deliveroo",
+        logo: Deliveroo_Logo,
+        link: "http://localhost:5173",
+      },
       { name: "Noon", logo: Noon_Logo, link: "http://localhost:5173" },
-      { name: "Keeta", logo: Keeta_Logo, link: "http://localhost:5173" },
+      {
+        name: "Keeta",
+        logo: Keeta_Logo,
+        link: "https://url-eu.mykeeta.com/0SVGJ78z",
+      },
     ],
   },
   {
@@ -180,7 +216,11 @@ const BRANCHES = [
         link: "https://www.talabat.com/uae/vkusno-russian-kitchen",
       },
       { name: "Careem", logo: Careem_Logo, link: "http://localhost:5173" },
-      { name: "Deliveroo", logo: Deliveroo_Logo, link: "http://localhost:5173" },
+      {
+        name: "Deliveroo",
+        logo: Deliveroo_Logo,
+        link: "http://localhost:5173",
+      },
       { name: "Noon", logo: Noon_Logo, link: "http://localhost:5173" },
       { name: "Keeta", logo: Keeta_Logo, link: "http://localhost:5173" },
     ],
