@@ -1,6 +1,4 @@
-﻿/* Bookshelf section - menu items displayed as book spines */
-
-.specialties-section {
+﻿.specialties-section {
   background-color: var(--bg_color);
   padding: 100px 0;
   perspective: 2000px;
@@ -45,7 +43,6 @@
   color: var(--text_muted_color);
 }
 
-/* Bookshelf container */
 .specialty-cards {
   position: relative;
   z-index: 1;
@@ -58,28 +55,21 @@
   padding: 0;
   position: relative;
   perspective: 1000px;
-  /* Both axes, explicitly.
-     `overflow-x: hidden` alone is a trap: per spec, when one axis is hidden
-     and the other is `visible`, the visible one computes to `auto`. So this
-     was silently a vertically-scrollable box, and anything spilling past the
-     shelf - the over-long spine titles, the -15px hover lift - gave the wheel
-     something to scroll. Hovering a book and scrolling moved the whole shelf. */
+
   overflow: hidden;
   overscroll-behavior: contain;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  padding-bottom: 25px; /* Increased to ensure space for the shelf */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 25px;
   cursor: default;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
 .specialty-cards::-webkit-scrollbar {
   display: none;
 }
 
-/* Fixed shelf styling - COMPLETELY REDONE */
 .specialty-cards::before {
   content: "";
   position: absolute;
@@ -93,7 +83,6 @@
   z-index: 5;
 }
 
-/* Fixed shelf base - SIMPLIFIED */
 .specialty-cards::after {
   content: "";
   position: absolute;
@@ -107,7 +96,6 @@
   z-index: 2;
 }
 
-/* Navigation buttons for bookshelf */
 .bookshelf-nav {
   position: absolute;
   top: 50%;
@@ -145,10 +133,9 @@
   top: 710px;
 }
 
-/* Book style for menu cards - varying widths */
 .specialty-card {
   align-self: flex-end;
-  height: 300px; /* Default height - will be overridden */
+  height: 300px;
   position: relative;
   transform-style: preserve-3d;
   transform-origin: bottom center;
@@ -160,7 +147,6 @@
   z-index: 1;
   margin: 0 -2px;
   flex-shrink: 0;
-  /* Add a subtle bookbinding texture */
   background-image: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.1) 0%,
@@ -169,15 +155,13 @@
     rgba(0, 0, 0, 0.1) 100%
   ) !important;
   background-blend-mode: overlay;
-  /* Book bottom shadow effect */
-  box-shadow: inset 0 -10px 8px -8px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    inset 0 -10px 8px -8px rgba(0, 0, 0, 0.4),
     0 1px 2px rgba(0, 0, 0, 0.3);
-  /* Create a small book binding edge at the top */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 0; /* Ensure book sits directly on the shelf */
+  margin-bottom: 0;
 }
 
-/* Height variations for books */
 .specialty-card:nth-child(3n + 1) {
   height: 280px;
 }
@@ -198,7 +182,6 @@
   height: 270px;
 }
 
-/* Add a slight tilt to some books */
 .specialty-card:nth-child(9n + 2) {
   transform: rotateZ(1deg);
 }
@@ -207,9 +190,8 @@
   transform: rotateZ(-1deg);
 }
 
-/* Book width variations - make sure all cards get a width */
 .specialty-card {
-  flex: 0 0 35px; /* Default width */
+  flex: 0 0 35px;
 }
 
 .specialty-card:nth-child(odd) {
@@ -236,113 +218,96 @@
   flex: 0 0 32px;
 }
 
-/* Ensure all books have their specific color styles defined - with higher specificity */
-/* Book 1: Purple Gradient */
 .specialty-cards .specialty-card.book-spine-0,
 div.specialty-card.book-spine-0 {
   background: linear-gradient(to right, #8e44ad, #9b59b6) !important;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Book 2: Dark Blue */
 .specialty-cards .specialty-card.book-spine-1,
 div.specialty-card.book-spine-1 {
   background: linear-gradient(to right, #2c3e50, #34495e) !important;
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Book 3: Crimson Red */
 .specialty-cards .specialty-card.book-spine-2,
 div.specialty-card.book-spine-2 {
   background: linear-gradient(to right, #c0392b, #e74c3c) !important;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Book 4: Deep Green */
 .specialty-cards .specialty-card.book-spine-3,
 div.specialty-card.book-spine-3 {
   background: linear-gradient(to right, #27ae60, #2ecc71) !important;
   box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.35);
 }
 
-/* Book 5: Gold */
 .specialty-cards .specialty-card.book-spine-4,
 div.specialty-card.book-spine-4 {
   background: linear-gradient(to right, #f39c12, #f1c40f) !important;
   box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.25);
 }
 
-/* Book 6: Teal */
 .specialty-cards .specialty-card.book-spine-5,
 div.specialty-card.book-spine-5 {
   background: linear-gradient(to right, #1abc9c, #16a085) !important;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.45);
 }
 
-/* Book 7: Royal Blue */
 .specialty-cards .specialty-card.book-spine-6,
 div.specialty-card.book-spine-6 {
   background: linear-gradient(to right, #3498db, #2980b9) !important;
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Book 8: Dark Brown */
 .specialty-cards .specialty-card.book-spine-7,
 div.specialty-card.book-spine-7 {
   background: linear-gradient(to right, #795548, #5d4037) !important;
   box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
-/* Book 9: Grey Blue */
 .specialty-cards .specialty-card.book-spine-8,
 div.specialty-card.book-spine-8 {
   background: linear-gradient(to right, #607d8b, #455a64) !important;
   box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.3);
 }
 
-/* Book 10: Vibrant Purple */
 .specialty-cards .specialty-card.book-spine-9,
 div.specialty-card.book-spine-9 {
   background: linear-gradient(to right, #9c27b0, #7b1fa2) !important;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
-/* Book 11: Deep Burgundy with texture */
 .specialty-cards .specialty-card.book-spine-10,
 div.specialty-card.book-spine-10 {
   background: linear-gradient(to right, #6d1b36, #872140) !important;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Book 12: Weathered Blue with cloth texture */
 .specialty-cards .specialty-card.book-spine-11,
 div.specialty-card.book-spine-11 {
   background: linear-gradient(to right, #34558b, #486ca5) !important;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Book 13: Embossed Green with pattern */
 .specialty-cards .specialty-card.book-spine-12,
 div.specialty-card.book-spine-12 {
   background: linear-gradient(to right, #316a45, #3e864f) !important;
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Book 14: Antique Gold with ornate pattern */
 .specialty-cards .specialty-card.book-spine-13,
 div.specialty-card.book-spine-13 {
   background: linear-gradient(to right, #b8860b, #cd9830) !important;
   box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.4);
 }
 
-/* Book 15: Vintage Red with subtle lines */
 .specialty-cards .specialty-card.book-spine-14,
 div.specialty-card.book-spine-14 {
   background: linear-gradient(to right, #8a2727, #a13131) !important;
   box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.45);
 }
 
-/* Custom decorative elements for book spines */
 .book-spine-0::after,
 .book-spine-3::after,
 .book-spine-6::after,
@@ -389,7 +354,6 @@ div.specialty-card.book-spine-14 {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Double line decorations for some books */
 .book-spine-2::before,
 .book-spine-10::before {
   content: "";
@@ -414,7 +378,6 @@ div.specialty-card.book-spine-14 {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Circle decorations for some books */
 .book-spine-6::before,
 .book-spine-11::before {
   content: "";
@@ -428,15 +391,6 @@ div.specialty-card.book-spine-14 {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Book spine title - adjusted for variable heights */
-/* The spine title, rotated to run along the book.
-
-   `width` is the length of the text ALONG the spine once rotated, so it has to
-   stay inside the book's 300px height. It was 250px with white-space: nowrap
-   and no overflow rule, so a long dish name - "Baked Russian Pie With Potato
-   And Mushroom" - simply ran past the box and out the bottom of the shelf.
-   Clipping with an ellipsis keeps every spine tidy; the full name is still on
-   the card that opens on hover. */
 .specialty-card::before {
   content: attr(data-title);
   position: absolute;
@@ -446,8 +400,6 @@ div.specialty-card.book-spine-14 {
   width: 280px;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
-  /* Set per book from the dish name's length - see spineFontSize in
-     BookShelfSection.jsx. The fallback is the size short names use. */
   font-size: var(--spine_title_size, 0.85rem);
   font-weight: bold;
   text-transform: uppercase;
@@ -456,11 +408,9 @@ div.specialty-card.book-spine-14 {
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  /* Text stroke for better readability */
   -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.3);
 }
 
-/* Add some top decorative elements to taller books */
 .specialty-card[style*="height: 320px"]::after,
 .specialty-card[style*="height: 310px"]::after,
 .specialty-card:nth-child(7n)::after,
@@ -475,7 +425,6 @@ div.specialty-card.book-spine-14 {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* FIXED MENU CARD HOVER FUNCTIONALITY */
 .specialty-card-content {
   position: absolute;
   top: -20px;
@@ -487,7 +436,8 @@ div.specialty-card.book-spine-14 {
   padding: 20px;
   transform: rotateY(90deg);
   transform-origin: left center;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+  transition:
+    transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
     opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   opacity: 0;
   border-radius: 5px;
@@ -498,28 +448,25 @@ div.specialty-card.book-spine-14 {
   will-change: transform, opacity;
 }
 
-/* This is the key part that was missing - show the menu card on hover */
 .specialty-card:hover .specialty-card-content {
   transform: rotateY(0deg);
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Update other hover effects */
 .specialty-card:hover {
   transform: rotateZ(-10deg) translateY(-15px) !important;
   z-index: 100;
-  box-shadow: inset 0 -10px 8px -8px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    inset 0 -10px 8px -8px rgba(0, 0, 0, 0.4),
     5px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* More subtle hover animation for images */
 .specialty-card:hover .specialty-image img {
   transform: scale(1.05);
   transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Title inside the book/CD */
 .specialty-card-content h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -528,7 +475,6 @@ div.specialty-card.book-spine-14 {
   padding-bottom: 10px;
 }
 
-/* Image inside the book/CD */
 .specialty-image {
   height: 130px;
   margin: -20px -20px 15px;
@@ -546,7 +492,6 @@ div.specialty-card.book-spine-14 {
   transform: scale(1.1);
 }
 
-/* Description inside the book/CD */
 .specialty-card-content p {
   font-size: 0.95rem;
   line-height: 1.5;
@@ -554,7 +499,6 @@ div.specialty-card.book-spine-14 {
   margin-bottom: 15px;
 }
 
-/* Price tag */
 .specialty-price {
   display: inline-block;
   padding: 5px 12px;
@@ -568,7 +512,6 @@ div.specialty-card.book-spine-14 {
   margin-bottom: 15px;
 }
 
-/* Add to cart button */
 .add-to-cart-btn {
   background-color: #8e44ad;
   color: white;
@@ -615,7 +558,6 @@ div.specialty-card.book-spine-14 {
   left: 100%;
 }
 
-/* View menu button - reposition it */
 .view-menu-container {
   text-align: center;
   margin-top: 100px;

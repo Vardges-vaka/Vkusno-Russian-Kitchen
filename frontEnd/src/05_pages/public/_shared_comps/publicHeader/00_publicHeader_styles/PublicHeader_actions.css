@@ -1,7 +1,7 @@
 .PublicHeader_actions {
   display: flex;
   align-items: center;
-  gap: 14px; /* toggler & language select are scaled up, need breathing room */
+  gap: 14px;
 }
 
 @media (max-width: 767px) {

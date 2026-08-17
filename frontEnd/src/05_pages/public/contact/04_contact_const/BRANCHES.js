@@ -6,13 +6,6 @@ import {
   Keeta_Logo,
 } from "../../../../01_assets/_assets.index.js";
 
-// Source: context/Details - Copy.xlsx ("Branches" sheet).
-// ru/ar branch names and addresses are a first draft translation -
-// flagged for the client to confirm/correct, per the plan.
-//
-// aggregators: only aggregators actually offered at a branch are listed.
-// "http://localhost:5173" is a placeholder for storefront URLs that
-// haven't been provided yet - swap in the real link when available.
 const BRANCHES = [
   {
     id: "arjan",
@@ -52,9 +45,13 @@ const BRANCHES = [
       {
         name: "Deliveroo",
         logo: Deliveroo_Logo,
-        link: "http://localhost:5173",
+        link: "https://deliveroo.ae/menu/dubai/south-barsha-arjan/vkusno-russian-kitchen-dubai-south-barsha?utm_campaign=organic&utm_medium=referrer&utm_source=menu_share",
       },
-      { name: "Noon", logo: Noon_Logo, link: "http://localhost:5173" },
+      {
+        name: "Noon",
+        logo: Noon_Logo,
+        link: "https://food.noon.com/en-ae/outlet/VKSNRSV1FH",
+      },
       {
         name: "Keeta",
         logo: Keeta_Logo,
@@ -100,9 +97,13 @@ const BRANCHES = [
       {
         name: "Deliveroo",
         logo: Deliveroo_Logo,
-        link: "http://localhost:5173",
+        link: "https://deliveroo.ae/menu/dubai/marina/vkusno-russian-kitchen-dubai-marina?utm_campaign=organic&utm_medium=referrer&utm_source=menu_share",
       },
-      { name: "Noon", logo: Noon_Logo, link: "http://localhost:5173" },
+      {
+        name: "Noon",
+        logo: Noon_Logo,
+        link: "https://food.noon.com/en-ae/outlet/VKSNRSUPWK",
+      },
       {
         name: "Keeta",
         logo: Keeta_Logo,
@@ -175,9 +176,13 @@ const BRANCHES = [
       {
         name: "Deliveroo",
         logo: Deliveroo_Logo,
-        link: "http://localhost:5173",
+        link: "https://deliveroo.ae/menu/dubai/dubai-business-bay/vkusno-russian-kitchen-business-bay?utm_campaign=organic&utm_medium=referrer&utm_source=menu_share",
       },
-      { name: "Noon", logo: Noon_Logo, link: "http://localhost:5173" },
+      {
+        name: "Noon",
+        logo: Noon_Logo,
+        link: "https://food.noon.com/en-ae/outlet/VKSNRSS182",
+      },
       {
         name: "Keeta",
         logo: Keeta_Logo,
@@ -215,14 +220,26 @@ const BRANCHES = [
         logo: Talabat_Logo,
         link: "https://www.talabat.com/uae/vkusno-russian-kitchen",
       },
-      { name: "Careem", logo: Careem_Logo, link: "http://localhost:5173" },
+      {
+        name: "Careem",
+        logo: Careem_Logo,
+        link: "https://link.careem.com/cMrAPjOuWPyeD",
+      },
       {
         name: "Deliveroo",
         logo: Deliveroo_Logo,
-        link: "http://localhost:5173",
+        link: "https://deliveroo.ae/menu/dubai/silicon-oasis/vkusno-russian-kitchen-dubai-silicon-oasis?utm_campaign=organic&utm_medium=referrer&utm_source=menu_share",
       },
-      { name: "Noon", logo: Noon_Logo, link: "http://localhost:5173" },
-      { name: "Keeta", logo: Keeta_Logo, link: "http://localhost:5173" },
+      {
+        name: "Noon",
+        logo: Noon_Logo,
+        link: "https://food.noon.com/en-ae/outlet/VKSNRS0PYF",
+      },
+      {
+        name: "Keeta",
+        logo: Keeta_Logo,
+        link: "https://url-eu.mykeeta.com/xFE7lMPz",
+      },
     ],
   },
 ];

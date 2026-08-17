@@ -29,7 +29,8 @@ const Home_featuredCarousel = ({
 
   // See Home_hero: framer-motion props are invisible to the CSS
   // prefers-reduced-motion queries, so the gate lives here.
-  const enter = (offset) => (shouldReduceMotion ? false : { opacity: 0, y: offset });
+  const enter = (offset) =>
+    shouldReduceMotion ? false : { opacity: 0, y: offset };
   const settle = (visible, offset) =>
     shouldReduceMotion
       ? { opacity: 1, y: 0 }
@@ -192,7 +193,9 @@ const Home_featuredCarousel = ({
                 <div className="homeFeaturedCarousel__imageWrap">
                   <img
                     className="homeFeaturedCarousel__image"
-                    src={item.images?.card || item.images?.full || dishPlaceholder}
+                    src={
+                      item.images?.card || item.images?.full || dishPlaceholder
+                    }
                     alt=""
                     loading="lazy"
                     onError={handleImageError}
@@ -238,9 +241,6 @@ const Home_featuredCarousel = ({
         </div>
       </div>
 
-      {/* Same reasoning as Menu_categoryTabs: these are scroll shortcuts, not
-          tabs. role="tab" without arrow-key navigation and matching tabpanels
-          promises assistive tech behaviour that is not there. */}
       <div
         className="homeFeaturedCarousel__dots"
         role="group"

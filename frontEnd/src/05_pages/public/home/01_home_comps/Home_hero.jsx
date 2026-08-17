@@ -8,7 +8,8 @@ const Home_hero = ({ t, onMenuClick, shouldReduceMotion }) => {
   // framer-motion animates from JS props, which the prefers-reduced-motion
   // media queries in the stylesheets cannot reach - so this staggered entrance
   // ran regardless of the OS setting. These collapse it to the final state.
-  const enter = (offset) => (shouldReduceMotion ? false : { opacity: 0, y: offset });
+  const enter = (offset) =>
+    shouldReduceMotion ? false : { opacity: 0, y: offset };
   const settle = { opacity: 1, y: 0 };
   const timing = (delay) =>
     shouldReduceMotion ? { duration: 0 } : { duration: 0.8, delay };
@@ -51,9 +52,6 @@ const Home_hero = ({ t, onMenuClick, shouldReduceMotion }) => {
               initial={enter(20)}
               animate={settle}
               transition={timing(1.1)}>
-              {/* Primary action: straight to the RestHero storefront.
-                  Same destination as "Order directly > Online" in the menu
-                  order modal, so both entry points stay in sync via DIRECT_ORDER. */}
               <a
                 className="Home_hero_cta Home_hero_cta--order"
                 href={DIRECT_ORDER.link}

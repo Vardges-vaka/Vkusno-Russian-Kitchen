@@ -1,7 +1,7 @@
 .Menu_itemCard {
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* clips the edge-to-edge photo to the rounded corners */
+  overflow: hidden;
   background-color: var(--surface_color);
   border: 1px solid var(--border_color);
   border-radius: 12px;
@@ -12,9 +12,6 @@
     border-color 0.15s ease-out;
 }
 
-/* The card is a plain container now - the dish name inside it is the real
-   link. :focus-within carries the hover treatment so keyboard focus on that
-   link still lights up the whole card. */
 .Menu_itemCard {
   position: relative;
 }
@@ -31,8 +28,6 @@
   text-decoration: none;
 }
 
-/* Stretches the name link over the entire card so the click target is
-   unchanged from when the card itself was clickable. */
 .Menu_itemCard_nameLink::after {
   content: "";
   position: absolute;
@@ -46,22 +41,11 @@
   border-radius: 2px;
 }
 
-/* Sits above the stretched link so Order stays independently clickable. */
 .Menu_itemCard_orderBtn {
   position: relative;
   z-index: 2;
 }
 
-/* Photo spans the full card width; fixed ratio keeps every card equal height */
-/* Skeleton: holds the photo's exact footprint and shimmers until the image
-   decodes, so the grid never reflows and empty cards do not read as broken.
-
-   The shimmer sits UNDER the photo rather than gating its opacity. An opacity
-   gate would depend on the onLoad handler firing - and for an image already in
-   cache the load event can beat React attaching the handler, leaving the photo
-   invisible for good. Here the photo simply paints over the shimmer, so the
-   worst a missed event can do is leave an animation running behind an opaque
-   image. The --loaded class is a CPU optimisation, not a correctness gate. */
 .Menu_itemCard_photoWrap {
   position: relative;
   width: 100%;
@@ -86,7 +70,6 @@
   animation: Menu_itemCard_shimmer 1.4s ease-in-out infinite;
 }
 
-/* Photo has decoded - stop animating a layer nobody can see any more. */
 .Menu_itemCard_photoWrap--loaded::after {
   content: none;
 }
@@ -107,14 +90,12 @@
   }
 }
 
-/* The shimmer is decorative motion; the photo still fades in. */
 @media (prefers-reduced-motion: reduce) {
   .Menu_itemCard_photoWrap::after {
     animation: none;
   }
 }
 
-/* Monogram tile for items without a photo (drinks) */
 .Menu_itemCard_photoFallback {
   display: flex;
   align-items: center;
@@ -130,7 +111,7 @@
 .Menu_itemCard_body {
   display: flex;
   flex-direction: column;
-  flex: 1; /* footer sticks to the bottom even when names wrap differently */
+  flex: 1;
   gap: 10px;
   padding: 12px;
 }
@@ -147,7 +128,6 @@
   font-size: 13px;
   line-height: 1.4;
   color: var(--text_muted_color);
-  /* Clamp to two lines so all cards stay the same height */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -159,7 +139,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  margin-top: auto; /* pins price + button to the card's bottom edge */
+  margin-top: auto; 
 }
 
 .Menu_itemCard_price {
@@ -170,7 +150,7 @@
 }
 
 .Menu_itemCard_currency {
-  margin-inline-start: 4px; /* logical property: flips side in RTL */
+  margin-inline-start: 4px; 
   font-size: 12px;
   font-weight: 600;
   color: var(--text_muted_color);

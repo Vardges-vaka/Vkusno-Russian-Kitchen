@@ -97,14 +97,10 @@ const MenuItem = ({ variant = "page" }) => {
 
   return (
     <div className="MenuItem_container">
-      {/* Only the standalone page emits metadata. In overlay mode the menu
-          page underneath already owns the document head, and a modal should
-          not rewrite the canonical URL of the page behind it. */}
+
       <PageMeta
         title={name}
         description={pickLocale(item.description?.short, lang)}
-        /* Each language has its own slug, so the alternates cannot be derived
-           from this URL - they are built from the dish's own slug map. */
         alternates={Object.fromEntries(
           SUPPORTED_LANGUAGES.map((code) => [
             code,

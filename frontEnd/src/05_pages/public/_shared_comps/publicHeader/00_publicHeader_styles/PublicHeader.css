@@ -1,10 +1,9 @@
-/* Mobile: logo + actions on row 1, nav full-width on row 2 */
 .PublicHeader_container {
   box-sizing: border-box;
   max-width: 100%;
   position: sticky;
   top: 0;
-  z-index: 500; /* above page content, below modals */
+  z-index: 500; 
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas:
@@ -17,7 +16,6 @@
   background-color: var(--header_bg_color);
   border-bottom: 1px solid var(--border_color);
   box-shadow: 0 2px 14px var(--header_shadow_color);
-  /* header bg is translucent, blur keeps scrolled content readable */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition:

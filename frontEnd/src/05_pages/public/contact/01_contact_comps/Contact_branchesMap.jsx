@@ -17,9 +17,6 @@ import {
 } from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_contact_styles/Contact_branchesMap.css";
 
-// Lives inside <Map> so useMap() resolves to that map instance. Re-centers
-// the camera whenever a branch is selected from a card or a pin, instead of
-// forcing the map to jump on every render.
 const Contact_branchesMap_panner = ({ branches, selectedBranchId }) => {
   const map = useMap();
 

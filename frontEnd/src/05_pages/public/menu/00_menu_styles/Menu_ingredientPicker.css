@@ -1,5 +1,3 @@
-/* Multi-select ingredient list with its own search box.
-   Logical properties throughout so it mirrors under dir="rtl". */
 
 .Menu_ingredientPicker {
   display: flex;
@@ -16,8 +14,6 @@
   gap: 6px;
 }
 
-/* Count of ticked ingredients - the list is scrolled, so the number is often
-   the only way to see that something is selected further down. */
 .Menu_ingredientPicker_badge {
   display: inline-flex;
   align-items: center;
@@ -86,7 +82,6 @@
   outline: none;
 }
 
-/* Chrome draws its own clear affordance on type=search; we provide one. */
 .Menu_ingredientPicker_searchInput::-webkit-search-cancel-button {
   display: none;
 }
@@ -105,8 +100,6 @@
   color: var(--accent_color);
 }
 
-/* Capped height with its own scroll: 209 ingredients would otherwise push the
-   whole menu off screen when the panel opens. */
 .Menu_ingredientPicker_list {
   max-height: 190px;
   margin: 0;

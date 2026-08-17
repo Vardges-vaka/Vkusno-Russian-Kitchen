@@ -3,7 +3,6 @@ import {
   linkedIn_logo,
 } from "../../../../01_assets/_assets.index.js";
 
-// Source: context/Details - Copy.xlsx ("Socials" sheet).
 const SOCIALS = [
   {
     name: "Instagram",

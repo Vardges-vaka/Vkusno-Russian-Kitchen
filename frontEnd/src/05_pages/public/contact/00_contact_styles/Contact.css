@@ -15,7 +15,6 @@
   color: var(--text_color);
 }
 
-/* Small gold rule under the title echoes the Menu page's hero */
 .Contact_hero_title::after {
   content: "";
   display: block;
@@ -34,9 +33,6 @@
   color: var(--text_muted_color);
 }
 
-/* ── Connect: contact panel + map ─────────────────────────────
-   Stacked on mobile; from tablet up the panel sits on one side
-   and the map fills the rest at equal height. */
 .Contact_connect {
   display: grid;
   grid-template-columns: 1fr;
@@ -64,8 +60,6 @@
   color: var(--text_muted_color);
 }
 
-/* margin-top:auto absorbs the free space, pinning the socials
-   block below it to the bottom of the panel */
 .Contact_connect_divider {
   width: 100%;
   height: 1px;
@@ -74,12 +68,10 @@
   background-color: var(--border_color);
 }
 
-/* Flex wrapper lets the map component stretch to the row height */
 .Contact_connect_map {
   display: flex;
 }
 
-/* ── Branches ─────────────────────────────────────────────── */
 .Contact_branches {
   margin-top: 40px;
 }

@@ -1,6 +1,5 @@
 import { Phone, Mail, MessageCircle } from "lucide-react";
 
-// Source: context/Details - Copy.xlsx ("Socials" sheet).
 const PHONE_NUMBER = "+971 52 102 5674";
 const EMAIL_ADDRESS = "info@vkusno.ae";
 

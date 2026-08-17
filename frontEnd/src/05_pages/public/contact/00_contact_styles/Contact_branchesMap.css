@@ -1,5 +1,4 @@
-/* flex: 1 lets the map fill the connect section's column; min-height
-   guarantees a usable map when the layout is stacked on mobile */
+
 .Contact_branchesMap {
   position: relative;
   flex: 1;
@@ -15,8 +14,7 @@
   width: 100%;
   height: 100%;
 }
-
-/* Covers the frame while the script loads, or if there's no API key */
+  
 .Contact_branchesMap_fallback {
   position: absolute;
   inset: 0;
@@ -30,12 +28,7 @@
   color: var(--text_muted_color);
 }
 
-/* Google renders the InfoWindow bubble on its own always-white chrome, in BOTH
-   themes. These used to be theme tokens, so in dark mode the text resolved to
-   near-white on that white bubble and the branch details were unreadable.
-   The L_ (light) tokens are declared on :root and stay available whichever
-   theme is active, so the bubble keeps a legible light-on-white palette and
-   still tracks the design system. Same approach as Menu_orderMap.css. */
+
 .Contact_branchesMap_infoWindow {
   display: flex;
   flex-direction: column;

@@ -7,7 +7,9 @@ import "../00_contact_styles/Contact_infoPanel.css";
 
 const Contact_infoPanel = ({ contactInfo, t }) => {
   return (
-    <div className="Contact_infoPanel" aria-label={t("contact.infoPanel.label")}>
+    <div
+      className="Contact_infoPanel"
+      aria-label={t("contact.infoPanel.label")}>
       {contactInfo.map((item) => {
         const Icon = item.icon;
         const opensNewTab = item.name === "WhatsApp";
@@ -24,7 +26,6 @@ const Contact_infoPanel = ({ contactInfo, t }) => {
               <Icon className="Contact_infoPanel_icon" size={20} />
             </span>
 
-            {/* Two lines: the action ("Call us") + the actual value */}
             <span className="Contact_infoPanel_text">
               <span className="Contact_infoPanel_action">
                 {t(`contact.infoPanel.${item.name}`)}

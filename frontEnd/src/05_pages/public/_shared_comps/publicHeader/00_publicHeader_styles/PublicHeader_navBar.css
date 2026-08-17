@@ -1,4 +1,3 @@
-/* Nav sits on the header surface, so no own background/border */
 .PublicHeader_navBar {
   display: flex;
   align-items: center;
@@ -20,8 +19,6 @@
   display: flex;
 }
 
-/* No !important needed: .active_link below adds a class to this same element,
-   so it already outranks this rule on specificity. */
 .PublicHeader_navBar_link {
   position: relative;
   padding: 8px 12px;
@@ -35,7 +32,6 @@
     background-color 0.15s ease-in-out;
 }
 
-/* Animated underline: scaleX is GPU-cheap vs animating width */
 .PublicHeader_navBar_link::after {
   content: "";
   position: absolute;

@@ -28,8 +28,6 @@
   width: 20px;
   height: 15px;
   object-fit: cover;
-  /* border-radius: 2px; */
-  /* border: 0.5px solid rgba(0, 0, 0, 0.847); */
 }
 
 .languageSwitcher__name {
@@ -75,21 +73,14 @@
 .languageSwitcher__option.active {
   background-color: rgba(140, 141, 140, 0.285);
   border: none;
-  /* margin: -4px 0px; */
-  /* transform: scale(1.05); */
-  /* font-weight: 500; */
 }
 
-/* Keyboard position inside the listbox. Real focus stays on the <ul>
-   (aria-activedescendant pattern), so the highlight has to be drawn here. */
 .languageSwitcher__option.focused {
   background-color: rgba(140, 141, 140, 0.285);
   outline: 2px solid currentColor;
   outline-offset: -2px;
 }
 
-/* The listbox itself takes focus when opened - its options carry the
-   visible state, so suppress the browser ring on the container only. */
 .languageSwitcher__dropdown:focus {
   outline: none;
 }
@@ -105,7 +96,6 @@
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .languageSwitcher__button {
     padding: 6px;

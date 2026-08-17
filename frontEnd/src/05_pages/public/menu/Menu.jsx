@@ -29,9 +29,7 @@ const Menu = () => {
 
   return (
     <div className="Menu_container">
-      {/* Describes the FULL menu, not the filtered view - the structured data
-          should reflect what the restaurant offers, not what this visitor
-          happens to have typed into the search box. */}
+
       <PageMeta
         title={t("meta.title")}
         description={t("meta.description")}
@@ -85,9 +83,7 @@ const Menu = () => {
         </p>
       )}
 
-      {/* The dish modal is a route now (/{lang}/menu/{slug}), rendered by App
-          over this grid. Only the order modal still lives here, because it is
-          reachable straight from a card's Order button. */}
+
       {orderItem && (
         <Menu_orderModal
           item={orderItem}

@@ -7,7 +7,6 @@
   min-height: 100vh;
   padding: 24px;
   text-align: center;
-  /* Fallback colors in case the theme attribute was lost with the crash */
   background-color: var(--bg_color, #faf6ef);
   color: var(--text_color, #2b2118);
 }

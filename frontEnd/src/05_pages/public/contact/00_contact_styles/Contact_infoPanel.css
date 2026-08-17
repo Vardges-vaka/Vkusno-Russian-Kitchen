@@ -27,7 +27,6 @@
   outline: none;
 }
 
-/* Soft accent chip keeps the three rows visually anchored */
 .Contact_infoPanel_iconWrap {
   display: flex;
   align-items: center;

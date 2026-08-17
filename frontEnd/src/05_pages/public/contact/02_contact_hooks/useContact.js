@@ -8,7 +8,6 @@ import {
 
 export const useContact = () => {
   const { t, i18n } = useTranslation("Contact");
-  // "en-US" -> "en" so it matches the data's locale keys (en / ar / ru)
   const lang = (i18n.language || "en").split("-")[0];
 
   const { selectedBranchId, selectBranch } = useMapContext();

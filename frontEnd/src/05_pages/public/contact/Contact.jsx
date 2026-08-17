@@ -36,8 +36,6 @@ const Contact = () => {
         <p className="Contact_hero_subtitle">{t("contact.subtitle")}</p>
       </header>
 
-      {/* Panel (contact details + socials) on the left, map on the right.
-          Grid columns flip automatically for RTL locales. */}
       <section
         className="Contact_connect"
         aria-label={t("contact.infoPanel.label")}>
@@ -49,8 +47,6 @@ const Contact = () => {
             <Contact_infoPanel contactInfo={contactInfo} t={t} />
           </div>
 
-          {/* margin-top:auto on the divider pins the socials block to the
-              bottom of the panel when the map column is taller */}
           <hr className="Contact_connect_divider" />
 
           <div className="Contact_connect_block">

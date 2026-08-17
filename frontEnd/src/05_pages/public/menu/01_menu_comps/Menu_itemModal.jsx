@@ -10,14 +10,9 @@ import {
 import Menu_itemDetail from "./Menu_itemDetail.jsx";
 import "../00_menu_styles/Menu_itemModal.css";
 
-// Overlay presentation of a dish. The content itself lives in Menu_itemDetail,
-// shared with the standalone /{lang}/menu/{slug} page so the two cannot drift.
 const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
-  // Moves focus into the dialog, keeps Tab inside it, and hands focus back to
-  // whatever opened it on close.
   const dialogRef = useFocusTrap();
 
-  // Esc closes the modal; page scroll is locked while it is open
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") onClose();

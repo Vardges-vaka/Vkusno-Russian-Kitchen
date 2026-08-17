@@ -1,5 +1,8 @@
 import { Link, useParams } from "react-router-dom";
-import { localePath, resolveLanguage } from "../../../00_config/_config.index.js";
+import {
+  localePath,
+  resolveLanguage,
+} from "../../../00_config/_config.index.js";
 import { useTranslation } from "react-i18next";
 import "./notFound.css";
 
@@ -10,9 +13,6 @@ const NotFound = () => {
 
   return (
     <div className="notFound">
-      {/* Client-side routing means the server answers 200 for every path, so a
-          missing page is a soft 404. React 19 hoists these into <head>; the
-          noindex is what actually keeps it out of the index. */}
       <title>{`${t("title")} - Vkusno`}</title>
       <meta name="robots" content="noindex, follow" />
 
@@ -27,7 +27,9 @@ const NotFound = () => {
         </header>
 
         <nav className="notFound_actions" aria-label={t("actionsAria")}>
-          <Link className="notFound_action notFound_action--primary" to={localePath(lang)}>
+          <Link
+            className="notFound_action notFound_action--primary"
+            to={localePath(lang)}>
             {t("home")}
           </Link>
           <Link className="notFound_action" to={localePath(lang, "menu")}>

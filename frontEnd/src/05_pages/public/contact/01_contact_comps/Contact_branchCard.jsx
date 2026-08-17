@@ -11,14 +11,8 @@ import "../00_contact_styles/Contact_branchCard.css";
 const Contact_branchCard = ({ branch, lang, t, isSelected, onSelect }) => {
   const name = pickLocale(branch.name, lang);
 
-  // Stops the click reaching the card's own onClick - links inside
-  // the card should navigate, not just re-select the already-selected branch.
   const stopCardClick = (event) => event.stopPropagation();
 
-  // The card used to be role="button" with <a> links inside it - interactive
-  // nested in interactive. Now it is a plain container: the branch name is the
-  // real control, and the whole-card click stays purely as a mouse shortcut
-  // (keyboard and screen-reader users get the same action from the name).
   return (
     <article
       className={`Contact_branchCard${
@@ -57,8 +51,6 @@ const Contact_branchCard = ({ branch, lang, t, isSelected, onSelect }) => {
         {pickLocale(branch.location.address, lang)}
       </p>
 
-      {/* margin-top:auto in CSS pins the footer to the bottom, so cards
-          in the same grid row stay visually aligned */}
       <div className="Contact_branchCard_footer">
         <div className="Contact_branchCard_aggregators">
           {branch.aggregators.map((aggregator) => (
