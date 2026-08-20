@@ -3,17 +3,42 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "trailingSlash": false,
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "live.vkusno.ae" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "live.vkusno.ae"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.live.vkusno.ae" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "www.live.vkusno.ae"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     },
     {
       "source": "/assets/(.*)",
@@ -30,6 +55,10 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
         }
       ]
     },

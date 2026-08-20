@@ -1,7 +1,12 @@
 User-agent: *
 Allow: /
 
-# Locale JSON is fetched by the app at runtime; it is not a page.
-Disallow: /locales/
+# /locales/ is NOT disallowed, deliberately. Every visible string on the site is
+# fetched from /locales/{lang}/{namespace}.json at runtime by i18next
+# (see src/i18n/i18n.Config.js). Googlebot obeys robots.txt while RENDERING, so
+# blocking this folder made every page render with no text at all - 216 pages
+# that look complete in a browser and blank to a crawler.
+# The JSON is kept out of search results by an X-Robots-Tag: noindex header on
+# /locales/ in vercel.json, which still permits the fetch.
 
 Sitemap: https://vkusno.ae/sitemap.xml
