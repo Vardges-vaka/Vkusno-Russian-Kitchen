@@ -13,6 +13,26 @@
 // crash the modal - it just shows the untranslated name until added here.
 
 const INGREDIENT_NAMES = {
+  "Blueberry jam": {
+    en: "Blueberry jam",
+    ru: "Варенье из голубики",
+    ar: "مربى التوت الأزرق",
+  },
+  "Pickled tomato": {
+    en: "Pickled tomato",
+    ru: "Маринованные помидоры",
+    ar: "طماطم مخللة",
+  },
+  "Pickled red cabbage": {
+    en: "Pickled red cabbage",
+    ru: "Солёная красная капуста",
+    ar: "ملفوف أحمر مخلل",
+  },
+  "Pickled white cabbage": {
+    en: "Pickled white cabbage",
+    ru: "Солёная белокочанная капуста",
+    ar: "ملفوف أبيض مخلل",
+  },
   "All-purpose flour": {
     en: "All-purpose flour",
     ru: "Пшеничная мука",

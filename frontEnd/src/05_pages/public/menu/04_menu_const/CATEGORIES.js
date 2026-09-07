@@ -2,6 +2,21 @@
 // Category order follows the order the categories first appear in the menu sheet.
 
 import {
+  SourCream,
+  Honey,
+  HomemadeBlueberryJam,
+  CondensedMilk,
+  PickledTomato,
+  PickledCucumber,
+  PickledRedCabbage,
+  PickledWhiteCabbage,
+  RussianLunch,
+  DumplingLovers,
+  UzbekFeast,
+  GrillDuoForTwo,
+  BeefDinner,
+  ChickenDinner,
+  CabbageRollsClassic,
   ScrambledEggs,
   Omelette,
   PancakesWithCondensedMilk,
@@ -96,7 +111,13 @@ export const Categories = [
       ar: "المقبلات الباردة",
       ru: "Холодные Закуски",
     },
-    menuItems: [/* BeefTongue, */ AssortedPickles, Holodec, EggplantRolls],
+    menuItems: [
+      /* BeefTongue, */ AssortedPickles, Holodec, EggplantRolls,
+      PickledTomato,
+      PickledCucumber,
+      PickledRedCabbage,
+      PickledWhiteCabbage,
+    ],
   },
   {
     id: 3,
@@ -209,6 +230,10 @@ export const Categories = [
       HouseSpecialSauce,
       MustardSauce,
       TomatoGarlicSauce,
+      SourCream,
+      Honey,
+      HomemadeBlueberryJam,
+      CondensedMilk,
     ],
   },
   {
@@ -229,6 +254,23 @@ export const Categories = [
       // RedBull,
       RaspberryMors,
       CranberyMors,
+    ],
+  },
+  {
+    id: 14,
+    name: {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+    menuItems: [
+      RussianLunch,
+      DumplingLovers,
+      UzbekFeast,
+      GrillDuoForTwo,
+      BeefDinner,
+      ChickenDinner,
+      CabbageRollsClassic,
     ],
   },
 ];

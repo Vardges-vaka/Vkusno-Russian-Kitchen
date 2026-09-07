@@ -2,7 +2,7 @@
 //   ./thumbnail  -> 100x100 photos (WebP)
 //   ./full       -> 1200x900 photos (WebP)
 // WebP generated from the source .jpg files by scripts/convertMenuImagesToWebp.mjs.
-// Imported by ../menuItems.js. 70 items.
+// Imported by ../menuItems.js. 86 items.
 //
 // Thumbnails are deliberately NOT imported. Nothing renders them (the cards
 // use the full image), but at ~3.8 KB each they sat under Vite's 4 KB inline
@@ -223,7 +223,104 @@ import cranberyMorsCard2x from "./card2x/Cranbery Mors(800x600px).webp";
 import cranberyMorsCard from "./card/Cranbery Mors(400x300px).webp";
 import cranberyMorsFull from "./full/Cranbery Mors(1200x900px).webp";
 
+import sourCreamCard2x from "./card2x/Sour Cream(800x600px).webp";
+import sourCreamCard from "./card/Sour Cream(400x300px).webp";
+import sourCreamFull from "./full/Sour Cream(1200x900px).webp";
+import honeyCard2x from "./card2x/Honey(800x600px).webp";
+import honeyCard from "./card/Honey(400x300px).webp";
+import honeyFull from "./full/Honey(1200x900px).webp";
+import homemadeJamBlueberryCard2x from "./card2x/Homemade Jam Blueberry(800x600px).webp";
+import homemadeJamBlueberryCard from "./card/Homemade Jam Blueberry(400x300px).webp";
+import homemadeJamBlueberryFull from "./full/Homemade Jam Blueberry(1200x900px).webp";
+import condensedMilkCard2x from "./card2x/Condensed Milk(800x600px).webp";
+import condensedMilkCard from "./card/Condensed Milk(400x300px).webp";
+import condensedMilkFull from "./full/Condensed Milk(1200x900px).webp";
+import pickledTomatoCard2x from "./card2x/Pickled Tomato(800x600px).webp";
+import pickledTomatoCard from "./card/Pickled Tomato(400x300px).webp";
+import pickledTomatoFull from "./full/Pickled Tomato(1200x900px).webp";
+import pickledCucumberCard2x from "./card2x/Pickled Cucumber(800x600px).webp";
+import pickledCucumberCard from "./card/Pickled Cucumber(400x300px).webp";
+import pickledCucumberFull from "./full/Pickled Cucumber(1200x900px).webp";
+import pickledRedCabbageCard2x from "./card2x/Pickled Red Cabbage(800x600px).webp";
+import pickledRedCabbageCard from "./card/Pickled Red Cabbage(400x300px).webp";
+import pickledRedCabbageFull from "./full/Pickled Red Cabbage(1200x900px).webp";
+import pickledWhiteCabbageCard2x from "./card2x/Pickled White Cabbage(800x600px).webp";
+import pickledWhiteCabbageCard from "./card/Pickled White Cabbage(400x300px).webp";
+import pickledWhiteCabbageFull from "./full/Pickled White Cabbage(1200x900px).webp";
+import russianLunchCard2x from "./card2x/Russian Lunch(800x600px).webp";
+import russianLunchCard from "./card/Russian Lunch(400x300px).webp";
+import russianLunchFull from "./full/Russian Lunch(1200x900px).webp";
+import dumplingLoversCard2x from "./card2x/Dumpling Lovers(800x600px).webp";
+import dumplingLoversCard from "./card/Dumpling Lovers(400x300px).webp";
+import dumplingLoversFull from "./full/Dumpling Lovers(1200x900px).webp";
+import uzbekFeastCard2x from "./card2x/Uzbek Feast(800x600px).webp";
+import uzbekFeastCard from "./card/Uzbek Feast(400x300px).webp";
+import uzbekFeastFull from "./full/Uzbek Feast(1200x900px).webp";
+import grillDuoForTwoCard2x from "./card2x/Grill Duo for Two(800x600px).webp";
+import grillDuoForTwoCard from "./card/Grill Duo for Two(400x300px).webp";
+import grillDuoForTwoFull from "./full/Grill Duo for Two(1200x900px).webp";
+import beefDinnerCard2x from "./card2x/Beef Dinner(800x600px).webp";
+import beefDinnerCard from "./card/Beef Dinner(400x300px).webp";
+import beefDinnerFull from "./full/Beef Dinner(1200x900px).webp";
+import chickenDinnerCard2x from "./card2x/Chicken Dinner(800x600px).webp";
+import chickenDinnerCard from "./card/Chicken Dinner(400x300px).webp";
+import chickenDinnerFull from "./full/Chicken Dinner(1200x900px).webp";
+import homeStyleBeefPanCard2x from "./card2x/Home Style Beef Pan(800x600px).webp";
+import homeStyleBeefPanCard from "./card/Home Style Beef Pan(400x300px).webp";
+import homeStyleBeefPanFull from "./full/Home Style Beef Pan(1200x900px).webp";
+import cabbageRollsClassicCard2x from "./card2x/Cabbage Rolls Classic(800x600px).webp";
+import cabbageRollsClassicCard from "./card/Cabbage Rolls Classic(400x300px).webp";
+import cabbageRollsClassicFull from "./full/Cabbage Rolls Classic(1200x900px).webp";
+
 export {
+  sourCreamCard,
+  sourCreamCard2x,
+  sourCreamFull,
+  honeyCard,
+  honeyCard2x,
+  honeyFull,
+  homemadeJamBlueberryCard,
+  homemadeJamBlueberryCard2x,
+  homemadeJamBlueberryFull,
+  condensedMilkCard,
+  condensedMilkCard2x,
+  condensedMilkFull,
+  pickledTomatoCard,
+  pickledTomatoCard2x,
+  pickledTomatoFull,
+  pickledCucumberCard,
+  pickledCucumberCard2x,
+  pickledCucumberFull,
+  pickledRedCabbageCard,
+  pickledRedCabbageCard2x,
+  pickledRedCabbageFull,
+  pickledWhiteCabbageCard,
+  pickledWhiteCabbageCard2x,
+  pickledWhiteCabbageFull,
+  russianLunchCard,
+  russianLunchCard2x,
+  russianLunchFull,
+  dumplingLoversCard,
+  dumplingLoversCard2x,
+  dumplingLoversFull,
+  uzbekFeastCard,
+  uzbekFeastCard2x,
+  uzbekFeastFull,
+  grillDuoForTwoCard,
+  grillDuoForTwoCard2x,
+  grillDuoForTwoFull,
+  beefDinnerCard,
+  beefDinnerCard2x,
+  beefDinnerFull,
+  chickenDinnerCard,
+  chickenDinnerCard2x,
+  chickenDinnerFull,
+  homeStyleBeefPanCard,
+  homeStyleBeefPanCard2x,
+  homeStyleBeefPanFull,
+  cabbageRollsClassicCard,
+  cabbageRollsClassicCard2x,
+  cabbageRollsClassicFull,
   scrambledEggsCard,
   scrambledEggsCard2x,
   scrambledEggsFull,
@@ -438,6 +535,22 @@ export {
 
 // Grouped by menu item, for convenience.
 export const MenuItemImages = {
+  sourCream: { card: sourCreamCard, card2x: sourCreamCard2x, full: sourCreamFull },
+  honey: { card: honeyCard, card2x: honeyCard2x, full: honeyFull },
+  homemadeJamBlueberry: { card: homemadeJamBlueberryCard, card2x: homemadeJamBlueberryCard2x, full: homemadeJamBlueberryFull },
+  condensedMilk: { card: condensedMilkCard, card2x: condensedMilkCard2x, full: condensedMilkFull },
+  pickledTomato: { card: pickledTomatoCard, card2x: pickledTomatoCard2x, full: pickledTomatoFull },
+  pickledCucumber: { card: pickledCucumberCard, card2x: pickledCucumberCard2x, full: pickledCucumberFull },
+  pickledRedCabbage: { card: pickledRedCabbageCard, card2x: pickledRedCabbageCard2x, full: pickledRedCabbageFull },
+  pickledWhiteCabbage: { card: pickledWhiteCabbageCard, card2x: pickledWhiteCabbageCard2x, full: pickledWhiteCabbageFull },
+  russianLunch: { card: russianLunchCard, card2x: russianLunchCard2x, full: russianLunchFull },
+  dumplingLovers: { card: dumplingLoversCard, card2x: dumplingLoversCard2x, full: dumplingLoversFull },
+  uzbekFeast: { card: uzbekFeastCard, card2x: uzbekFeastCard2x, full: uzbekFeastFull },
+  grillDuoForTwo: { card: grillDuoForTwoCard, card2x: grillDuoForTwoCard2x, full: grillDuoForTwoFull },
+  beefDinner: { card: beefDinnerCard, card2x: beefDinnerCard2x, full: beefDinnerFull },
+  chickenDinner: { card: chickenDinnerCard, card2x: chickenDinnerCard2x, full: chickenDinnerFull },
+  homeStyleBeefPan: { card: homeStyleBeefPanCard, card2x: homeStyleBeefPanCard2x, full: homeStyleBeefPanFull },
+  cabbageRollsClassic: { card: cabbageRollsClassicCard, card2x: cabbageRollsClassicCard2x, full: cabbageRollsClassicFull },
   scrambledEggs: { card: scrambledEggsCard, card2x: scrambledEggsCard2x, full: scrambledEggsFull },
   omelette: { card: omeletteCard, card2x: omeletteCard2x, full: omeletteFull },
   pancakesWithCondensedMilk: { card: pancakesWithCondensedMilkCard, card2x: pancakesWithCondensedMilkCard2x, full: pancakesWithCondensedMilkFull },
