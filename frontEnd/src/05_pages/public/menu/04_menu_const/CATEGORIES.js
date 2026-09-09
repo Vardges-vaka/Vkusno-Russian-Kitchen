@@ -16,6 +16,7 @@ import {
   GrillDuoForTwo,
   BeefDinner,
   ChickenDinner,
+  HomeStyleBeefPan,
   CabbageRollsClassic,
   ScrambledEggs,
   Omelette,
@@ -25,7 +26,7 @@ import {
   RicePorridge,
   BuckwheatPorridge,
   OatmealPorridge,
-  // BeefTongue,
+  BeefTongue,
   AssortedPickles,
   Holodec,
   EggplantRolls,
@@ -70,10 +71,10 @@ import {
   ChickenSkewer,
   BeefSkewer,
   LambSkewer,
-  // MixedGrill,
+  MixedGrill,
   Buckwheat,
   LyulyaKebab,
-  // LambChops,
+  LambChops,
   BoiledRice,
   GrilledVegetable,
   SweetPotatoFries,
@@ -89,7 +90,8 @@ import {
   CranberyMors,
 } from "./menuItems.js";
 
-export const Categories = [
+// Keep inactive items in their original position so reactivation restores order.
+const allCategories = [
   {
     id: 1,
     name: { en: "Breakfast", ar: "الفطور", ru: "Завтраки" },
@@ -112,7 +114,10 @@ export const Categories = [
       ru: "Холодные Закуски",
     },
     menuItems: [
-      /* BeefTongue, */ AssortedPickles, Holodec, EggplantRolls,
+      BeefTongue,
+      AssortedPickles,
+      Holodec,
+      EggplantRolls,
       PickledTomato,
       PickledCucumber,
       PickledRedCabbage,
@@ -199,9 +204,9 @@ export const Categories = [
       ChickenSkewer,
       BeefSkewer,
       LambSkewer,
-      // MixedGrill,
+      MixedGrill,
       LyulyaKebab,
-      // LambChops,
+      LambChops,
     ],
   },
   {
@@ -270,9 +275,19 @@ export const Categories = [
       GrillDuoForTwo,
       BeefDinner,
       ChickenDinner,
+      HomeStyleBeefPan,
       CabbageRollsClassic,
     ],
   },
 ];
+
+// Every public menu surface (including homepage, search and dish lookup)
+// imports this list, so availability is enforced before anything is rendered.
+export const Categories = allCategories
+  .map((category) => ({
+    ...category,
+    menuItems: category.menuItems.filter((item) => item.isActive === true),
+  }))
+  .filter((category) => category.menuItems.length > 0);
 
 export default Categories;

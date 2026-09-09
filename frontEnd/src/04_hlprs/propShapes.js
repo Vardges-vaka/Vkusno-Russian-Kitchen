@@ -18,6 +18,7 @@ export const localizedStringShape = PropTypes.shape({
 
 export const menuItemShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  isActive: PropTypes.bool.isRequired,
   name: localizedStringShape.isRequired,
   description: PropTypes.shape({
     short: localizedStringShape,

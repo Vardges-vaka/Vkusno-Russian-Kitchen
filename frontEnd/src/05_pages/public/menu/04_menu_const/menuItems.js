@@ -8,7 +8,8 @@
 //   duplicated the AR short description on all 70 items)., ingredients, nutrition
 //   - menuItems/menuItemExports.js    -> thumbnail (100x100) and full (1200x900) photos
 //
-// Prices are in AED. 82 active items across 14 categories.
+// Prices are in AED. Set isActive to false to hide a dish everywhere.
+// Keep its data, image imports, category entry and translations for reactivation.
 //
 // `slug` is the URL segment for /{lang}/menu/{slug}. One per language so a
 // Russian reader gets /ru/menu/pelmeni-s-myasom rather than an English path.
@@ -58,6 +59,9 @@ import {
   chickenDinnerCard,
   chickenDinnerCard2x,
   chickenDinnerFull,
+  homeStyleBeefPanCard,
+  homeStyleBeefPanCard2x,
+  homeStyleBeefPanFull,
   cabbageRollsClassicCard,
   cabbageRollsClassicCard2x,
   cabbageRollsClassicFull,
@@ -85,6 +89,9 @@ import {
   oatmealPorridgeCard,
   oatmealPorridgeCard2x,
   oatmealPorridgeFull,
+  beefTongueCard,
+  beefTongueCard2x,
+  beefTongueFull,
   assortedPicklesCard,
   assortedPicklesCard2x,
   assortedPicklesFull,
@@ -217,14 +224,18 @@ import {
   lambSkewerCard,
   lambSkewerCard2x,
   lambSkewerFull,
-  // mixedGrillFull,
+  mixedGrillCard,
+  mixedGrillCard2x,
+  mixedGrillFull,
   buckwheatCard,
   buckwheatCard2x,
   buckwheatFull,
   lyulyaKebabCard,
   lyulyaKebabCard2x,
   lyulyaKebabFull,
-  // lambChopsFull,
+  lambChopsCard,
+  lambChopsCard2x,
+  lambChopsFull,
   boiledRiceCard,
   boiledRiceCard2x,
   boiledRiceFull,
@@ -268,6 +279,7 @@ import {
 
 export const ScrambledEggs = {
   id: 1,
+  isActive: true,
   slug: {
     en: "scrambled-eggs",
     ru: "yaichnitsa",
@@ -310,6 +322,7 @@ export const ScrambledEggs = {
 
 export const Omelette = {
   id: 2,
+  isActive: true,
   slug: {
     en: "omelette",
     ru: "omlet",
@@ -354,6 +367,7 @@ export const Omelette = {
 
 export const PancakesWithCondensedMilk = {
   id: 3,
+  isActive: true,
   slug: {
     en: "pancakes-with-condensed-milk",
     ru: "bliny-so-sgushchenkoy",
@@ -397,6 +411,7 @@ export const PancakesWithCondensedMilk = {
 
 export const PancakesWithJam = {
   id: 4,
+  isActive: true,
   slug: {
     en: "pancakes-with-jam",
     ru: "bliny-s-dzhemom",
@@ -432,6 +447,7 @@ export const PancakesWithJam = {
 
 export const RyeBreadJam = {
   id: 5,
+  isActive: true,
   slug: {
     en: "rye-bread-jam",
     ru: "rzhanoy-khleb-s-dzhemom",
@@ -467,6 +483,7 @@ export const RyeBreadJam = {
 
 export const RicePorridge = {
   id: 6,
+  isActive: true,
   slug: {
     en: "rice-porridge",
     ru: "risovaya-kasha",
@@ -502,6 +519,7 @@ export const RicePorridge = {
 
 export const BuckwheatPorridge = {
   id: 7,
+  isActive: true,
   slug: {
     en: "buckwheat-porridge",
     ru: "grechnevaya-kasha",
@@ -544,6 +562,7 @@ export const BuckwheatPorridge = {
 
 export const OatmealPorridge = {
   id: 8,
+  isActive: true,
   slug: {
     en: "oatmeal-porridge",
     ru: "ovsyanaya-kasha",
@@ -583,56 +602,59 @@ export const OatmealPorridge = {
   ],
 };
 
-// Off the menu temporarily (expected back within the year). Commented out
-// rather than deleted so its translated copy in MenuItems.json stays valid -
-// same treatment as MixedGrill and LambChops below.
-// export const BeefTongue = {
-//   id: 9,
-//   slug: {
-//     en: "beef-tongue",
-//     ru: "govyazhi-yazyk",
-//     ar: "lisan-baqari",
-//   },
-//   name: {
-//     en: "Beef Tongue",
-//     ar: "لسان بقري",
-//     ru: "Говяжьи язык",
-//   },
-//   categories: [
-//     { en: "Cold Appetizers", ar: "المقبلات الباردة", ru: "Холодные Закуски" },
-//   ],
-//   description: {
-//     short: {
-//       en: "Tender chilled slices of beef tongue with mustard sauce on the side.",
-//       ar: "لسان بقري مقطع مع صلصة الخردل الروسي.",
-//       ru: "Нежные ломтики говяжьего языка с горчичным соусом.",
-//     },
-//   },
-//   price: 38,
-//   images: {
-//     full: beefTongueFull,
-//   },
-//   nutrition: {
-//     calories: 450,
-//     protein: 30,
-//     fat: 35,
-//     carbs: 0,
-//   },
-//   ingredients: [
-//     "Beef tongue",
-//     "Onion",
-//     "Garlic",
-//     "Bay leaf",
-//     "Black peppercorns",
-//     "Carrot",
-//     "Celery",
-//     "Salt (Estimated)",
-//     "Water (Estimated)",
-//   ],
-// };
+// Off the menu temporarily. Set isActive to true when it returns; its photos,
+// category position and translated descriptions are already preserved.
+export const BeefTongue = {
+  id: 9,
+  isActive: false,
+  slug: {
+    en: "beef-tongue",
+    ru: "govyazhi-yazyk",
+    ar: "lisan-baqari",
+  },
+  name: {
+    en: "Beef Tongue",
+    ar: "لسان بقري",
+    ru: "Говяжьи язык",
+  },
+  categories: [
+    { en: "Cold Appetizers", ar: "المقبلات الباردة", ru: "Холодные Закуски" },
+  ],
+  description: {
+    short: {
+      en: "Tender chilled slices of beef tongue with mustard sauce on the side.",
+      ar: "لسان بقري مقطع مع صلصة الخردل الروسي.",
+      ru: "Нежные ломтики говяжьего языка с горчичным соусом.",
+    },
+  },
+  price: 38,
+  images: {
+    card: beefTongueCard,
+    card2x: beefTongueCard2x,
+    full: beefTongueFull,
+  },
+  nutrition: {
+    calories: 450,
+    protein: 30,
+    fat: 35,
+    carbs: 0,
+  },
+  ingredients: [
+    "Beef tongue",
+    "Onion",
+    "Garlic",
+    "Bay leaf",
+    "Black peppercorns",
+    "Carrot",
+    "Celery",
+    "Salt (Estimated)",
+    "Water (Estimated)",
+  ],
+};
 
 export const AssortedPickles = {
   id: 10,
+  isActive: true,
   slug: {
     en: "assorted-pickles",
     ru: "assorti-iz-soleniy",
@@ -685,6 +707,7 @@ export const AssortedPickles = {
 
 export const Holodec = {
   id: 11,
+  isActive: true,
   slug: {
     en: "holodec",
     ru: "kholodets",
@@ -732,6 +755,7 @@ export const Holodec = {
 
 export const EggplantRolls = {
   id: 12,
+  isActive: true,
   slug: {
     en: "eggplant-rolls",
     ru: "rulety-iz-baklazhana",
@@ -780,6 +804,7 @@ export const EggplantRolls = {
 
 export const RussianBorscht = {
   id: 13,
+  isActive: true,
   slug: {
     en: "russian-borscht",
     ru: "borshch",
@@ -832,6 +857,7 @@ export const RussianBorscht = {
 
 export const ChickenNoodlesSoup = {
   id: 14,
+  isActive: true,
   slug: {
     en: "chicken-noodles-soup",
     ru: "kurinyy-sup-s-lapshoy",
@@ -879,6 +905,7 @@ export const ChickenNoodlesSoup = {
 
 export const MeatballSoup = {
   id: 15,
+  isActive: true,
   slug: {
     en: "meatball-soup",
     ru: "sup-s-frikadelkami",
@@ -925,6 +952,7 @@ export const MeatballSoup = {
 
 export const Okroshka = {
   id: 16,
+  isActive: true,
   slug: {
     en: "okroshka",
     ru: "okroshka",
@@ -971,6 +999,7 @@ export const Okroshka = {
 
 export const Solyanka = {
   id: 17,
+  isActive: true,
   slug: {
     en: "solyanka",
     ru: "solyanka",
@@ -1020,6 +1049,7 @@ export const Solyanka = {
 
 export const RussianOlivierSalad = {
   id: 18,
+  isActive: true,
   slug: {
     en: "russian-olivier-salad",
     ru: "olive",
@@ -1065,6 +1095,7 @@ export const RussianOlivierSalad = {
 
 export const Vinegret = {
   id: 19,
+  isActive: true,
   slug: {
     en: "vinegret",
     ru: "vinegret",
@@ -1111,6 +1142,7 @@ export const Vinegret = {
 
 export const RussianHerringSaladShuba = {
   id: 20,
+  isActive: true,
   slug: {
     en: "russian-herring-salad-shuba",
     ru: "seld-pod-shuboy",
@@ -1154,6 +1186,7 @@ export const RussianHerringSaladShuba = {
 
 export const Shakarob = {
   id: 21,
+  isActive: true,
   slug: {
     en: "shakarob",
     ru: "shakarob",
@@ -1198,6 +1231,7 @@ export const Shakarob = {
 
 export const UzbekAchichuk = {
   id: 22,
+  isActive: true,
   slug: {
     en: "uzbek-achichuk",
     ru: "achichuk",
@@ -1239,6 +1273,7 @@ export const UzbekAchichuk = {
 
 export const CarrotSalad = {
   id: 23,
+  isActive: true,
   slug: {
     en: "carrot-salad",
     ru: "salat-iz-morkovi",
@@ -1282,6 +1317,7 @@ export const CarrotSalad = {
 
 export const GreekSalad = {
   id: 24,
+  isActive: true,
   slug: {
     en: "greek-salad",
     ru: "grecheskiy-salat",
@@ -1329,6 +1365,7 @@ export const GreekSalad = {
 
 export const SpicySteakSalad = {
   id: 25,
+  isActive: true,
   slug: {
     en: "spicy-steak-salad",
     ru: "ostryy-steyk-salat",
@@ -1377,6 +1414,7 @@ export const SpicySteakSalad = {
 
 export const BakedRussianPieWithCabbage = {
   id: 26,
+  isActive: true,
   slug: {
     en: "baked-russian-pie-with-cabbage",
     ru: "pirozhki-s-kapustoy",
@@ -1425,6 +1463,7 @@ export const BakedRussianPieWithCabbage = {
 
 export const BeetrootSalad = {
   id: 27,
+  isActive: true,
   slug: {
     en: "beetroot-salad",
     ru: "svekolnyy-salat",
@@ -1468,6 +1507,7 @@ export const BeetrootSalad = {
 
 export const BakedRussianPieWithPotatoAndMushroom = {
   id: 28,
+  isActive: true,
   slug: {
     en: "baked-russian-pie-with-potato-and-mushroom",
     ru: "pirozhki-s-kartoshkoy-i-gribami",
@@ -1516,6 +1556,7 @@ export const BakedRussianPieWithPotatoAndMushroom = {
 
 export const SamsaWithMeat = {
   id: 29,
+  isActive: true,
   slug: {
     en: "samsa-with-meat",
     ru: "samsa-iz-govyadiny",
@@ -1561,6 +1602,7 @@ export const SamsaWithMeat = {
 
 export const BunsWithJam = {
   id: 30,
+  isActive: true,
   slug: {
     en: "buns-with-jam",
     ru: "bulochka-s-dzhemom",
@@ -1596,6 +1638,7 @@ export const BunsWithJam = {
 
 export const BakedHotDog = {
   id: 31,
+  isActive: true,
   slug: {
     en: "baked-hot-dog",
     ru: "khot-dog",
@@ -1642,6 +1685,7 @@ export const BakedHotDog = {
 
 export const Vatrushka = {
   id: 32,
+  isActive: true,
   slug: {
     en: "vatrushka",
     ru: "vatrushka",
@@ -1683,6 +1727,7 @@ export const Vatrushka = {
 
 export const RussianPancakesWithBeef = {
   id: 33,
+  isActive: true,
   slug: {
     en: "russian-pancakes-with-beef",
     ru: "bliny-s-govyadinoy",
@@ -1730,6 +1775,7 @@ export const RussianPancakesWithBeef = {
 
 export const RussianPancakesWithMushroom = {
   id: 34,
+  isActive: true,
   slug: {
     en: "russian-pancakes-with-mushroom",
     ru: "bliny-s-gribami",
@@ -1777,6 +1823,7 @@ export const RussianPancakesWithMushroom = {
 
 export const VarenikiWithPotato = {
   id: 35,
+  isActive: true,
   slug: {
     en: "vareniki-with-potato",
     ru: "vareniki",
@@ -1826,6 +1873,7 @@ export const VarenikiWithPotato = {
 
 export const PelmeniWithMeat = {
   id: 36,
+  isActive: true,
   slug: {
     en: "pelmeni-with-meat",
     ru: "pelmeni",
@@ -1874,6 +1922,7 @@ export const PelmeniWithMeat = {
 
 export const Draniki = {
   id: 37,
+  isActive: true,
   slug: {
     en: "draniki",
     ru: "draniki",
@@ -1920,6 +1969,7 @@ export const Draniki = {
 
 export const MantiWithMeat = {
   id: 38,
+  isActive: true,
   slug: {
     en: "manti-with-meat",
     ru: "manty-iz-govyadiny",
@@ -1967,6 +2017,7 @@ export const MantiWithMeat = {
 
 export const CheburekWithMeat = {
   id: 39,
+  isActive: true,
   slug: {
     en: "cheburek-with-meat",
     ru: "cheburek-iz-govyadiny",
@@ -2015,6 +2066,7 @@ export const CheburekWithMeat = {
 
 export const BeefCutlets = {
   id: 40,
+  isActive: true,
   slug: {
     en: "beef-cutlets",
     ru: "govyazhi-kotlety",
@@ -2062,6 +2114,7 @@ export const BeefCutlets = {
 
 export const ChickenCutlets = {
   id: 41,
+  isActive: true,
   slug: {
     en: "chicken-cutlets",
     ru: "kurinye-kotlety",
@@ -2109,6 +2162,7 @@ export const ChickenCutlets = {
 
 export const UzbekBeefPlov = {
   id: 42,
+  isActive: true,
   slug: {
     en: "uzbek-beef-plov",
     ru: "uzbekskiy-plov",
@@ -2158,6 +2212,7 @@ export const UzbekBeefPlov = {
 
 export const CabbageRollsWithRiceAndMincedMeat = {
   id: 43,
+  isActive: true,
   slug: {
     en: "cabbage-rolls-with-rice-and-minced-meat",
     ru: "golubtsy",
@@ -2204,6 +2259,7 @@ export const CabbageRollsWithRiceAndMincedMeat = {
 
 export const HotPan = {
   id: 44,
+  isActive: true,
   slug: {
     en: "hot-pan",
     ru: "zharkoe-iz-govyadiny",
@@ -2251,6 +2307,7 @@ export const HotPan = {
 
 export const BeefStroganoff = {
   id: 45,
+  isActive: true,
   slug: {
     en: "beef-stroganoff",
     ru: "befstroganov",
@@ -2295,6 +2352,7 @@ export const BeefStroganoff = {
 
 export const ChickenKiev = {
   id: 46,
+  isActive: true,
   slug: {
     en: "chicken-kiev",
     ru: "kotleta-po-po-kievski",
@@ -2341,6 +2399,7 @@ export const ChickenKiev = {
 
 export const Napoleon = {
   id: 47,
+  isActive: true,
   slug: {
     en: "napoleon",
     ru: "napoleon",
@@ -2382,6 +2441,7 @@ export const Napoleon = {
 
 export const HoneyCake = {
   id: 48,
+  isActive: true,
   slug: {
     en: "honey-cake",
     ru: "medovik",
@@ -2431,6 +2491,7 @@ export const HoneyCake = {
 
 export const RussianPancakesWithCottageCheese = {
   id: 49,
+  isActive: true,
   slug: {
     en: "russian-pancakes-with-cottage-cheese",
     ru: "bliny-s-tvorogom",
@@ -2476,6 +2537,7 @@ export const RussianPancakesWithCottageCheese = {
 
 export const Syrniki = {
   id: 50,
+  isActive: true,
   slug: {
     en: "syrniki",
     ru: "syrniki",
@@ -2520,6 +2582,7 @@ export const Syrniki = {
 
 export const ChickenSkewer = {
   id: 51,
+  isActive: true,
   slug: {
     en: "chicken-skewer",
     ru: "kurinyy-shashlyk",
@@ -2563,6 +2626,7 @@ export const ChickenSkewer = {
 
 export const BeefSkewer = {
   id: 52,
+  isActive: true,
   slug: {
     en: "beef-skewer",
     ru: "govyazhiy-shashlyk",
@@ -2603,6 +2667,7 @@ export const BeefSkewer = {
 
 export const LambSkewer = {
   id: 53,
+  isActive: true,
   slug: {
     en: "lamb-skewer",
     ru: "baraniy-shashlyk",
@@ -2644,50 +2709,54 @@ export const LambSkewer = {
   ],
 };
 
-// export const MixedGrill = {
-//   id: 54,
-//   slug: {
-//     en: "mixed-grill",
-//     ru: "assorti-iz-shashlykov",
-//     ar: "mashwiyat-mushakkala",
-//   },
-//   name: {
-//     en: "Mixed Grill",
-//     ar: "مشويات مشكلة",
-//     ru: "Ассорти из шашлыков",
-//   },
-//   categories: [{ en: "Mix Grill", ar: "المشاوي", ru: "Шашлыки" }],
-//   description: {
-//     short: {
-//       en: "1 kg mixed grill: beef, chicken, lamb & lyulya.",
-//       ar: "مشاوي مشكلة ١ كغ: لحم بقري ودجاج وضأن وكباب ليليا.",
-//       ru: "Ассорти 1 кг: говядина, курица, баранина, люля.",
-//     },
-//   },
-//   price: 214,
-//   images: {
-//     full: mixedGrillFull,
-//   },
-//   nutrition: {
-//     calories: 2380,
-//     protein: 199,
-//     fat: 162,
-//     carbs: 7,
-//   },
-//   ingredients: [
-//     "Beef skewer",
-//     "Chicken skewer",
-//     "Lamb skewer",
-//     "Lyulya kebab",
-//     "Lamb chop",
-//     "Cooking oil (Est.)",
-//     "Salt (Est.)",
-//     "Black pepper (Est.)",
-//   ],
-// };
+export const MixedGrill = {
+  id: 54,
+  isActive: false,
+  slug: {
+    en: "mixed-grill",
+    ru: "assorti-iz-shashlykov",
+    ar: "mashwiyat-mushakkala",
+  },
+  name: {
+    en: "Mixed Grill",
+    ar: "مشويات مشكلة",
+    ru: "Ассорти из шашлыков",
+  },
+  categories: [{ en: "Mix Grill", ar: "المشاوي", ru: "Шашлыки" }],
+  description: {
+    short: {
+      en: "1 kg mixed grill: beef, chicken, lamb & lyulya.",
+      ar: "مشاوي مشكلة ١ كغ: لحم بقري ودجاج وضأن وكباب ليليا.",
+      ru: "Ассорти 1 кг: говядина, курица, баранина, люля.",
+    },
+  },
+  price: 214,
+  images: {
+    card: mixedGrillCard,
+    card2x: mixedGrillCard2x,
+    full: mixedGrillFull,
+  },
+  nutrition: {
+    calories: 2380,
+    protein: 199,
+    fat: 162,
+    carbs: 7,
+  },
+  ingredients: [
+    "Beef skewer",
+    "Chicken skewer",
+    "Lamb skewer",
+    "Lyulya kebab",
+    "Lamb chop",
+    "Cooking oil (Est.)",
+    "Salt (Est.)",
+    "Black pepper (Est.)",
+  ],
+};
 
 export const Buckwheat = {
   id: 55,
+  isActive: true,
   slug: {
     en: "buckwheat",
     ru: "grechka",
@@ -2723,6 +2792,7 @@ export const Buckwheat = {
 
 export const LyulyaKebab = {
   id: 56,
+  isActive: true,
   slug: {
     en: "lyulya-kebab",
     ru: "lyulya-kebab",
@@ -2765,46 +2835,50 @@ export const LyulyaKebab = {
   ],
 };
 
-// export const LambChops = {
-//   id: 57,
-//   slug: {
-//     en: "lamb-chops",
-//     ru: "barani-otbivnye",
-//     ar: "rish-dhan",
-//   },
-//   name: {
-//     en: "Lamb Chops",
-//     ar: "ريش ضأن",
-//     ru: "Бараньи отбивные",
-//   },
-//   categories: [{ en: "Mix Grill", ar: "المشاوي", ru: "Шашлыки" }],
-//   description: {
-//     short: {
-//       en: "Char-grilled lamb chops, simply seasoned.",
-//       ar: "يقدم مع بطاطا مقلية.",
-//       ru: "Сочные бараньи отбивные на гриле.",
-//     },
-//   },
-//   price: 87,
-//   images: {
-//     full: lambChopsFull,
-//   },
-//   nutrition: {
-//     calories: 930,
-//     protein: 75,
-//     fat: 80,
-//     carbs: 0,
-//   },
-//   ingredients: [
-//     "Lamb chops (raw)",
-//     "Cooking oil",
-//     "Salt (Est.)",
-//     "Black pepper (Est.)",
-//   ],
-// };
+export const LambChops = {
+  id: 57,
+  isActive: false,
+  slug: {
+    en: "lamb-chops",
+    ru: "barani-otbivnye",
+    ar: "rish-dhan",
+  },
+  name: {
+    en: "Lamb Chops",
+    ar: "ريش ضأن",
+    ru: "Бараньи отбивные",
+  },
+  categories: [{ en: "Mix Grill", ar: "المشاوي", ru: "Шашлыки" }],
+  description: {
+    short: {
+      en: "Char-grilled lamb chops, simply seasoned.",
+      ar: "يقدم مع بطاطا مقلية.",
+      ru: "Сочные бараньи отбивные на гриле.",
+    },
+  },
+  price: 87,
+  images: {
+    card: lambChopsCard,
+    card2x: lambChopsCard2x,
+    full: lambChopsFull,
+  },
+  nutrition: {
+    calories: 930,
+    protein: 75,
+    fat: 80,
+    carbs: 0,
+  },
+  ingredients: [
+    "Lamb chops (raw)",
+    "Cooking oil",
+    "Salt (Est.)",
+    "Black pepper (Est.)",
+  ],
+};
 
 export const BoiledRice = {
   id: 58,
+  isActive: true,
   slug: {
     en: "boiled-rice",
     ru: "varenyy-ris",
@@ -2845,6 +2919,7 @@ export const BoiledRice = {
 
 export const GrilledVegetable = {
   id: 59,
+  isActive: true,
   slug: {
     en: "grilled-vegetable",
     ru: "ovoshchi-na-grile",
@@ -2892,6 +2967,7 @@ export const GrilledVegetable = {
 
 export const SweetPotatoFries = {
   id: 60,
+  isActive: true,
   slug: {
     en: "sweet-potato-fries",
     ru: "sladkiy-kartofel-fri",
@@ -2933,6 +3009,7 @@ export const SweetPotatoFries = {
 
 export const MashedPotatoes = {
   id: 61,
+  isActive: true,
   slug: {
     en: "mashed-potatoes",
     ru: "kartofelnoe-pyure",
@@ -2974,6 +3051,7 @@ export const MashedPotatoes = {
 
 export const FrenchFries = {
   id: 62,
+  isActive: true,
   slug: {
     en: "french-fries",
     ru: "kartofel-fri",
@@ -3014,6 +3092,7 @@ export const FrenchFries = {
 
 export const HomeStylePotatoWithMushroom = {
   id: 63,
+  isActive: true,
   slug: {
     en: "home-style-potato-with-mushroom",
     ru: "kartoshka-po-domashnemu-s-gribami",
@@ -3058,6 +3137,7 @@ export const HomeStylePotatoWithMushroom = {
 
 export const UzbekFlatbread = {
   id: 64,
+  isActive: true,
   slug: {
     en: "uzbek-flatbread",
     ru: "lepeshka",
@@ -3102,6 +3182,7 @@ export const UzbekFlatbread = {
 
 export const AdjikaSauce = {
   id: 65,
+  isActive: true,
   slug: {
     en: "adjika-sauce",
     ru: "adzhika",
@@ -3147,6 +3228,7 @@ export const AdjikaSauce = {
 
 export const HouseSpecialSauce = {
   id: 66,
+  isActive: true,
   slug: {
     en: "house-special-sauce",
     ru: "firmennyy-sous",
@@ -3191,6 +3273,7 @@ export const HouseSpecialSauce = {
 
 export const MustardSauce = {
   id: 67,
+  isActive: true,
   slug: {
     en: "mustard-sauce",
     ru: "gorchitsa",
@@ -3234,6 +3317,7 @@ export const MustardSauce = {
 
 export const TomatoGarlicSauce = {
   id: 68,
+  isActive: true,
   slug: {
     en: "tomato-garlic-sauce",
     ru: "tomatno-chesnochnyy-sous",
@@ -3279,6 +3363,7 @@ export const TomatoGarlicSauce = {
 
 export const RaspberryMors = {
   id: 76,
+  isActive: false,
   slug: {
     en: "raspberry-mors",
     ru: "malinovyy-mors",
@@ -3320,6 +3405,7 @@ export const RaspberryMors = {
 
 export const CranberyMors = {
   id: 77,
+  isActive: true,
   slug: {
     en: "cranbery-mors",
     ru: "klyukvennyy-mors",
@@ -3363,6 +3449,7 @@ export const CranberyMors = {
 // Nutrition was not supplied. Combo ingredients follow their component dishes.
 export const SourCream = {
   id: 78,
+  isActive: true,
   slug: {
     en: "sour-cream",
     ru: "smetana",
@@ -3396,6 +3483,7 @@ export const SourCream = {
 
 export const Honey = {
   id: 79,
+  isActive: true,
   slug: {
     en: "honey",
     ru: "myod",
@@ -3429,6 +3517,7 @@ export const Honey = {
 
 export const HomemadeBlueberryJam = {
   id: 80,
+  isActive: true,
   slug: {
     en: "homemade-blueberry-jam",
     ru: "domashnee-varenye-iz-golubiki",
@@ -3462,6 +3551,7 @@ export const HomemadeBlueberryJam = {
 
 export const CondensedMilk = {
   id: 81,
+  isActive: true,
   slug: {
     en: "condensed-milk",
     ru: "sgushchennoe-moloko",
@@ -3495,6 +3585,7 @@ export const CondensedMilk = {
 
 export const PickledTomato = {
   id: 82,
+  isActive: true,
   slug: {
     en: "pickled-tomato",
     ru: "marinovannye-pomidory",
@@ -3528,6 +3619,7 @@ export const PickledTomato = {
 
 export const PickledCucumber = {
   id: 83,
+  isActive: true,
   slug: {
     en: "pickled-cucumber",
     ru: "solenye-ogurtsy",
@@ -3561,6 +3653,7 @@ export const PickledCucumber = {
 
 export const PickledRedCabbage = {
   id: 84,
+  isActive: true,
   slug: {
     en: "pickled-red-cabbage",
     ru: "solenaya-krasnaya-kapusta",
@@ -3594,6 +3687,7 @@ export const PickledRedCabbage = {
 
 export const PickledWhiteCabbage = {
   id: 85,
+  isActive: true,
   slug: {
     en: "pickled-white-cabbage",
     ru: "solenaya-kapusta",
@@ -3627,6 +3721,7 @@ export const PickledWhiteCabbage = {
 
 export const RussianLunch = {
   id: 86,
+  isActive: true,
   slug: {
     en: "russian-lunch",
     ru: "russkiy-obed",
@@ -3666,6 +3761,7 @@ export const RussianLunch = {
 
 export const DumplingLovers = {
   id: 87,
+  isActive: true,
   slug: {
     en: "dumpling-lovers",
     ru: "dlya-lyubiteley-pelmeney",
@@ -3704,6 +3800,7 @@ export const DumplingLovers = {
 
 export const UzbekFeast = {
   id: 88,
+  isActive: true,
   slug: {
     en: "uzbek-feast",
     ru: "uzbekskoe-zastolye",
@@ -3743,6 +3840,7 @@ export const UzbekFeast = {
 
 export const GrillDuoForTwo = {
   id: 89,
+  isActive: true,
   slug: {
     en: "grill-duo-for-two",
     ru: "gril-duet-na-dvoikh",
@@ -3782,6 +3880,7 @@ export const GrillDuoForTwo = {
 
 export const BeefDinner = {
   id: 90,
+  isActive: true,
   slug: {
     en: "beef-dinner",
     ru: "uzhin-s-govyadinoy",
@@ -3820,6 +3919,7 @@ export const BeefDinner = {
 
 export const ChickenDinner = {
   id: 91,
+  isActive: true,
   slug: {
     en: "chicken-dinner",
     ru: "kurinyy-uzhin",
@@ -3856,8 +3956,49 @@ export const ChickenDinner = {
   ].flatMap((item) => item.ingredients ?? []))],
 };
 
+export const HomeStyleBeefPan = {
+  id: 92,
+  isActive: true,
+  slug: {
+    en: "home-style-beef-pan",
+    ru: "govyadina-na-skovorode-po-domashnemu",
+    ar: "miqlat-lahm-baqari-manziliya",
+  },
+  name: {
+    en: "Home Style Beef Pan (5 Items)",
+    ru: "Говядина на сковороде по-домашнему (5 блюд)",
+    ar: "مقلاة لحم بقري منزلية الصنع (٥ أصناف)",
+  },
+  categories: [{
+    en: "Combos",
+    ru: "Комбо",
+    ar: "الوجبات المجمعة",
+  }],
+  description: {
+    short: {
+      en: "Mushroom crêpes, carrot salad, tomato-garlic sauce, honey cake and Hot Pan.",
+      ru: "Блины с грибами, салат из моркови, томатно-чесночный соус, медовик и жаркое из говядины.",
+      ar: "فطائر روسية بالفطر، سلطة الجزر، صلصة الطماطم والثوم، كعكة العسل ومقلاة ساخنة باللحم البقري.",
+    },
+  },
+  price: 141,
+  images: {
+    card: homeStyleBeefPanCard,
+    card2x: homeStyleBeefPanCard2x,
+    full: homeStyleBeefPanFull,
+  },
+  ingredients: [...new Set([
+    RussianPancakesWithMushroom,
+    CarrotSalad,
+    TomatoGarlicSauce,
+    HoneyCake,
+    HotPan,
+  ].flatMap((item) => item.ingredients ?? []))],
+};
+
 export const CabbageRollsClassic = {
   id: 93,
+  isActive: true,
   slug: {
     en: "cabbage-rolls-classic",
     ru: "klassicheskie-golubtsy",
@@ -3894,7 +4035,8 @@ export const CabbageRollsClassic = {
   ].flatMap((item) => item.ingredients ?? []))],
 };
 
-export const MenuItems = [
+// Complete catalogue, including temporarily unavailable dishes.
+export const AllMenuItems = [
   ScrambledEggs,
   Omelette,
   PancakesWithCondensedMilk,
@@ -3903,6 +4045,7 @@ export const MenuItems = [
   RicePorridge,
   BuckwheatPorridge,
   OatmealPorridge,
+  BeefTongue,
   AssortedPickles,
   Holodec,
   EggplantRolls,
@@ -3947,10 +4090,10 @@ export const MenuItems = [
   ChickenSkewer,
   BeefSkewer,
   LambSkewer,
-  // MixedGrill,
+  MixedGrill,
   Buckwheat,
   LyulyaKebab,
-  // LambChops,
+  LambChops,
   BoiledRice,
   GrilledVegetable,
   SweetPotatoFries,
@@ -3978,7 +4121,11 @@ export const MenuItems = [
   GrillDuoForTwo,
   BeefDinner,
   ChickenDinner,
+  HomeStyleBeefPan,
   CabbageRollsClassic,
 ];
+
+// Public consumers must use this filtered list or Categories.
+export const MenuItems = AllMenuItems.filter((item) => item.isActive === true);
 
 export default MenuItems;

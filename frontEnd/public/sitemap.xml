@@ -1682,30 +1682,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vkusno.ae/en/menu/raspberry-mors</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/menu/raspberry-mors"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/malinovyy-mors"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mors-al-tut"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/raspberry-mors"/>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://vkusno.ae/ru/menu/malinovyy-mors</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/menu/raspberry-mors"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/malinovyy-mors"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mors-al-tut"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/raspberry-mors"/>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://vkusno.ae/ar/menu/mors-al-tut</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/menu/raspberry-mors"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/malinovyy-mors"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mors-al-tut"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/raspberry-mors"/>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://vkusno.ae/en/menu/cranbery-mors</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/menu/cranbery-mors"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/klyukvennyy-mors"/>
@@ -2063,6 +2039,30 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-uzhin"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asha-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-dinner"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/en/menu/home-style-beef-pan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyadina-na-skovorode-po-domashnemu"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqlat-lahm-baqari-manziliya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/ru/menu/govyadina-na-skovorode-po-domashnemu</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyadina-na-skovorode-po-domashnemu"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqlat-lahm-baqari-manziliya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/ar/menu/miqlat-lahm-baqari-manziliya</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyadina-na-skovorode-po-domashnemu"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqlat-lahm-baqari-manziliya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
     <priority>0.6</priority>
   </url>
   <url>

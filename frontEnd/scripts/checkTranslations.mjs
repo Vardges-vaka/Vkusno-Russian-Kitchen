@@ -10,6 +10,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { readMenuData } from "./readMenuData.mjs";
 
 // new URL("../") already resolves to frontEnd/; path.dirname on a trailing
 // slash would climb one level too far, to the repo root.
@@ -146,41 +147,27 @@ for (const namespace of namespaces) {
 // search indexes them across all languages); long ones moved to the MenuItems
 // namespace. Cross-check the two, because the original defect was all 70
 // Arabic long descriptions being copies of the short one.
-const menuRaw = await readFile(
-  path.join(ROOT, "src/05_pages/public/menu/04_menu_const/menuItems.js"),
-  "utf8",
-);
-
-// Dishes are taken off the menu by commenting the block out, so comment lines
-// must go before parsing - otherwise a disabled dish still counts as active
-// and its locale entry looks required rather than orphaned.
-const menuSource = menuRaw
-  .split(/\r?\n/)
-  .filter((line) => !/^\s*\/\//.test(line))
-  .join("\n");
-
-const grab = (chunk, lang) =>
-  chunk.match(new RegExp(`${lang}:\\s*"((?:[^"\\\\]|\\\\.)*)"`))?.[1];
-
+const { AllMenuItems, MenuItems } = await readMenuData();
 const shortById = {};
-for (const [, id, shortChunk] of menuSource.matchAll(
-  /\n {2}id: (\d+),[\s\S]*?short: \{([\s\S]*?)\},/g,
-)) {
-  shortById[id] = Object.fromEntries(
-    ["en", "ru", "ar"].map((lang) => [lang, grab(shortChunk, lang)]),
-  );
+for (const item of AllMenuItems) {
+  if (typeof item.isActive !== "boolean") {
+    fail(`menuItems.js: item ${item.id} must declare isActive as true or false`);
+  }
+  if (Object.hasOwn(shortById, item.id)) {
+    fail(`menuItems.js: duplicate item id ${item.id}`);
+  }
+  shortById[item.id] = item.description?.short ?? {};
+  for (const lang of languages) {
+    if (typeof shortById[item.id][lang] !== "string" || !shortById[item.id][lang].trim()) {
+      fail(`menuItems.js: item ${item.id} is missing its ${lang} short description`);
+    }
+  }
 }
 
-// Dishes taken off the menu temporarily keep their translated copy - the
-// three currently disabled are due back within the year, and rewriting three
-// languages of description would be pure waste. So a locale entry for a
-// DISABLED dish is allowed; one for a dish that never existed is not.
-const disabledIds = new Set(
-  [...menuRaw.matchAll(/^\s*\/\/\s*id: (\d+),/gm)].map((m) => m[1]),
-);
-
+// Keep validating inactive dishes so switching them back on restores complete
+// translated content. Only ids absent from the full catalog are orphaned.
 const itemIds = Object.keys(shortById);
-if (!itemIds.length) fail("menuItems.js: no items parsed - has the shape changed?");
+if (!itemIds.length) fail("menuItems.js: the full menu catalog is empty");
 
 let duplicated = 0;
 for (const lang of languages) {
@@ -192,6 +179,10 @@ for (const lang of languages) {
       fail(`${lang}/MenuItems.json: missing long description for item ${id}`);
       continue;
     }
+    if (typeof long !== "string" || !long.trim()) {
+      fail(`${lang}/MenuItems.json: item ${id} long description is empty or not text`);
+      continue;
+    }
     if (long === shortById[id][lang]) {
       duplicated += 1;
       if (duplicated <= 5) {
@@ -200,10 +191,8 @@ for (const lang of languages) {
     }
   }
 
-  // An id in the locale file with no matching dish is dead weight - unless
-  // the dish is merely commented out, in which case it is deliberate.
   for (const id of Object.keys(longs)) {
-    if (!shortById[id] && !disabledIds.has(id)) {
+    if (!Object.hasOwn(shortById, id)) {
       fail(`${lang}/MenuItems.json: long description for unknown item ${id}`);
     }
   }
@@ -218,6 +207,6 @@ if (failures.length) {
 
 console.log(
   `translations ok: ${languages.length} languages x ${namespaces.length} namespaces, ` +
-    `${itemIds.length} active menu items checked` +
-    (disabledIds.size ? `, ${disabledIds.size} disabled preserved` : ""),
+    `${itemIds.length} known menu items checked ` +
+    `(${MenuItems.length} active, ${AllMenuItems.filter((item) => item.isActive === false).length} inactive preserved)`,
 );

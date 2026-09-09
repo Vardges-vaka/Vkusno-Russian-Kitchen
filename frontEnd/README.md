@@ -165,6 +165,7 @@ holds one exported object per dish.
 ```js
 export const PelmeniWithMeat = {
   id: 36,
+  isActive: true,
   slug: { en: "pelmeni-with-meat", ru: "pelmeni", ar: "pelmeni-bil-lahm" },
   name: { en: …, ar: …, ru: … },
   categories: [{ en: …, ar: …, ru: … }],
@@ -192,13 +193,34 @@ Things that are not obvious:
   ~3.8 KB each they sat under Vite's inline limit and were base64-embedded into
   the menu chunk - 268 KB of it. `assetsInlineLimit: 0` now prevents a repeat.
 
-### Taking a dish off the menu
+### Temporarily hiding or restoring a dish
 
-Comment out its block in `menuItems.js` **and** its entries in `CATEGORIES.js`
-(both the import and the category's `menuItems` array) - that is how the drinks
-are disabled. Then delete its id from the three `MenuItems.json` files, or
-`check:i18n` will flag the orphan. `npm run sitemap` picks up the change; the
-generator ignores commented-out blocks so a removed dish is not advertised.
+Change just the dish's `isActive` property in
+`src/05_pages/public/menu/04_menu_const/menuItems.js`:
+
+```js
+isActive: false, // Change to true to restore the item.
+```
+
+Inactive dishes disappear from the menu, search, homepage, and sitemap. Their
+direct URLs redirect to the menu. Categories with no active dishes disappear
+automatically. Photos, translations, ingredients, prices, and category positions
+stay in place so restoring an item needs only the same flag change.
+
+Use a boolean `true` or `false`, without quotation marks. The build validates
+the flag and descriptions for every item, including inactive ones. Beef Tongue,
+Mixed Grill, and Lamb Chops are already set to `false`.
+
+Combos have their own flag. If a temporarily unavailable dish also belongs to a
+combo, turn off that combo separately when needed.
+
+`AllMenuItems` contains the complete catalogue. Public code uses the filtered
+`MenuItems` or `Categories` exports. When adding a new dish, keep it in
+`AllMenuItems` and its category regardless of whether it starts active.
+
+Run `npm test`, `npm run lint`, and `npm run build` after editing. The build
+regenerates the sitemap. This is a static site, so deploy the rebuilt site when
+you want the change to reach visitors.
 
 ### Images
 
