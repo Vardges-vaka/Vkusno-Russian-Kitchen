@@ -1,0 +1,234 @@
+.MenuDownload_overlay {
+  box-sizing: border-box;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  animation: menuDownloadFade 0.2s ease-out;
+}
+
+.MenuDownload_dialog {
+  box-sizing: border-box;
+  position: relative;
+  inline-size: 100%;
+  min-inline-size: 0;
+  max-block-size: 85vh;
+  max-block-size: 85dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-block: 24px max(24px, env(safe-area-inset-bottom));
+  padding-inline: 20px;
+  border: 1px solid var(--border_color);
+  border-radius: 16px 16px 0 0;
+  background-color: var(--surface_color);
+  color: var(--text_color);
+  box-shadow: 0 12px 40px var(--shadow_color);
+  text-align: start;
+  cursor: default;
+  animation: menuDownloadRise 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.MenuDownload_dialog_close {
+  box-sizing: border-box;
+  position: absolute;
+  inset-block-start: 12px;
+  inset-inline-end: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--text_muted_color);
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.MenuDownload_dialog_close:hover {
+  background-color: var(--accent_soft_color);
+  color: var(--accent_color);
+}
+
+.MenuDownload_dialog_header {
+  margin-block-end: 24px;
+  padding-inline-end: 44px;
+}
+
+.MenuDownload_dialog_title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.MenuDownload_dialog_description {
+  margin-block: 12px 0;
+  margin-inline: 0;
+  color: var(--text_muted_color);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.MenuDownload_dialog_field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-inline-size: 0;
+}
+
+.MenuDownload_dialog_label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.MenuDownload_dialog_select {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: 44px;
+  padding-block: 10px;
+  padding-inline: 12px;
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+  background-color: var(--surface_color);
+  color: var(--text_color);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: start;
+  cursor: pointer;
+}
+
+.MenuDownload_dialog_select option {
+  background-color: var(--surface_color);
+  color: var(--text_color);
+}
+
+.MenuDownload_dialog_actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block-start: 24px;
+}
+
+.MenuDownload_dialog_download,
+.MenuDownload_dialog_cancel {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-inline-size: 0;
+  min-block-size: 44px;
+  padding-block: 10px;
+  padding-inline: 16px;
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.MenuDownload_dialog_download {
+  border-color: var(--accent_color);
+  background-color: var(--accent_color);
+  color: var(--surface_color);
+}
+
+.MenuDownload_dialog_download:hover {
+  border-color: var(--accent_hover_color);
+  background-color: var(--accent_hover_color);
+}
+
+.MenuDownload_dialog_cancel {
+  background-color: transparent;
+  color: var(--text_color);
+}
+
+.MenuDownload_dialog_cancel:hover {
+  background-color: var(--accent_soft_color);
+}
+
+.MenuDownload_dialog:focus-visible,
+.MenuDownload_dialog_close:focus-visible,
+.MenuDownload_dialog_select:focus-visible,
+.MenuDownload_dialog_download:focus-visible,
+.MenuDownload_dialog_cancel:focus-visible {
+  outline: 2px solid var(--accent_color);
+  outline-offset: 4px;
+}
+
+@keyframes menuDownloadFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menuDownloadRise {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .MenuDownload_overlay {
+    align-items: center;
+    padding: 24px;
+  }
+
+  .MenuDownload_dialog {
+    max-inline-size: 420px;
+    max-block-size: min(90vh, calc(100vh - 48px));
+    max-block-size: min(90dvh, calc(100dvh - 48px));
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .MenuDownload_dialog_actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .MenuDownload_dialog_download {
+    flex-grow: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .MenuDownload_overlay,
+  .MenuDownload_dialog {
+    animation: none;
+  }
+
+  .MenuDownload_dialog_close,
+  .MenuDownload_dialog_download,
+  .MenuDownload_dialog_cancel {
+    transition: none;
+  }
+}

@@ -45,6 +45,14 @@
   margin-top: 24px;
 }
 
+.Menu_hero_actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-block-start: 16px;
+  text-align: start;
+}
+
 .Menu_emptyState {
   margin: 64px 0;
   text-align: center;

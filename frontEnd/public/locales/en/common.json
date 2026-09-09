@@ -11,6 +11,15 @@
       "contact": "Contact"
     }
   },
+  "menuDownload": {
+    "trigger": "Download menu",
+    "title": "Download menu",
+    "description": "Choose a language for your menu PDF.",
+    "languageLabel": "Menu language",
+    "download": "Download PDF",
+    "cancel": "Cancel",
+    "close": "Close"
+  },
   "error": {
     "title": "Something went wrong",
     "message": "An unexpected error occurred. Please reload the page or come back later.",

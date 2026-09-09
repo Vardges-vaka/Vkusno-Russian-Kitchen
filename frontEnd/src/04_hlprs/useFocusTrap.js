@@ -68,7 +68,11 @@ export const useFocusTrap = (isActive = true) => {
       container.removeEventListener("keydown", handleKeyDown);
       // Only restore if the trigger is still in the document - after a route
       // change (closing a dish overlay) it may well be gone.
-      if (previouslyFocused instanceof HTMLElement && previouslyFocused.isConnected) {
+      const active = document.activeElement;
+      // A route may have already focused its next dialog. Do not steal that
+      // focus while the previous dialog's passive cleanup is still running.
+      const canRestore = !active || active === document.body || container.contains(active);
+      if (canRestore && previouslyFocused instanceof HTMLElement && previouslyFocused.isConnected) {
         previouslyFocused.focus({ preventScroll: true });
       }
     };

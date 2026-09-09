@@ -222,6 +222,30 @@ Run `npm test`, `npm run lint`, and `npm run build` after editing. The build
 regenerates the sitemap. This is a static site, so deploy the rebuilt site when
 you want the change to reach visitors.
 
+### Menu PDF downloads
+
+Menu and Contact share a **Download menu** button. The chooser starts in the
+current website language and lets visitors select English, Russian, or Arabic
+without changing the website language. The browser handles the PDF download;
+some browsers open the file with their own save controls.
+
+To update a downloadable menu, replace the corresponding file in
+`src/01_assets/menuPDF/`, keeping its filename:
+
+- `menu_en.pdf` — English
+- `menu_ru.pdf` — Russian
+- `menu_ar.pdf` — Arabic
+
+The folder's `_menuPDF.index.js` maps each language to an imported URL and a
+readable saved filename. Vite emits the PDFs as separate, hashed assets; their
+contents are requested only when a visitor activates **Download PDF**.
+
+These are manually supplied snapshots. Editing website items or changing
+`isActive` does not change the PDF contents; update the relevant PDFs when
+their menus need to match. Run `npm run lint`, `npm test`, and `npm run build`,
+then check all three downloads with `npm run preview` before deploying the
+rebuilt site. Replacing a PDF changes its built asset hash.
+
 ### Images
 
 Source JPEGs live beside their WebP output; only WebP is imported.

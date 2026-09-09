@@ -1,0 +1,48 @@
+.MenuDownload {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+.MenuDownload_button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-block-size: 44px;
+  max-inline-size: 100%;
+  padding-block: 10px;
+  padding-inline: 16px;
+  border: 1px solid var(--accent_color);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--accent_color);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: start;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.MenuDownload_button svg {
+  flex-shrink: 0;
+  inline-size: 18px;
+  block-size: 18px;
+}
+
+.MenuDownload_button:hover {
+  background-color: var(--accent_soft_color);
+}
+
+.MenuDownload_button:focus-visible {
+  outline: 2px solid var(--accent_color);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .MenuDownload_button {
+    transition: none;
+  }
+}

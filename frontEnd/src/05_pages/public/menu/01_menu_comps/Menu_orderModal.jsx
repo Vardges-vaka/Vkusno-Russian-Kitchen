@@ -6,6 +6,7 @@ import {
   translateFn,
   pickLocale,
   useFocusTrap,
+  useBodyScrollLock,
 } from "../../../../04_hlprs/_hlprs.index.js";
 import { useMapContext } from "../../../../03_context/_context.index.js";
 import {
@@ -48,6 +49,7 @@ const formatHours = (timing, t) =>
 const Menu_orderModal = ({ item, lang, t, onClose }) => {
   // Focus goes into the dialog, Tab stays inside, and returns on close.
   const dialogRef = useFocusTrap();
+  useBodyScrollLock();
   const { selectedBranchId, selectBranch } = useMapContext();
   const name = pickLocale(item.name, lang);
   const selectedBranch = BRANCHES.find(
@@ -114,13 +116,10 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
     selectBranch(null);
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = previousOverflow;
       selectBranch(null);
     };
   }, [onClose, selectBranch]);

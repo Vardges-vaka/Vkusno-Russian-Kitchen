@@ -1,4 +1,5 @@
 import { useMenu } from "./02_menu_hooks/_menu_hooks.index.js";
+import { MenuDownload } from "../_shared_comps/_public.shared_comps.index.js";
 import { PageMeta } from "../../../02_comps/_comps.index.js";
 import { graph, menuNode } from "../../../04_hlprs/_hlprs.index.js";
 import { Categories } from "./04_menu_const/CATEGORIES.js";
@@ -39,6 +40,9 @@ const Menu = () => {
       <header className="Menu_hero">
         <h1 className="Menu_hero_lead">{t("menu.hero.lead")}</h1>
         <p className="Menu_hero_description">{t("menu.hero.description")}</p>
+        <div className="Menu_hero_actions">
+          <MenuDownload key={lang} lang={lang} t={t} />
+        </div>
         <Menu_searchBar
           value={searchQuery}
           onChange={handlers.handleSearchChange}

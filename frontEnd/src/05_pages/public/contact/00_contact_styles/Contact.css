@@ -41,6 +41,14 @@
   margin-top: 24px;
 }
 
+.Contact_hero_actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-block-start: 16px;
+  text-align: start;
+}
+
 .Contact_connect_panel {
   display: flex;
   flex-direction: column;

@@ -10,3 +10,4 @@ export * from "./dishPlaceholder.js";
 export * from "./menuItems/menuItemExports.js";
 export * from "./socialLogos/_socialLogos.index.js";
 export * from "./aggregatorLogos/_aggregatorLogos.index.js";
+export * from "./menuPDF/_menuPDF.index.js";

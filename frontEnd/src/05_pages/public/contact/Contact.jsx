@@ -1,4 +1,5 @@
 import { useContact } from "./02_contact_hooks/_contact_hooks.index.js";
+import { MenuDownload } from "../_shared_comps/_public.shared_comps.index.js";
 import {
   Contact_infoPanel,
   Contact_socials,
@@ -34,6 +35,9 @@ const Contact = () => {
       <header className="Contact_hero">
         <h1 className="Contact_hero_title">{t("contact.title")}</h1>
         <p className="Contact_hero_subtitle">{t("contact.subtitle")}</p>
+        <div className="Contact_hero_actions">
+          <MenuDownload key={lang} lang={lang} t={t} />
+        </div>
       </header>
 
       <section

@@ -6,12 +6,14 @@ import {
   translateFn,
   pickLocale,
   useFocusTrap,
+  useBodyScrollLock,
 } from "../../../../04_hlprs/_hlprs.index.js";
 import Menu_itemDetail from "./Menu_itemDetail.jsx";
 import "../00_menu_styles/Menu_itemModal.css";
 
 const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
   const dialogRef = useFocusTrap();
+  useBodyScrollLock();
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -19,12 +21,9 @@ const Menu_itemModal = ({ item, lang, t, onClose, onOrder }) => {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = previousOverflow;
     };
   }, [onClose]);
 
