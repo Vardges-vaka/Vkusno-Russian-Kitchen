@@ -3460,11 +3460,13 @@ export const SourCream = {
     ru: "Сметана",
     ar: "كريمة حامضة",
   },
-  categories: [{
-    en: "Sauces",
-    ru: "Соусы",
-    ar: "الصلصات",
-  }],
+  categories: [
+    {
+      en: "Sauces",
+      ru: "Соусы",
+      ar: "الصلصات",
+    },
+  ],
   description: {
     short: {
       en: "Traditional sour cream.",
@@ -3494,11 +3496,13 @@ export const Honey = {
     ru: "Мёд",
     ar: "عسل",
   },
-  categories: [{
-    en: "Sauces",
-    ru: "Соусы",
-    ar: "الصلصات",
-  }],
+  categories: [
+    {
+      en: "Sauces",
+      ru: "Соусы",
+      ar: "الصلصات",
+    },
+  ],
   description: {
     short: {
       en: "A generous portion of honey.",
@@ -3528,11 +3532,13 @@ export const HomemadeBlueberryJam = {
     ru: "Домашнее варенье",
     ar: "مربى توت أزرق منزلي الصنع",
   },
-  categories: [{
-    en: "Sauces",
-    ru: "Соусы",
-    ar: "الصلصات",
-  }],
+  categories: [
+    {
+      en: "Sauces",
+      ru: "Соусы",
+      ar: "الصلصات",
+    },
+  ],
   description: {
     short: {
       en: "Homemade blueberry jam.",
@@ -3562,11 +3568,13 @@ export const CondensedMilk = {
     ru: "Сгущённое молоко",
     ar: "حليب مكثف محلى",
   },
-  categories: [{
-    en: "Sauces",
-    ru: "Соусы",
-    ar: "الصلصات",
-  }],
+  categories: [
+    {
+      en: "Sauces",
+      ru: "Соусы",
+      ar: "الصلصات",
+    },
+  ],
   description: {
     short: {
       en: "A generous portion of condensed milk.",
@@ -3596,11 +3604,13 @@ export const PickledTomato = {
     ru: "Маринованные помидоры",
     ar: "طماطم مخللة",
   },
-  categories: [{
-    en: "Cold Appetizers",
-    ru: "Холодные Закуски",
-    ar: "المقبلات الباردة",
-  }],
+  categories: [
+    {
+      en: "Cold Appetizers",
+      ru: "Холодные Закуски",
+      ar: "المقبلات الباردة",
+    },
+  ],
   description: {
     short: {
       en: "Pickled red tomato slices.",
@@ -3630,11 +3640,13 @@ export const PickledCucumber = {
     ru: "Солёные огурцы",
     ar: "خيار مخلل",
   },
-  categories: [{
-    en: "Cold Appetizers",
-    ru: "Холодные Закуски",
-    ar: "المقبلات الباردة",
-  }],
+  categories: [
+    {
+      en: "Cold Appetizers",
+      ru: "Холодные Закуски",
+      ar: "المقبلات الباردة",
+    },
+  ],
   description: {
     short: {
       en: "Pickled cucumber slices.",
@@ -3664,11 +3676,13 @@ export const PickledRedCabbage = {
     ru: "Солёная красная капуста",
     ar: "ملفوف أحمر مخلل",
   },
-  categories: [{
-    en: "Cold Appetizers",
-    ru: "Холодные Закуски",
-    ar: "المقبلات الباردة",
-  }],
+  categories: [
+    {
+      en: "Cold Appetizers",
+      ru: "Холодные Закуски",
+      ar: "المقبلات الباردة",
+    },
+  ],
   description: {
     short: {
       en: "Pickled red cabbage.",
@@ -3698,11 +3712,13 @@ export const PickledWhiteCabbage = {
     ru: "Солёная капуста",
     ar: "ملفوف أبيض مخلل",
   },
-  categories: [{
-    en: "Cold Appetizers",
-    ru: "Холодные Закуски",
-    ar: "المقبلات الباردة",
-  }],
+  categories: [
+    {
+      en: "Cold Appetizers",
+      ru: "Холодные Закуски",
+      ar: "المقبلات الباردة",
+    },
+  ],
   description: {
     short: {
       en: "Pickled white cabbage.",
@@ -3732,11 +3748,13 @@ export const RussianLunch = {
     ru: "Русский обед (5 блюд)",
     ar: "غداء روسي (٥ أصناف)",
   },
-  categories: [{
-    en: "Combos",
-    ru: "Комбо",
-    ar: "الوجبات المجمعة",
-  }],
+  categories: [
+    {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+  ],
   description: {
     short: {
       en: "Borscht, Olivier salad, meat pelmeni, cabbage pie and honey cake.",
@@ -3750,13 +3768,17 @@ export const RussianLunch = {
     card2x: russianLunchCard2x,
     full: russianLunchFull,
   },
-  ingredients: [...new Set([
-    RussianBorscht,
-    RussianOlivierSalad,
-    PelmeniWithMeat,
-    BakedRussianPieWithCabbage,
-    HoneyCake,
-  ].flatMap((item) => item.ingredients ?? []))],
+  ingredients: [
+    ...new Set(
+      [
+        RussianBorscht,
+        RussianOlivierSalad,
+        PelmeniWithMeat,
+        BakedRussianPieWithCabbage,
+        HoneyCake,
+      ].flatMap((item) => item.ingredients ?? []),
+    ),
+  ],
 };
 
 export const DumplingLovers = {
@@ -3772,11 +3794,13 @@ export const DumplingLovers = {
     ru: "Для любителей пельменей (4 блюда)",
     ar: "عشاق الزلابية (٤ أصناف)",
   },
-  categories: [{
-    en: "Combos",
-    ru: "Комбо",
-    ar: "الوجبات المجمعة",
-  }],
+  categories: [
+    {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+  ],
   description: {
     short: {
       en: "Meat pelmeni, beef manti, potato vareniki and a cabbage pie.",
@@ -3790,170 +3814,16 @@ export const DumplingLovers = {
     card2x: dumplingLoversCard2x,
     full: dumplingLoversFull,
   },
-  ingredients: [...new Set([
-    PelmeniWithMeat,
-    MantiWithMeat,
-    VarenikiWithPotato,
-    BakedRussianPieWithCabbage,
-  ].flatMap((item) => item.ingredients ?? []))],
-};
-
-export const UzbekFeast = {
-  id: 88,
-  isActive: true,
-  slug: {
-    en: "uzbek-feast",
-    ru: "uzbekskoe-zastolye",
-    ar: "walima-uzbakiya",
-  },
-  name: {
-    en: "Uzbek Feast (5 Items)",
-    ru: "Узбекское застолье (5 блюд)",
-    ar: "وليمة أوزبكية (٥ أصناف)",
-  },
-  categories: [{
-    en: "Combos",
-    ru: "Комбо",
-    ar: "الوجبات المجمعة",
-  }],
-  description: {
-    short: {
-      en: "Beef plov, manti, Shakarob salad, flatbread and cranberry mors.",
-      ru: "Узбекский плов, манты, шакароб, лепёшка и клюквенный морс.",
-      ar: "بلوف لحم بقري، مانتي، شاكاروب، خبز مسطح ومورس التوت البري.",
-    },
-  },
-  price: 142,
-  images: {
-    card: uzbekFeastCard,
-    card2x: uzbekFeastCard2x,
-    full: uzbekFeastFull,
-  },
-  ingredients: [...new Set([
-    UzbekBeefPlov,
-    MantiWithMeat,
-    Shakarob,
-    UzbekFlatbread,
-    CranberyMors,
-  ].flatMap((item) => item.ingredients ?? []))],
-};
-
-export const GrillDuoForTwo = {
-  id: 89,
-  isActive: true,
-  slug: {
-    en: "grill-duo-for-two",
-    ru: "gril-duet-na-dvoikh",
-    ar: "mashawi-li-shakhsayn",
-  },
-  name: {
-    en: "Grill Duo for Two (5 Items)",
-    ru: "Гриль-дуэт на двоих (5 блюд)",
-    ar: "مشاوي لشخصين (٥ أصناف)",
-  },
-  categories: [{
-    en: "Combos",
-    ru: "Комбо",
-    ar: "الوجبات المجمعة",
-  }],
-  description: {
-    short: {
-      en: "Chicken skewer, lyulya kebab, Achichuk, flatbread and house sauce.",
-      ru: "Куриный шашлык, люля-кебаб, ачичук, лепёшка и фирменный соус.",
-      ar: "سيخ دجاج، كباب ليليا، أتشيتشوك، خبز مسطح وصلصة خاصة بالمطعم.",
-    },
-  },
-  price: 145,
-  images: {
-    card: grillDuoForTwoCard,
-    card2x: grillDuoForTwoCard2x,
-    full: grillDuoForTwoFull,
-  },
-  ingredients: [...new Set([
-    ChickenSkewer,
-    LyulyaKebab,
-    UzbekAchichuk,
-    UzbekFlatbread,
-    HouseSpecialSauce,
-  ].flatMap((item) => item.ingredients ?? []))],
-};
-
-export const BeefDinner = {
-  id: 90,
-  isActive: true,
-  slug: {
-    en: "beef-dinner",
-    ru: "uzhin-s-govyadinoy",
-    ar: "asha-lahm-baqari",
-  },
-  name: {
-    en: "Beef Dinner (4 Items)",
-    ru: "Ужин с говядиной (4 блюда)",
-    ar: "عشاء لحم بقري (٤ أصناف)",
-  },
-  categories: [{
-    en: "Combos",
-    ru: "Комбо",
-    ar: "الوجبات المجمعة",
-  }],
-  description: {
-    short: {
-      en: "Beef Stroganoff, Vinegret salad, beef samsa and cranberry mors.",
-      ru: "Бефстроганов, винегрет, самса из говядины и клюквенный морс.",
-      ar: "ستروجانوف لحم بقري، سلطة فينيغريت، سمبوسة باللحم ومورس التوت البري.",
-    },
-  },
-  price: 129,
-  images: {
-    card: beefDinnerCard,
-    card2x: beefDinnerCard2x,
-    full: beefDinnerFull,
-  },
-  ingredients: [...new Set([
-    BeefStroganoff,
-    Vinegret,
-    SamsaWithMeat,
-    CranberyMors,
-  ].flatMap((item) => item.ingredients ?? []))],
-};
-
-export const ChickenDinner = {
-  id: 91,
-  isActive: true,
-  slug: {
-    en: "chicken-dinner",
-    ru: "kurinyy-uzhin",
-    ar: "asha-dajaj",
-  },
-  name: {
-    en: "Chicken Dinner (4 Items)",
-    ru: "Куриный ужин (4 блюда)",
-    ar: "عشاء دجاج (٤ أصناف)",
-  },
-  categories: [{
-    en: "Combos",
-    ru: "Комбо",
-    ar: "الوجبات المجمعة",
-  }],
-  description: {
-    short: {
-      en: "Chicken Kiev, chicken noodle soup, Olivier salad and a cabbage pie.",
-      ru: "Котлета по-киевски, куриный суп с лапшой, оливье и пирожок с капустой.",
-      ar: "دجاج كييف، شوربة الدجاج بالشعيرية، سلطة أوليفييه وفطيرة بالملفوف.",
-    },
-  },
-  price: 127,
-  images: {
-    card: chickenDinnerCard,
-    card2x: chickenDinnerCard2x,
-    full: chickenDinnerFull,
-  },
-  ingredients: [...new Set([
-    ChickenKiev,
-    ChickenNoodlesSoup,
-    RussianOlivierSalad,
-    BakedRussianPieWithCabbage,
-  ].flatMap((item) => item.ingredients ?? []))],
+  ingredients: [
+    ...new Set(
+      [
+        PelmeniWithMeat,
+        MantiWithMeat,
+        VarenikiWithPotato,
+        BakedRussianPieWithCabbage,
+      ].flatMap((item) => item.ingredients ?? []),
+    ),
+  ],
 };
 
 export const HomeStyleBeefPan = {
@@ -3969,11 +3839,13 @@ export const HomeStyleBeefPan = {
     ru: "Говядина на сковороде по-домашнему (5 блюд)",
     ar: "مقلاة لحم بقري منزلية الصنع (٥ أصناف)",
   },
-  categories: [{
-    en: "Combos",
-    ru: "Комбо",
-    ar: "الوجبات المجمعة",
-  }],
+  categories: [
+    {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+  ],
   description: {
     short: {
       en: "Mushroom crêpes, carrot salad, tomato-garlic sauce, honey cake and Hot Pan.",
@@ -3987,13 +3859,196 @@ export const HomeStyleBeefPan = {
     card2x: homeStyleBeefPanCard2x,
     full: homeStyleBeefPanFull,
   },
-  ingredients: [...new Set([
-    RussianPancakesWithMushroom,
-    CarrotSalad,
-    TomatoGarlicSauce,
-    HoneyCake,
-    HotPan,
-  ].flatMap((item) => item.ingredients ?? []))],
+  ingredients: [
+    ...new Set(
+      [
+        RussianPancakesWithMushroom,
+        CarrotSalad,
+        TomatoGarlicSauce,
+        HoneyCake,
+        HotPan,
+      ].flatMap((item) => item.ingredients ?? []),
+    ),
+  ],
+};
+
+export const UzbekFeast = {
+  id: 88,
+  isActive: true,
+  slug: {
+    en: "uzbek-feast",
+    ru: "uzbekskoe-zastolye",
+    ar: "walima-uzbakiya",
+  },
+  name: {
+    en: "Uzbek Feast (5 Items)",
+    ru: "Узбекское застолье (5 блюд)",
+    ar: "وليمة أوزبكية (٥ أصناف)",
+  },
+  categories: [
+    {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+  ],
+  description: {
+    short: {
+      en: "Beef plov, manti, Shakarob salad, flatbread and cranberry mors.",
+      ru: "Узбекский плов, манты, шакароб, лепёшка и клюквенный морс.",
+      ar: "بلوف لحم بقري، مانتي، شاكاروب، خبز مسطح ومورس التوت البري.",
+    },
+  },
+  price: 142,
+  images: {
+    card: uzbekFeastCard,
+    card2x: uzbekFeastCard2x,
+    full: uzbekFeastFull,
+  },
+  ingredients: [
+    ...new Set(
+      [
+        UzbekBeefPlov,
+        MantiWithMeat,
+        Shakarob,
+        UzbekFlatbread,
+        CranberyMors,
+      ].flatMap((item) => item.ingredients ?? []),
+    ),
+  ],
+};
+
+export const GrillDuoForTwo = {
+  id: 89,
+  isActive: true,
+  slug: {
+    en: "grill-duo-for-two",
+    ru: "gril-duet-na-dvoikh",
+    ar: "mashawi-li-shakhsayn",
+  },
+  name: {
+    en: "Grill Duo for Two (5 Items)",
+    ru: "Гриль-дуэт на двоих (5 блюд)",
+    ar: "مشاوي لشخصين (٥ أصناف)",
+  },
+  categories: [
+    {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+  ],
+  description: {
+    short: {
+      en: "Chicken skewer, lyulya kebab, Achichuk, flatbread and house sauce.",
+      ru: "Куриный шашлык, люля-кебаб, ачичук, лепёшка и фирменный соус.",
+      ar: "سيخ دجاج، كباب ليليا، أتشيتشوك، خبز مسطح وصلصة خاصة بالمطعم.",
+    },
+  },
+  price: 145,
+  images: {
+    card: grillDuoForTwoCard,
+    card2x: grillDuoForTwoCard2x,
+    full: grillDuoForTwoFull,
+  },
+  ingredients: [
+    ...new Set(
+      [
+        ChickenSkewer,
+        LyulyaKebab,
+        UzbekAchichuk,
+        UzbekFlatbread,
+        HouseSpecialSauce,
+      ].flatMap((item) => item.ingredients ?? []),
+    ),
+  ],
+};
+
+export const BeefDinner = {
+  id: 90,
+  isActive: true,
+  slug: {
+    en: "beef-dinner",
+    ru: "uzhin-s-govyadinoy",
+    ar: "asha-lahm-baqari",
+  },
+  name: {
+    en: "Beef Dinner (4 Items)",
+    ru: "Ужин с говядиной (4 блюда)",
+    ar: "عشاء لحم بقري (٤ أصناف)",
+  },
+  categories: [
+    {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+  ],
+  description: {
+    short: {
+      en: "Beef Stroganoff, Vinegret salad, beef samsa and cranberry mors.",
+      ru: "Бефстроганов, винегрет, самса из говядины и клюквенный морс.",
+      ar: "ستروجانوف لحم بقري، سلطة فينيغريت، سمبوسة باللحم ومورس التوت البري.",
+    },
+  },
+  price: 129,
+  images: {
+    card: beefDinnerCard,
+    card2x: beefDinnerCard2x,
+    full: beefDinnerFull,
+  },
+  ingredients: [
+    ...new Set(
+      [BeefStroganoff, Vinegret, SamsaWithMeat, CranberyMors].flatMap(
+        (item) => item.ingredients ?? [],
+      ),
+    ),
+  ],
+};
+
+export const ChickenDinner = {
+  id: 91,
+  isActive: true,
+  slug: {
+    en: "chicken-dinner",
+    ru: "kurinyy-uzhin",
+    ar: "asha-dajaj",
+  },
+  name: {
+    en: "Chicken Dinner (4 Items)",
+    ru: "Куриный ужин (4 блюда)",
+    ar: "عشاء دجاج (٤ أصناف)",
+  },
+  categories: [
+    {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+  ],
+  description: {
+    short: {
+      en: "Chicken Kiev, chicken noodle soup, Olivier salad and a cabbage pie.",
+      ru: "Котлета по-киевски, куриный суп с лапшой, оливье и пирожок с капустой.",
+      ar: "دجاج كييف، شوربة الدجاج بالشعيرية، سلطة أوليفييه وفطيرة بالملفوف.",
+    },
+  },
+  price: 127,
+  images: {
+    card: chickenDinnerCard,
+    card2x: chickenDinnerCard2x,
+    full: chickenDinnerFull,
+  },
+  ingredients: [
+    ...new Set(
+      [
+        ChickenKiev,
+        ChickenNoodlesSoup,
+        RussianOlivierSalad,
+        BakedRussianPieWithCabbage,
+      ].flatMap((item) => item.ingredients ?? []),
+    ),
+  ],
 };
 
 export const CabbageRollsClassic = {
@@ -4009,11 +4064,13 @@ export const CabbageRollsClassic = {
     ru: "Классические голубцы (4 блюда)",
     ar: "ملفوف محشو كلاسيكي (٤ أصناف)",
   },
-  categories: [{
-    en: "Combos",
-    ru: "Комбо",
-    ar: "الوجبات المجمعة",
-  }],
+  categories: [
+    {
+      en: "Combos",
+      ru: "Комбо",
+      ar: "الوجبات المجمعة",
+    },
+  ],
   description: {
     short: {
       en: "Cabbage rolls, Shuba herring salad, a cabbage pie and cranberry mors.",
@@ -4027,12 +4084,16 @@ export const CabbageRollsClassic = {
     card2x: cabbageRollsClassicCard2x,
     full: cabbageRollsClassicFull,
   },
-  ingredients: [...new Set([
-    CabbageRollsWithRiceAndMincedMeat,
-    RussianHerringSaladShuba,
-    BakedRussianPieWithCabbage,
-    CranberyMors,
-  ].flatMap((item) => item.ingredients ?? []))],
+  ingredients: [
+    ...new Set(
+      [
+        CabbageRollsWithRiceAndMincedMeat,
+        RussianHerringSaladShuba,
+        BakedRussianPieWithCabbage,
+        CranberyMors,
+      ].flatMap((item) => item.ingredients ?? []),
+    ),
+  ],
 };
 
 // Complete catalogue, including temporarily unavailable dishes.
@@ -4121,8 +4182,8 @@ export const AllMenuItems = [
   GrillDuoForTwo,
   BeefDinner,
   ChickenDinner,
-  HomeStyleBeefPan,
   CabbageRollsClassic,
+  HomeStyleBeefPan,
 ];
 
 // Public consumers must use this filtered list or Categories.
