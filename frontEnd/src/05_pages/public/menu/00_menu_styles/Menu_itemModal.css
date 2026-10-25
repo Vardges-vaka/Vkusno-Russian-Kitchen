@@ -187,6 +187,19 @@
   border-radius: 999px;
 }
 
+/* Allergens reuse the ingredient pill: dark text and a gold edge so they stand
+   out (gold text itself is too light to read on the cream background). */
+.Menu_itemModal_allergen {
+  color: var(--text_color);
+  border-color: var(--gold_color);
+}
+
+.Menu_itemModal_allergens_none {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text_color);
+}
+
 @keyframes menuModalFade {
   from {
     opacity: 0;

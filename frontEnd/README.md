@@ -174,8 +174,17 @@ export const PelmeniWithMeat = {
   images: { full: pelmeniWithMeatFull },
   nutrition: { calories, protein, fat, carbs },
   ingredients: ["Ground beef", "Onion, finely chopped", …],
+  allergens: ["gluten", "eggs"],
 };
 ```
+
+- **Allergens are written by a script, not by hand.** `allergens` holds keys
+  translated through `menu.allergens.items` in `public/locales/*/Menu.json`.
+  They come from the dish's Supy recipe via the Recipe Book
+  (`WORKFLOWS\Costs\.workflows\scripts\sync_site_allergens.py`); correct an
+  allergen in `Costs\Recipe Book\Nutrition and Allergens.xlsx`, rebuild the
+  Recipe Book, then re-run that script. No field = not checked (block hidden);
+  `[]` = none of the 14 in the recipe.
 
 Things that are not obvious:
 
@@ -312,8 +321,8 @@ NotFound page carries `noindex, follow`.
 ## Known gaps
 
 - Menu images ship at 1200×900 (above).
-- No dietary or allergen tags. Allergens are derivable from `ingredients`;
-  **halal status and vegetarian are not** and need kitchen confirmation.
+- No dietary tags. **Halal status and vegetarian** are not derivable and need
+  kitchen confirmation. (Allergens are shown since 18 Oct 2026 - see Menu data.)
 - No analytics. Note that the privacy policy currently states none are used -
   that copy must change first, in all three languages.
 - Open Graph tags are static and site-level. Scrapers such as WhatsApp do not

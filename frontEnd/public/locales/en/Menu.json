@@ -38,6 +38,27 @@
       "carbs": "Carbs",
       "notice": "Nutritional values are approximate and may vary depending on portion size and preparation."
     },
+    "allergens": {
+      "title": "Allergens",
+      "none": "None of the 14 main allergens is in this dish's recipe.",
+      "notice": "Based on our recipes. Our kitchens also handle other allergens, so traces may be present. If you have an allergy, please contact us before ordering.",
+      "items": {
+        "gluten": "Gluten",
+        "crustaceans": "Crustaceans",
+        "eggs": "Eggs",
+        "fish": "Fish",
+        "peanuts": "Peanuts",
+        "soy": "Soy",
+        "milk": "Milk",
+        "treeNuts": "Tree nuts",
+        "celery": "Celery",
+        "mustard": "Mustard",
+        "sesame": "Sesame",
+        "sulphites": "Sulphites",
+        "lupin": "Lupin",
+        "molluscs": "Molluscs"
+      }
+    },
     "a11y": {
       "categoryNav": "Menu categories"
     },

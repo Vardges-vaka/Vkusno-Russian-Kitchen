@@ -12,7 +12,8 @@ import {
 } from "../04_menu_const/INGREDIENTS.js";
 import "../00_menu_styles/Menu_itemModal.css";
 
-// The dish content itself - photo, price, description, nutrition, ingredients.
+// The dish content itself - photo, price, description, nutrition, ingredients,
+// allergens.
 // Rendered in two places: inside Menu_itemModal (overlay, when you click a card)
 // and inside MenuItem (standalone page, on a direct hit or from a crawler).
 // Keeping it here means the two can never drift apart.
@@ -50,6 +51,11 @@ const Menu_itemDetail = ({ item, lang, t, onOrder, headingLevel = "h2" }) => {
         .map((ingredient) => pickIngredient(ingredient, lang)),
     ),
   ];
+
+  // Allergen keys ("gluten", "milk"...) written into menuItems.js from the
+  // Recipe Book by Costs' sync_site_allergens.py. No `allergens` field means
+  // not checked yet - hide the block; an empty list means none in the recipe.
+  const hasAllergens = Array.isArray(item.allergens);
 
   const NUTRITION_ROWS = hasNutrition
     ? [
@@ -124,6 +130,32 @@ const Menu_itemDetail = ({ item, lang, t, onOrder, headingLevel = "h2" }) => {
                 </li>
               ))}
             </ul>
+          </>
+        )}
+
+        {hasAllergens && (
+          <>
+            <h3 className="Menu_itemModal_sectionTitle">
+              {t("menu.allergens.title")}
+            </h3>
+            {item.allergens.length > 0 ? (
+              <ul className="Menu_itemModal_ingredients">
+                {item.allergens.map((key) => (
+                  <li
+                    key={key}
+                    className="Menu_itemModal_ingredient Menu_itemModal_allergen">
+                    {t(`menu.allergens.items.${key}`, { defaultValue: key })}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="Menu_itemModal_allergens_none">
+                {t("menu.allergens.none")}
+              </p>
+            )}
+            <p className="Menu_itemModal_nutrition_notice">
+              {t("menu.allergens.notice")}
+            </p>
           </>
         )}
       </div>

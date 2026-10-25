@@ -318,6 +318,7 @@ export const ScrambledEggs = {
     "Black pepper (Est.)",
     "Rye bread slice",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const Omelette = {
@@ -363,6 +364,7 @@ export const Omelette = {
     "Black pepper (Est.)",
     "Rye bread slice",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const PancakesWithCondensedMilk = {
@@ -407,6 +409,7 @@ export const PancakesWithCondensedMilk = {
     "Salt (Est.)",
     "Sweetened condensed milk",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const PancakesWithJam = {
@@ -443,6 +446,7 @@ export const PancakesWithJam = {
     carbs: 98,
   },
   ingredients: ["Pancakes (3 pcs)", "Berry jam"],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const RyeBreadJam = {
@@ -479,6 +483,7 @@ export const RyeBreadJam = {
     carbs: 56,
   },
   ingredients: ["Rye bread", "Berry jam", "Butter (Opt.)"],
+  allergens: ["gluten"],
 };
 
 export const RicePorridge = {
@@ -515,6 +520,7 @@ export const RicePorridge = {
     carbs: 102,
   },
   ingredients: ["Milk", "Water (Est.)", "Rice, rinsed", "Honey", "Walnuts"],
+  allergens: ["milk", "treeNuts"],
 };
 
 export const BuckwheatPorridge = {
@@ -558,6 +564,7 @@ export const BuckwheatPorridge = {
     "Walnuts, chopped",
     "Salt (Estimated)",
   ],
+  allergens: ["milk", "treeNuts"],
 };
 
 export const OatmealPorridge = {
@@ -600,6 +607,7 @@ export const OatmealPorridge = {
     "Honey",
     "Walnuts, chopped",
   ],
+  allergens: ["gluten", "milk", "treeNuts"],
 };
 
 // Off the menu temporarily. Set isActive to true when it returns; its photos,
@@ -703,6 +711,7 @@ export const AssortedPickles = {
     "Peppercorns",
     "Fresh dill",
   ],
+  allergens: [],
 };
 
 export const Holodec = {
@@ -751,6 +760,7 @@ export const Holodec = {
     "Water",
     "Gelatin (Estimated)",
   ],
+  allergens: ["gluten", "celery", "mustard", "sulphites"],
 };
 
 export const EggplantRolls = {
@@ -800,6 +810,7 @@ export const EggplantRolls = {
     "Pomegranate molasses (Estimated)",
     "Walnuts, crushed (Estimated)",
   ],
+  allergens: ["eggs", "treeNuts", "mustard"],
 };
 
 export const RussianBorscht = {
@@ -853,6 +864,7 @@ export const RussianBorscht = {
     "Fresh dill",
     "Sour cream (Opt.)",
   ],
+  allergens: ["gluten", "milk", "celery"],
 };
 
 export const ChickenNoodlesSoup = {
@@ -901,6 +913,7 @@ export const ChickenNoodlesSoup = {
     "Black pepper (Est.)",
     "Fresh dill (Est.)",
   ],
+  allergens: ["gluten", "eggs", "celery"],
 };
 
 export const MeatballSoup = {
@@ -948,6 +961,7 @@ export const MeatballSoup = {
     "Black pepper (Est.)",
     "Fresh dill (Est.)",
   ],
+  allergens: ["gluten", "celery"],
 };
 
 export const Okroshka = {
@@ -995,6 +1009,7 @@ export const Okroshka = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["eggs", "milk"],
 };
 
 export const Solyanka = {
@@ -1045,6 +1060,7 @@ export const Solyanka = {
     "Black pepper (Est.)",
     "Lemon slice",
   ],
+  allergens: ["gluten", "milk", "celery"],
 };
 
 export const RussianOlivierSalad = {
@@ -1091,6 +1107,7 @@ export const RussianOlivierSalad = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["eggs", "milk", "mustard"],
 };
 
 export const Vinegret = {
@@ -1138,6 +1155,7 @@ export const Vinegret = {
     "Salt (Estimated)",
     "Black pepper (Estimated)",
   ],
+  allergens: [],
 };
 
 export const RussianHerringSaladShuba = {
@@ -1182,6 +1200,7 @@ export const RussianHerringSaladShuba = {
     "Mayonnaise",
     "Salt",
   ],
+  allergens: ["eggs", "fish", "mustard"],
 };
 
 export const Shakarob = {
@@ -1227,6 +1246,7 @@ export const Shakarob = {
     "Salt (Estimated)",
     "Black pepper (Estimated)",
   ],
+  allergens: [],
 };
 
 export const UzbekAchichuk = {
@@ -1269,6 +1289,7 @@ export const UzbekAchichuk = {
     "Fresh chili, rings",
     "Salt (Estimated)",
   ],
+  allergens: [],
 };
 
 export const CarrotSalad = {
@@ -1313,6 +1334,7 @@ export const CarrotSalad = {
     "Salt (Estimated)",
     "Black pepper (Estimated)",
   ],
+  allergens: [],
 };
 
 export const GreekSalad = {
@@ -1361,6 +1383,7 @@ export const GreekSalad = {
     "Salt (Estimated)",
     "Black pepper (Estimated)",
   ],
+  allergens: ["milk"],
 };
 
 export const SpicySteakSalad = {
@@ -1410,6 +1433,7 @@ export const SpicySteakSalad = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["gluten", "fish", "soy", "molluscs"],
 };
 
 export const BakedRussianPieWithCabbage = {
@@ -1459,6 +1483,7 @@ export const BakedRussianPieWithCabbage = {
     "Carrot, chopped",
     "Fresh dill",
   ],
+  allergens: ["gluten", "eggs", "milk", "celery"],
 };
 
 export const BeetrootSalad = {
@@ -1503,6 +1528,7 @@ export const BeetrootSalad = {
     "Salt (Estimated)",
     "Black pepper (Estimated)",
   ],
+  allergens: ["eggs", "milk", "treeNuts", "mustard"],
 };
 
 export const BakedRussianPieWithPotatoAndMushroom = {
@@ -1552,6 +1578,7 @@ export const BakedRussianPieWithPotatoAndMushroom = {
     "Cooked mushroom (Est.)",
     "Fresh dill",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const SamsaWithMeat = {
@@ -1598,6 +1625,7 @@ export const SamsaWithMeat = {
     "Ground cumin",
     "Black pepper",
   ],
+  allergens: ["gluten", "eggs", "milk", "celery", "sesame"],
 };
 
 export const BunsWithJam = {
@@ -1634,6 +1662,7 @@ export const BunsWithJam = {
     carbs: 58,
   },
   ingredients: ["Pie-dough (see above)", "Berry jam", "Egg wash"],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const BakedHotDog = {
@@ -1681,6 +1710,7 @@ export const BakedHotDog = {
     "Egg (dough + wash)",
     "Chicken frank sausage",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const Vatrushka = {
@@ -1723,6 +1753,7 @@ export const Vatrushka = {
     "Egg yolk (filling + wash)",
     "Icing sugar (opt.)",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const RussianPancakesWithBeef = {
@@ -1771,6 +1802,7 @@ export const RussianPancakesWithBeef = {
     "Butter, for frying (Est.)",
     "Sour cream, serving (Est.)",
   ],
+  allergens: ["gluten", "eggs", "milk", "celery"],
 };
 
 export const RussianPancakesWithMushroom = {
@@ -1819,6 +1851,7 @@ export const RussianPancakesWithMushroom = {
     "Butter, for frying (Est.)",
     "Sour cream, serving (Est.)",
   ],
+  allergens: ["gluten", "eggs", "milk", "celery"],
 };
 
 export const VarenikiWithPotato = {
@@ -1869,6 +1902,7 @@ export const VarenikiWithPotato = {
     "Fresh dill",
     "Sour cream (Est.)",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const PelmeniWithMeat = {
@@ -1918,6 +1952,7 @@ export const PelmeniWithMeat = {
     "Ground cumin (Estimated)",
     "Black pepper",
   ],
+  allergens: ["gluten", "eggs", "milk", "celery"],
 };
 
 export const Draniki = {
@@ -1965,6 +2000,7 @@ export const Draniki = {
     "Sunflower oil, absorbed (Est.)",
     "Sour cream",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const MantiWithMeat = {
@@ -2013,6 +2049,7 @@ export const MantiWithMeat = {
     "Black pepper",
     "Butter (for serving)",
   ],
+  allergens: ["gluten", "eggs", "milk", "celery"],
 };
 
 export const CheburekWithMeat = {
@@ -2062,6 +2099,7 @@ export const CheburekWithMeat = {
     "Cumin seeds",
     "Black pepper (Estimated)",
   ],
+  allergens: ["gluten", "eggs", "celery"],
 };
 
 export const BeefCutlets = {
@@ -2110,6 +2148,7 @@ export const BeefCutlets = {
     "Black pepper (Est.)",
     "Vegetable oil, absorbed (Est.)",
   ],
+  allergens: ["gluten", "eggs", "milk", "celery", "mustard"],
 };
 
 export const ChickenCutlets = {
@@ -2158,6 +2197,7 @@ export const ChickenCutlets = {
     "Black pepper (Est.)",
     "Vegetable oil, absorbed (Est.)",
   ],
+  allergens: ["gluten", "eggs", "milk", "mustard"],
 };
 
 export const UzbekBeefPlov = {
@@ -2208,6 +2248,7 @@ export const UzbekBeefPlov = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: [],
 };
 
 export const CabbageRollsWithRiceAndMincedMeat = {
@@ -2255,6 +2296,7 @@ export const CabbageRollsWithRiceAndMincedMeat = {
     "Crushed tomato",
     "Beef/veg stock (Est.)",
   ],
+  allergens: [],
 };
 
 export const HotPan = {
@@ -2303,6 +2345,7 @@ export const HotPan = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["gluten", "celery"],
 };
 
 export const BeefStroganoff = {
@@ -2348,6 +2391,7 @@ export const BeefStroganoff = {
     "Cooking cream (30 % fat)",
     "Salt & pepper",
   ],
+  allergens: ["gluten", "milk", "celery"],
 };
 
 export const ChickenKiev = {
@@ -2395,6 +2439,7 @@ export const ChickenKiev = {
     "Breadcrumbs",
     "Vegetable oil, absorbed (Est.)",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const Napoleon = {
@@ -2437,6 +2482,7 @@ export const Napoleon = {
     "Walnuts, chopped",
     "Vanilla essence (Est.)",
   ],
+  allergens: ["gluten", "milk", "treeNuts"],
 };
 
 export const HoneyCake = {
@@ -2487,6 +2533,7 @@ export const HoneyCake = {
     "Prunes, diced",
     "Honey glaze (Est.)",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const RussianPancakesWithCottageCheese = {
@@ -2533,6 +2580,7 @@ export const RussianPancakesWithCottageCheese = {
     "Butter, for frying (Est.)",
     "Jam / condensed milk (Opt., Est.)",
   ],
+  allergens: ["gluten", "eggs", "milk"],
 };
 
 export const Syrniki = {
@@ -2578,6 +2626,7 @@ export const Syrniki = {
     "Sunflower oil, absorbed (Est.)",
     "Sour cream, serving (Opt., Est.)",
   ],
+  allergens: ["eggs", "milk"],
 };
 
 export const ChickenSkewer = {
@@ -2622,6 +2671,7 @@ export const ChickenSkewer = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["gluten", "eggs", "celery", "mustard"],
 };
 
 export const BeefSkewer = {
@@ -2663,6 +2713,7 @@ export const BeefSkewer = {
     "Salt (Est.)",
     "Black pepper",
   ],
+  allergens: ["gluten", "celery"],
 };
 
 export const LambSkewer = {
@@ -2707,6 +2758,7 @@ export const LambSkewer = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["gluten", "eggs", "celery", "mustard"],
 };
 
 export const MixedGrill = {
@@ -2752,6 +2804,7 @@ export const MixedGrill = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["gluten", "eggs", "celery", "mustard"],
 };
 
 export const Buckwheat = {
@@ -2788,6 +2841,7 @@ export const Buckwheat = {
     carbs: 72,
   },
   ingredients: ["Buckwheat groats", "Water", "Unsalted butter", "Salt (Est.)"],
+  allergens: [],
 };
 
 export const LyulyaKebab = {
@@ -2833,6 +2887,7 @@ export const LyulyaKebab = {
     "Salt (Est.)",
     "Vegetable oil, brushing (Est.)",
   ],
+  allergens: ["gluten", "celery"],
 };
 
 export const LambChops = {
@@ -2874,6 +2929,7 @@ export const LambChops = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["gluten", "celery"],
 };
 
 export const BoiledRice = {
@@ -2915,6 +2971,7 @@ export const BoiledRice = {
     "Unsalted butter",
     "Salt (Estimated)",
   ],
+  allergens: [],
 };
 
 export const GrilledVegetable = {
@@ -2963,6 +3020,7 @@ export const GrilledVegetable = {
     "Black pepper (Est.)",
     "Dried oregano/thyme (Optional)",
   ],
+  allergens: [],
 };
 
 export const SweetPotatoFries = {
@@ -3005,6 +3063,7 @@ export const SweetPotatoFries = {
     "Black pepper (Estimated)",
     "Smoked paprika (Optional)",
   ],
+  allergens: ["eggs", "mustard"],
 };
 
 export const MashedPotatoes = {
@@ -3047,6 +3106,7 @@ export const MashedPotatoes = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["milk"],
 };
 
 export const FrenchFries = {
@@ -3088,6 +3148,7 @@ export const FrenchFries = {
     "Salt (Est.)",
     "Black pepper (Optional)",
   ],
+  allergens: ["eggs", "mustard"],
 };
 
 export const HomeStylePotatoWithMushroom = {
@@ -3133,6 +3194,7 @@ export const HomeStylePotatoWithMushroom = {
     "Salt (Est.)",
     "Black pepper (Est.)",
   ],
+  allergens: ["gluten", "celery"],
 };
 
 export const UzbekFlatbread = {
@@ -3178,6 +3240,7 @@ export const UzbekFlatbread = {
     "Salt",
     "Dry yeast",
   ],
+  allergens: ["gluten", "eggs", "milk", "sesame"],
 };
 
 export const AdjikaSauce = {
@@ -3224,6 +3287,7 @@ export const AdjikaSauce = {
     "Salt",
     "Sugar (Opt.)",
   ],
+  allergens: ["gluten", "celery"],
 };
 
 export const HouseSpecialSauce = {
@@ -3269,6 +3333,7 @@ export const HouseSpecialSauce = {
     "Salt",
     "Black pepper",
   ],
+  allergens: ["eggs", "mustard"],
 };
 
 export const MustardSauce = {
@@ -3313,6 +3378,7 @@ export const MustardSauce = {
     "Salt (Est.)",
     "Black pepper",
   ],
+  allergens: ["mustard", "sulphites"],
 };
 
 export const TomatoGarlicSauce = {
@@ -3359,6 +3425,7 @@ export const TomatoGarlicSauce = {
     "Black pepper",
     "Parsley",
   ],
+  allergens: ["gluten", "celery"],
 };
 
 export const RaspberryMors = {
@@ -3401,6 +3468,7 @@ export const RaspberryMors = {
     carbs: 16,
   },
   ingredients: ["Frozen raspberries (Est.)", "Water (Est.)", "Sugar (Est.)"],
+  allergens: [],
 };
 
 export const CranberyMors = {
@@ -3443,6 +3511,7 @@ export const CranberyMors = {
     carbs: 15,
   },
   ingredients: ["Frozen cranberries (Est.)", "Water (Est.)", "Sugar (Est.)"],
+  allergens: [],
 };
 
 // Additions from Vkusno Menu - New Items - September 2026.xlsx.
@@ -3481,6 +3550,7 @@ export const SourCream = {
     full: sourCreamFull,
   },
   ingredients: ["Sour cream"],
+  allergens: ["milk"],
 };
 
 export const Honey = {
@@ -3517,6 +3587,7 @@ export const Honey = {
     full: honeyFull,
   },
   ingredients: ["Honey"],
+  allergens: [],
 };
 
 export const HomemadeBlueberryJam = {
@@ -3553,6 +3624,7 @@ export const HomemadeBlueberryJam = {
     full: homemadeJamBlueberryFull,
   },
   ingredients: ["Blueberry jam"],
+  allergens: [],
 };
 
 export const CondensedMilk = {
@@ -3589,6 +3661,7 @@ export const CondensedMilk = {
     full: condensedMilkFull,
   },
   ingredients: ["Sweetened condensed milk"],
+  allergens: ["milk"],
 };
 
 export const PickledTomato = {
@@ -3625,6 +3698,7 @@ export const PickledTomato = {
     full: pickledTomatoFull,
   },
   ingredients: ["Pickled tomato"],
+  allergens: [],
 };
 
 export const PickledCucumber = {
@@ -3661,6 +3735,7 @@ export const PickledCucumber = {
     full: pickledCucumberFull,
   },
   ingredients: ["Pickled cucumber"],
+  allergens: [],
 };
 
 export const PickledRedCabbage = {
@@ -3697,6 +3772,7 @@ export const PickledRedCabbage = {
     full: pickledRedCabbageFull,
   },
   ingredients: ["Pickled red cabbage"],
+  allergens: [],
 };
 
 export const PickledWhiteCabbage = {
@@ -3733,6 +3809,7 @@ export const PickledWhiteCabbage = {
     full: pickledWhiteCabbageFull,
   },
   ingredients: ["Pickled white cabbage"],
+  allergens: [],
 };
 
 export const RussianLunch = {
@@ -3779,6 +3856,7 @@ export const RussianLunch = {
       ].flatMap((item) => item.ingredients ?? []),
     ),
   ],
+  allergens: ["gluten", "eggs", "milk", "celery", "mustard"],
 };
 
 export const DumplingLovers = {
@@ -3824,6 +3902,7 @@ export const DumplingLovers = {
       ].flatMap((item) => item.ingredients ?? []),
     ),
   ],
+  allergens: ["gluten", "eggs", "milk", "celery"],
 };
 
 export const HomeStyleBeefPan = {
@@ -3870,6 +3949,7 @@ export const HomeStyleBeefPan = {
       ].flatMap((item) => item.ingredients ?? []),
     ),
   ],
+  allergens: ["gluten", "eggs", "milk", "celery"],
 };
 
 export const UzbekFeast = {
@@ -3916,6 +3996,7 @@ export const UzbekFeast = {
       ].flatMap((item) => item.ingredients ?? []),
     ),
   ],
+  allergens: ["gluten", "eggs", "milk", "celery", "sesame"],
 };
 
 export const GrillDuoForTwo = {
@@ -3962,6 +4043,7 @@ export const GrillDuoForTwo = {
       ].flatMap((item) => item.ingredients ?? []),
     ),
   ],
+  allergens: ["gluten", "eggs", "milk", "celery", "mustard", "sesame"],
 };
 
 export const BeefDinner = {
@@ -4004,6 +4086,7 @@ export const BeefDinner = {
       ),
     ),
   ],
+  allergens: ["gluten", "eggs", "milk", "celery", "sesame"],
 };
 
 export const ChickenDinner = {
@@ -4049,6 +4132,7 @@ export const ChickenDinner = {
       ].flatMap((item) => item.ingredients ?? []),
     ),
   ],
+  allergens: ["gluten", "eggs", "milk", "celery", "mustard"],
 };
 
 export const CabbageRollsClassic = {
@@ -4094,6 +4178,7 @@ export const CabbageRollsClassic = {
       ].flatMap((item) => item.ingredients ?? []),
     ),
   ],
+  allergens: ["gluten", "eggs", "fish", "milk", "celery", "mustard"],
 };
 
 // Complete catalogue, including temporarily unavailable dishes.

@@ -39,6 +39,8 @@ export const menuItemShape = PropTypes.shape({
     carbs: PropTypes.number,
   }),
   ingredients: PropTypes.arrayOf(PropTypes.string),
+  // keys from menu.allergens.items ("gluten", "milk"...); [] = none in the recipe
+  allergens: PropTypes.arrayOf(PropTypes.string),
 });
 
 export const categoryShape = PropTypes.shape({
