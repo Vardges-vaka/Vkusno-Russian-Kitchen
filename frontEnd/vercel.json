@@ -3,9 +3,42 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.vkusno.ae" }],
+      "destination": "https://vkusno.ae/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/elementor-236",
+      "destination": "/en/menu",
+      "permanent": true
+    },
+    {
+      "source": "/menu",
+      "destination": "/en/menu",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/hello-world",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/wp-:path*",
+      "destination": "/en",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|locales/)(?!.*\\.).*)",
       "destination": "/index.html"
     }
   ],

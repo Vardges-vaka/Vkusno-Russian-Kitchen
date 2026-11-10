@@ -71,8 +71,27 @@ const Menu_itemDetail = ({ item, lang, t, onOrder, headingLevel = "h2" }) => {
       {item.images?.full && (
         <img
           className="Menu_itemModal_photo"
-          src={item.images.full}
+          /* Same tiers as the menu card. The detail photo is large, so the
+             browser may take the 1200px file; width and height keep the 4:3
+             slot from jumping when the file arrives. */
+          src={item.images.card2x ?? item.images.full}
+          srcSet={
+            item.images.card
+              ? [
+                  `${item.images.card} 400w`,
+                  item.images.card2x && `${item.images.card2x} 800w`,
+                  `${item.images.full} 1200w`,
+                ]
+                  .filter(Boolean)
+                  .join(", ")
+              : undefined
+          }
+          sizes="(max-width: 768px) 100vw, 860px"
           alt={name}
+          width={1200}
+          height={900}
+          decoding="async"
+          fetchPriority="high"
         />
       )}
 

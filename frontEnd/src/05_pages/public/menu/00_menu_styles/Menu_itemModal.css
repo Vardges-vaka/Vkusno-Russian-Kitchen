@@ -57,6 +57,10 @@
 .Menu_itemModal_photo {
   display: block;
   width: 100%;
+  /* The img tag carries width/height so the slot exists before the file
+     arrives. Without height: auto the browser treats 900 as the real height
+     and the photo fills the whole popup. */
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
