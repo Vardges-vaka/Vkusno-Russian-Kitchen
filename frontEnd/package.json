@@ -12,7 +12,8 @@
     "check:i18n": "node scripts/checkTranslations.mjs",
     "sitemap": "node scripts/generateSitemap.mjs",
     "redirects": "node scripts/generateSlugRedirects.mjs",
-    "prebuild": "npm run check:i18n && npm run sitemap && npm run redirects"
+    "prebuild": "npm run check:i18n && npm run sitemap && npm run redirects",
+    "postbuild": "npm run sitemap"
   },
   "dependencies": {
     "@fontsource-variable/golos-text": "^5.3.0",

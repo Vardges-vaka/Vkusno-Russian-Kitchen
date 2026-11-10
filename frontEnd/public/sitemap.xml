@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vkusno.ae/en</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en"/>
@@ -169,6 +170,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/yaichnitsa"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/bayd-makhfuq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/scrambled-eggs"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Scrambled%20Eggs(1200x900px)-BsW7Zdre.webp</image:loc>
+      <image:title>Scrambled Eggs</image:title>
+      <image:caption>Creamy scrambled eggs on rye toast.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -178,6 +184,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/yaichnitsa"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/bayd-makhfuq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/scrambled-eggs"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Scrambled%20Eggs(1200x900px)-BsW7Zdre.webp</image:loc>
+      <image:title>Яичница</image:title>
+      <image:caption>Нежная яичница-скрэмбл на ржаном тосте.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -187,6 +198,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/yaichnitsa"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/bayd-makhfuq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/scrambled-eggs"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Scrambled%20Eggs(1200x900px)-BsW7Zdre.webp</image:loc>
+      <image:title>بيض مخفوق</image:title>
+      <image:caption>بيض مخفوق هش على خبز الجاودار الشهي.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -196,6 +212,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/omlet"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/omlet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/omelette"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Omelette(1200x900px)-DhPgTh7j.webp</image:loc>
+      <image:title>Omelette</image:title>
+      <image:caption>Fluffy omelette with tomato &amp; onion.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -205,6 +226,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/omlet"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/omlet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/omelette"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Omelette(1200x900px)-DhPgTh7j.webp</image:loc>
+      <image:title>Омлет</image:title>
+      <image:caption>Пышный омлет с томатом и луком.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -214,6 +240,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/omlet"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/omlet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/omelette"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Omelette(1200x900px)-DhPgTh7j.webp</image:loc>
+      <image:title>أومليت</image:title>
+      <image:caption>أومليت خفيف مع البصل والطماطم.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -223,6 +254,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-so-sgushchenkoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-bil-halib-al-mukathaf"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pancakes-with-condensed-milk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pancakes%20with%20Condensed%20Milk(1200x900px)-D9-fkwBE.webp</image:loc>
+      <image:title>Pancakes with Condensed Milk</image:title>
+      <image:caption>Thin crêpes with condensed milk.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -232,6 +268,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-so-sgushchenkoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-bil-halib-al-mukathaf"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pancakes-with-condensed-milk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pancakes%20with%20Condensed%20Milk(1200x900px)-D9-fkwBE.webp</image:loc>
+      <image:title>Блины со сгущенкой</image:title>
+      <image:caption>Тонкие блины со сгущёнкой.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -241,6 +282,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-so-sgushchenkoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-bil-halib-al-mukathaf"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pancakes-with-condensed-milk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pancakes%20with%20Condensed%20Milk(1200x900px)-D9-fkwBE.webp</image:loc>
+      <image:title>فطائر بالحليب المكثف</image:title>
+      <image:caption>ثلاث فطائر مع حليب مكثف محلى.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -250,6 +296,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pancakes-with-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pancakes%20with%20Jam(1200x900px)-UGnFZ0-f.webp</image:loc>
+      <image:title>Pancakes with Jam</image:title>
+      <image:caption>Thin crêpes with berry jam.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -259,6 +310,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pancakes-with-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pancakes%20with%20Jam(1200x900px)-UGnFZ0-f.webp</image:loc>
+      <image:title>Блины с джемом</image:title>
+      <image:caption>Тонкие блины с ягодным джемом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -268,6 +324,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pancakes-with-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pancakes%20with%20Jam(1200x900px)-UGnFZ0-f.webp</image:loc>
+      <image:title>فطائر بالمربى</image:title>
+      <image:caption>ثلاث فطائر مع مربى حلو.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -277,6 +338,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/rzhanoy-khleb-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-al-jawdar-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/rye-bread-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Rye%20Bread%20Jam(1200x900px)-DAHNLnMA.webp</image:loc>
+      <image:title>Rye Bread Jam</image:title>
+      <image:caption>Toasted rye with berry jam.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -286,6 +352,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/rzhanoy-khleb-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-al-jawdar-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/rye-bread-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Rye%20Bread%20Jam(1200x900px)-DAHNLnMA.webp</image:loc>
+      <image:title>Ржаной хлеб с джемом</image:title>
+      <image:caption>Ржаной тост с ягодным джемом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -295,6 +366,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/rzhanoy-khleb-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-al-jawdar-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/rye-bread-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Rye%20Bread%20Jam(1200x900px)-DAHNLnMA.webp</image:loc>
+      <image:title>خبز الجاودار بالمربى</image:title>
+      <image:caption>خبز الجاودار مع مربى التوت الأزرق محلي الصنع.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -304,6 +380,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/risovaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-aruz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/rice-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Rice%20Porridge(1200x900px)-CQASz33D.webp</image:loc>
+      <image:title>Rice Porridge</image:title>
+      <image:caption>Warm creamy rice porridge with honey &amp; walnuts.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -313,6 +394,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/risovaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-aruz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/rice-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Rice%20Porridge(1200x900px)-CQASz33D.webp</image:loc>
+      <image:title>Рисовая каша</image:title>
+      <image:caption>Тёплая рисовая каша с мёдом и орехами.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -322,6 +408,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/risovaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-aruz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/rice-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Rice%20Porridge(1200x900px)-CQASz33D.webp</image:loc>
+      <image:title>عصيدة الأرز</image:title>
+      <image:caption>عصيدة أرز كريمية مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -331,6 +422,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grechnevaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-hinta-al-sawda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buckwheat-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buckwheat%20Porridge(1200x900px)-BvPt9Mmf.webp</image:loc>
+      <image:title>Buckwheat Porridge</image:title>
+      <image:caption>Creamy buckwheat porridge with honey &amp; nuts.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -340,6 +436,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grechnevaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-hinta-al-sawda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buckwheat-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buckwheat%20Porridge(1200x900px)-BvPt9Mmf.webp</image:loc>
+      <image:title>Гречневая каша</image:title>
+      <image:caption>Кремовая гречневая каша с мёдом и орехами.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -349,6 +450,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grechnevaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-hinta-al-sawda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buckwheat-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buckwheat%20Porridge(1200x900px)-BvPt9Mmf.webp</image:loc>
+      <image:title>عصيدة الحنطة السوداء</image:title>
+      <image:caption>عصيدة حنطة سوداء شهية مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -358,6 +464,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ovsyanaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-shufan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/oatmeal-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Oatmeal%20Porridge(1200x900px)-Dw9Hf85w.webp</image:loc>
+      <image:title>Oatmeal Porridge</image:title>
+      <image:caption>Creamy honey-walnut oatmeal porridge.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -367,6 +478,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ovsyanaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-shufan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/oatmeal-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Oatmeal%20Porridge(1200x900px)-Dw9Hf85w.webp</image:loc>
+      <image:title>Овсяная каша</image:title>
+      <image:caption>Овсяная каша с мёдом и орехами.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -376,6 +492,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ovsyanaya-kasha"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asidat-al-shufan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/oatmeal-porridge"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Oatmeal%20Porridge(1200x900px)-Dw9Hf85w.webp</image:loc>
+      <image:title>عصيدة الشوفان</image:title>
+      <image:caption>عصيدة شوفان ناعمة مع الجوز، مع اختيارك من الحليب المكثف المحلى أو العسل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -385,6 +506,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/assorti-iz-soleniy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mukhallalat-mutanawwia"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/assorted-pickles"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Assorted%20Pickles(1200x900px)-DBR9k8Nq.webp</image:loc>
+      <image:title>Assorted Pickles</image:title>
+      <image:caption>Plate of authentic Russian pickles.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -394,6 +520,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/assorti-iz-soleniy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mukhallalat-mutanawwia"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/assorted-pickles"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Assorted%20Pickles(1200x900px)-DBR9k8Nq.webp</image:loc>
+      <image:title>Ассорти из солений</image:title>
+      <image:caption>Ассорти хрустящих домашних солений.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -403,6 +534,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/assorti-iz-soleniy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mukhallalat-mutanawwia"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/assorted-pickles"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Assorted%20Pickles(1200x900px)-DBR9k8Nq.webp</image:loc>
+      <image:title>مخللات متنوعة</image:title>
+      <image:caption>ملفوف أبيض وأحمر مخلل، خيار وطماطم.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -412,6 +548,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kholodets"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/holodek"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/holodec"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Holodec(1200x900px)-CO-4aFY9.webp</image:loc>
+      <image:title>Holodec</image:title>
+      <image:caption>Classic beef holodec in savoury meat jelly.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -421,6 +562,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kholodets"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/holodek"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/holodec"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Holodec(1200x900px)-CO-4aFY9.webp</image:loc>
+      <image:title>Холодец</image:title>
+      <image:caption>Классический говяжий холодец.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -430,6 +576,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kholodets"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/holodek"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/holodec"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Holodec(1200x900px)-CO-4aFY9.webp</image:loc>
+      <image:title>هولوديك</image:title>
+      <image:caption>مرق لحم، فيليه بقري، بيض مسلوق وجزر مسلوق.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -439,6 +590,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/rulety-iz-baklazhana"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/lafaif-badhinjan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/eggplant-rolls"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Eggplant%20Rolls(1200x900px)--fC_Mt0W.webp</image:loc>
+      <image:title>Eggplant Rolls</image:title>
+      <image:caption>Smoky eggplant rolls with creamy garlic filling.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -448,6 +604,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/rulety-iz-baklazhana"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/lafaif-badhinjan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/eggplant-rolls"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Eggplant%20Rolls(1200x900px)--fC_Mt0W.webp</image:loc>
+      <image:title>Рулеты из баклажана</image:title>
+      <image:caption>Рулеты из баклажана с чесночным кремом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -457,6 +618,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/rulety-iz-baklazhana"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/lafaif-badhinjan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/eggplant-rolls"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Eggplant%20Rolls(1200x900px)--fC_Mt0W.webp</image:loc>
+      <image:title>لفائف باذنجان</image:title>
+      <image:caption>خمس قطع محشوة بالطماطم، البقدونس، مايونيز الثوم، صلصة الرمان والجوز.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -466,6 +632,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/borshch"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/borsh-rusi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-borscht"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Borscht(1200x900px)-CFAKDk6b.webp</image:loc>
+      <image:title>Russian Borscht</image:title>
+      <image:caption>Hearty beef &amp; beet borscht with dill.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -475,6 +646,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/borshch"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/borsh-rusi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-borscht"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Borscht(1200x900px)-CFAKDk6b.webp</image:loc>
+      <image:title>Борщ</image:title>
+      <image:caption>Сытный борщ с говядиной и свёклой.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -484,6 +660,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/borshch"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/borsh-rusi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-borscht"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Borscht(1200x900px)-CFAKDk6b.webp</image:loc>
+      <image:title>بورش روسي</image:title>
+      <image:caption>بورش غني بلحم البقر والشمندر مع الشبت.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -493,6 +674,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-sup-s-lapshoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shurbat-al-dajaj-bil-shairiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-noodles-soup"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Noodles%20Soup(1200x900px)-DcwMpZKP.webp</image:loc>
+      <image:title>Chicken Noodles Soup</image:title>
+      <image:caption>Homestyle chicken-noodle soup with dill.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -502,6 +688,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-sup-s-lapshoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shurbat-al-dajaj-bil-shairiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-noodles-soup"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Noodles%20Soup(1200x900px)-DcwMpZKP.webp</image:loc>
+      <image:title>Куриный суп с лапшой</image:title>
+      <image:caption>Домашний куриный суп с лапшой и укропом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -511,6 +702,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-sup-s-lapshoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shurbat-al-dajaj-bil-shairiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-noodles-soup"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Noodles%20Soup(1200x900px)-DcwMpZKP.webp</image:loc>
+      <image:title>شوربة الدجاج بالشعيرية</image:title>
+      <image:caption>شوربة دجاج منزلية بالشعيرية والشبت.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -520,6 +716,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sup-s-frikadelkami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shurbat-kurat-al-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/meatball-soup"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Meatball%20Soup(1200x900px)-CgqsKd5p.webp</image:loc>
+      <image:title>Meatball Soup</image:title>
+      <image:caption>Comforting meatball soup with vegetables &amp; dill.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -529,6 +730,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sup-s-frikadelkami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shurbat-kurat-al-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/meatball-soup"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Meatball%20Soup(1200x900px)-CgqsKd5p.webp</image:loc>
+      <image:title>Суп с фрикадельками</image:title>
+      <image:caption>Домашний суп с фрикадельками, овощами и укропом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -538,6 +744,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sup-s-frikadelkami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shurbat-kurat-al-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/meatball-soup"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Meatball%20Soup(1200x900px)-CgqsKd5p.webp</image:loc>
+      <image:title>شوربة كرات اللحم</image:title>
+      <image:caption>شوربة دافئة بكرات اللحم مع الخضار والشبت.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -547,6 +758,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/okroshka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/okroshka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/okroshka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Okroshka%20(1200x900px)-K75lblkj.webp</image:loc>
+      <image:title>Okroshka</image:title>
+      <image:caption>Refreshing chilled yogurt soup with beef &amp; dill.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -556,6 +772,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/okroshka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/okroshka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/okroshka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Okroshka%20(1200x900px)-K75lblkj.webp</image:loc>
+      <image:title>Окрошка</image:title>
+      <image:caption>Освежающая окрошка с говядиной и укропом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -565,6 +786,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/okroshka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/okroshka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/okroshka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Okroshka%20(1200x900px)-K75lblkj.webp</image:loc>
+      <image:title>أوكروشكا</image:title>
+      <image:caption>شوربة زبادي باردة ومنعشة مع لحم البقر والشبت.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -574,6 +800,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solyanka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/solyanka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/solyanka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Solyanka(1200x900px)-XkZ9y3Qn.webp</image:loc>
+      <image:title>Solyanka</image:title>
+      <image:caption>Tangy beef &amp; pickle solyanka soup.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -583,6 +814,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solyanka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/solyanka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/solyanka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Solyanka(1200x900px)-XkZ9y3Qn.webp</image:loc>
+      <image:title>Солянка</image:title>
+      <image:caption>Кисло-пряная солянка с мясом и огурцами.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -592,6 +828,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solyanka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/solyanka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/solyanka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Solyanka(1200x900px)-XkZ9y3Qn.webp</image:loc>
+      <image:title>سوليانكا</image:title>
+      <image:caption>شوربة سوليانكا حامضة بلحم البقر والمخللات.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -601,6 +842,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/olive"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-olivye-al-rusiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-olivier-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Olivier%20Salad(1200x900px)-D8EPieLc.webp</image:loc>
+      <image:title>Russian Olivier Salad</image:title>
+      <image:caption>Creamy Russian Olivier salad with beef &amp; vegetables.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -610,6 +856,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/olive"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-olivye-al-rusiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-olivier-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Olivier%20Salad(1200x900px)-D8EPieLc.webp</image:loc>
+      <image:title>Оливье</image:title>
+      <image:caption>Классический Оливье с говядиной и овощами.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -619,6 +870,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/olive"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-olivye-al-rusiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-olivier-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Olivier%20Salad(1200x900px)-D8EPieLc.webp</image:loc>
+      <image:title>سلطة أوليفييه الروسية</image:title>
+      <image:caption>سلطة روسية تقليدية مع لحم، بيض مسلوق، بطاطا مسلوقة، بازلاء، مخلل، ومايونيز.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -628,6 +884,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vinegret"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-vinegret"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vinegret"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vinegret(1200x900px)-aG7uXWJV.webp</image:loc>
+      <image:title>Vinegret</image:title>
+      <image:caption>Colourful beet-potato vinegret with pickles.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -637,6 +898,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vinegret"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-vinegret"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vinegret"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vinegret(1200x900px)-aG7uXWJV.webp</image:loc>
+      <image:title>Винегрет</image:title>
+      <image:caption>Яркий винегрет с овощами и соленьями.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -646,6 +912,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vinegret"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-vinegret"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vinegret"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vinegret(1200x900px)-aG7uXWJV.webp</image:loc>
+      <image:title>سلطة فينيغريت</image:title>
+      <image:caption>سلطة روسية كلاسيكية مع شمندر مشوي وزيت دوار الشمس.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -655,6 +926,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/seld-pod-shuboy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-ringa-shuba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-herring-salad-shuba"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Herring%20Salad%20-%20Shuba(1200x900px)-CSBlwJYJ.webp</image:loc>
+      <image:title>Russian Herring Salad - Shuba</image:title>
+      <image:caption>Layered herring salad “Shuba” with beet &amp; mayo.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -664,6 +940,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/seld-pod-shuboy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-ringa-shuba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-herring-salad-shuba"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Herring%20Salad%20-%20Shuba(1200x900px)-CSBlwJYJ.webp</image:loc>
+      <image:title>Сельдь под шубой</image:title>
+      <image:caption>Слоёная «Сельдь под шубой» с майонезом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -673,6 +954,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/seld-pod-shuboy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-ringa-shuba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-herring-salad-shuba"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Herring%20Salad%20-%20Shuba(1200x900px)-CSBlwJYJ.webp</image:loc>
+      <image:title>سلطة الرنجة الروسية - شوبا</image:title>
+      <image:caption>شرائح رنجة مخللة، بصل مفروم ناعماً، شمندر، جزر، بطاطا، وصلصة مايونيز.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -682,6 +968,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/shakarob"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shakarob"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/shakarob"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Shakarob(1200x900px)-sxz6UprF.webp</image:loc>
+      <image:title>Shakarob</image:title>
+      <image:caption>Refreshing Uzbek shakarob of cucumber, tomato &amp; onion.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -691,6 +982,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/shakarob"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shakarob"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/shakarob"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Shakarob(1200x900px)-sxz6UprF.webp</image:loc>
+      <image:title>Шакароб</image:title>
+      <image:caption>Освежающий узбекский Шакароб из огурцов, помидоров и лука.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -700,6 +996,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/shakarob"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/shakarob"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/shakarob"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Shakarob(1200x900px)-sxz6UprF.webp</image:loc>
+      <image:title>شاكاروب</image:title>
+      <image:caption>طماطم، خيار، بصل، وأعشاب طازجة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -709,6 +1010,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/achichuk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/achichuk-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-achichuk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Achichuk(1200x900px)-BHyCKojg.webp</image:loc>
+      <image:title>Uzbek Achichuk</image:title>
+      <image:caption>Spicy Uzbek tomato-cucumber salad.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -718,6 +1024,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/achichuk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/achichuk-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-achichuk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Achichuk(1200x900px)-BHyCKojg.webp</image:loc>
+      <image:title>Ачичук</image:title>
+      <image:caption>Острый узбекский салат из томатов и огурцов.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -727,6 +1038,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/achichuk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/achichuk-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-achichuk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Achichuk(1200x900px)-BHyCKojg.webp</image:loc>
+      <image:title>أتشيتشوك الأوزبكي</image:title>
+      <image:caption>بصل وطماطم.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -736,6 +1052,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/salat-iz-morkovi"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-jazar"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/carrot-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Carrot%20Salad(1200x900px)-qQtFwTMt.webp</image:loc>
+      <image:title>Carrot Salad</image:title>
+      <image:caption>Crisp carrot salad with coriander &amp; vinegar.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -745,6 +1066,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/salat-iz-morkovi"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-jazar"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/carrot-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Carrot%20Salad(1200x900px)-qQtFwTMt.webp</image:loc>
+      <image:title>Салат из моркови</image:title>
+      <image:caption>Хрустящий морковный салат с кориандром.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -754,6 +1080,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/salat-iz-morkovi"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-jazar"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/carrot-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Carrot%20Salad(1200x900px)-qQtFwTMt.webp</image:loc>
+      <image:title>سلطة الجزر</image:title>
+      <image:caption>سلطة جزر متبلة حارة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -763,6 +1094,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grecheskiy-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salata-yunaniya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/greek-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Greek%20Salad(1200x900px)-D0YrhDxt.webp</image:loc>
+      <image:title>Greek Salad</image:title>
+      <image:caption>Classic Greek salad with feta &amp; olives.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -772,6 +1108,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grecheskiy-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salata-yunaniya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/greek-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Greek%20Salad(1200x900px)-D0YrhDxt.webp</image:loc>
+      <image:title>Греческий салат</image:title>
+      <image:caption>Классический греческий салат с фетой и оливками.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -781,6 +1122,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grecheskiy-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salata-yunaniya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/greek-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Greek%20Salad(1200x900px)-D0YrhDxt.webp</image:loc>
+      <image:title>سلطة يونانية</image:title>
+      <image:caption>فلفل رومي، خيار، طماطم، بصل، وجبنة فيتا مع ليمون وزيت زيتون.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -790,6 +1136,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ostryy-steyk-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-sharaih-al-lahm-al-harra"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/spicy-steak-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Spicy%20Steak%20Salad(1200x900px)-Ho2wLYZk.webp</image:loc>
+      <image:title>Spicy Steak Salad</image:title>
+      <image:caption>Zesty steak salad with crisp veggies.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -799,6 +1150,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ostryy-steyk-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-sharaih-al-lahm-al-harra"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/spicy-steak-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Spicy%20Steak%20Salad(1200x900px)-Ho2wLYZk.webp</image:loc>
+      <image:title>Острый стейк-салат</image:title>
+      <image:caption>Остро-пряный салат со стейком.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -808,6 +1164,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ostryy-steyk-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-sharaih-al-lahm-al-harra"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/spicy-steak-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Spicy%20Steak%20Salad(1200x900px)-Ho2wLYZk.webp</image:loc>
+      <image:title>سلطة شرائح اللحم الحارة</image:title>
+      <image:caption>قطع خضراوات طازجة، شرائح فيليه مشوية، وصلصة الشيف.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -817,6 +1178,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pirozhki-s-kapustoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatira-rusiya-bil-malfuf"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-russian-pie-with-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Russian%20Pie%20With%20Cabbage(1200x900px)-OZhQ28Qj.webp</image:loc>
+      <image:title>Baked Russian Pie With Cabbage</image:title>
+      <image:caption>Golden hand-pie stuffed with sweet cabbage.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -826,6 +1192,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pirozhki-s-kapustoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatira-rusiya-bil-malfuf"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-russian-pie-with-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Russian%20Pie%20With%20Cabbage(1200x900px)-OZhQ28Qj.webp</image:loc>
+      <image:title>Пирожки с капустой</image:title>
+      <image:caption>Золотистый пирожок с капустой.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -835,6 +1206,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pirozhki-s-kapustoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatira-rusiya-bil-malfuf"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-russian-pie-with-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Russian%20Pie%20With%20Cabbage(1200x900px)-OZhQ28Qj.webp</image:loc>
+      <image:title>فطيرة روسية مخبوزة مع ملفوف</image:title>
+      <image:caption>قطعة واحدة</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -844,6 +1220,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/svekolnyy-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-shamandar"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beetroot-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beetroot%20Salad(1200x900px)-GlKZML-I.webp</image:loc>
+      <image:title>Beetroot Salad</image:title>
+      <image:caption>Vibrant beetroot salad with feta &amp; walnuts.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -853,6 +1234,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/svekolnyy-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-shamandar"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beetroot-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beetroot%20Salad(1200x900px)-GlKZML-I.webp</image:loc>
+      <image:title>Свекольный салат</image:title>
+      <image:caption>Яркий свекольный салат с фетой и орехами.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -862,6 +1248,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/svekolnyy-salat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salatat-al-shamandar"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beetroot-salad"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beetroot%20Salad(1200x900px)-GlKZML-I.webp</image:loc>
+      <image:title>سلطة الشمندر</image:title>
+      <image:caption>ثوم، مايونيز، شمندر، برقوق مجفف، وجبنة فيتا.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -871,6 +1262,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pirozhki-s-kartoshkoy-i-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatira-rusiya-bil-batata-wal-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-russian-pie-with-potato-and-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Russian%20Pie%20With%20Potato%20And%20Mushroom(1200x900px)%20(2)-D647O8W_.webp</image:loc>
+      <image:title>Baked Russian Pie With Potato And Mushroom</image:title>
+      <image:caption>Fluffy potato-mushroom hand-pie.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -880,6 +1276,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pirozhki-s-kartoshkoy-i-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatira-rusiya-bil-batata-wal-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-russian-pie-with-potato-and-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Russian%20Pie%20With%20Potato%20And%20Mushroom(1200x900px)%20(2)-D647O8W_.webp</image:loc>
+      <image:title>Пирожки с картошкой и грибами</image:title>
+      <image:caption>Пирожок с картофелем и грибами.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -889,6 +1290,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pirozhki-s-kartoshkoy-i-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatira-rusiya-bil-batata-wal-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-russian-pie-with-potato-and-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Russian%20Pie%20With%20Potato%20And%20Mushroom(1200x900px)%20(2)-D647O8W_.webp</image:loc>
+      <image:title>فطيرة روسية مخبوزة مع بطاطا وفطر</image:title>
+      <image:caption>قطعة واحدة</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -898,6 +1304,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/samsa-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sambusa-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/samsa-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Samsa%20With%20Meat(1200x900px)-C6X1YWyP.webp</image:loc>
+      <image:title>Samsa With Meat</image:title>
+      <image:caption>Flaky triangle samsa with spiced beef.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -907,6 +1318,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/samsa-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sambusa-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/samsa-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Samsa%20With%20Meat(1200x900px)-C6X1YWyP.webp</image:loc>
+      <image:title>Самса из говядины</image:title>
+      <image:caption>Слоёная самса с пряной говядиной.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -916,6 +1332,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/samsa-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sambusa-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/samsa-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Samsa%20With%20Meat(1200x900px)-C6X1YWyP.webp</image:loc>
+      <image:title>سمبوسة باللحم</image:title>
+      <image:caption>قطعة واحدة</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -925,6 +1346,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bulochka-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buns-with-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buns%20With%20Jam(1200x900px)-D61-w4co.webp</image:loc>
+      <image:title>Buns With Jam</image:title>
+      <image:caption>Crescent bun filled with berry jam.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -934,6 +1360,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bulochka-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buns-with-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buns%20With%20Jam(1200x900px)-D61-w4co.webp</image:loc>
+      <image:title>Булочка с джемом</image:title>
+      <image:caption>Рогалик с ягодным джемом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -943,6 +1374,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bulochka-s-dzhemom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-bil-murabba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buns-with-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buns%20With%20Jam(1200x900px)-D61-w4co.webp</image:loc>
+      <image:title>خبز مع مربى</image:title>
+      <image:caption>قطعة واحدة</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -952,6 +1388,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/khot-dog"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/hot-dog-makhbuz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-hot-dog"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Hot%20Dog(1200x900px)-DgkL_G9y.webp</image:loc>
+      <image:title>Baked Hot Dog</image:title>
+      <image:caption>Soft milk-dough hot-dog roll.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -961,6 +1402,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/khot-dog"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/hot-dog-makhbuz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-hot-dog"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Hot%20Dog(1200x900px)-DgkL_G9y.webp</image:loc>
+      <image:title>Хот-дог</image:title>
+      <image:caption>Хот-дог в мягком дрожжевом тесте.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -970,6 +1416,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/khot-dog"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/hot-dog-makhbuz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/baked-hot-dog"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Baked%20Hot%20Dog(1200x900px)-DgkL_G9y.webp</image:loc>
+      <image:title>هوت دوغ مخبوز</image:title>
+      <image:caption>قطعة واحدة</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -979,6 +1430,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vatrushka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/vatrushka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vatrushka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vatrushka(1200x900px)-HVcX4eyu.webp</image:loc>
+      <image:title>Vatrushka</image:title>
+      <image:caption>Sweet cottage-cheese vatrushka bun.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -988,6 +1444,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vatrushka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/vatrushka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vatrushka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vatrushka(1200x900px)-HVcX4eyu.webp</image:loc>
+      <image:title>Ватрушка</image:title>
+      <image:caption>Сладкая ватрушка с творогом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -997,6 +1458,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vatrushka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/vatrushka"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vatrushka"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vatrushka(1200x900px)-HVcX4eyu.webp</image:loc>
+      <image:title>فاتروشكا</image:title>
+      <image:caption>قطعة واحدة</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1006,6 +1472,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-govyadinoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-lahm-al-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-beef"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20Beef(1200x900px)-DTMB966V.webp</image:loc>
+      <image:title>Russian Pancakes with Beef</image:title>
+      <image:caption>Beef-filled Russian crêpes with sour cream.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1015,6 +1486,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-govyadinoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-lahm-al-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-beef"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20Beef(1200x900px)-DTMB966V.webp</image:loc>
+      <image:title>Блины с говядиной</image:title>
+      <image:caption>Блины с говяжьей начинкой и сметаной.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1024,6 +1500,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-govyadinoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-lahm-al-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-beef"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20Beef(1200x900px)-DTMB966V.webp</image:loc>
+      <image:title>فطائر روسية باللحم البقري</image:title>
+      <image:caption>ثلاث قطع من لحم البقر المفروم الطري، مع التوابل والبصل الذهبي.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1033,6 +1514,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20Mushroom(1200x900px)-Cch0rhgQ.webp</image:loc>
+      <image:title>Russian Pancakes with Mushroom</image:title>
+      <image:caption>Mushroom-filled Russian crêpes with sour cream.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1042,6 +1528,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20Mushroom(1200x900px)-Cch0rhgQ.webp</image:loc>
+      <image:title>Блины с грибами</image:title>
+      <image:caption>Блины с грибной начинкой и сметаной.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1051,6 +1542,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20Mushroom(1200x900px)-Cch0rhgQ.webp</image:loc>
+      <image:title>فطائر روسية بالفطر</image:title>
+      <image:caption>ثلاث قطع.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1060,6 +1556,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vareniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/vareniki-bil-batata"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vareniki-with-potato"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vareniki%20With%20Potato(1200x900px)-CivzX3Fh.webp</image:loc>
+      <image:title>Vareniki With Potato</image:title>
+      <image:caption>Soft potato vareniki with butter &amp; sour cream.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1069,6 +1570,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vareniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/vareniki-bil-batata"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vareniki-with-potato"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vareniki%20With%20Potato(1200x900px)-CivzX3Fh.webp</image:loc>
+      <image:title>Вареники</image:title>
+      <image:caption>Нежные вареники с картофелем и сметаной.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1078,6 +1584,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/vareniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/vareniki-bil-batata"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/vareniki-with-potato"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Vareniki%20With%20Potato(1200x900px)-CivzX3Fh.webp</image:loc>
+      <image:title>فارينيكي بالبطاطا</image:title>
+      <image:caption>عشر قطع من الزلابية المحشوة بالبطاطا.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1087,6 +1598,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pelmeni"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/pelmeni-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pelmeni-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pelmeni%20with%20meat(1200x900px)-Bz3xXeVA.webp</image:loc>
+      <image:title>Pelmeni with meat</image:title>
+      <image:caption>Tender beef pelmeni with sour cream.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1096,6 +1612,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pelmeni"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/pelmeni-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pelmeni-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pelmeni%20with%20meat(1200x900px)-Bz3xXeVA.webp</image:loc>
+      <image:title>Пельмени</image:title>
+      <image:caption>Нежные пельмени с говядиной и сметаной.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1105,6 +1626,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/pelmeni"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/pelmeni-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pelmeni-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pelmeni%20with%20meat(1200x900px)-Bz3xXeVA.webp</image:loc>
+      <image:title>بيلميني باللحم</image:title>
+      <image:caption>اثنا عشر قطعة من الزلابية الروسية التقليدية المحشوة باللحم، مع الزبدة والقشدة الحامضة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1114,6 +1640,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/draniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/draniki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/draniki"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Draniki(1200x900px)-chqnoUPh.webp</image:loc>
+      <image:title>Draniki</image:title>
+      <image:caption>Crispy Belarusian potato pancakes with sour cream.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1123,6 +1654,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/draniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/draniki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/draniki"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Draniki(1200x900px)-chqnoUPh.webp</image:loc>
+      <image:title>Драники</image:title>
+      <image:caption>Хрустящие белорусские драники со сметаной.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1132,6 +1668,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/draniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/draniki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/draniki"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Draniki(1200x900px)-chqnoUPh.webp</image:loc>
+      <image:title>درانيكي</image:title>
+      <image:caption>فطائر البطاطا المقلية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1141,6 +1682,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/manty-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/manti-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/manti-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Manti%20With%20Meat(1200x900px)-s54h4kNC.webp</image:loc>
+      <image:title>Manti With Meat</image:title>
+      <image:caption>Steamed beef manti with sour-cream dip.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1150,6 +1696,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/manty-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/manti-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/manti-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Manti%20With%20Meat(1200x900px)-s54h4kNC.webp</image:loc>
+      <image:title>Манты из говядины</image:title>
+      <image:caption>Паровые манты с говядиной и сметаной.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1159,6 +1710,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/manty-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/manti-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/manti-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Manti%20With%20Meat(1200x900px)-s54h4kNC.webp</image:loc>
+      <image:title>مانتي باللحم</image:title>
+      <image:caption>خمس قطع من الزلابية الأوزبكية المحشوة باللحم المتبل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1168,6 +1724,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/cheburek-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/cheburek-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cheburek-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cheburek%20With%20Meat(1200x900px)-Dg9AtbGP.webp</image:loc>
+      <image:title>Cheburek With Meat</image:title>
+      <image:caption>Crispy beef cheburek, golden-fried turnover.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1177,6 +1738,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/cheburek-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/cheburek-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cheburek-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cheburek%20With%20Meat(1200x900px)-Dg9AtbGP.webp</image:loc>
+      <image:title>Чебурек из говядины</image:title>
+      <image:caption>Хрустящий говяжий чебурек.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1186,6 +1752,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/cheburek-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/cheburek-bil-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cheburek-with-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cheburek%20With%20Meat(1200x900px)-Dg9AtbGP.webp</image:loc>
+      <image:title>تشيبوريك باللحم</image:title>
+      <image:caption>لحم بقري مفروم وبصل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1195,6 +1766,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyazhi-kotlety"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sharaih-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-cutlets"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Cutlets(1200x900px)-DGRwllAW.webp</image:loc>
+      <image:title>Beef Cutlets</image:title>
+      <image:caption>Juicy beef cutlets with creamy spice.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1204,6 +1780,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyazhi-kotlety"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sharaih-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-cutlets"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Cutlets(1200x900px)-DGRwllAW.webp</image:loc>
+      <image:title>Говяжьи котлеты</image:title>
+      <image:caption>Сочные говяжьи котлеты со специями.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1213,6 +1794,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyazhi-kotlety"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sharaih-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-cutlets"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Cutlets(1200x900px)-DGRwllAW.webp</image:loc>
+      <image:title>شرائح لحم بقري</image:title>
+      <image:caption>شريحة لحم بقري على الطريقة الروسية التقليدية مع اختيارك من الأطباق الجانبية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1222,6 +1808,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinye-kotlety"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sharaih-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-cutlets"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Cutlets(1200x900px)-S09SD6Bb.webp</image:loc>
+      <image:title>Chicken Cutlets</image:title>
+      <image:caption>Juicy chicken cutlets with warm spices.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1231,6 +1822,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinye-kotlety"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sharaih-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-cutlets"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Cutlets(1200x900px)-S09SD6Bb.webp</image:loc>
+      <image:title>Куриные котлеты</image:title>
+      <image:caption>Сочные куриные котлеты со специями.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1240,6 +1836,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinye-kotlety"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sharaih-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-cutlets"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Cutlets(1200x900px)-S09SD6Bb.webp</image:loc>
+      <image:title>شرائح دجاج</image:title>
+      <image:caption>قطعتان من شرائح الدجاج المطهوة على البخار، مع اختيارك من الأطباق الجانبية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1249,6 +1850,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzbekskiy-plov"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/plov-lahm-baqari-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-beef-plov"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Beef%20Plov(1200x900px)-DfVlzdiA.webp</image:loc>
+      <image:title>Uzbek Beef Plov</image:title>
+      <image:caption>Fragrant Uzbek beef plov with carrots &amp; garlic.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1258,6 +1864,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzbekskiy-plov"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/plov-lahm-baqari-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-beef-plov"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Beef%20Plov(1200x900px)-DfVlzdiA.webp</image:loc>
+      <image:title>Узбекский плов</image:title>
+      <image:caption>Ароматный узбекский плов с говядиной.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1267,6 +1878,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzbekskiy-plov"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/plov-lahm-baqari-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-beef-plov"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Beef%20Plov(1200x900px)-DfVlzdiA.webp</image:loc>
+      <image:title>بلوف لحم بقري أوزبكي</image:title>
+      <image:caption>أرز، لحم بقري، جزر، وتوابل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1276,6 +1892,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/golubtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-mahshi-bil-aruz-wal-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cabbage-rolls-with-rice-and-minced-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cabbage%20Rolls%20With%20Rice%20And%20Minced%20Meat(1200x900px)-BHVxmhb1.webp</image:loc>
+      <image:title>Cabbage Rolls With Rice And Minced Meat</image:title>
+      <image:caption>Hearty cabbage rolls with beef &amp; rice.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1285,6 +1906,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/golubtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-mahshi-bil-aruz-wal-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cabbage-rolls-with-rice-and-minced-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cabbage%20Rolls%20With%20Rice%20And%20Minced%20Meat(1200x900px)-BHVxmhb1.webp</image:loc>
+      <image:title>Голубцы</image:title>
+      <image:caption>Сытные голубцы с говядиной и рисом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1294,6 +1920,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/golubtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-mahshi-bil-aruz-wal-lahm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cabbage-rolls-with-rice-and-minced-meat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cabbage%20Rolls%20With%20Rice%20And%20Minced%20Meat(1200x900px)-BHVxmhb1.webp</image:loc>
+      <image:title>ملفوف محشو بالأرز واللحم المفروم</image:title>
+      <image:caption>ثلاث قطع من أوراق الكرنب مع لحم بقري وأرز.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1303,6 +1934,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/zharkoe-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqla-sakhina"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/hot-pan"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Hot%20Pan(1200x900px)-CjgCf7gM.webp</image:loc>
+      <image:title>Hot Pan</image:title>
+      <image:caption>Sizzling beef-potato hot-pan.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1312,6 +1948,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/zharkoe-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqla-sakhina"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/hot-pan"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Hot%20Pan(1200x900px)-CjgCf7gM.webp</image:loc>
+      <image:title>Жаркое из Говядины</image:title>
+      <image:caption>Жаркое из говядины и картофеля.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1321,6 +1962,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/zharkoe-iz-govyadiny"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqla-sakhina"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/hot-pan"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Hot%20Pan(1200x900px)-CjgCf7gM.webp</image:loc>
+      <image:title>مقلاة ساخنة</image:title>
+      <image:caption>لحم بقري، بطاطا، فطر، وبصل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1330,6 +1976,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/befstroganov"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/stroganoff-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-stroganoff"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Stroganoff(1200x900px)-ChrHGTYH.webp</image:loc>
+      <image:title>Beef Stroganoff</image:title>
+      <image:caption>Classic creamy beef stroganoff.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1339,6 +1990,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/befstroganov"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/stroganoff-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-stroganoff"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Stroganoff(1200x900px)-ChrHGTYH.webp</image:loc>
+      <image:title>Бефстроганов</image:title>
+      <image:caption>Классический бефстроганов.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1348,6 +2004,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/befstroganov"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/stroganoff-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-stroganoff"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Stroganoff(1200x900px)-ChrHGTYH.webp</image:loc>
+      <image:title>ستروجانوف لحم بقري</image:title>
+      <image:caption>شريحة لحم بقري طرية سوتيه تقدم مع صلصة كريمة وبطاطا مهروسة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1357,6 +2018,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kotleta-po-po-kievski"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/dajaj-kiev"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-kiev"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Kiev(1200x900px)-cjCTSX0H.webp</image:loc>
+      <image:title>Chicken Kiev</image:title>
+      <image:caption>Golden, butter-filled Chicken Kiev.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1366,6 +2032,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kotleta-po-po-kievski"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/dajaj-kiev"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-kiev"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Kiev(1200x900px)-cjCTSX0H.webp</image:loc>
+      <image:title>Котлета по по-киевски</image:title>
+      <image:caption>Золотистая котлета по-киевски.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1375,6 +2046,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kotleta-po-po-kievski"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/dajaj-kiev"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-kiev"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Kiev(1200x900px)-cjCTSX0H.webp</image:loc>
+      <image:title>دجاج كييف</image:title>
+      <image:caption>دجاج منزوع العظم مغطى بصلصة زبدة البقدونس الكريمية المتبلة. يقدم مع اختيارك من الأطباق الجانبية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1384,6 +2060,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/napoleon"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/napoleon"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/napoleon"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Napoleon(1200x900px)-5BqZsRyT.webp</image:loc>
+      <image:title>Napoleon</image:title>
+      <image:caption>Flaky walnut-caramel Napoleon slice.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1393,6 +2074,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/napoleon"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/napoleon"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/napoleon"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Napoleon(1200x900px)-5BqZsRyT.webp</image:loc>
+      <image:title>Наполеон</image:title>
+      <image:caption>Слойка «Наполеон» с ореховым кремом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1402,6 +2088,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/napoleon"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/napoleon"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/napoleon"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Napoleon(1200x900px)-5BqZsRyT.webp</image:loc>
+      <image:title>نابليون</image:title>
+      <image:caption>معجنات روسية رقيقة وهشة محشوة بالكريمة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1411,6 +2102,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/medovik"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/kaakat-al-asal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/honey-cake"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Honey%20Cake(1200x900px)-GuV7_jVK.webp</image:loc>
+      <image:title>Honey Cake</image:title>
+      <image:caption>Rich honey sponge with a light caramel glaze.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1420,6 +2116,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/medovik"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/kaakat-al-asal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/honey-cake"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Honey%20Cake(1200x900px)-GuV7_jVK.webp</image:loc>
+      <image:title>Медовик</image:title>
+      <image:caption>Нежный медовый бисквит с карамельной глазурью.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1429,6 +2130,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/medovik"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/kaakat-al-asal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/honey-cake"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Honey%20Cake(1200x900px)-GuV7_jVK.webp</image:loc>
+      <image:title>كعكة العسل</image:title>
+      <image:caption>عسل، كريمة، وتوت طازج.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1438,6 +2144,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-tvorogom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-jibn"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-cottage-cheese"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20cottage%20cheese(1200x900px)-Dl_U23hY.webp</image:loc>
+      <image:title>Russian Pancakes with cottage cheese</image:title>
+      <image:caption>Cottage-cheese crêpes with jam.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1447,6 +2158,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-tvorogom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-jibn"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-cottage-cheese"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20cottage%20cheese(1200x900px)-Dl_U23hY.webp</image:loc>
+      <image:title>Блины с творогом</image:title>
+      <image:caption>Блины c творожной начинкой и вареньем.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1456,6 +2172,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/bliny-s-tvorogom"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/fatair-rusiya-bil-jibn"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-pancakes-with-cottage-cheese"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Pancakes%20with%20cottage%20cheese(1200x900px)-Dl_U23hY.webp</image:loc>
+      <image:title>فطائر روسية مع جبن قريش</image:title>
+      <image:caption>٣ قطع.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1465,6 +2186,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/syrniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/syrniki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/syrniki"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Syrniki(1200x900px)-DDGZeKlk.webp</image:loc>
+      <image:title>Syrniki</image:title>
+      <image:caption>Sweet cottage-cheese syrniki, pan-fried till golden.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1474,6 +2200,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/syrniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/syrniki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/syrniki"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Syrniki(1200x900px)-DDGZeKlk.webp</image:loc>
+      <image:title>Сырники</image:title>
+      <image:caption>Сладкие сырники, обжаренные до золотистой корочки.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1483,6 +2214,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/syrniki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/syrniki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/syrniki"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Syrniki(1200x900px)-DDGZeKlk.webp</image:loc>
+      <image:title>سيرنيكي</image:title>
+      <image:caption>٣ قطع من فطائر الجبن القريش التقليدية من شرق أوروبا مع اختيارك من الصلصة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1492,6 +2228,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Skewer(1200x900px)-B7woZHsl.webp</image:loc>
+      <image:title>Chicken Skewer</image:title>
+      <image:caption>Zesty coriander chicken skewer, flame-grilled.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1501,6 +2242,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Skewer(1200x900px)-B7woZHsl.webp</image:loc>
+      <image:title>Куриный шашлык</image:title>
+      <image:caption>Куриный шашлык с кориандром и лимоном.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1510,6 +2256,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Skewer(1200x900px)-B7woZHsl.webp</image:loc>
+      <image:title>سيخ دجاج</image:title>
+      <image:caption>مكعبات صدور دجاج متبلة مشوية. تقدم مع بطاطا مقلية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1519,6 +2270,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyazhiy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Skewer(1200x900px)-C__YxB73.webp</image:loc>
+      <image:title>Beef Skewer</image:title>
+      <image:caption>Juicy grilled beef skewer, pepper-marinated.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1528,6 +2284,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyazhiy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Skewer(1200x900px)-C__YxB73.webp</image:loc>
+      <image:title>Говяжий шашлык</image:title>
+      <image:caption>Сочный говяжий шашлык на гриле.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1537,6 +2298,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyazhiy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Skewer(1200x900px)-C__YxB73.webp</image:loc>
+      <image:title>سيخ لحم بقري</image:title>
+      <image:caption>مكعبات لحم بقري طري مشوية. تقدم مع بطاطا مقلية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1546,6 +2312,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/baraniy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-lahm-dhan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/lamb-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Lamb%20Skewer(1200x900px)-9iZLWrwL.webp</image:loc>
+      <image:title>Lamb Skewer</image:title>
+      <image:caption>Cumin-coriander lamb skewer, smoky &amp; tender.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1555,6 +2326,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/baraniy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-lahm-dhan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/lamb-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Lamb%20Skewer(1200x900px)-9iZLWrwL.webp</image:loc>
+      <image:title>Бараний шашлык</image:title>
+      <image:caption>Пряный бараний шашлык с кумином.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1564,6 +2340,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/baraniy-shashlyk"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/sikh-lahm-dhan"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/lamb-skewer"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Lamb%20Skewer(1200x900px)-9iZLWrwL.webp</image:loc>
+      <image:title>سيخ لحم ضأن</image:title>
+      <image:caption>مكعبات لحم ضأن متبلة مشوية. تقدم مع بطاطا مقلية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1573,6 +2354,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grechka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/hinta-sawda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buckwheat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buckwheat(1200x900px)-DpHZCeOE.webp</image:loc>
+      <image:title>Buckwheat</image:title>
+      <image:caption>Fluffy buttered buckwheat groats.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1582,6 +2368,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grechka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/hinta-sawda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buckwheat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buckwheat(1200x900px)-DpHZCeOE.webp</image:loc>
+      <image:title>Гречка</image:title>
+      <image:caption>Рассыпчатая гречка с маслом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1591,6 +2382,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/grechka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/hinta-sawda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/buckwheat"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Buckwheat(1200x900px)-DpHZCeOE.webp</image:loc>
+      <image:title>الحنطة السوداء</image:title>
+      <image:caption>دقيق الحنطة السوداء، ماء وملح.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1600,6 +2396,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/lyulya-kebab"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/lyulya-kebab"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/lyulya-kebab"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Lyulya%20Kebab(1200x900px)-CBFfObM1.webp</image:loc>
+      <image:title>Lyulya Kebab</image:title>
+      <image:caption>Smoky mixed-meat lyulya kebab on skewer.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1609,6 +2410,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/lyulya-kebab"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/lyulya-kebab"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/lyulya-kebab"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Lyulya%20Kebab(1200x900px)-CBFfObM1.webp</image:loc>
+      <image:title>Люля Кебаб</image:title>
+      <image:caption>Ароматный люля-кебаб из говядины и курицы.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1618,6 +2424,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/lyulya-kebab"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/lyulya-kebab"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/lyulya-kebab"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Lyulya%20Kebab(1200x900px)-CBFfObM1.webp</image:loc>
+      <image:title>كباب ليليا</image:title>
+      <image:caption>لحم بقري ولحم ضأن مفروم مشوي. يقدم مع بطاطا مقلية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1627,6 +2438,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/varenyy-ris"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/aruz-masluq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/boiled-rice"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Boiled%20Rice(1200x900px)-Cb_rVogF.webp</image:loc>
+      <image:title>Boiled Rice</image:title>
+      <image:caption>Fluffy buttered boiled rice.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1636,6 +2452,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/varenyy-ris"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/aruz-masluq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/boiled-rice"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Boiled%20Rice(1200x900px)-Cb_rVogF.webp</image:loc>
+      <image:title>Вареный рис</image:title>
+      <image:caption>Рассыпчатый рис с маслом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1645,6 +2466,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/varenyy-ris"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/aruz-masluq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/boiled-rice"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Boiled%20Rice(1200x900px)-Cb_rVogF.webp</image:loc>
+      <image:title>الأرز المسلوق</image:title>
+      <image:caption>أرز أبيض مسلوق.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1654,6 +2480,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ovoshchi-na-grile"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khudar-mashwiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/grilled-vegetable"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Grilled%20Vegetable(1200x900px)-BAuAV1Iz.webp</image:loc>
+      <image:title>Grilled Vegetable</image:title>
+      <image:caption>Smoky mixed grilled vegetables with butter glaze.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1663,6 +2494,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ovoshchi-na-grile"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khudar-mashwiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/grilled-vegetable"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Grilled%20Vegetable(1200x900px)-BAuAV1Iz.webp</image:loc>
+      <image:title>Овощи на гриле</image:title>
+      <image:caption>Овощное ассорти на гриле с масляной глазурью.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1672,6 +2508,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/ovoshchi-na-grile"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khudar-mashwiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/grilled-vegetable"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Grilled%20Vegetable(1200x900px)-BAuAV1Iz.webp</image:loc>
+      <image:title>خضار مشوية</image:title>
+      <image:caption>تشكيلة من الخضراوات المشوية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1681,6 +2522,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sladkiy-kartofel-fri"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batata-hilwa-maqliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/sweet-potato-fries"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Sweet%20Potato%20Fries(1200x900px)-C0MQxfhI.webp</image:loc>
+      <image:title>Sweet Potato Fries</image:title>
+      <image:caption>Crispy oven-baked sweet-potato fries.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1690,6 +2536,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sladkiy-kartofel-fri"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batata-hilwa-maqliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/sweet-potato-fries"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Sweet%20Potato%20Fries(1200x900px)-C0MQxfhI.webp</image:loc>
+      <image:title>Сладкий картофель фри</image:title>
+      <image:caption>Хрустящий батат-фри из духовки.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1699,6 +2550,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sladkiy-kartofel-fri"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batata-hilwa-maqliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/sweet-potato-fries"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Sweet%20Potato%20Fries(1200x900px)-C0MQxfhI.webp</image:loc>
+      <image:title>بطاطس حلوة مقلية</image:title>
+      <image:caption>استمتعوا بالتوازن المثالي بين القرمشة والطراوة مع بطاطسنا الحلوة المقلية، المتبّلة بخبرة والمُحمّرة بلون ذهبي خفيف، لتُقدّم لكم تجربة شهية ستجعلكم تتوقون إلى حلاوتها اللذيذة مع كل قضمة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1708,6 +2564,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartofelnoe-pyure"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-mahrusa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/mashed-potatoes"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Mashed%20Potatoes(1200x900px)-BL0Mi2AO.webp</image:loc>
+      <image:title>Mashed Potatoes</image:title>
+      <image:caption>Creamy mashed potatoes with butter.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1717,6 +2578,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartofelnoe-pyure"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-mahrusa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/mashed-potatoes"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Mashed%20Potatoes(1200x900px)-BL0Mi2AO.webp</image:loc>
+      <image:title>Картофельное пюре</image:title>
+      <image:caption>Нежное картофельное пюре с маслом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1726,6 +2592,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartofelnoe-pyure"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-mahrusa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/mashed-potatoes"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Mashed%20Potatoes(1200x900px)-BL0Mi2AO.webp</image:loc>
+      <image:title>بطاطس مهروسة</image:title>
+      <image:caption>جرّبوا بطاطسنا المهروسة، المصنوعة من بطاطس ناعمة وهشة، مخفوقة مع الزبدة الكريمية والحليب الغني، لتُشكّل طبقًا جانبيًا شهيًا يُكمّل أي وجبة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1735,6 +2606,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartofel-fri"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-maqliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/french-fries"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/French%20Fries(1200x900px)-Bg0XcNPQ.webp</image:loc>
+      <image:title>French Fries</image:title>
+      <image:caption>Classic double-fried French fries.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1744,6 +2620,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartofel-fri"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-maqliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/french-fries"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/French%20Fries(1200x900px)-Bg0XcNPQ.webp</image:loc>
+      <image:title>Картофель фри</image:title>
+      <image:caption>Классический картофель фри.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1753,6 +2634,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartofel-fri"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-maqliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/french-fries"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/French%20Fries(1200x900px)-Bg0XcNPQ.webp</image:loc>
+      <image:title>بطاطس مقلية عادية</image:title>
+      <image:caption>مقلية حتى تصبح ذهبية مقرمشة ومتبلة بشكل مثالي، تُعدّ إضافة رائعة لأي وجبة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1762,6 +2648,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartoshka-po-domashnemu-s-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-manziliya-bil-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-potato-with-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Home%20Style%20Potato%20With%20Mushroom(1200x900px)-2Dcu-P1P.webp</image:loc>
+      <image:title>Home Style Potato With Mushroom</image:title>
+      <image:caption>Rustic fried potatoes with mushrooms &amp; dill.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1771,6 +2662,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartoshka-po-domashnemu-s-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-manziliya-bil-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-potato-with-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Home%20Style%20Potato%20With%20Mushroom(1200x900px)-2Dcu-P1P.webp</image:loc>
+      <image:title>Картошка по домашнему с грибами</image:title>
+      <image:caption>Картошка по-домашнему с грибами и укропом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1780,6 +2676,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kartoshka-po-domashnemu-s-gribami"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/batatis-manziliya-bil-fitr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-potato-with-mushroom"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Home%20Style%20Potato%20With%20Mushroom(1200x900px)-2Dcu-P1P.webp</image:loc>
+      <image:title>بطاطس منزلية مع الفطر</image:title>
+      <image:caption>فطر وبصل وبطاطا مقلية مع أعشاب طازجة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1789,6 +2690,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/lepeshka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-musattah-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-flatbread"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Flatbread(1200x900px)-DUu6TZHN.webp</image:loc>
+      <image:title>Uzbek Flatbread</image:title>
+      <image:caption>Uzbek-style sesame flatbread, warm &amp; fluffy.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1798,6 +2704,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/lepeshka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-musattah-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-flatbread"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Flatbread(1200x900px)-DUu6TZHN.webp</image:loc>
+      <image:title>Лепешка</image:title>
+      <image:caption>Узбекская лепёшка с кунжутом.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1807,6 +2718,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/lepeshka"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khubz-musattah-uzbaki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-flatbread"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Flatbread(1200x900px)-DUu6TZHN.webp</image:loc>
+      <image:title>خبز مسطح أوزبكي</image:title>
+      <image:caption>خبز مسطح</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1816,6 +2732,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/adzhika"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-adjika"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/adjika-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Adjika%20Sauce(1200x900px)-usvg27yj.webp</image:loc>
+      <image:title>Adjika Sauce</image:title>
+      <image:caption>Fiery Georgian adjika.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1825,6 +2746,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/adzhika"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-adjika"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/adjika-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Adjika%20Sauce(1200x900px)-usvg27yj.webp</image:loc>
+      <image:title>Аджика</image:title>
+      <image:caption>Острая аджика.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1834,6 +2760,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/adzhika"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-adjika"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/adjika-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Adjika%20Sauce(1200x900px)-usvg27yj.webp</image:loc>
+      <image:title>صلصة أدجيكا</image:title>
+      <image:caption>صلصة أدجيكا جورجية حارة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1843,6 +2774,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/firmennyy-sous"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsa-khassa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/house-special-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/House%20Special%20Sauce(1200x900px)-lhFYznWW.webp</image:loc>
+      <image:title>House Special Sauce</image:title>
+      <image:caption>Creamy ketchup-mayo “house” sauce.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1852,6 +2788,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/firmennyy-sous"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsa-khassa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/house-special-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/House%20Special%20Sauce(1200x900px)-lhFYznWW.webp</image:loc>
+      <image:title>Фирменный соус</image:title>
+      <image:caption>Кремовый фирменный соус.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1861,6 +2802,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/firmennyy-sous"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsa-khassa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/house-special-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/House%20Special%20Sauce(1200x900px)-lhFYznWW.webp</image:loc>
+      <image:title>صلصة خاصة بالمطعم</image:title>
+      <image:caption>صلصة البيت الكريمية بالكاتشب والمايونيز.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1870,6 +2816,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/gorchitsa"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-al-khardal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/mustard-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Mustard%20Sauce(1200x900px)-CXu-RXxH.webp</image:loc>
+      <image:title>Mustard Sauce</image:title>
+      <image:caption>Honey-mustard dipping sauce.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1879,6 +2830,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/gorchitsa"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-al-khardal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/mustard-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Mustard%20Sauce(1200x900px)-CXu-RXxH.webp</image:loc>
+      <image:title>Горчица</image:title>
+      <image:caption>Медово-горчичный соус.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1888,6 +2844,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/gorchitsa"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-al-khardal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/mustard-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Mustard%20Sauce(1200x900px)-CXu-RXxH.webp</image:loc>
+      <image:title>صلصة الخردل</image:title>
+      <image:caption>صلصة الخردل بالعسل للغمس.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1897,6 +2858,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/tomatno-chesnochnyy-sous"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-al-tamatim-wal-thum"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/tomato-garlic-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Tomato-Garlic%20Sauce(1200x900px)-3BwNUUdE.webp</image:loc>
+      <image:title>Tomato-Garlic Sauce</image:title>
+      <image:caption>Rich tomato-garlic dip.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1906,6 +2872,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/tomatno-chesnochnyy-sous"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-al-tamatim-wal-thum"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/tomato-garlic-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Tomato-Garlic%20Sauce(1200x900px)-3BwNUUdE.webp</image:loc>
+      <image:title>Томатно-чесночный соус</image:title>
+      <image:caption>Насыщенный томатно-чесночный соус.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1915,6 +2886,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/tomatno-chesnochnyy-sous"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/salsat-al-tamatim-wal-thum"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/tomato-garlic-sauce"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Tomato-Garlic%20Sauce(1200x900px)-3BwNUUdE.webp</image:loc>
+      <image:title>صلصة الطماطم والثوم</image:title>
+      <image:caption>صلصة غنية بالطماطم والثوم.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1924,6 +2900,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/klyukvennyy-mors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mors-al-tut-al-barri"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cranbery-mors"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cranbery%20Mors(1200x900px)-BCi0it6a.webp</image:loc>
+      <image:title>Cranbery Mors</image:title>
+      <image:caption>Refreshing homemade cranberry mors.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1933,6 +2914,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/klyukvennyy-mors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mors-al-tut-al-barri"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cranbery-mors"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cranbery%20Mors(1200x900px)-BCi0it6a.webp</image:loc>
+      <image:title>Клюквенный морс</image:title>
+      <image:caption>Домашний клюквенный морс.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1942,6 +2928,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/klyukvennyy-mors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mors-al-tut-al-barri"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cranbery-mors"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cranbery%20Mors(1200x900px)-BCi0it6a.webp</image:loc>
+      <image:title>مورس التوت البري</image:title>
+      <image:caption>مورس التوت البري المنزلي المنعش.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1951,6 +2942,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/smetana"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/karima-hamida"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/sour-cream"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Sour%20Cream(1200x900px)-SJUx3B11.webp</image:loc>
+      <image:title>Sour Cream</image:title>
+      <image:caption>Traditional sour cream.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1960,6 +2956,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/smetana"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/karima-hamida"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/sour-cream"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Sour%20Cream(1200x900px)-SJUx3B11.webp</image:loc>
+      <image:title>Сметана</image:title>
+      <image:caption>Традиционная сметана.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1969,6 +2970,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/smetana"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/karima-hamida"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/sour-cream"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Sour%20Cream(1200x900px)-SJUx3B11.webp</image:loc>
+      <image:title>كريمة حامضة</image:title>
+      <image:caption>كريمة حامضة تقليدية.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1978,6 +2984,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/myod"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/honey"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Honey(1200x900px)-C1croO94.webp</image:loc>
+      <image:title>Honey</image:title>
+      <image:caption>A generous portion of honey.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1987,6 +2998,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/myod"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/honey"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Honey(1200x900px)-C1croO94.webp</image:loc>
+      <image:title>Мёд</image:title>
+      <image:caption>Щедрая порция мёда.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -1996,6 +3012,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/myod"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/honey"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Honey(1200x900px)-C1croO94.webp</image:loc>
+      <image:title>عسل</image:title>
+      <image:caption>كمية وفيرة من العسل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2005,6 +3026,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/domashnee-varenye-iz-golubiki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/murabba-tut-azraq-manzili"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/homemade-blueberry-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Homemade%20Jam%20Blueberry(1200x900px)-CqV5aSVY.webp</image:loc>
+      <image:title>Homemade Jam Blueberry</image:title>
+      <image:caption>Homemade blueberry jam.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2014,6 +3040,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/domashnee-varenye-iz-golubiki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/murabba-tut-azraq-manzili"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/homemade-blueberry-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Homemade%20Jam%20Blueberry(1200x900px)-CqV5aSVY.webp</image:loc>
+      <image:title>Домашнее варенье</image:title>
+      <image:caption>Домашнее варенье из голубики.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2023,6 +3054,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/domashnee-varenye-iz-golubiki"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/murabba-tut-azraq-manzili"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/homemade-blueberry-jam"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Homemade%20Jam%20Blueberry(1200x900px)-CqV5aSVY.webp</image:loc>
+      <image:title>مربى توت أزرق منزلي الصنع</image:title>
+      <image:caption>مربى توت أزرق منزلي الصنع.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2032,6 +3068,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sgushchennoe-moloko"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/halib-mukathaf-muhalla"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/condensed-milk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Condensed%20Milk(1200x900px)-EjjAXGPu.webp</image:loc>
+      <image:title>Condensed Milk</image:title>
+      <image:caption>A generous portion of condensed milk.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2041,6 +3082,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sgushchennoe-moloko"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/halib-mukathaf-muhalla"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/condensed-milk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Condensed%20Milk(1200x900px)-EjjAXGPu.webp</image:loc>
+      <image:title>Сгущённое молоко</image:title>
+      <image:caption>Щедрая порция сгущённого молока.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2050,6 +3096,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/sgushchennoe-moloko"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/halib-mukathaf-muhalla"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/condensed-milk"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Condensed%20Milk(1200x900px)-EjjAXGPu.webp</image:loc>
+      <image:title>حليب مكثف محلى</image:title>
+      <image:caption>كمية وفيرة من الحليب المكثف المحلى.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2059,6 +3110,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/marinovannye-pomidory"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/tamatim-mukhallala"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-tomato"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Tomato(1200x900px)-BlWFMj3-.webp</image:loc>
+      <image:title>Pickled Tomato</image:title>
+      <image:caption>Pickled red tomato slices.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2068,6 +3124,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/marinovannye-pomidory"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/tamatim-mukhallala"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-tomato"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Tomato(1200x900px)-BlWFMj3-.webp</image:loc>
+      <image:title>Маринованные помидоры</image:title>
+      <image:caption>Ломтики маринованных красных помидоров.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2077,6 +3138,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/marinovannye-pomidory"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/tamatim-mukhallala"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-tomato"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Tomato(1200x900px)-BlWFMj3-.webp</image:loc>
+      <image:title>طماطم مخللة</image:title>
+      <image:caption>شرائح طماطم حمراء مخللة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2086,6 +3152,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenye-ogurtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khiyar-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-cucumber"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Cucumber(1200x900px)-7tvHBzzd.webp</image:loc>
+      <image:title>Pickled Cucumber</image:title>
+      <image:caption>Pickled cucumber slices.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2095,6 +3166,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenye-ogurtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khiyar-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-cucumber"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Cucumber(1200x900px)-7tvHBzzd.webp</image:loc>
+      <image:title>Солёные огурцы</image:title>
+      <image:caption>Ломтики солёных огурцов.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2104,6 +3180,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenye-ogurtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/khiyar-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-cucumber"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Cucumber(1200x900px)-7tvHBzzd.webp</image:loc>
+      <image:title>خيار مخلل</image:title>
+      <image:caption>شرائح خيار مخللة.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2113,6 +3194,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenaya-krasnaya-kapusta"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-ahmar-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-red-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Red%20Cabbage(1200x900px)-DKAgVVBI.webp</image:loc>
+      <image:title>Pickled Red Cabbage</image:title>
+      <image:caption>Pickled red cabbage.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2122,6 +3208,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenaya-krasnaya-kapusta"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-ahmar-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-red-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Red%20Cabbage(1200x900px)-DKAgVVBI.webp</image:loc>
+      <image:title>Солёная красная капуста</image:title>
+      <image:caption>Солёная красная капуста.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2131,6 +3222,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenaya-krasnaya-kapusta"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-ahmar-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-red-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20Red%20Cabbage(1200x900px)-DKAgVVBI.webp</image:loc>
+      <image:title>ملفوف أحمر مخلل</image:title>
+      <image:caption>ملفوف أحمر مخلل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2140,6 +3236,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenaya-kapusta"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-abyad-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-white-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20White%20Cabbage(1200x900px)-BBz7jCPm.webp</image:loc>
+      <image:title>Pickled White Cabbage</image:title>
+      <image:caption>Pickled white cabbage.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2149,6 +3250,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenaya-kapusta"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-abyad-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-white-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20White%20Cabbage(1200x900px)-BBz7jCPm.webp</image:loc>
+      <image:title>Солёная капуста</image:title>
+      <image:caption>Солёная белокочанная капуста.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2158,6 +3264,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/solenaya-kapusta"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-abyad-mukhallal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/pickled-white-cabbage"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Pickled%20White%20Cabbage(1200x900px)-BBz7jCPm.webp</image:loc>
+      <image:title>ملفوف أبيض مخلل</image:title>
+      <image:caption>ملفوف أبيض مخلل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2167,6 +3278,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/russkiy-obed"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/ghada-rusi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-lunch"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Lunch(1200x900px)-en1wNfNG.webp</image:loc>
+      <image:title>Russian Lunch (5 Items)</image:title>
+      <image:caption>Borscht, Olivier salad, meat pelmeni, cabbage pie and honey cake.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2176,6 +3292,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/russkiy-obed"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/ghada-rusi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-lunch"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Lunch(1200x900px)-en1wNfNG.webp</image:loc>
+      <image:title>Русский обед (5 блюд)</image:title>
+      <image:caption>Борщ, оливье, пельмени, пирожок с капустой и медовик.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2185,6 +3306,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/russkiy-obed"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/ghada-rusi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/russian-lunch"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Russian%20Lunch(1200x900px)-en1wNfNG.webp</image:loc>
+      <image:title>غداء روسي (٥ أصناف)</image:title>
+      <image:caption>بورش، سلطة أوليفييه، بيلميني باللحم، فطيرة بالملفوف وكعكة العسل.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2194,6 +3320,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/dlya-lyubiteley-pelmeney"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/ushshaq-al-zalabiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/dumpling-lovers"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Dumpling%20Lovers(1200x900px)-BVg1zDEH.webp</image:loc>
+      <image:title>Dumpling Lovers (4 Items)</image:title>
+      <image:caption>Meat pelmeni, beef manti, potato vareniki and a cabbage pie.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2203,6 +3334,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/dlya-lyubiteley-pelmeney"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/ushshaq-al-zalabiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/dumpling-lovers"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Dumpling%20Lovers(1200x900px)-BVg1zDEH.webp</image:loc>
+      <image:title>Для любителей пельменей (4 блюда)</image:title>
+      <image:caption>Пельмени, манты из говядины, вареники с картошкой и пирожок с капустой.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2212,6 +3348,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/dlya-lyubiteley-pelmeney"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/ushshaq-al-zalabiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/dumpling-lovers"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Dumpling%20Lovers(1200x900px)-BVg1zDEH.webp</image:loc>
+      <image:title>عشاق الزلابية (٤ أصناف)</image:title>
+      <image:caption>بيلميني باللحم، مانتي باللحم، فارينيكي بالبطاطا وفطيرة بالملفوف.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2221,6 +3362,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzbekskoe-zastolye"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/walima-uzbakiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-feast"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Feast(1200x900px)-BV9o3s1n.webp</image:loc>
+      <image:title>Uzbek Feast (5 Items)</image:title>
+      <image:caption>Beef plov, manti, Shakarob salad, flatbread and cranberry mors.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2230,6 +3376,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzbekskoe-zastolye"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/walima-uzbakiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-feast"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Feast(1200x900px)-BV9o3s1n.webp</image:loc>
+      <image:title>Узбекское застолье (5 блюд)</image:title>
+      <image:caption>Узбекский плов, манты, шакароб, лепёшка и клюквенный морс.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2239,6 +3390,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzbekskoe-zastolye"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/walima-uzbakiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/uzbek-feast"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Uzbek%20Feast(1200x900px)-BV9o3s1n.webp</image:loc>
+      <image:title>وليمة أوزبكية (٥ أصناف)</image:title>
+      <image:caption>بلوف لحم بقري، مانتي، شاكاروب، خبز مسطح ومورس التوت البري.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2248,6 +3404,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/gril-duet-na-dvoikh"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mashawi-li-shakhsayn"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/grill-duo-for-two"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Grill%20Duo%20for%20Two(1200x900px)-DCt-czb6.webp</image:loc>
+      <image:title>Grill Duo for Two (5 Items)</image:title>
+      <image:caption>Chicken skewer, lyulya kebab, Achichuk, flatbread and house sauce.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2257,6 +3418,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/gril-duet-na-dvoikh"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mashawi-li-shakhsayn"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/grill-duo-for-two"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Grill%20Duo%20for%20Two(1200x900px)-DCt-czb6.webp</image:loc>
+      <image:title>Гриль-дуэт на двоих (5 блюд)</image:title>
+      <image:caption>Куриный шашлык, люля-кебаб, ачичук, лепёшка и фирменный соус.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2266,6 +3432,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/gril-duet-na-dvoikh"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/mashawi-li-shakhsayn"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/grill-duo-for-two"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Grill%20Duo%20for%20Two(1200x900px)-DCt-czb6.webp</image:loc>
+      <image:title>مشاوي لشخصين (٥ أصناف)</image:title>
+      <image:caption>سيخ دجاج، كباب ليليا، أتشيتشوك، خبز مسطح وصلصة خاصة بالمطعم.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2275,6 +3446,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzhin-s-govyadinoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asha-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-dinner"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Dinner(1200x900px)-CZhbNoL6.webp</image:loc>
+      <image:title>Beef Dinner (4 Items)</image:title>
+      <image:caption>Beef Stroganoff, Vinegret salad, beef samsa and cranberry mors.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2284,6 +3460,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzhin-s-govyadinoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asha-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-dinner"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Dinner(1200x900px)-CZhbNoL6.webp</image:loc>
+      <image:title>Ужин с говядиной (4 блюда)</image:title>
+      <image:caption>Бефстроганов, винегрет, самса из говядины и клюквенный морс.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2293,6 +3474,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/uzhin-s-govyadinoy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asha-lahm-baqari"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/beef-dinner"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Beef%20Dinner(1200x900px)-CZhbNoL6.webp</image:loc>
+      <image:title>عشاء لحم بقري (٤ أصناف)</image:title>
+      <image:caption>ستروجانوف لحم بقري، سلطة فينيغريت، سمبوسة باللحم ومورس التوت البري.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2302,6 +3488,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-uzhin"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asha-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-dinner"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Dinner(1200x900px)-Q4SbkJRX.webp</image:loc>
+      <image:title>Chicken Dinner (4 Items)</image:title>
+      <image:caption>Chicken Kiev, chicken noodle soup, Olivier salad and a cabbage pie.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2311,6 +3502,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-uzhin"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asha-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-dinner"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Dinner(1200x900px)-Q4SbkJRX.webp</image:loc>
+      <image:title>Куриный ужин (4 блюда)</image:title>
+      <image:caption>Котлета по-киевски, куриный суп с лапшой, оливье и пирожок с капустой.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2320,6 +3516,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/kurinyy-uzhin"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/asha-dajaj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/chicken-dinner"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Chicken%20Dinner(1200x900px)-Q4SbkJRX.webp</image:loc>
+      <image:title>عشاء دجاج (٤ أصناف)</image:title>
+      <image:caption>دجاج كييف، شوربة الدجاج بالشعيرية، سلطة أوليفييه وفطيرة بالملفوف.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2329,6 +3530,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/klassicheskie-golubtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-mahshi-klasiki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cabbage-rolls-classic"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cabbage%20Rolls%20Classic(1200x900px)-CohXE66L.webp</image:loc>
+      <image:title>Cabbage Rolls Classic (4 Items)</image:title>
+      <image:caption>Cabbage rolls, Shuba herring salad, a cabbage pie and cranberry mors.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2338,6 +3544,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/klassicheskie-golubtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-mahshi-klasiki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cabbage-rolls-classic"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cabbage%20Rolls%20Classic(1200x900px)-CohXE66L.webp</image:loc>
+      <image:title>Классические голубцы (4 блюда)</image:title>
+      <image:caption>Голубцы, сельдь под шубой, пирожок с капустой и клюквенный морс.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2347,6 +3558,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/klassicheskie-golubtsy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/malfuf-mahshi-klasiki"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/cabbage-rolls-classic"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Cabbage%20Rolls%20Classic(1200x900px)-CohXE66L.webp</image:loc>
+      <image:title>ملفوف محشو كلاسيكي (٤ أصناف)</image:title>
+      <image:caption>ملفوف محشو، سلطة الرنجة شوبا، فطيرة بالملفوف ومورس التوت البري.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2356,6 +3572,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyadina-na-skovorode-po-domashnemu"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqlat-lahm-baqari-manziliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Home%20Style%20Beef%20Pan(1200x900px)-Dgl2vxz0.webp</image:loc>
+      <image:title>Home Style Beef Pan (5 Items)</image:title>
+      <image:caption>Mushroom crêpes, carrot salad, tomato-garlic sauce, honey cake and Hot Pan.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2365,6 +3586,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyadina-na-skovorode-po-domashnemu"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqlat-lahm-baqari-manziliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Home%20Style%20Beef%20Pan(1200x900px)-Dgl2vxz0.webp</image:loc>
+      <image:title>Говядина на сковороде по-домашнему (5 блюд)</image:title>
+      <image:caption>Блины с грибами, салат из моркови, томатно-чесночный соус, медовик и жаркое из говядины.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2374,6 +3600,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/menu/govyadina-na-skovorode-po-domashnemu"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/menu/miqlat-lahm-baqari-manziliya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/menu/home-style-beef-pan"/>
+    <image:image>
+      <image:loc>https://vkusno.ae/assets/Home%20Style%20Beef%20Pan(1200x900px)-Dgl2vxz0.webp</image:loc>
+      <image:title>مقلاة لحم بقري منزلية الصنع (٥ أصناف)</image:title>
+      <image:caption>فطائر روسية بالفطر، سلطة الجزر، صلصة الطماطم والثوم، كعكة العسل ومقلاة ساخنة باللحم البقري.</image:caption>
+    </image:image>
     <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>

@@ -49,3 +49,29 @@ test("createSitemap writes one lastmod per url when dates are supplied", () => {
   assert.equal(createSitemap([], []).includes("<lastmod>"), false);
   assert.throws(() => createSitemap([], [], {}), /Missing sitemap lastmod/);
 });
+
+test("a dish photo is listed on that dish only, in the page language", () => {
+  const xml = createSitemap([
+    {
+      slug: { en: "eggs", ru: "yaitsa", ar: "bayd" },
+      name: { en: "Eggs & toast", ru: "Яичница", ar: "بيض" },
+      description: { short: { en: "Creamy eggs", ru: "Нежная", ar: "كريمي" } },
+      sitemapImage: "https://vkusno.ae/assets/eggs.webp",
+    },
+    {
+      slug: { en: "soup", ru: "sup", ar: "shorba" },
+      name: { en: "Soup", ru: "Суп", ar: "شوربة" },
+      images: { full: "/src/01_assets/menuItems/full/Soup.webp" },
+    },
+  ]);
+  assert.match(
+    xml,
+    /<loc>https:\/\/vkusno\.ae\/ru\/menu\/yaitsa<\/loc>[\s\S]*?<image:title>Яичница<\/image:title>[\s\S]*?<image:caption>Нежная<\/image:caption>/,
+  );
+  assert.match(xml, /<image:loc>https:\/\/vkusno\.ae\/assets\/eggs\.webp<\/image:loc>/);
+  assert.equal(xml.includes("Eggs &amp; toast"), true);
+  assert.equal(xml.includes("/src/01_assets"), false);
+  const home = xml.slice(xml.indexOf("<loc>https://vkusno.ae/en</loc>"), xml.indexOf("<loc>https://vkusno.ae/ru</loc>"));
+  assert.equal(home.includes("<image:image>"), false);
+  assert.equal((xml.match(/<image:image>/g) ?? []).length, 3);
+});

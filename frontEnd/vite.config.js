@@ -15,6 +15,10 @@ export default defineConfig({
     // a gzip figure is a misleading number to optimise against.
     reportCompressedSize: true,
 
+    // The sitemap reads this after the build to find each dish photo's
+    // final /assets/ address, then deletes the file so it is not published.
+    manifest: true,
+
     chunkSizeWarningLimit: 200,
 
     // Never base64-inline an asset into JS.
