@@ -14,7 +14,13 @@
          with the site-wide description and a canonical pointing at "/". They
          are emitted per route by 02_comps/PageMeta.jsx instead. -->
 
+    <!-- The SVG stays for browsers that can draw it sharply. The ico and png
+         cover the tab, bookmarks, and phones that ask for those files by name. -->
     <link rel="icon" type="image/svg+xml" href="/Vkusno_logo.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Matches the two page backgrounds in ColorVariables.css, so the mobile
          browser chrome follows the theme instead of fighting it. -->
