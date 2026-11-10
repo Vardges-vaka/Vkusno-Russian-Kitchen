@@ -1,5 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import { useLocation } from "react-router-dom";
+
+// For useSyncExternalStore below: true at build time and while React attaches
+// to a page saved at build time, false in every other render.
+const subscribeToNothing = () => () => {};
+const notAttaching = () => false;
+const attaching = () => true;
 
 // React Router keeps scroll position by default - reset on every path change.
 //
@@ -11,8 +17,22 @@ const ScrollToTop = () => {
   const { pathname, state } = useLocation();
   const isOverlay = Boolean(state?.background);
 
+  // A saved page is on screen before React arrives, so the reader may already
+  // have scrolled it, and a reload restores their position. The first run
+  // must leave that alone. Later page changes still reset to the top.
+  const isAttachingToSavedPage = useSyncExternalStore(
+    subscribeToNothing,
+    notAttaching,
+    attaching,
+  );
+  const skipFirstReset = useRef(isAttachingToSavedPage);
+
   useEffect(() => {
     if (isOverlay) return;
+    if (skipFirstReset.current) {
+      skipFirstReset.current = false;
+      return;
+    }
     window.scrollTo(0, 0);
   }, [pathname, isOverlay]);
 

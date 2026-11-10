@@ -33,12 +33,14 @@
       content="#16110d"
       media="(prefers-color-scheme: dark)" />
 
-    <!-- Open Graph / Twitter stay STATIC and site-level, on purpose.
-         WhatsApp, Facebook and Slack scrapers do not execute JavaScript, so
-         they can only ever see these tags - a React-injected per-route og:title
-         is invisible to exactly the audience Open Graph exists for. Emitting
-         both would only duplicate tags for no gain. Genuine per-route link
-         previews need prerendering or SSR; that is not in this app's scope. -->
+    <!-- Open Graph / Twitter tags are plain HTML, not React, on purpose.
+         WhatsApp, Facebook and Slack scrapers do not execute JavaScript, so a
+         React-injected share title is invisible to exactly the audience these
+         tags exist for. The values below are the site-level defaults for the
+         app shell. scripts/prerender.mjs rewrites them for each page it saves
+         at build time, and adds a share picture on dish pages. Keep one tag
+         per property and keep "property" before "content": the build stops if
+         it cannot find exactly one of each. -->
     <meta property="og:type" content="restaurant.restaurant" />
     <meta property="og:site_name" content="Vkusno" />
     <meta property="og:title" content="Vkusno - Russian Kitchen in Dubai" />

@@ -40,7 +40,9 @@ that restriction is the only thing protecting it.
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Vite dev server |
-| `npm run build` | Runs `prebuild` (translation check + sitemap), then builds |
+| `npm run build` | `prebuild` (translation check, sitemap, redirects), the Vite build, then `postbuild` (saves every page, then finishes the sitemap) |
+| `npm run prerender` | Builds the app for Node and saves a finished HTML copy of every page into `dist/`. Run by `postbuild`; needs a fresh `vite build` |
+| `npm run preview:saved` | Serves `dist/` the way Vercel does, on http://localhost:4180, to look at the saved pages |
 | `npm run preview` | Serve the production build locally |
 | `npm run lint` | ESLint - expected to be clean |
 | `npm run check:i18n` | Translation integrity check (see below) |
@@ -305,8 +307,7 @@ as the job ads. The message body is in the visitor's language.
 
 The sitemap lists `/careers` and, for each open job, `/careers/{id}` with the
 same id in English, Russian and Arabic. Each job page carries one schema.org
-`JobPosting`. Pay is not in it. WhatsApp and LinkedIn link previews stay
-site-level, because the Open Graph tags are static (see Known gaps).
+`JobPosting`. Pay is not in it. Each open job page is saved at build time with its own share title and text.
 
 ---
 
@@ -345,6 +346,43 @@ backgrounds, the button shimmer.
 
 ---
 
+## Saved pages (prerendering)
+
+The app is rendered in the browser, so on its own every address returns the
+same empty shell. `npm run build` therefore also saves a finished HTML copy of
+every page: `dist/en/menu/index.html`, `dist/ru/menu/borshch/index.html`, and
+so on. Vercel serves that file first; React then attaches to it.
+
+How it fits together:
+
+- `src/entry-server.jsx` lists every address (`listPages`) and draws one with
+  the real `App` (`renderPage`). `npm run build:ssr` builds it for Node.
+- `scripts/prerender.mjs` runs after the Vite build. It draws each address,
+  moves the page's title, description and language links into `<head>`, adds
+  that page's stylesheets, and writes the file. It stops the build if a page
+  has no heading, points at a missing file, or differs from the sitemap.
+- `src/main.jsx` loads the page's code and words first, then attaches React.
+  If either wait is removed, React replaces the saved page with the spinner.
+- Three values start from a fixed build-time value and switch right after
+  React attaches: device type (`mobile`), theme (`light`), and the language
+  (from the address). The first browser render must equal the saved page.
+
+Rules when adding things:
+
+- A new page needs a row in `STATIC_PAGES` (`src/entry-server.jsx`), a row in
+  `PAGE_SOURCE` (`scripts/prerender.mjs`), and a sitemap entry.
+- A page that reads a translation file not listed in `ns`
+  (`src/i18n/i18n.Config.js`) needs `namespaces: [...]` on its route in
+  `06_routes/userRoutes.jsx`.
+- Anything drawn from `window`, `localStorage`, the screen size, the clock or
+  a random number must not change what the first render shows.
+- `npm run dev` never shows saved pages. Use `npm run build`, then
+  `npm run preview:saved`.
+
+Addresses with no saved page (an unknown address, a hidden dish, a closed job)
+still get the shell and work as before. To switch saving off, change
+`postbuild` in `package.json` back to `npm run sitemap`.
+
 ## Deployment
 
 Vercel. `vercel.json` holds the SPA rewrite and cache headers: `/assets/*` is
@@ -368,7 +406,6 @@ NotFound page carries `noindex, follow`.
   kitchen confirmation. (Allergens are shown since 18 Oct 2026 - see Menu data.)
 - No analytics. Note that the privacy policy currently states none are used -
   that copy must change first, in all three languages.
-- Open Graph tags are static and site-level. Scrapers such as WhatsApp do not
-  run JavaScript, so per-route previews would need prerendering.
+- Share pictures exist for dish pages only (cut from the dish photo at build time). Home, menu, contact, kitchens, careers, FAQ and privacy share a title and text but no picture, until a site picture is chosen.
 - `src/` still contains zero-byte placeholder files and commented-out admin
   routes from an earlier plan.

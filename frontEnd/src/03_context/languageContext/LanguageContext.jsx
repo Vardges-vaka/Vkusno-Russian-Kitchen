@@ -1,7 +1,11 @@
 import { createContext, useState, useEffect, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
-import { IS_DEBUG, resolveLanguage } from "../../00_config/_config.index.js";
+import {
+  IS_DEBUG,
+  IS_SERVER,
+  resolveLanguage,
+} from "../../00_config/_config.index.js";
 
 // Driven by VITE_IS_DEBUG in .env (see IS_DEBUG in 00_config). This used to be
 // a hardcoded `true`, which logged on every language change in production.
@@ -19,12 +23,18 @@ const LanguageProvider = ({ children }) => {
     //
     // window.location rather than useParams because this provider sits above
     // the Router - it has no route context to read.
-    resolveLanguage(
-      window.location.pathname.split("/")[1],
-      localStorage.getItem("language"),
-      i18n.language,
-      navigator.language,
-    ),
+    //
+    // There is no address bar while pages are saved at build time. The build
+    // sets i18next to the page's language before each render, so that is the
+    // language to use there.
+    IS_SERVER
+      ? resolveLanguage(i18n.language)
+      : resolveLanguage(
+          window.location.pathname.split("/")[1],
+          localStorage.getItem("language"),
+          i18n.language,
+          navigator.language,
+        ),
   );
 
   useEffect(() => {

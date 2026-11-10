@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { dishPlaceholder } from "../../../../01_assets/_assets.index.js";
+import { useAttachingToSavedPage } from "../02_home_hooks/useAttachingToSavedPage.js";
 import {
   menuItemShape,
   langShape,
@@ -35,6 +36,16 @@ const Home_featuredCarousel = ({
     shouldReduceMotion
       ? { opacity: 1, y: 0 }
       : { opacity: visible ? 1 : 0, y: visible ? 0 : offset };
+
+  // Same reason as the hero: the saved page shows these cards still hidden.
+  // framer-motion must not touch them until React has finished attaching.
+  const isAttaching = useAttachingToSavedPage();
+  const held = (offset) =>
+    isAttaching
+      ? { style: { opacity: 0, transform: `translateY(${offset}px)` } }
+      : null;
+  const Header = isAttaching ? "div" : motion.div;
+  const Card = isAttaching ? "article" : motion.article;
 
   // Full dish page - see the note in BookShelfSection.
   const handleShowMore = useCallback(
@@ -111,13 +122,15 @@ const Home_featuredCarousel = ({
     <section ref={sectionRef} className="homeFeaturedCarousel">
       <div className="homeFeaturedCarousel__glow" aria-hidden="true" />
 
-      <motion.div
+      <Header
         className="homeFeaturedCarousel__header"
-        initial={enter(40)}
-        animate={settle(isInView, 40)}
-        transition={
-          shouldReduceMotion ? { duration: 0 } : { duration: 0.7, delay: 0.1 }
-        }>
+        {...(held(40) ?? {
+          initial: enter(40),
+          animate: settle(isInView, 40),
+          transition: shouldReduceMotion
+            ? { duration: 0 }
+            : { duration: 0.7, delay: 0.1 },
+        })}>
         <div className="homeFeaturedCarousel__headerTop">
           <div>
             <p className="homeFeaturedCarousel__eyebrow">
@@ -151,7 +164,7 @@ const Home_featuredCarousel = ({
         <p className="homeFeaturedCarousel__subtitle">
           {t("featured.description")}
         </p>
-      </motion.div>
+      </Header>
 
       <div className="homeFeaturedCarousel__stage">
         <div
@@ -165,16 +178,16 @@ const Home_featuredCarousel = ({
             const isActive = index === activeIndex;
 
             return (
-              <motion.article
+              <Card
                 key={item.id}
                 className={`homeFeaturedCarousel__card${isActive ? " homeFeaturedCarousel__card--active" : ""}`}
-                initial={enter(28)}
-                animate={settle(isInView, 28)}
-                transition={
-                  shouldReduceMotion
+                {...(held(28) ?? {
+                  initial: enter(28),
+                  animate: settle(isInView, 28),
+                  transition: shouldReduceMotion
                     ? { duration: 0 }
-                    : { duration: 0.45, delay: 0.06 + index * 0.04 }
-                }
+                    : { duration: 0.45, delay: 0.06 + index * 0.04 },
+                })}
                 onClick={() => isActive && handleShowMore(item)}
                 onKeyDown={(event) => {
                   if (
@@ -235,7 +248,7 @@ const Home_featuredCarousel = ({
                     {t("bookShelf.cta")}
                   </button>
                 </div>
-              </motion.article>
+              </Card>
             );
           })}
         </div>

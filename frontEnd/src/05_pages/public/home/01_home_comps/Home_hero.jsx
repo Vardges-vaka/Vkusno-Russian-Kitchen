@@ -3,6 +3,7 @@ import { translateFn } from "../../../../04_hlprs/_hlprs.index.js";
 import { motion } from "framer-motion";
 import { heroBackground } from "../../../../01_assets/_assets.index.js";
 import { DIRECT_ORDER } from "../../contact/04_contact_const/_contact_const.index.js";
+import { useAttachingToSavedPage } from "../02_home_hooks/useAttachingToSavedPage.js";
 
 const Home_hero = ({ t, onMenuClick, shouldReduceMotion }) => {
   // framer-motion animates from JS props, which the prefers-reduced-motion
@@ -14,44 +15,67 @@ const Home_hero = ({ t, onMenuClick, shouldReduceMotion }) => {
   const timing = (delay) =>
     shouldReduceMotion ? { duration: 0 } : { duration: 0.8, delay };
 
+  // The saved page is drawn with the text still hidden. framer-motion changes
+  // those elements while React is attaching, so the first browser draw no
+  // longer matches and React throws the saved page away. Plain elements with
+  // the same hidden styles are used until attach finishes. The fade starts then.
+  const isAttaching = useAttachingToSavedPage();
+  const held = (offset) =>
+    isAttaching
+      ? { style: { opacity: 0, transform: `translateY(${offset}px)` } }
+      : null;
+
+  const Tagline = isAttaching ? "p" : motion.p;
+  const Title = isAttaching ? "h1" : motion.h1;
+  const Description = isAttaching ? "p" : motion.p;
+  const Actions = isAttaching ? "div" : motion.div;
+
   return (
     <div className="Home_hero">
       <div className="Home_hero_wrapper">
-        <motion.div
+        <div
           className="Home_hero_section"
           style={{ backgroundImage: `url(${heroBackground})` }}>
           <div className="Home_hero_overlay" aria-hidden="true" />
 
           <div className="Home_hero_content">
-            <motion.p
+            <Tagline
               className="Home_hero_tagline"
-              initial={enter(20)}
-              animate={settle}
-              transition={timing(0.2)}>
+              {...(held(20) ?? {
+                initial: enter(20),
+                animate: settle,
+                transition: timing(0.2),
+              })}>
               {t("hero.tagline")}
-            </motion.p>
+            </Tagline>
 
-            <motion.h1
+            <Title
               className="Home_hero_title"
-              initial={enter(30)}
-              animate={settle}
-              transition={timing(0.5)}>
+              {...(held(30) ?? {
+                initial: enter(30),
+                animate: settle,
+                transition: timing(0.5),
+              })}>
               Vkusno
-            </motion.h1>
+            </Title>
 
-            <motion.p
+            <Description
               className="Home_hero_description"
-              initial={enter(20)}
-              animate={settle}
-              transition={timing(0.8)}>
+              {...(held(20) ?? {
+                initial: enter(20),
+                animate: settle,
+                transition: timing(0.8),
+              })}>
               {t("hero.description")}
-            </motion.p>
+            </Description>
 
-            <motion.div
+            <Actions
               className="Home_hero_ctaContainer"
-              initial={enter(20)}
-              animate={settle}
-              transition={timing(1.1)}>
+              {...(held(20) ?? {
+                initial: enter(20),
+                animate: settle,
+                transition: timing(1.1),
+              })}>
               <a
                 className="Home_hero_cta Home_hero_cta--order"
                 href={DIRECT_ORDER.link}
@@ -67,9 +91,9 @@ const Home_hero = ({ t, onMenuClick, shouldReduceMotion }) => {
                 onClick={onMenuClick}>
                 {t("hero.cta")}
               </button>
-            </motion.div>
+            </Actions>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

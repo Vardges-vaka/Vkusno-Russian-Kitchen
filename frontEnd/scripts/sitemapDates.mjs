@@ -22,6 +22,7 @@ const STATIC_FILES = {
   "": "Home.json",
   menu: "Menu.json",
   contact: "Contact.json",
+  kitchens: "Kitchens.json",
   careers: "Careers.json",
   faq: "FAQ.json",
   privacy: "Privacy.json",
@@ -138,7 +139,7 @@ export const buildSitemapDates = async ({
           })),
         );
       }
-      if (route === "contact") parts.push(contactSource);
+      if (route === "contact" || route === "kitchens") parts.push(contactSource);
       if (route === "careers") {
         parts.push(commonFor(common, lang));
         parts.push(

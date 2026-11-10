@@ -9,10 +9,11 @@ import "@fontsource/ibm-plex-sans-arabic/600.css";
 import "./07_styles/ColorVariables.css";
 import "./07_styles/App.css";
 import { Suspense } from "react";
+import PropTypes from "prop-types";
 import {
   Navigate,
   Route,
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   useLocation,
 } from "react-router-dom";
@@ -87,7 +88,10 @@ const AppRoutes = () => {
   );
 };
 
-function App() {
+// Router and routerProps exist for the build step that saves each page: it
+// passes StaticRouter with the page's address. In the browser both are left
+// out and the app uses BrowserRouter, as before.
+function App({ Router = BrowserRouter, routerProps }) {
   return (
     <ErrorBoundary>
       <ClientProvider>
@@ -95,7 +99,7 @@ function App() {
           <LanguageProvider>
             {/* MapProvider is NOT here - it mounts inside AppRoutes, and only
                 on routes that can show a map. See routeNeedsMap. */}
-            <Router>
+            <Router {...routerProps}>
               <ScrollToTop />
               <Suspense fallback={<PageLoader />}>
                 <AppRoutes />
@@ -107,5 +111,10 @@ function App() {
     </ErrorBoundary>
   );
 }
+
+App.propTypes = {
+  Router: PropTypes.elementType,
+  routerProps: PropTypes.object,
+};
 
 export default App;

@@ -6,6 +6,7 @@ import { PageMeta } from "../../../02_comps/_comps.index.js";
 import { graph, organisationNode, restaurantNode } from "../../../04_hlprs/_hlprs.index.js";
 import { BRANCHES, CONTACT_INFO } from "../contact/04_contact_const/_contact_const.index.js";
 import { useHome } from "./02_home_hooks/_home_hooks.index.js";
+import { useAttachingToSavedPage } from "./02_home_hooks/useAttachingToSavedPage.js";
 import {
   BookShelfSection,
   Home_hero,
@@ -18,7 +19,13 @@ const Home = () => {
   const { lang: langParam } = useParams();
   const routeLang = resolveLanguage(langParam, i18n.language);
   const navigate = useNavigate();
-  const { isDesktop } = useClientContext();
+  const { isDesktop: screenIsDesktop } = useClientContext();
+  // The saved home page is the phone layout. The header above this page
+  // attaches first and can already know the real screen width. This page has
+  // to stay on the phone layout until it has attached, then it may switch to
+  // the wide shelf.
+  const isAttaching = useAttachingToSavedPage();
+  const isDesktop = isAttaching ? false : screenIsDesktop;
 
   const {
     lang,
@@ -28,7 +35,7 @@ const Home = () => {
     shouldReduceMotion,
     bookshelfItems,
     featuredItems,
-  } = useHome();
+  } = useHome({ isDesktop });
 
   return (
     <div className="Home">

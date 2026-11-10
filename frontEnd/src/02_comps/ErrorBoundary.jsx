@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 // Classes can't use the useTranslation hook, so we call the i18n
 // instance directly - fine here, an error screen doesn't need to
 // react to live language switches.
-import i18n from "../i18n/i18n.index.js";
+// Imported from the package, not from ../i18n/i18n.index.js. That file starts
+// the browser-only loaders, and this component also runs when pages are saved
+// in Node. It is the same single instance either way.
+import i18n from "i18next";
 import "./00_comps_styles/errorBoundary.css";
 
 // Error boundaries are the one case React still requires a class:

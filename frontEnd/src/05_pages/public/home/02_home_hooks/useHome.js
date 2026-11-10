@@ -28,11 +28,19 @@ const FEATURED_ITEMS = Categories.map((category) => category.menuItems?.[0])
   .filter(Boolean)
   .slice(0, FEATURED_COUNT);
 
-export const useHome = () => {
+export const useHome = ({ isDesktop }) => {
   const { i18n } = useTranslation("Home");
   const lang = (i18n.language || "en").split("-")[0];
 
-  const specialtiesRef = useRef(null);
+  // The desktop shelf and the phone carousel are two different elements. A
+  // page saved at build time first attaches as the phone layout and switches
+  // a moment later on a wide screen. useInView starts watching again only when
+  // it is handed a different ref object, so each layout has its own. With one
+  // shared ref it kept watching the carousel that had just been removed, and
+  // the shelf never faded in.
+  const carouselRef = useRef(null);
+  const shelfRef = useRef(null);
+  const specialtiesRef = isDesktop ? shelfRef : carouselRef;
   const bookshelfRef = useRef(null);
 
   const isSpecialtiesInView = useInView(specialtiesRef, {

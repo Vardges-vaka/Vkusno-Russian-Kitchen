@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import { useMemo, useState } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
-import { langShape, translateFn, pickLocale } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  langShape,
+  translateFn,
+  pickLocale,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import { INGREDIENT_OPTIONS } from "../04_menu_const/INGREDIENTS.js";
 import { SORT_OPTIONS } from "../03_menu_hlprs/_menu_hlprs.index.js";
 import Menu_ingredientPicker from "./Menu_ingredientPicker.jsx";
@@ -20,6 +24,15 @@ const Menu_filters = ({
   resultCount,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // The panel holds two lists of 209 ingredients. Nothing shows them until
+  // the reader opens the filters, so they stay out of the first render and
+  // out of the page saved at build time. Two reasons: about 420 hidden rows
+  // of HTML on every menu page, and the lists are sorted with localeCompare,
+  // which Node and a browser can order differently - React would then find a
+  // saved page that does not match and redraw it. Once opened they stay
+  // mounted, so text typed into a picker's search survives closing the panel.
+  const [hasOpened, setHasOpened] = useState(false);
 
   // Labels come from the same dictionary the modal uses, so the filter reads in
   // the active language. Sorted by the localised label rather than the English
@@ -45,10 +58,15 @@ const Menu_filters = ({
           className={`Menu_filters_toggle${hasActive ? " Menu_filters_toggle--active" : ""}`}
           aria-expanded={isOpen}
           aria-controls="Menu_filters_panel"
-          onClick={() => setIsOpen((open) => !open)}>
+          onClick={() => {
+            setHasOpened(true);
+            setIsOpen((open) => !open);
+          }}>
           <SlidersHorizontal size={16} aria-hidden="true" />
           {t("menu.filters.title")}
-          {hasActive && <span className="Menu_filters_dot" aria-hidden="true" />}
+          {hasActive && (
+            <span className="Menu_filters_dot" aria-hidden="true" />
+          )}
         </button>
 
         <p className="Menu_filters_count" role="status">
@@ -56,44 +74,58 @@ const Menu_filters = ({
         </p>
       </div>
 
-      <div id="Menu_filters_panel" className="Menu_filters_panel" hidden={!isOpen}>
-        <label className="Menu_filters_field Menu_filters_field--sort">
-          <span className="Menu_filters_label">{t("menu.filters.sort")}</span>
-          <select
-            className="Menu_filters_select"
-            value={filters.sort}
-            onChange={(event) => onChange({ sort: event.target.value })}>
-            {SORT_OPTIONS.map((option) => (
-              <option key={option} value={option}>
-                {t(`menu.filters.sortOptions.${option}`)}
-              </option>
-            ))}
-          </select>
-        </label>
+      <div
+        id="Menu_filters_panel"
+        className="Menu_filters_panel"
+        hidden={!isOpen}>
+        {hasOpened && (
+          <>
+            <label className="Menu_filters_field Menu_filters_field--sort">
+              <span className="Menu_filters_label">
+                {t("menu.filters.sort")}
+              </span>
+              <select
+                className="Menu_filters_select"
+                value={filters.sort}
+                onChange={(event) => onChange({ sort: event.target.value })}>
+                {SORT_OPTIONS.map((option) => (
+                  <option key={option} value={option}>
+                    {t(`menu.filters.sortOptions.${option}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
 
-        <Menu_ingredientPicker
-          label={t("menu.filters.with")}
-          options={ingredients}
-          selected={filters.withIngredients}
-          onChange={(withIngredients) => onChange({ withIngredients })}
-          lang={lang}
-          t={t}
-        />
+            <Menu_ingredientPicker
+              label={t("menu.filters.with")}
+              options={ingredients}
+              selected={filters.withIngredients}
+              onChange={(withIngredients) => onChange({ withIngredients })}
+              lang={lang}
+              t={t}
+            />
 
-        <Menu_ingredientPicker
-          label={t("menu.filters.without")}
-          options={ingredients}
-          selected={filters.withoutIngredients}
-          onChange={(withoutIngredients) => onChange({ withoutIngredients })}
-          lang={lang}
-          t={t}
-        />
+            <Menu_ingredientPicker
+              label={t("menu.filters.without")}
+              options={ingredients}
+              selected={filters.withoutIngredients}
+              onChange={(withoutIngredients) =>
+                onChange({ withoutIngredients })
+              }
+              lang={lang}
+              t={t}
+            />
 
-        {hasActive && (
-          <button type="button" className="Menu_filters_reset" onClick={onReset}>
-            <X size={14} aria-hidden="true" />
-            {t("menu.filters.clear")}
-          </button>
+            {hasActive && (
+              <button
+                type="button"
+                className="Menu_filters_reset"
+                onClick={onReset}>
+                <X size={14} aria-hidden="true" />
+                {t("menu.filters.clear")}
+              </button>
+            )}
+          </>
         )}
       </div>
     </div>

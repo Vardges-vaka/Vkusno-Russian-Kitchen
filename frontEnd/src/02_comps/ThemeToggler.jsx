@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../03_context/_context.index.js";
 import "./00_comps_styles/themeToggler.css";
@@ -5,6 +6,14 @@ import "./00_comps_styles/themeToggler.css";
 const ThemeToggler = () => {
   const { toggleTheme, isDarkMode } = useTheme();
   const { t } = useTranslation("common");
+
+  // A saved page is drawn with the box unchecked. After React attaches, the
+  // real theme can be dark, but the browser keeps the old unchecked box.
+  // Write it directly so the control matches the theme.
+  useEffect(() => {
+    const input = document.getElementById("themeToggle");
+    if (input) input.checked = isDarkMode;
+  }, [isDarkMode]);
 
   return (
     <>

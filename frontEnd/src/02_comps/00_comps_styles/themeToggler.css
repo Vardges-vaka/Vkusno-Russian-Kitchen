@@ -68,16 +68,30 @@
   animation-delay: 0.29s !important;
 }
 
-.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg {
+/* The sun shows when the toggle is checked, and also whenever the page itself
+   is dark. A page saved at build time is on screen before React, so for a
+   dark-theme visitor the checkbox is still unchecked at that moment.
+   data-theme is stamped on <html> by the inline script in index.html before
+   first paint, so the icon starts in the right state instead of flipping. */
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg,
+[data-theme="dark"] .st-sunMoonThemeToggleBtn .themeToggleInput + svg {
   transform: rotate(90deg);
 }
-.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg mask > circle {
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg mask > circle,
+[data-theme="dark"]
+  .st-sunMoonThemeToggleBtn
+  .themeToggleInput
+  + svg
+  mask
+  > circle {
   transform: translate(16px, -3px);
 }
-.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunMoon {
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunMoon,
+[data-theme="dark"] .st-sunMoonThemeToggleBtn .themeToggleInput + svg .sunMoon {
   transform: scale(0.55);
 }
-.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunRay {
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunRay,
+[data-theme="dark"] .st-sunMoonThemeToggleBtn .themeToggleInput + svg .sunRay {
   animation: showRay1832 0.4s ease 0s 1 forwards;
 }
 

@@ -15,6 +15,10 @@
     "hash": "614d436c436669a9",
     "lastmod": "2026-11-10"
   },
+  "ar|kitchens": {
+    "hash": "eb73b2cb412637f6",
+    "lastmod": "2026-11-10"
+  },
   "ar|kitchens/arjan": {
     "hash": "7efe9eddbbb4f1c2",
     "lastmod": "2026-11-10"
@@ -387,6 +391,10 @@
     "hash": "12994daa5b4f5d0b",
     "lastmod": "2026-11-10"
   },
+  "en|kitchens": {
+    "hash": "ca7344c3aab50657",
+    "lastmod": "2026-11-10"
+  },
   "en|kitchens/arjan": {
     "hash": "8817c9de6ffeec28",
     "lastmod": "2026-11-10"
@@ -757,6 +765,10 @@
   },
   "ru|faq": {
     "hash": "b16fe87b983dfabd",
+    "lastmod": "2026-11-10"
+  },
+  "ru|kitchens": {
+    "hash": "cc2bf86eabf23134",
     "lastmod": "2026-11-10"
   },
   "ru|kitchens/arjan": {

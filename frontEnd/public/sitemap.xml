@@ -84,6 +84,33 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://vkusno.ae/en/kitchens</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/kitchens"/>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/ru/kitchens</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/kitchens"/>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/ar/kitchens</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/kitchens"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/kitchens"/>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://vkusno.ae/en/careers</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/careers"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/careers"/>

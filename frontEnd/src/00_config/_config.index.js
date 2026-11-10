@@ -14,6 +14,11 @@ export const IS_DEBUG = ["true", "1", "yes"].includes(
 // the i18n config and the language switcher all need it now that the language
 // is a URL segment - so it belongs here rather than inside a provider.
 
+// True while the pages are saved at build time. That runs in Node, where
+// there is no browser. Code that reads window, localStorage or navigator
+// while rendering checks this first.
+export const IS_SERVER = typeof window === "undefined";
+
 export const SUPPORTED_LANGUAGES = ["en", "ru", "ar"];
 export const DEFAULT_LANGUAGE = "en";
 export const RTL_LANGUAGES = ["ar"];
