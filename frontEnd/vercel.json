@@ -31,6 +31,77 @@
       "permanent": true
     },
     {
+      "source": "/about",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/en/faq",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/en/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/:lang(en|ru|ar)/index.html",
+      "destination": "/:lang",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/feed/:path*",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/category",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/author",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "query", "key": "p" }],
+      "destination": "/en",
+      "permanent": true
+    },
+    {
       "source": "/wp-:path*",
       "destination": "/en",
       "permanent": true
