@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "Careers",
+    "description": "Jobs at Vkusno in Dubai: chefs, kitchen and delivery team. See the open positions and how to apply.",
+    "jobTitle": "{{title}} job in Dubai"
+  },
+  "hero": {
+    "title": "Careers",
+    "intro": "Join the team that cooks Vkusno's home-style Russian food in Dubai."
+  },
+  "list": {
+    "title": "Open positions",
+    "viewJob": "View job",
+    "viewJobAria": "View job: {{title}}"
+  },
+  "empty": {
+    "title": "No open positions right now",
+    "text": "We are always glad to hear from good cooks and kitchen staff. You are welcome to send us your CV."
+  },
+  "general": {
+    "title": "Don't see your job?",
+    "text": "Send us your CV and tell us which job you are looking for."
+  },
+  "job": {
+    "type": {
+      "FULL_TIME": "Full-time",
+      "PART_TIME": "Part-time"
+    },
+    "sections": {
+      "role": "About the role",
+      "duties": "What you will do",
+      "mustHave": "What you need",
+      "niceToHave": "Nice to have",
+      "offer": "What we offer",
+      "about": "About Vkusno",
+      "hours": "Working hours",
+      "probation": "Probation"
+    },
+    "allJobs": "All open positions",
+    "factsLabel": "Job details"
+  },
+  "apply": {
+    "title": "How to apply",
+    "text": "Send your CV to {{email}}.",
+    "subjectLabel": "Email subject",
+    "emailButton": "Apply by email",
+    "mailBody": "Hello,\n\nI would like to apply for the {{title}} position. My CV is attached.\n\nThank you.",
+    "generalMailBody": "Hello,\n\nI would like to work at Vkusno. My CV is attached.\n\nThank you.",
+    "privacy": "We use your CV only to consider you for jobs at Vkusno.",
+    "privacyLink": "Privacy Policy"
+  }
+}

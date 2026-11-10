@@ -107,7 +107,9 @@ test("disabling the whole menu leaves static pages in the sitemap", async () => 
       for (const lang of LANGUAGES) assert.equal(findMenuItemBySlug(item.slug[lang]), null);
     }
     const sitemap = createSitemap(MenuItems);
-    assert.equal((sitemap.match(/<url>/g) ?? []).length, 15);
+    // Home, menu, contact, careers, faq and privacy, in each of the 3 languages.
+    // Careers is a static route, so an empty menu is 18 URLs rather than 15.
+    assert.equal((sitemap.match(/<url>/g) ?? []).length, 18);
     assert.equal(sitemap.includes("/menu/"), false);
     for (const lang of LANGUAGES) {
       assert.ok(sitemap.includes(`<loc>https://vkusno.ae/${lang}/menu</loc>`));

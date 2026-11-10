@@ -8,6 +8,7 @@
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { readCareersData } from "./readCareersData.mjs";
 import { readMenuData } from "./readMenuData.mjs";
 
 // new URL("../") already resolves to frontEnd/; path.dirname on a trailing
@@ -15,7 +16,7 @@ import { readMenuData } from "./readMenuData.mjs";
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const SITE_URL = "https://vkusno.ae";
 const LANGS = ["en", "ru", "ar"];
-const STATIC_ROUTES = ["", "menu", "contact", "faq", "privacy"];
+const STATIC_ROUTES = ["", "menu", "contact", "careers", "faq", "privacy"];
 
 const urlFor = (lang, route) =>
   route ? `${SITE_URL}/${lang}/${route}` : `${SITE_URL}/${lang}`;
@@ -38,13 +39,17 @@ const entry = (routeByLang, priority) =>
     ].join("\n");
   }).join("\n");
 
-export const createSitemap = (menuItems) => {
+export const createSitemap = (menuItems, jobs = []) => {
   const entries = [
     ...STATIC_ROUTES.map((route) =>
       entry(Object.fromEntries(LANGS.map((l) => [l, route])), route === "" ? "1.0" : "0.8"),
     ),
     ...menuItems.map(({ slug }) =>
       entry(Object.fromEntries(LANGS.map((l) => [l, `menu/${slug[l]}`])), "0.6"),
+    ),
+    // The job id is the same in every language, unlike a dish slug.
+    ...jobs.map(({ id }) =>
+      entry(Object.fromEntries(LANGS.map((l) => [l, `careers/${id}`])), "0.5"),
     ),
   ];
 
@@ -62,10 +67,11 @@ export const createSitemap = (menuItems) => {
 // menu is valid: the sitemap then contains only the site's static routes.
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const { MenuItems } = await readMenuData();
-  await writeFile(path.join(ROOT, "public/sitemap.xml"), createSitemap(MenuItems), "utf8");
+  const { JOBS } = await readCareersData();
+  await writeFile(path.join(ROOT, "public/sitemap.xml"), createSitemap(MenuItems, JOBS), "utf8");
 
-  const total = (STATIC_ROUTES.length + MenuItems.length) * LANGS.length;
+  const total = (STATIC_ROUTES.length + MenuItems.length + JOBS.length) * LANGS.length;
   console.log(
-    `sitemap.xml: ${total} URLs (${STATIC_ROUTES.length} static + ${MenuItems.length} dishes) x ${LANGS.length} languages`,
+    `sitemap.xml: ${total} URLs (${STATIC_ROUTES.length} static + ${MenuItems.length} dishes + ${JOBS.length} jobs) x ${LANGS.length} languages`,
   );
 }

@@ -1,0 +1,140 @@
+.CareersJob_container {
+  max-inline-size: 1120px;
+  margin-inline: auto;
+  padding-block: 16px 48px;
+  text-align: start;
+}
+
+.CareersJob_breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-block-end: 18px;
+  font-size: 0.9rem;
+  color: var(--text_muted_color);
+}
+
+.CareersJob_breadcrumb a {
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+.CareersJob_breadcrumb a:hover,
+.CareersJob_breadcrumb a:focus-visible {
+  text-decoration: underline;
+}
+
+.CareersJob_breadcrumb a:focus-visible {
+  outline: 2px solid var(--accent_color);
+  outline-offset: 3px;
+}
+
+.CareersJob_breadcrumb [aria-current="page"] {
+  color: var(--text_color);
+}
+
+.CareersJob_article {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.CareersJob_main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-inline-size: 0;
+}
+
+.CareersJob_title {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0.04em;
+  color: var(--text_color);
+}
+
+.CareersJob_title::after {
+  content: "";
+  display: block;
+  inline-size: 80px;
+  block-size: 3px;
+  margin-block-start: 12px;
+  border-radius: 2px;
+  background-color: var(--gold_color);
+}
+
+.CareersJob_pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block: 14px 0;
+  margin-inline: 0;
+}
+
+.CareersJob_pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-block: 4px;
+  padding-inline: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent_color);
+  background-color: var(--accent_soft_color);
+  border-radius: 999px;
+}
+
+.CareersJob_jump {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  margin-block-start: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+.CareersJob_jump:hover {
+  text-decoration: underline;
+}
+
+.CareersJob_jump:focus-visible {
+  outline: 2px solid var(--accent_color);
+  outline-offset: 3px;
+}
+
+.CareersJob_aside {
+  min-inline-size: 0;
+}
+
+@media (min-width: 768px) {
+  .CareersJob_container {
+    padding-block: 24px 64px;
+  }
+
+  .CareersJob_title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .CareersJob_article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+    column-gap: 32px;
+    align-items: start;
+  }
+
+  .CareersJob_jump {
+    display: none;
+  }
+
+  .CareersJob_aside {
+    position: sticky;
+    inset-block-start: calc(var(--menu_header_offset, 72px) + 16px);
+    align-self: start;
+    z-index: 1;
+  }
+}

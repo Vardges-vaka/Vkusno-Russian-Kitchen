@@ -36,6 +36,10 @@
       "closing": "Tradition in every bite."
     },
     "nav_links": {
+      "careers": "Careers",
+      "careersNone": "No open Vacancies",
+      "careersCount_one": "{{count}} Vacancy",
+      "careersCount_other": "{{count}} Vacancies",
       "faq": "FAQ",
       "privacy": "Privacy Policy",
       "copyright": "Copyright © 2026 Vkusno. All rights reserved."

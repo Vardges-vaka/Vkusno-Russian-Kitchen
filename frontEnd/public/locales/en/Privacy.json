@@ -1,12 +1,12 @@
 {
   "title": "Privacy Policy",
-  "lastUpdated": "Last updated: 15 August 2026",
+  "lastUpdated": "Last updated: 10 November 2026",
   "intro": "This Privacy Policy explains how Vkusno (“we”, “us”, “our”) handles information when you visit our website at vkusno.ae. We keep this policy clear and proportionate to what our site actually does: showcase our menu and locations and help you reach us or order through trusted delivery partners.",
   "sections": [
     {
       "title": "1. Who we are",
       "paragraphs": [
-        "Vkusno Russian Kitchen operates restaurants in the United Arab Emirates. Our website is an informational site for our brand, menu, branch locations, and contact details.",
+        "Vkusno Russian Kitchen operates restaurants in the United Arab Emirates. Our website is an informational site for our brand, menu, branch locations, contact details, and job openings.",
         "If you have questions about this policy or your personal data, you can reach us using the contact details at the end of this page."
       ]
     },
@@ -70,33 +70,41 @@
       ]
     },
     {
-      "title": "8. Your rights",
+      "title": "8. Job applications",
+      "paragraphs": [
+        "If you apply for a job at Vkusno, you send us your CV and contact details by email. Our website does not collect or store applications itself.",
+        "We use your application only to consider you for current and future positions at Vkusno, share it only with the people involved in hiring, and do not sell or publish it.",
+        "We keep applications for up to 12 months and then delete them, unless you ask us to delete yours sooner or you join our team."
+      ]
+    },
+    {
+      "title": "9. Your rights",
       "paragraphs": [
         "Under applicable UAE data-protection laws, including the UAE Personal Data Protection Law (PDPL) where it applies to our processing, you may have rights to access, correct, delete, or restrict certain uses of your personal data, and to object to processing in some cases.",
         "To exercise these rights, contact us using the details below. We may need to verify your request before responding."
       ]
     },
     {
-      "title": "9. Children",
+      "title": "10. Children",
       "paragraphs": [
         "Our website is not directed at children under 13, and we do not knowingly collect personal data from children. If you believe a child has provided us with personal information, please contact us so we can take appropriate steps."
       ]
     },
     {
-      "title": "10. International processing",
+      "title": "11. International processing",
       "paragraphs": [
         "Some third-party providers (for example, Google) may process data on servers located outside the UAE. Where required, we rely on appropriate safeguards permitted under applicable law."
       ]
     },
     {
-      "title": "11. Changes to this policy",
+      "title": "12. Changes to this policy",
       "paragraphs": [
         "We may update this Privacy Policy from time to time. When we do, we will revise the “Last updated” date at the top of this page. Continued use of the website after changes are posted means you accept the updated policy."
       ]
     }
   ],
   "contact": {
-    "title": "12. Contact us",
+    "title": "13. Contact us",
     "body": "For privacy-related questions or requests, email us at {{email}} or call {{phone}}."
   },
   "meta": {

@@ -24,7 +24,7 @@ const PublicFooter = () => {
             t={t}
           />
 
-          <PublicFooter_aside tContact={tContact} />
+          <PublicFooter_aside t={t} lang={lang} tContact={tContact} />
         </div>
       </div>
 

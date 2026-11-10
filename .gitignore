@@ -27,6 +27,7 @@ dist/
 # Local planning + context notes, not part of the deliverable
 .context/
 .plans/
+.instructions/
 plan.md
 
 # OS junk (Windows / OneDrive / macOS)

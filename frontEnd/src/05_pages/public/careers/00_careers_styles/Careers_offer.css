@@ -1,0 +1,56 @@
+.Careers_offer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-block-start: 40px;
+  padding: 20px;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 16px;
+}
+
+.Careers_offer_title {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  color: var(--text_color);
+}
+
+.Careers_offer_title--about {
+  margin-block-start: 8px;
+}
+
+.Careers_offer_list {
+  margin: 0;
+  padding-inline-start: 1.25em;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text_color);
+}
+
+.Careers_offer_list ::marker {
+  color: var(--gold_color);
+}
+
+.Careers_offer_about {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text_color);
+}
+
+@media (min-width: 768px) {
+  .Careers_offer {
+    margin-block-start: 48px;
+    padding: 24px;
+  }
+
+  .Careers_offer_title {
+    font-size: 26px;
+  }
+}
+
+/* On the job page the column already separates the blocks. */
+.CareersJob_main .Careers_offer {
+  margin-block-start: 0;
+}

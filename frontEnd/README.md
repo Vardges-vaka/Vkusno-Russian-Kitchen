@@ -102,8 +102,8 @@ Three languages: `en`, `ru`, `ar`. Arabic is RTL.
 `src/`. This matters: `src/` is build *input* and does not exist at runtime, so
 a loader path pointing there works in dev and 404s in production.
 
-Namespaces: `common`, `Home`, `Menu`, `MenuItems`, `Contact`, `FAQ`,
-`Privacy`, `NotFound`.
+Namespaces: `common`, `Home`, `Menu`, `MenuItems`, `Contact`, `Careers`,
+`FAQ`, `Privacy`, `NotFound`.
 
 ### Language is in the URL
 
@@ -133,7 +133,7 @@ Build internal links with `localePath(lang, "menu")` - never a bare
 
 1. Add the code to `SUPPORTED_LANGUAGES` in `00_config/_config.index.js` and to
    `supportedLngs` in `src/i18n/i18n.Config.js`.
-2. Create `public/locales/<code>/` with all eight namespaces.
+2. Create `public/locales/<code>/` with all nine namespaces.
 3. Add an endonym to `LANGUAGE_ENDONYMS` in `02_comps/LanguageSelect.jsx` -
    written in its own language, since that control is for people who cannot
    read the current one.
@@ -264,6 +264,49 @@ hero at 1920px.
 > **Known issue:** menu cards render the 1200×900 image because the only other
 > size is a 100×100 thumbnail. That is ~9.5 MB of photos on the menu page. The
 > fix is a ~400×300 tier plus `srcset`; the converter is the place to add it.
+
+---
+
+## Careers
+
+Open jobs on vkusno.ae come from `WORKFLOWS\HR\Positions.xlsx`, not from a file
+you edit in this repo.
+
+`Positions.xlsx` → `WORKFLOWS\HR\.agent\scripts\sync_site_careers.py` →
+`src/05_pages/public/careers/04_careers_const/JOBS.js` → `npm run build`.
+
+**Never edit `JOBS.js`.** Change the spreadsheet and run the sync again.
+
+To publish a job:
+
+1. In `Positions.xlsx`: `Open now?` = Yes, fill `Open since`, check the `Job ID`,
+   and check the Russian and Arabic rows (yellow cells are drafts).
+2. In `WORKFLOWS\HR\.agent\scripts`:
+   `python -X utf8 sync_site_careers.py --dry-run`, then the same command
+   without `--dry-run`.
+3. In this folder: `npm run build`. You commit, push and deploy.
+
+To close a job, set `Open now?` = No and repeat the sync and the build. The
+job's URL then returns to the list and drops out of the sitemap. To change
+wording, edit the spreadsheet (and its Russian and Arabic rows) and sync again.
+The LinkedIn / Indeed / Bayt ads are made from the same file by `make_ads.py`.
+
+`python -X utf8 sync_site_careers.py --preview` writes every Vkusno job, open
+or not, and marks the file `preview`. The build refuses that file
+(`JOBS.js is a PREVIEW file...`) unless `CAREERS_ALLOW_PREVIEW=1`, which is
+only for looking locally. Run the sync again without `--preview` before a
+real build.
+
+There is no application form. A form would need a backend and would store
+someone's CV. The button opens the visitor's mail app, addressed to
+careers@vkusno.ae. The subject is always the English job title plus
+" – Vkusno", on every language of the page, so the inbox sorts the same way
+as the job ads. The message body is in the visitor's language.
+
+The sitemap lists `/careers` and, for each open job, `/careers/{id}` with the
+same id in English, Russian and Arabic. Each job page carries one schema.org
+`JobPosting`. Pay is not in it. WhatsApp and LinkedIn link previews stay
+site-level, because the Open Graph tags are static (see Known gaps).
 
 ---
 

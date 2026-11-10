@@ -36,6 +36,14 @@
       "closing": "تقاليد في كل لقمة."
     },
     "nav_links": {
+      "careers": "الوظائف",
+      "careersNone": "لا توجد وظائف شاغرة",
+      "careersCount_zero": "لا توجد وظائف شاغرة",
+      "careersCount_one": "وظيفة شاغرة واحدة",
+      "careersCount_two": "وظيفتان شاغرتان",
+      "careersCount_few": "{{count}} وظائف شاغرة",
+      "careersCount_many": "{{count}} وظيفة شاغرة",
+      "careersCount_other": "{{count}} وظيفة شاغرة",
       "faq": "الأسئلة الشائعة",
       "privacy": "سياسة الخصوصية",
       "copyright": "حقوق النشر © 2026 Vkusno. جميع الحقوق محفوظة."

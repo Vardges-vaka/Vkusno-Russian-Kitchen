@@ -1,0 +1,38 @@
+.Careers_jobDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.Careers_jobDetail_title {
+  margin-block: 0 12px;
+  margin-inline: 0;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  color: var(--text_color);
+}
+
+.Careers_jobDetail_text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text_color);
+}
+
+.Careers_jobDetail_list {
+  margin: 0;
+  padding-inline-start: 1.25em;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text_color);
+}
+
+.Careers_jobDetail_list ::marker {
+  color: var(--gold_color);
+}
+
+@media (min-width: 768px) {
+  .Careers_jobDetail_title {
+    font-size: 26px;
+  }
+}

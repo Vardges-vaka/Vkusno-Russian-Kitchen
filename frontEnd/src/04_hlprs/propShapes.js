@@ -16,6 +16,46 @@ export const localizedStringShape = PropTypes.shape({
   ru: PropTypes.string,
 });
 
+// Same { en, ru, ar } shape, but each language is a list of points.
+// Not required per key: a preview file may only have English, and pickLocaleList
+// falls back to en.
+export const localizedListShape = PropTypes.shape({
+  en: PropTypes.arrayOf(PropTypes.string),
+  ar: PropTypes.arrayOf(PropTypes.string),
+  ru: PropTypes.arrayOf(PropTypes.string),
+});
+
+const nullable = (shape) =>
+  PropTypes.oneOfType([shape, PropTypes.oneOf([null])]);
+
+// One row of JOBS.js. Optional fields stay loose: openings, a kitchen list
+// and the posted date can all be null (a preview of a job that is not open yet).
+export const jobShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  title: localizedStringShape.isRequired,
+  summary: localizedStringShape.isRequired,
+  duties: localizedListShape.isRequired,
+  mustHave: localizedListShape.isRequired,
+  niceToHave: localizedListShape,
+  employmentType: PropTypes.oneOf(["FULL_TIME", "PART_TIME"]).isRequired,
+  kitchens: nullable(PropTypes.arrayOf(PropTypes.string)),
+  openings: nullable(PropTypes.number),
+  datePosted: nullable(PropTypes.string),
+});
+
+// Shared lines from the Common sheet. hours and probation are null unless
+// the owner chose to show them on the ads.
+export const careersCommonShape = PropTypes.shape({
+  brand: PropTypes.string,
+  applyEmail: PropTypes.string,
+  applyWhatsApp: nullable(PropTypes.string),
+  location: localizedStringShape,
+  about: localizedStringShape,
+  offer: localizedListShape,
+  hours: nullable(localizedStringShape),
+  probation: nullable(localizedStringShape),
+});
+
 export const menuItemShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   isActive: PropTypes.bool.isRequired,

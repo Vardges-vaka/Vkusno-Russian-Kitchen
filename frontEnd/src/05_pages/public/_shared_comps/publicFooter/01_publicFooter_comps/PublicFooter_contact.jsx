@@ -1,10 +1,12 @@
 import {
+  langShape,
   translateFn,
 } from "../../../../../04_hlprs/_hlprs.index.js";
 import { CONTACT_INFO } from "../../../contact/04_contact_const/_contact_const.index.js";
+import PublicFooter_careers from "./PublicFooter_careers.jsx";
 import "../00_publicFooter_styles/PublicFooter_contact.css";
 
-const PublicFooter_contact = ({ tContact }) => {
+const PublicFooter_contact = ({ t, lang, tContact }) => {
   return (
     <section
       className="PublicFooter_contact"
@@ -37,12 +39,15 @@ const PublicFooter_contact = ({ tContact }) => {
             </li>
           );
         })}
+        <PublicFooter_careers t={t} lang={lang} />
       </ul>
     </section>
   );
 };
 
 PublicFooter_contact.propTypes = {
+  t: translateFn.isRequired,
+  lang: langShape.isRequired,
   tContact: translateFn.isRequired,
 };
 

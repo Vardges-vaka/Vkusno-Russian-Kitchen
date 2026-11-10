@@ -1,8 +1,8 @@
+import { NavLink } from "react-router-dom";
 import {
   translateFn,
   langShape,
 } from "../../../../../04_hlprs/_hlprs.index.js";
-import { NavLink } from "react-router-dom";
 import "../00_publicFooter_styles/PublicFooter_navBar.css";
 import { FOOTER_LINKS } from "../04_publicFooter_const/_publicFooter_const.index.js";
 

@@ -128,6 +128,39 @@ export const breadcrumbNode = (trail) => ({
   })),
 });
 
+// Google for Jobs reads one JobPosting per job page (never on the list page).
+// No baseSalary: pay is not published (owner decision D9). Google lists it
+// as recommended, not required.
+export const jobPostingNode = (job, lang, { descriptionHtml, branches = [] }) => ({
+  "@type": "JobPosting",
+  title: pickLocale(job.title, lang),
+  description: descriptionHtml,
+  datePosted: job.datePosted,
+  employmentType: job.employmentType,
+  directApply: false,
+  ...(job.openings ? { totalJobOpenings: job.openings } : {}),
+  url: absoluteUrl(localePath(lang, `careers/${job.id}`)),
+  identifier: { "@type": "PropertyValue", name: "Vkusno", value: job.id },
+  hiringOrganization: {
+    "@type": "Organization",
+    "@id": ORGANISATION_ID,
+    name: "Vkusno",
+    sameAs: SITE_URL,
+  },
+  jobLocation: branches
+    .filter((branch) => !job.kitchens || job.kitchens.includes(branch.id))
+    .map((branch) => ({
+      "@type": "Place",
+      name: `Vkusno - ${pickLocale(branch.name, lang)}`,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: pickLocale(branch.location.address, lang),
+        addressLocality: "Dubai",
+        addressCountry: "AE",
+      },
+    })),
+});
+
 // Wraps nodes in a single @graph so one <script> covers the whole page.
 export const graph = (...nodes) => ({
   "@context": "https://schema.org",

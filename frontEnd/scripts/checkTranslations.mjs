@@ -11,6 +11,7 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { readMenuData } from "./readMenuData.mjs";
+import { withCareersData } from "./readCareersData.mjs";
 
 // new URL("../") already resolves to frontEnd/; path.dirname on a trailing
 // slash would climb one level too far, to the repo root.
@@ -59,6 +60,159 @@ const varList = (value) => [
   ),
 ].sort();
 
+const JOB_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const ISO_DATE = /^(\d{4})-(\d{2})-(\d{2})$/;
+const EMAIL = /^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/;
+
+const isRealDate = (value) => {
+  const match = ISO_DATE.exec(value);
+  if (!match) return false;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(year, month - 1, day);
+  return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
+};
+
+const isFutureDate = (value) => {
+  const [year, month, day] = value.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return date > today;
+};
+
+// Shape rules for JOBS.js. A preview file may skip Russian and Arabic
+// (the page falls back to English) but only when CAREERS_ALLOW_PREVIEW=1.
+// Unpublished jobs have no "Open since", so a preview date may be null.
+export function checkCareersData(data, branchIds, env = process.env) {
+  const problems = [];
+  const fail = (message) => problems.push(message);
+  const mode = data?.CAREERS_DATA_MODE;
+  if (mode !== "live" && mode !== "preview") {
+    fail('CAREERS_DATA_MODE must be "live" or "preview"');
+    return problems;
+  }
+  const preview = mode === "preview";
+  if (preview && env.CAREERS_ALLOW_PREVIEW !== "1") {
+    fail("JOBS.js is a PREVIEW file - run sync_site_careers.py without --preview before building");
+    return problems;
+  }
+
+  const textAt = (value, label) => {
+    const required = preview ? ["en"] : ["en", "ru", "ar"];
+    for (const lang of required) {
+      if (typeof value?.[lang] !== "string" || !value[lang].trim()) {
+        fail(`${label}: missing ${lang} text`);
+      }
+    }
+    if (!preview || !value) return;
+    for (const lang of ["ru", "ar"]) {
+      if (!Object.hasOwn(value, lang)) continue;
+      if (typeof value[lang] !== "string" || !value[lang].trim()) {
+        fail(`${label}: ${lang} text is present but empty`);
+      }
+    }
+  };
+
+  const listsAt = (value, label, min) => {
+    const lengths = {};
+    for (const lang of ["en", "ru", "ar"]) {
+      const required = lang === "en" || !preview;
+      const present = value != null && Object.hasOwn(value, lang);
+      if (!present) {
+        if (required) fail(`${label}: missing ${lang} list`);
+        continue;
+      }
+      const list = value[lang];
+      if (!Array.isArray(list)) {
+        fail(`${label}: ${lang} is not a list`);
+        continue;
+      }
+      if (required && list.length < min) {
+        fail(`${label}: ${lang} needs at least ${min} item(s)`);
+      }
+      if (list.some((item) => typeof item !== "string" || !item.trim())) {
+        fail(`${label}: ${lang} has an empty item`);
+      }
+      lengths[lang] = list.length;
+    }
+    if (lengths.en == null) return;
+    for (const lang of ["ru", "ar"]) {
+      if (lengths[lang] != null && lengths[lang] !== lengths.en) {
+        fail(`${label}: ${lang} has ${lengths[lang]} lines, English has ${lengths.en}`);
+      }
+    }
+  };
+
+  const common = data?.CAREERS_COMMON;
+  if (!common || typeof common !== "object") {
+    fail("CAREERS_COMMON is missing");
+    return problems;
+  }
+  if (common.brand !== "Vkusno") fail('CAREERS_COMMON.brand must be "Vkusno"');
+  if (typeof common.applyEmail !== "string" || !EMAIL.test(common.applyEmail)) {
+    fail("CAREERS_COMMON.applyEmail must be an email address");
+  }
+  if (common.applyWhatsApp != null && !/^\d+$/.test(common.applyWhatsApp)) {
+    fail("CAREERS_COMMON.applyWhatsApp must be digits only or null");
+  }
+  textAt(common.about, "CAREERS_COMMON.about");
+  textAt(common.location, "CAREERS_COMMON.location");
+  listsAt(common.offer, "CAREERS_COMMON.offer", 1);
+  for (const key of ["hours", "probation"]) {
+    if (common[key] == null) continue;
+    textAt(common[key], `CAREERS_COMMON.${key}`);
+  }
+
+  if (!Array.isArray(data.JOBS)) {
+    fail("JOBS must be a list");
+    return problems;
+  }
+  const seen = new Set();
+  for (const job of data.JOBS) {
+    const label = job?.id || "(job)";
+    if (typeof job?.id !== "string" || !JOB_ID.test(job.id)) {
+      fail(`${label}: id must be lowercase letters, digits and single hyphens`);
+    } else if (seen.has(job.id)) {
+      fail(`${label}: duplicated id`);
+    }
+    if (typeof job?.id === "string") seen.add(job.id);
+    textAt(job?.title, `${label} title`);
+    textAt(job?.summary, `${label} summary`);
+    listsAt(job?.duties, `${label} duties`, 1);
+    listsAt(job?.mustHave, `${label} mustHave`, 1);
+    listsAt(job?.niceToHave, `${label} niceToHave`, 0);
+    if (job?.employmentType !== "FULL_TIME" && job?.employmentType !== "PART_TIME") {
+      fail(`${label}: employmentType must be FULL_TIME or PART_TIME`);
+    }
+    if (job?.kitchens == null) {
+      // any kitchen
+    } else if (!Array.isArray(job.kitchens) || job.kitchens.length === 0) {
+      fail(`${label}: kitchens must be null or a list of branch ids`);
+    } else {
+      const unknown = job.kitchens.filter((id) => !branchIds.includes(id));
+      if (unknown.length) fail(`${label}: unknown kitchen(s) ${unknown.join(", ")}`);
+    }
+    if (job?.openings != null && (!Number.isInteger(job.openings) || job.openings < 1)) {
+      fail(`${label}: openings must be a positive whole number or null`);
+    }
+    if (job?.datePosted == null) {
+      if (!preview) fail(`${label}: datePosted is required`);
+    } else if (typeof job.datePosted !== "string" || !isRealDate(job.datePosted)) {
+      fail(`${label}: datePosted must be a real YYYY-MM-DD date`);
+    } else if (isFutureDate(job.datePosted)) {
+      fail(`${label}: datePosted is in the future`);
+    }
+  }
+  return problems;
+}
+
+const invokedDirectly =
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+async function checkLocales() {
 const languages = (await readdir(LOCALES, { withFileTypes: true }))
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name);
@@ -199,6 +353,20 @@ for (const lang of languages) {
 }
 if (duplicated > 5) fail(`...and ${duplicated - 5} more duplicated long descriptions`);
 
+let openJobs = 0;
+try {
+  const careersLoaded = await withCareersData(async (data, server) => {
+    const { BRANCHES } = await server.ssrLoadModule(
+      "/src/05_pages/public/contact/04_contact_const/BRANCHES.js",
+    );
+    return { data, branchIds: BRANCHES.map((branch) => branch.id) };
+  });
+  openJobs = Array.isArray(careersLoaded.data.JOBS) ? careersLoaded.data.JOBS.length : 0;
+  checkCareersData(careersLoaded.data, careersLoaded.branchIds).forEach((message) => fail(message));
+} catch (error) {
+  fail(`careers data could not be read: ${error.message}`);
+}
+
 if (failures.length) {
   console.error(`\ntranslation check FAILED (${failures.length} problem(s)):\n`);
   failures.forEach((message) => console.error(`  - ${message}`));
@@ -208,5 +376,11 @@ if (failures.length) {
 console.log(
   `translations ok: ${languages.length} languages x ${namespaces.length} namespaces, ` +
     `${itemIds.length} known menu items checked ` +
-    `(${MenuItems.length} active, ${AllMenuItems.filter((item) => item.isActive === false).length} inactive preserved)`,
+    `(${MenuItems.length} active, ${AllMenuItems.filter((item) => item.isActive === false).length} inactive preserved), ` +
+    `${openJobs} open jobs`,
 );
+}
+
+if (invokedDirectly) {
+  await checkLocales();
+}

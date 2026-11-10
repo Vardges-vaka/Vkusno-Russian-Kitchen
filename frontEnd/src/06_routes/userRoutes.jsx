@@ -9,6 +9,8 @@ const Home = lazy(() => import("../05_pages/public/home/Home.jsx"));
 const Menu = lazy(() => import("../05_pages/public/menu/Menu.jsx"));
 const MenuItem = lazy(() => import("../05_pages/public/menu/MenuItem.jsx"));
 const Contact = lazy(() => import("../05_pages/public/contact/Contact.jsx"));
+const Careers = lazy(() => import("../05_pages/public/careers/Careers.jsx"));
+const CareersJob = lazy(() => import("../05_pages/public/careers/CareersJob.jsx"));
 const Privacy = lazy(() => import("../05_pages/public/legal/Privacy.jsx"));
 const FAQ = lazy(() => import("../05_pages/public/legal/FAQ.jsx"));
 const NotFound = lazy(() => import("../05_pages/public/notFound/NotFound.jsx"));
@@ -21,6 +23,8 @@ const UserRoutes = [
   // variant over the menu instead - see AppRoutes.
   { path: "menu/:slug", element: <MenuItem variant="page" /> },
   { path: "contact", element: <Contact /> },
+  { path: "careers", element: <Careers /> },
+  { path: "careers/:jobId", element: <CareersJob /> },
   { path: "privacy", element: <Privacy /> },
   { path: "faq", element: <FAQ /> },
   { path: "*", element: <NotFound /> },
