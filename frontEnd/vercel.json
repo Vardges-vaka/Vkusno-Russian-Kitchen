@@ -112,6 +112,35 @@
       "permanent": true
     },
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_]|$)"
+        }
+      ],
+      "destination": "/ru",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_]|$)"
+        }
+      ],
+      "destination": "/ar",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "destination": "/en",
+      "permanent": false
+    },
+    {
       "source": "/wp-:path*",
       "destination": "/en",
       "permanent": true

@@ -33,9 +33,10 @@ import UserRoutes, { MenuItem } from "./06_routes/userRoutes.jsx";
 import LanguageLayout from "./06_routes/LanguageLayout.jsx";
 import ScrollToTop from "./06_routes/ScrollToTop.jsx";
 
-// "/" has no language in it, so pick one: the visitor's saved/ detected
-// language if we support it, English otherwise. replace, so Back does not
-// bounce them straight back here.
+// "/" has no language in it. On Vercel the server already sends this address
+// to /ru, /ar, or /en from the browser's language. This jump remains for
+// local dev, where vercel.json does not run, and uses the language saved in
+// the browser. replace, so Back does not bounce them straight back here.
 const RootRedirect = () => {
   const { i18n } = useTranslation();
   return <Navigate to={localePath(resolveLanguage(i18n.language))} replace />;
