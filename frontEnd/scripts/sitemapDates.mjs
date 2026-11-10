@@ -86,11 +86,18 @@ export const buildSitemapDates = async ({
   staticRoutes,
   menuItems,
   jobs,
+  kitchens = [],
   common,
   ledger,
   today,
 }) => {
-  const files = [...new Set([...Object.values(STATIC_FILES), "MenuItems.json"])];
+  const files = [
+    ...new Set([
+      ...Object.values(STATIC_FILES),
+      "MenuItems.json",
+      ...(kitchens.length ? ["Kitchens.json"] : []),
+    ]),
+  ];
   const localeText = {};
   await Promise.all(
     langs.flatMap((lang) =>
@@ -143,6 +150,16 @@ export const buildSitemapDates = async ({
         );
       }
       note(pageKey(lang, route), parts);
+    }
+  }
+
+  for (const slug of kitchens) {
+    for (const lang of langs) {
+      note(pageKey(lang, `kitchens/${slug}`), [
+        localeText[`${lang}/Kitchens.json`],
+        contactSource,
+        slug,
+      ]);
     }
   }
 

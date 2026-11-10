@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Our kitchens",
+    "description": "Five Vkusno kitchens in Dubai. Address, hours and where to order.",
+    "kitchenTitle": "{{name}}",
+    "kitchenDescription": "{{name}}. {{address}}. {{hours}}."
+  },
+  "hero": {
+    "title": "Our kitchens",
+    "intro": "Five kitchens in Dubai. Pick one for the address, hours and where to order."
+  },
+  "list": {
+    "title": "Kitchens"
+  },
+  "card": {
+    "view": "View kitchen"
+  },
+  "detail": {
+    "back": "All kitchens",
+    "address": "Address",
+    "hours": "Hours",
+    "contact": "Contact",
+    "directions": "Directions",
+    "order": "Order from this kitchen",
+    "other": "Other kitchens"
+  },
+  "hours": {
+    "open24": "Open 24/7",
+    "range": "Open {{open}} – {{close}}"
+  }
+}

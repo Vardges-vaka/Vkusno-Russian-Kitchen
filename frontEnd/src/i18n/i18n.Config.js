@@ -13,7 +13,7 @@ export const i18nConfig = {
   supportedLngs: ["en", "ar", "ru"],
   load: "languageOnly",
 
-  ns: ["common", "Home", "Contact", "Careers", "Menu", "FAQ", "Privacy", "NotFound"],
+  ns: ["common", "Home", "Contact", "Kitchens", "Careers", "Menu", "FAQ", "Privacy", "NotFound"],
   defaultNS: "common",
 
   interpolation: {

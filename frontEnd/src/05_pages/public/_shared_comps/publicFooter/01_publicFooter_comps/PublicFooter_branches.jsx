@@ -36,13 +36,11 @@ const PublicFooter_branches = ({ branches, lang, tContact, t }) => {
           return (
             <li key={branch.id} className="PublicFooter_branches_item">
               <p className="PublicFooter_branches_line">
-                <a
+                <Link
                   className="PublicFooter_branches_nameLink"
-                  href={branch.location.googleMapsLink}
-                  target="_blank"
-                  rel="noreferrer">
+                  to={localePath(lang, `kitchens/${branch.slug}`)}>
                   {name}
-                </a>
+                </Link>
                 <span className="PublicFooter_branches_dot" aria-hidden="true">
                   ·
                 </span>

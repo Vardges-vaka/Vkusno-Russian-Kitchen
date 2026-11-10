@@ -5,10 +5,12 @@ import {
   Noon_Logo,
   Keeta_Logo,
 } from "../../../../01_assets/_assets.index.js";
+import { KITCHEN_SLUG } from "../../kitchens/04_kitchens_const/KITCHEN_SLUG.js";
 
 const BRANCHES = [
   {
     id: "arjan",
+    slug: KITCHEN_SLUG.arjan,
     name: {
       en: "Arjan",
       ru: "Арджан",
@@ -61,6 +63,7 @@ const BRANCHES = [
   },
   {
     id: "marina",
+    slug: KITCHEN_SLUG.marina,
     name: {
       en: "Dubai Marina",
       ru: "Дубай Марина",
@@ -113,6 +116,7 @@ const BRANCHES = [
   },
   {
     id: "bbSolAvenue",
+    slug: KITCHEN_SLUG.bbSolAvenue,
     name: {
       en: "Business Bay - SOL Avenue",
       ru: "Бизнес-Бэй - Sol Avenue",
@@ -145,6 +149,7 @@ const BRANCHES = [
   },
   {
     id: "bbCuisinette",
+    slug: KITCHEN_SLUG.bbCuisinette,
     name: {
       en: "Business Bay - Cuisinette",
       ru: "Бизнес-Бэй - Cuisinette",
@@ -192,6 +197,7 @@ const BRANCHES = [
   },
   {
     id: "dso",
+    slug: KITCHEN_SLUG.dso,
     name: {
       en: "Dubai Silicon Oasis (DSO)",
       ru: "Дубай Силикон Оазис (DSO)",

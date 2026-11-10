@@ -18,7 +18,8 @@
       "mapUnavailable": "The map is temporarily unavailable. Use the \"Directions\" link on any branch below instead.",
       "open24": "Open 24/7",
       "hours": "Open {{open}} – {{close}}",
-      "directions": "Directions"
+      "directions": "Directions",
+      "viewKitchen": "View kitchen"
     }
   },
   "meta": {

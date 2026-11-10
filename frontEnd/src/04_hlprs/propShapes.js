@@ -97,6 +97,7 @@ export const aggregatorShape = PropTypes.shape({
 
 export const branchShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
   name: localizedStringShape.isRequired,
   location: PropTypes.shape({
     address: localizedStringShape.isRequired,

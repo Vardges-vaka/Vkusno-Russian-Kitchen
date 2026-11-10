@@ -114,6 +114,19 @@
   outline: none;
 }
 
+.Contact_branchCard_page {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+.Contact_branchCard_page:hover,
+.Contact_branchCard_page:focus-visible {
+  text-decoration: underline;
+}
+
 .Contact_branchCard_aggregators {
   display: flex;
   flex-wrap: wrap;

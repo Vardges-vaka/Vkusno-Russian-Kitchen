@@ -8,11 +8,31 @@
     "lastmod": "2026-11-10"
   },
   "ar|contact": {
-    "hash": "2cc22bea56bdee93",
+    "hash": "92c891bfcefb0489",
     "lastmod": "2026-11-10"
   },
   "ar|faq": {
     "hash": "614d436c436669a9",
+    "lastmod": "2026-11-10"
+  },
+  "ar|kitchens/arjan": {
+    "hash": "7efe9eddbbb4f1c2",
+    "lastmod": "2026-11-10"
+  },
+  "ar|kitchens/business-bay-cuisinette": {
+    "hash": "091d4abeae80ad1c",
+    "lastmod": "2026-11-10"
+  },
+  "ar|kitchens/business-bay-sol-avenue": {
+    "hash": "9043fb8d412ac557",
+    "lastmod": "2026-11-10"
+  },
+  "ar|kitchens/dso": {
+    "hash": "0a8dd15a47ee80aa",
+    "lastmod": "2026-11-10"
+  },
+  "ar|kitchens/marina": {
+    "hash": "06d3647f67b64a4e",
     "lastmod": "2026-11-10"
   },
   "ar|menu": {
@@ -360,11 +380,31 @@
     "lastmod": "2026-11-10"
   },
   "en|contact": {
-    "hash": "34ab8a8476ae6255",
+    "hash": "b54a6ece509b2b52",
     "lastmod": "2026-11-10"
   },
   "en|faq": {
     "hash": "12994daa5b4f5d0b",
+    "lastmod": "2026-11-10"
+  },
+  "en|kitchens/arjan": {
+    "hash": "8817c9de6ffeec28",
+    "lastmod": "2026-11-10"
+  },
+  "en|kitchens/business-bay-cuisinette": {
+    "hash": "e1fa662b5e0b133c",
+    "lastmod": "2026-11-10"
+  },
+  "en|kitchens/business-bay-sol-avenue": {
+    "hash": "37333463eafa6733",
+    "lastmod": "2026-11-10"
+  },
+  "en|kitchens/dso": {
+    "hash": "2e36081c24794fff",
+    "lastmod": "2026-11-10"
+  },
+  "en|kitchens/marina": {
+    "hash": "1dc1944f794f3f08",
     "lastmod": "2026-11-10"
   },
   "en|menu": {
@@ -712,11 +752,31 @@
     "lastmod": "2026-11-10"
   },
   "ru|contact": {
-    "hash": "35711e848e9325f2",
+    "hash": "f2700b77df8f3cb8",
     "lastmod": "2026-11-10"
   },
   "ru|faq": {
     "hash": "b16fe87b983dfabd",
+    "lastmod": "2026-11-10"
+  },
+  "ru|kitchens/arjan": {
+    "hash": "90f6b13c98715fae",
+    "lastmod": "2026-11-10"
+  },
+  "ru|kitchens/business-bay-cuisinette": {
+    "hash": "ecddf788160bc65f",
+    "lastmod": "2026-11-10"
+  },
+  "ru|kitchens/business-bay-sol-avenue": {
+    "hash": "5cb93331078cb80a",
+    "lastmod": "2026-11-10"
+  },
+  "ru|kitchens/dso": {
+    "hash": "dda3e25827bbf174",
+    "lastmod": "2026-11-10"
+  },
+  "ru|kitchens/marina": {
+    "hash": "f59657c51a490fee",
     "lastmod": "2026-11-10"
   },
   "ru|menu": {

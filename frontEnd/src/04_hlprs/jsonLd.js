@@ -1,12 +1,27 @@
 import { SITE_URL, absoluteUrl, localePath } from "../00_config/_config.index.js";
+import {
+  PUBLIC_EMAIL,
+  PUBLIC_FACEBOOK,
+  PUBLIC_INSTAGRAM,
+  PUBLIC_PHONE,
+} from "../05_pages/public/contact/04_contact_const/publicIdentity.js";
 import { pickLocale } from "./pickLocale.js";
 
 // Schema.org builders. Every field below already exists in the app's own data
 // - BRANCHES.js carries addresses, coordinates and opening hours; menuItems.js
-// carries names, prices and photos - so none of this is duplicated content
-// maintained by hand.
+// carries names, prices and photos; publicIdentity.js carries the phone,
+// email and social links - so none of this is duplicated by hand.
+// Hours stay as published on the site. Ratings are not added.
 
 const ORGANISATION_ID = `${SITE_URL}/#organisation`;
+const MENU_PATH = "menu";
+const LOGO = {
+  "@type": "ImageObject",
+  url: `${SITE_URL}/icon-512.png`,
+  width: 512,
+  height: 512,
+};
+const SAME_AS = [PUBLIC_INSTAGRAM, PUBLIC_FACEBOOK];
 
 // "07:00"/"23:00" -> schema.org opening hours. 24/7 branches get the
 // all-days-all-hours form Google expects rather than an omitted field.
@@ -36,7 +51,8 @@ const openingHours = (timing) =>
       ];
 
 export const restaurantNode = (branch, lang, contactInfo = []) => {
-  const phone = contactInfo.find((item) => item.name === "phone")?.label;
+  const phone = contactInfo.find((item) => item.name === "phone")?.label || PUBLIC_PHONE;
+  const email = contactInfo.find((item) => item.name === "email")?.label || PUBLIC_EMAIL;
 
   return {
     "@type": "Restaurant",
@@ -44,8 +60,15 @@ export const restaurantNode = (branch, lang, contactInfo = []) => {
     name: `Vkusno - ${pickLocale(branch.name, lang)}`,
     servesCuisine: ["Russian", "Central Asian"],
     priceRange: "$$",
-    url: absoluteUrl(localePath(lang, "contact")),
-    ...(phone ? { telephone: phone } : {}),
+    url: absoluteUrl(
+      localePath(lang, branch.slug ? `kitchens/${branch.slug}` : "contact"),
+    ),
+    telephone: phone,
+    email,
+    menu: absoluteUrl(localePath(lang, MENU_PATH)),
+    logo: LOGO,
+    image: LOGO.url,
+    sameAs: SAME_AS,
     address: {
       "@type": "PostalAddress",
       streetAddress: pickLocale(branch.location.address, lang),
@@ -69,6 +92,11 @@ export const organisationNode = (lang) => ({
   name: "Vkusno",
   url: absoluteUrl(localePath(lang)),
   description: "Home-style Russian cooking in Dubai.",
+  logo: LOGO,
+  image: LOGO.url,
+  telephone: PUBLIC_PHONE,
+  email: PUBLIC_EMAIL,
+  sameAs: SAME_AS,
 });
 
 export const menuItemNode = (item, lang) => ({

@@ -18,6 +18,7 @@ import { fileURLToPath } from "node:url";
 import { readCareersData } from "./readCareersData.mjs";
 import { readMenuData } from "./readMenuData.mjs";
 import { buildSitemapDates, readSitemapLedger, writeSitemapLedger } from "./sitemapDates.mjs";
+import { KITCHEN_SLUG } from "../src/05_pages/public/kitchens/04_kitchens_const/KITCHEN_SLUG.js";
 
 // new URL("../") already resolves to frontEnd/; path.dirname on a trailing
 // slash would climb one level too far, to the repo root.
@@ -25,6 +26,7 @@ const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const SITE_URL = "https://vkusno.ae";
 const LANGS = ["en", "ru", "ar"];
 const STATIC_ROUTES = ["", "menu", "contact", "careers", "faq", "privacy"];
+const KITCHEN_SLUGS = Object.values(KITCHEN_SLUG);
 
 const urlFor = (lang, route) =>
   route ? `${SITE_URL}/${lang}/${route}` : `${SITE_URL}/${lang}`;
@@ -113,7 +115,7 @@ const entry = (routeByLang, priority, dates, photos) =>
     return lines.join("\n");
   }).join("\n");
 
-export const createSitemap = (menuItems, jobs = [], dates = null) => {
+export const createSitemap = (menuItems, jobs = [], dates = null, kitchens = []) => {
   const entries = [
     ...STATIC_ROUTES.map((route) =>
       entry(
@@ -135,6 +137,14 @@ export const createSitemap = (menuItems, jobs = [], dates = null) => {
       entry(
         Object.fromEntries(LANGS.map((l) => [l, `careers/${id}`])),
         "0.5",
+        dates,
+      ),
+    ),
+    // The kitchen slug is the same in every language.
+    ...kitchens.map((slug) =>
+      entry(
+        Object.fromEntries(LANGS.map((l) => [l, `kitchens/${slug}`])),
+        "0.7",
         dates,
       ),
     ),
@@ -180,12 +190,13 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     staticRoutes: STATIC_ROUTES,
     menuItems,
     jobs: JOBS,
+    kitchens: KITCHEN_SLUGS,
     common: CAREERS_COMMON,
     ledger: await readSitemapLedger(),
     today,
   });
   await writeSitemapLedger(ledger);
-  const xml = createSitemap(menuItems, JOBS, dates);
+  const xml = createSitemap(menuItems, JOBS, dates, KITCHEN_SLUGS);
   await writeFile(path.join(ROOT, "public/sitemap.xml"), xml, "utf8");
   // Vite already copied the pre-build sitemap into dist. Replace that copy
   // once the photo addresses exist, then drop the manifest so it is not published.
@@ -194,9 +205,9 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     await rm(MANIFEST_PATH, { force: true });
   }
 
-  const total = (STATIC_ROUTES.length + MenuItems.length + JOBS.length) * LANGS.length;
+  const total = (STATIC_ROUTES.length + MenuItems.length + JOBS.length + KITCHEN_SLUGS.length) * LANGS.length;
   const photos = manifest ? MenuItems.length : 0;
   console.log(
-    `sitemap.xml: ${total} URLs (${STATIC_ROUTES.length} static + ${MenuItems.length} dishes + ${JOBS.length} jobs) x ${LANGS.length} languages${photos ? `, ${photos} dish photos` : ""}`,
+    `sitemap.xml: ${total} URLs (${STATIC_ROUTES.length} static + ${MenuItems.length} dishes + ${JOBS.length} jobs + ${KITCHEN_SLUGS.length} kitchens) x ${LANGS.length} languages${photos ? `, ${photos} dish photos` : ""}`,
   );
 }

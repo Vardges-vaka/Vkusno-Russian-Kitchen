@@ -1,26 +1,27 @@
 import { Phone, Mail, MessageCircle } from "lucide-react";
-
-const PHONE_NUMBER = "+971 52 102 5674";
-const EMAIL_ADDRESS = "info@vkusno.ae";
+import {
+  PUBLIC_EMAIL,
+  PUBLIC_PHONE,
+} from "./publicIdentity.js";
 
 const CONTACT_INFO = [
   {
     name: "phone",
     icon: Phone,
-    label: PHONE_NUMBER,
-    link: `tel:${PHONE_NUMBER.replace(/\s/g, "")}`,
+    label: PUBLIC_PHONE,
+    link: `tel:${PUBLIC_PHONE.replace(/\s/g, "")}`,
   },
   {
     name: "WhatsApp",
     icon: MessageCircle,
-    label: PHONE_NUMBER,
-    link: `https://wa.me/${PHONE_NUMBER.replace(/\D/g, "")}`,
+    label: PUBLIC_PHONE,
+    link: `https://wa.me/${PUBLIC_PHONE.replace(/\D/g, "")}`,
   },
   {
     name: "email",
     icon: Mail,
-    label: EMAIL_ADDRESS,
-    link: `mailto:${EMAIL_ADDRESS}`,
+    label: PUBLIC_EMAIL,
+    link: `mailto:${PUBLIC_EMAIL}`,
   },
 ];
 

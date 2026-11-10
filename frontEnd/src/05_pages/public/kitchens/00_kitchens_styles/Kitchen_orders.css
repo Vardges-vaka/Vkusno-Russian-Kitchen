@@ -1,0 +1,48 @@
+.Kitchen_orders {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Kitchen_orders_title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text_muted_color);
+}
+
+.Kitchen_orders_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Kitchen_orders_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-block: 8px;
+  padding-inline: 12px;
+  color: var(--text_color);
+  text-decoration: none;
+  background-color: var(--bg_color);
+  border: 1px solid var(--border_color);
+  border-radius: 999px;
+}
+
+.Kitchen_orders_link:hover,
+.Kitchen_orders_link:focus-visible {
+  border-color: var(--accent_color);
+  outline: none;
+}
+
+.Kitchen_orders_logo {
+  inline-size: 18px;
+  block-size: 18px;
+  object-fit: contain;
+}

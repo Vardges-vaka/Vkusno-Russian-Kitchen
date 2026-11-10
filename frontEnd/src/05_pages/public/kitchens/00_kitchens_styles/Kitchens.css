@@ -1,0 +1,72 @@
+.Kitchens_container {
+  margin: 0 auto;
+  padding-block: 32px 48px;
+}
+
+.Kitchens_title,
+.Kitchens_list_title {
+  margin: 0;
+  color: var(--text_color);
+}
+
+.Kitchens_title {
+  font-size: 32px;
+  letter-spacing: 0.06em;
+}
+
+.Kitchens_title::after {
+  content: "";
+  display: block;
+  inline-size: 80px;
+  block-size: 3px;
+  margin-block-start: 12px;
+  border-radius: 2px;
+  background-color: var(--gold_color);
+}
+
+.Kitchens_intro {
+  margin-block: 16px 0;
+  margin-inline: 0;
+  max-inline-size: 42rem;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text_muted_color);
+}
+
+.Kitchens_list {
+  margin-block-start: 32px;
+}
+
+.Kitchens_list_title {
+  margin-block-end: 16px;
+  font-size: 22px;
+}
+
+.Kitchens_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .Kitchens_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .Kitchens_container {
+    padding-block: 48px 64px;
+  }
+
+  .Kitchens_title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Kitchens_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}

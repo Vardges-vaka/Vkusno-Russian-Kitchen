@@ -3,17 +3,18 @@ import {
   Facebook_logo,
   linkedIn_logo,
 } from "../../../../01_assets/_assets.index.js";
+import { PUBLIC_FACEBOOK, PUBLIC_INSTAGRAM } from "./publicIdentity.js";
 
 const SOCIALS = [
   {
     name: "Instagram",
     logo: Instagram_logo,
-    link: "https://www.instagram.com/vkusnodxb?igsh=NnMzcGF0dWgwYzRl",
+    link: PUBLIC_INSTAGRAM,
   },
   {
     name: "Facebook",
     logo: Facebook_logo,
-    link: "https://www.facebook.com/vkusnodxb",
+    link: PUBLIC_FACEBOOK,
   },
   {
     name: "LinkedIn",

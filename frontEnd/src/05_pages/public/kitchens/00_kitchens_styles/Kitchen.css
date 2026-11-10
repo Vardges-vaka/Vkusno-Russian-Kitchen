@@ -1,0 +1,141 @@
+.Kitchen_container {
+  margin: 0 auto;
+  padding-block: 16px 48px;
+}
+
+.Kitchen_breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-block-end: 18px;
+  font-size: 0.9rem;
+  color: var(--text_muted_color);
+}
+
+.Kitchen_breadcrumb a {
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+.Kitchen_breadcrumb a:hover,
+.Kitchen_breadcrumb a:focus-visible {
+  text-decoration: underline;
+}
+
+.Kitchen_breadcrumb [aria-current="page"] {
+  color: var(--text_color);
+}
+
+.Kitchen_title {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0.04em;
+  color: var(--text_color);
+}
+
+.Kitchen_title::after {
+  content: "";
+  display: block;
+  inline-size: 80px;
+  block-size: 3px;
+  margin-block-start: 12px;
+  border-radius: 2px;
+  background-color: var(--gold_color);
+}
+
+.Kitchen_hours {
+  margin-block: 14px 0;
+  margin-inline: 0;
+  color: var(--text_muted_color);
+}
+
+.Kitchen_layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-block-start: 24px;
+}
+
+.Kitchen_facts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 16px;
+}
+
+.Kitchen_heading {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text_muted_color);
+}
+
+.Kitchen_address {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0 0 12px;
+  line-height: 1.5;
+  color: var(--text_color);
+}
+
+.Kitchen_pin {
+  flex: none;
+  margin-block-start: 2px;
+  color: var(--gold_color);
+}
+
+.Kitchen_directions {
+  font-weight: 600;
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+.Kitchen_directions:hover,
+.Kitchen_directions:focus-visible {
+  text-decoration: underline;
+}
+
+.Kitchen_others {
+  margin-block-start: 32px;
+}
+
+.Kitchen_others_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Kitchen_others_list a {
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+.Kitchen_others_list a:hover,
+.Kitchen_others_list a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .Kitchen_container {
+    padding-block-end: 64px;
+  }
+
+  .Kitchen_title {
+    font-size: 36px;
+  }
+
+  .Kitchen_layout {
+    grid-template-columns: minmax(300px, 380px) 1fr;
+    gap: 24px;
+  }
+}

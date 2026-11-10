@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
+import { localePath } from "../../../../00_config/_config.index.js";
 import {
   branchShape,
   langShape,
@@ -80,6 +82,12 @@ const Contact_branchCard = ({ branch, lang, t, isSelected, onSelect }) => {
           onClick={stopCardClick}>
           {t("contact.branches.directions")}
         </a>
+        <Link
+          className="Contact_branchCard_page"
+          to={localePath(lang, `kitchens/${branch.slug}`)}
+          onClick={stopCardClick}>
+          {t("contact.branches.viewKitchen")}
+        </Link>
       </div>
     </article>
   );

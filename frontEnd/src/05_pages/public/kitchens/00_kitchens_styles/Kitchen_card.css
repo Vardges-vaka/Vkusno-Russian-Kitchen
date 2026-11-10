@@ -1,0 +1,55 @@
+.Kitchen_card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 14px;
+}
+
+.Kitchen_card_name {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text_color);
+}
+
+.Kitchen_card_hours {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text_muted_color);
+}
+
+.Kitchen_card_address {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text_color);
+}
+
+.Kitchen_card_pin {
+  flex: none;
+  margin-block-start: 2px;
+  color: var(--gold_color);
+}
+
+.Kitchen_card_link {
+  margin-block-start: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+.Kitchen_card_link:hover,
+.Kitchen_card_link:focus-visible {
+  text-decoration: underline;
+}
+
+.Kitchen_card_link:focus-visible {
+  outline: 2px solid var(--accent_color);
+  outline-offset: 3px;
+}

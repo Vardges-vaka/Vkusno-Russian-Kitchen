@@ -52,7 +52,7 @@ export const localePath = (lang, path = "") => {
 // the moment it mounts. It used to wrap the whole app, so Home, FAQ, Privacy
 // and the 404 page all paid for a script they never used. App consults this to
 // mount the provider only where a map can appear.
-const MAP_ROUTE_SEGMENTS = ["menu", "contact"];
+const MAP_ROUTE_SEGMENTS = ["menu", "contact", "kitchens"];
 
 export const routeNeedsMap = (pathname = "") => {
   const [, first, second] = pathname.split("/");
