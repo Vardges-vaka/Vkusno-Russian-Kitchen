@@ -40,9 +40,13 @@
       property="og:description"
       content="Home-style Russian cooking in Dubai. Five kitchens, delivery, pickup and self-service seating." />
     <meta property="og:url" content="https://vkusno.ae/" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:locale:alternate" content="ru" />
-    <meta property="og:locale:alternate" content="ar" />
+    <!-- Open Graph wants language_TERRITORY (en_US). The site's own language
+         codes stay en / ru / ar in the URL, html lang, and hreflang. The
+         preview text above is English, so the primary locale is en_US.
+         The alternates only say the same site also exists in Russian and Arabic. -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="ar_AE" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <script>
