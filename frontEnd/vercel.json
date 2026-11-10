@@ -6,7 +6,12 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.vkusno.ae" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vkusno.ae"
+        }
+      ],
       "destination": "https://vkusno.ae/:path*",
       "permanent": true
     },
@@ -97,13 +102,2208 @@
     },
     {
       "source": "/",
-      "has": [{ "type": "query", "key": "p" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "p"
+        }
+      ],
       "destination": "/en",
       "permanent": true
     },
     {
       "source": "/wp-:path*",
       "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/achichuk",
+      "destination": "/ar/menu/achichuk-uzbaki",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/adjika-sauce",
+      "destination": "/ar/menu/salsat-adjika",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/adzhika",
+      "destination": "/ar/menu/salsat-adjika",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/assorted-pickles",
+      "destination": "/ar/menu/mukhallalat-mutanawwia",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/assorti-iz-soleniy",
+      "destination": "/ar/menu/mukhallalat-mutanawwia",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/baked-hot-dog",
+      "destination": "/ar/menu/hot-dog-makhbuz",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/baked-russian-pie-with-cabbage",
+      "destination": "/ar/menu/fatira-rusiya-bil-malfuf",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/baked-russian-pie-with-potato-and-mushroom",
+      "destination": "/ar/menu/fatira-rusiya-bil-batata-wal-fitr",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/baraniy-shashlyk",
+      "destination": "/ar/menu/sikh-lahm-dhan",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/beef-cutlets",
+      "destination": "/ar/menu/sharaih-lahm-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/beef-dinner",
+      "destination": "/ar/menu/asha-lahm-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/beef-skewer",
+      "destination": "/ar/menu/sikh-lahm-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/beef-stroganoff",
+      "destination": "/ar/menu/stroganoff-lahm-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/beetroot-salad",
+      "destination": "/ar/menu/salatat-al-shamandar",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/befstroganov",
+      "destination": "/ar/menu/stroganoff-lahm-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/bliny-s-dzhemom",
+      "destination": "/ar/menu/fatair-bil-murabba",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/bliny-s-govyadinoy",
+      "destination": "/ar/menu/fatair-rusiya-bil-lahm-al-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/bliny-s-gribami",
+      "destination": "/ar/menu/fatair-rusiya-bil-fitr",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/bliny-s-tvorogom",
+      "destination": "/ar/menu/fatair-rusiya-bil-jibn",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/bliny-so-sgushchenkoy",
+      "destination": "/ar/menu/fatair-bil-halib-al-mukathaf",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/boiled-rice",
+      "destination": "/ar/menu/aruz-masluq",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/borshch",
+      "destination": "/ar/menu/borsh-rusi",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/buckwheat",
+      "destination": "/ar/menu/hinta-sawda",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/buckwheat-porridge",
+      "destination": "/ar/menu/asidat-al-hinta-al-sawda",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/bulochka-s-dzhemom",
+      "destination": "/ar/menu/khubz-bil-murabba",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/buns-with-jam",
+      "destination": "/ar/menu/khubz-bil-murabba",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/cabbage-rolls-classic",
+      "destination": "/ar/menu/malfuf-mahshi-klasiki",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/cabbage-rolls-with-rice-and-minced-meat",
+      "destination": "/ar/menu/malfuf-mahshi-bil-aruz-wal-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/carrot-salad",
+      "destination": "/ar/menu/salatat-al-jazar",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/cheburek-iz-govyadiny",
+      "destination": "/ar/menu/cheburek-bil-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/cheburek-with-meat",
+      "destination": "/ar/menu/cheburek-bil-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/chicken-cutlets",
+      "destination": "/ar/menu/sharaih-dajaj",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/chicken-dinner",
+      "destination": "/ar/menu/asha-dajaj",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/chicken-kiev",
+      "destination": "/ar/menu/dajaj-kiev",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/chicken-noodles-soup",
+      "destination": "/ar/menu/shurbat-al-dajaj-bil-shairiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/chicken-skewer",
+      "destination": "/ar/menu/sikh-dajaj",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/condensed-milk",
+      "destination": "/ar/menu/halib-mukathaf-muhalla",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/cranbery-mors",
+      "destination": "/ar/menu/mors-al-tut-al-barri",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/dlya-lyubiteley-pelmeney",
+      "destination": "/ar/menu/ushshaq-al-zalabiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/domashnee-varenye-iz-golubiki",
+      "destination": "/ar/menu/murabba-tut-azraq-manzili",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/dumpling-lovers",
+      "destination": "/ar/menu/ushshaq-al-zalabiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/eggplant-rolls",
+      "destination": "/ar/menu/lafaif-badhinjan",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/firmennyy-sous",
+      "destination": "/ar/menu/salsa-khassa",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/french-fries",
+      "destination": "/ar/menu/batatis-maqliya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/golubtsy",
+      "destination": "/ar/menu/malfuf-mahshi-bil-aruz-wal-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/gorchitsa",
+      "destination": "/ar/menu/salsat-al-khardal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/govyadina-na-skovorode-po-domashnemu",
+      "destination": "/ar/menu/miqlat-lahm-baqari-manziliya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/govyazhi-kotlety",
+      "destination": "/ar/menu/sharaih-lahm-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/govyazhiy-shashlyk",
+      "destination": "/ar/menu/sikh-lahm-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/grecheskiy-salat",
+      "destination": "/ar/menu/salata-yunaniya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/grechka",
+      "destination": "/ar/menu/hinta-sawda",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/grechnevaya-kasha",
+      "destination": "/ar/menu/asidat-al-hinta-al-sawda",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/greek-salad",
+      "destination": "/ar/menu/salata-yunaniya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/gril-duet-na-dvoikh",
+      "destination": "/ar/menu/mashawi-li-shakhsayn",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/grill-duo-for-two",
+      "destination": "/ar/menu/mashawi-li-shakhsayn",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/grilled-vegetable",
+      "destination": "/ar/menu/khudar-mashwiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/holodec",
+      "destination": "/ar/menu/holodek",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/home-style-beef-pan",
+      "destination": "/ar/menu/miqlat-lahm-baqari-manziliya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/home-style-potato-with-mushroom",
+      "destination": "/ar/menu/batatis-manziliya-bil-fitr",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/homemade-blueberry-jam",
+      "destination": "/ar/menu/murabba-tut-azraq-manzili",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/honey",
+      "destination": "/ar/menu/asal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/honey-cake",
+      "destination": "/ar/menu/kaakat-al-asal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/hot-pan",
+      "destination": "/ar/menu/miqla-sakhina",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/house-special-sauce",
+      "destination": "/ar/menu/salsa-khassa",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kartofel-fri",
+      "destination": "/ar/menu/batatis-maqliya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kartofelnoe-pyure",
+      "destination": "/ar/menu/batatis-mahrusa",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kartoshka-po-domashnemu-s-gribami",
+      "destination": "/ar/menu/batatis-manziliya-bil-fitr",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kholodets",
+      "destination": "/ar/menu/holodek",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/khot-dog",
+      "destination": "/ar/menu/hot-dog-makhbuz",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/klassicheskie-golubtsy",
+      "destination": "/ar/menu/malfuf-mahshi-klasiki",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/klyukvennyy-mors",
+      "destination": "/ar/menu/mors-al-tut-al-barri",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kotleta-po-po-kievski",
+      "destination": "/ar/menu/dajaj-kiev",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kurinye-kotlety",
+      "destination": "/ar/menu/sharaih-dajaj",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kurinyy-shashlyk",
+      "destination": "/ar/menu/sikh-dajaj",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kurinyy-sup-s-lapshoy",
+      "destination": "/ar/menu/shurbat-al-dajaj-bil-shairiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/kurinyy-uzhin",
+      "destination": "/ar/menu/asha-dajaj",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/lamb-skewer",
+      "destination": "/ar/menu/sikh-lahm-dhan",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/lepeshka",
+      "destination": "/ar/menu/khubz-musattah-uzbaki",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/manti-with-meat",
+      "destination": "/ar/menu/manti-bil-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/manty-iz-govyadiny",
+      "destination": "/ar/menu/manti-bil-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/marinovannye-pomidory",
+      "destination": "/ar/menu/tamatim-mukhallala",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/mashed-potatoes",
+      "destination": "/ar/menu/batatis-mahrusa",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/meatball-soup",
+      "destination": "/ar/menu/shurbat-kurat-al-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/medovik",
+      "destination": "/ar/menu/kaakat-al-asal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/mustard-sauce",
+      "destination": "/ar/menu/salsat-al-khardal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/myod",
+      "destination": "/ar/menu/asal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/oatmeal-porridge",
+      "destination": "/ar/menu/asidat-al-shufan",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/olive",
+      "destination": "/ar/menu/salatat-olivye-al-rusiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/omelette",
+      "destination": "/ar/menu/omlet",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/ostryy-steyk-salat",
+      "destination": "/ar/menu/salatat-sharaih-al-lahm-al-harra",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/ovoshchi-na-grile",
+      "destination": "/ar/menu/khudar-mashwiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/ovsyanaya-kasha",
+      "destination": "/ar/menu/asidat-al-shufan",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pancakes-with-condensed-milk",
+      "destination": "/ar/menu/fatair-bil-halib-al-mukathaf",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pancakes-with-jam",
+      "destination": "/ar/menu/fatair-bil-murabba",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pelmeni",
+      "destination": "/ar/menu/pelmeni-bil-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pelmeni-with-meat",
+      "destination": "/ar/menu/pelmeni-bil-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pickled-cucumber",
+      "destination": "/ar/menu/khiyar-mukhallal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pickled-red-cabbage",
+      "destination": "/ar/menu/malfuf-ahmar-mukhallal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pickled-tomato",
+      "destination": "/ar/menu/tamatim-mukhallala",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pickled-white-cabbage",
+      "destination": "/ar/menu/malfuf-abyad-mukhallal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pirozhki-s-kapustoy",
+      "destination": "/ar/menu/fatira-rusiya-bil-malfuf",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/pirozhki-s-kartoshkoy-i-gribami",
+      "destination": "/ar/menu/fatira-rusiya-bil-batata-wal-fitr",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/rice-porridge",
+      "destination": "/ar/menu/asidat-al-aruz",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/risovaya-kasha",
+      "destination": "/ar/menu/asidat-al-aruz",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/rulety-iz-baklazhana",
+      "destination": "/ar/menu/lafaif-badhinjan",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/russian-borscht",
+      "destination": "/ar/menu/borsh-rusi",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/russian-herring-salad-shuba",
+      "destination": "/ar/menu/salatat-al-ringa-shuba",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/russian-lunch",
+      "destination": "/ar/menu/ghada-rusi",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/russian-olivier-salad",
+      "destination": "/ar/menu/salatat-olivye-al-rusiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/russian-pancakes-with-beef",
+      "destination": "/ar/menu/fatair-rusiya-bil-lahm-al-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/russian-pancakes-with-cottage-cheese",
+      "destination": "/ar/menu/fatair-rusiya-bil-jibn",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/russian-pancakes-with-mushroom",
+      "destination": "/ar/menu/fatair-rusiya-bil-fitr",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/russkiy-obed",
+      "destination": "/ar/menu/ghada-rusi",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/rye-bread-jam",
+      "destination": "/ar/menu/khubz-al-jawdar-bil-murabba",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/rzhanoy-khleb-s-dzhemom",
+      "destination": "/ar/menu/khubz-al-jawdar-bil-murabba",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/salat-iz-morkovi",
+      "destination": "/ar/menu/salatat-al-jazar",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/samsa-iz-govyadiny",
+      "destination": "/ar/menu/sambusa-bil-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/samsa-with-meat",
+      "destination": "/ar/menu/sambusa-bil-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/scrambled-eggs",
+      "destination": "/ar/menu/bayd-makhfuq",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/seld-pod-shuboy",
+      "destination": "/ar/menu/salatat-al-ringa-shuba",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/sgushchennoe-moloko",
+      "destination": "/ar/menu/halib-mukathaf-muhalla",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/sladkiy-kartofel-fri",
+      "destination": "/ar/menu/batata-hilwa-maqliya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/smetana",
+      "destination": "/ar/menu/karima-hamida",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/solenaya-kapusta",
+      "destination": "/ar/menu/malfuf-abyad-mukhallal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/solenaya-krasnaya-kapusta",
+      "destination": "/ar/menu/malfuf-ahmar-mukhallal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/solenye-ogurtsy",
+      "destination": "/ar/menu/khiyar-mukhallal",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/sour-cream",
+      "destination": "/ar/menu/karima-hamida",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/spicy-steak-salad",
+      "destination": "/ar/menu/salatat-sharaih-al-lahm-al-harra",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/sup-s-frikadelkami",
+      "destination": "/ar/menu/shurbat-kurat-al-lahm",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/svekolnyy-salat",
+      "destination": "/ar/menu/salatat-al-shamandar",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/sweet-potato-fries",
+      "destination": "/ar/menu/batata-hilwa-maqliya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/tomatno-chesnochnyy-sous",
+      "destination": "/ar/menu/salsat-al-tamatim-wal-thum",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/tomato-garlic-sauce",
+      "destination": "/ar/menu/salsat-al-tamatim-wal-thum",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/uzbek-achichuk",
+      "destination": "/ar/menu/achichuk-uzbaki",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/uzbek-beef-plov",
+      "destination": "/ar/menu/plov-lahm-baqari-uzbaki",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/uzbek-feast",
+      "destination": "/ar/menu/walima-uzbakiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/uzbek-flatbread",
+      "destination": "/ar/menu/khubz-musattah-uzbaki",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/uzbekskiy-plov",
+      "destination": "/ar/menu/plov-lahm-baqari-uzbaki",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/uzbekskoe-zastolye",
+      "destination": "/ar/menu/walima-uzbakiya",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/uzhin-s-govyadinoy",
+      "destination": "/ar/menu/asha-lahm-baqari",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/vareniki",
+      "destination": "/ar/menu/vareniki-bil-batata",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/vareniki-with-potato",
+      "destination": "/ar/menu/vareniki-bil-batata",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/varenyy-ris",
+      "destination": "/ar/menu/aruz-masluq",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/vinegret",
+      "destination": "/ar/menu/salatat-vinegret",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/yaichnitsa",
+      "destination": "/ar/menu/bayd-makhfuq",
+      "permanent": true
+    },
+    {
+      "source": "/ar/menu/zharkoe-iz-govyadiny",
+      "destination": "/ar/menu/miqla-sakhina",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/achichuk",
+      "destination": "/en/menu/uzbek-achichuk",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/achichuk-uzbaki",
+      "destination": "/en/menu/uzbek-achichuk",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/adzhika",
+      "destination": "/en/menu/adjika-sauce",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/aruz-masluq",
+      "destination": "/en/menu/boiled-rice",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/asal",
+      "destination": "/en/menu/honey",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/asha-dajaj",
+      "destination": "/en/menu/chicken-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/asha-lahm-baqari",
+      "destination": "/en/menu/beef-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/asidat-al-aruz",
+      "destination": "/en/menu/rice-porridge",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/asidat-al-hinta-al-sawda",
+      "destination": "/en/menu/buckwheat-porridge",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/asidat-al-shufan",
+      "destination": "/en/menu/oatmeal-porridge",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/assorti-iz-soleniy",
+      "destination": "/en/menu/assorted-pickles",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/baraniy-shashlyk",
+      "destination": "/en/menu/lamb-skewer",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/batata-hilwa-maqliya",
+      "destination": "/en/menu/sweet-potato-fries",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/batatis-mahrusa",
+      "destination": "/en/menu/mashed-potatoes",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/batatis-manziliya-bil-fitr",
+      "destination": "/en/menu/home-style-potato-with-mushroom",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/batatis-maqliya",
+      "destination": "/en/menu/french-fries",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/bayd-makhfuq",
+      "destination": "/en/menu/scrambled-eggs",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/befstroganov",
+      "destination": "/en/menu/beef-stroganoff",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/bliny-s-dzhemom",
+      "destination": "/en/menu/pancakes-with-jam",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/bliny-s-govyadinoy",
+      "destination": "/en/menu/russian-pancakes-with-beef",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/bliny-s-gribami",
+      "destination": "/en/menu/russian-pancakes-with-mushroom",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/bliny-s-tvorogom",
+      "destination": "/en/menu/russian-pancakes-with-cottage-cheese",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/bliny-so-sgushchenkoy",
+      "destination": "/en/menu/pancakes-with-condensed-milk",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/borsh-rusi",
+      "destination": "/en/menu/russian-borscht",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/borshch",
+      "destination": "/en/menu/russian-borscht",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/bulochka-s-dzhemom",
+      "destination": "/en/menu/buns-with-jam",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/cheburek-bil-lahm",
+      "destination": "/en/menu/cheburek-with-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/cheburek-iz-govyadiny",
+      "destination": "/en/menu/cheburek-with-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/dajaj-kiev",
+      "destination": "/en/menu/chicken-kiev",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/dlya-lyubiteley-pelmeney",
+      "destination": "/en/menu/dumpling-lovers",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/domashnee-varenye-iz-golubiki",
+      "destination": "/en/menu/homemade-blueberry-jam",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/fatair-bil-halib-al-mukathaf",
+      "destination": "/en/menu/pancakes-with-condensed-milk",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/fatair-bil-murabba",
+      "destination": "/en/menu/pancakes-with-jam",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/fatair-rusiya-bil-fitr",
+      "destination": "/en/menu/russian-pancakes-with-mushroom",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/fatair-rusiya-bil-jibn",
+      "destination": "/en/menu/russian-pancakes-with-cottage-cheese",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/fatair-rusiya-bil-lahm-al-baqari",
+      "destination": "/en/menu/russian-pancakes-with-beef",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/fatira-rusiya-bil-batata-wal-fitr",
+      "destination": "/en/menu/baked-russian-pie-with-potato-and-mushroom",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/fatira-rusiya-bil-malfuf",
+      "destination": "/en/menu/baked-russian-pie-with-cabbage",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/firmennyy-sous",
+      "destination": "/en/menu/house-special-sauce",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/ghada-rusi",
+      "destination": "/en/menu/russian-lunch",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/golubtsy",
+      "destination": "/en/menu/cabbage-rolls-with-rice-and-minced-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/gorchitsa",
+      "destination": "/en/menu/mustard-sauce",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/govyadina-na-skovorode-po-domashnemu",
+      "destination": "/en/menu/home-style-beef-pan",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/govyazhi-kotlety",
+      "destination": "/en/menu/beef-cutlets",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/govyazhiy-shashlyk",
+      "destination": "/en/menu/beef-skewer",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/grecheskiy-salat",
+      "destination": "/en/menu/greek-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/grechka",
+      "destination": "/en/menu/buckwheat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/grechnevaya-kasha",
+      "destination": "/en/menu/buckwheat-porridge",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/gril-duet-na-dvoikh",
+      "destination": "/en/menu/grill-duo-for-two",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/halib-mukathaf-muhalla",
+      "destination": "/en/menu/condensed-milk",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/hinta-sawda",
+      "destination": "/en/menu/buckwheat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/holodek",
+      "destination": "/en/menu/holodec",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/hot-dog-makhbuz",
+      "destination": "/en/menu/baked-hot-dog",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kaakat-al-asal",
+      "destination": "/en/menu/honey-cake",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/karima-hamida",
+      "destination": "/en/menu/sour-cream",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kartofel-fri",
+      "destination": "/en/menu/french-fries",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kartofelnoe-pyure",
+      "destination": "/en/menu/mashed-potatoes",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kartoshka-po-domashnemu-s-gribami",
+      "destination": "/en/menu/home-style-potato-with-mushroom",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/khiyar-mukhallal",
+      "destination": "/en/menu/pickled-cucumber",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kholodets",
+      "destination": "/en/menu/holodec",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/khot-dog",
+      "destination": "/en/menu/baked-hot-dog",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/khubz-al-jawdar-bil-murabba",
+      "destination": "/en/menu/rye-bread-jam",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/khubz-bil-murabba",
+      "destination": "/en/menu/buns-with-jam",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/khubz-musattah-uzbaki",
+      "destination": "/en/menu/uzbek-flatbread",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/khudar-mashwiya",
+      "destination": "/en/menu/grilled-vegetable",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/klassicheskie-golubtsy",
+      "destination": "/en/menu/cabbage-rolls-classic",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/klyukvennyy-mors",
+      "destination": "/en/menu/cranbery-mors",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kotleta-po-po-kievski",
+      "destination": "/en/menu/chicken-kiev",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kurinye-kotlety",
+      "destination": "/en/menu/chicken-cutlets",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kurinyy-shashlyk",
+      "destination": "/en/menu/chicken-skewer",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kurinyy-sup-s-lapshoy",
+      "destination": "/en/menu/chicken-noodles-soup",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/kurinyy-uzhin",
+      "destination": "/en/menu/chicken-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/lafaif-badhinjan",
+      "destination": "/en/menu/eggplant-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/lepeshka",
+      "destination": "/en/menu/uzbek-flatbread",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/malfuf-abyad-mukhallal",
+      "destination": "/en/menu/pickled-white-cabbage",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/malfuf-ahmar-mukhallal",
+      "destination": "/en/menu/pickled-red-cabbage",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/malfuf-mahshi-bil-aruz-wal-lahm",
+      "destination": "/en/menu/cabbage-rolls-with-rice-and-minced-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/malfuf-mahshi-klasiki",
+      "destination": "/en/menu/cabbage-rolls-classic",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/manti-bil-lahm",
+      "destination": "/en/menu/manti-with-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/manty-iz-govyadiny",
+      "destination": "/en/menu/manti-with-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/marinovannye-pomidory",
+      "destination": "/en/menu/pickled-tomato",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/mashawi-li-shakhsayn",
+      "destination": "/en/menu/grill-duo-for-two",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/medovik",
+      "destination": "/en/menu/honey-cake",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/miqla-sakhina",
+      "destination": "/en/menu/hot-pan",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/miqlat-lahm-baqari-manziliya",
+      "destination": "/en/menu/home-style-beef-pan",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/mors-al-tut-al-barri",
+      "destination": "/en/menu/cranbery-mors",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/mukhallalat-mutanawwia",
+      "destination": "/en/menu/assorted-pickles",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/murabba-tut-azraq-manzili",
+      "destination": "/en/menu/homemade-blueberry-jam",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/myod",
+      "destination": "/en/menu/honey",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/olive",
+      "destination": "/en/menu/russian-olivier-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/omlet",
+      "destination": "/en/menu/omelette",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/ostryy-steyk-salat",
+      "destination": "/en/menu/spicy-steak-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/ovoshchi-na-grile",
+      "destination": "/en/menu/grilled-vegetable",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/ovsyanaya-kasha",
+      "destination": "/en/menu/oatmeal-porridge",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/pelmeni",
+      "destination": "/en/menu/pelmeni-with-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/pelmeni-bil-lahm",
+      "destination": "/en/menu/pelmeni-with-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/pirozhki-s-kapustoy",
+      "destination": "/en/menu/baked-russian-pie-with-cabbage",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/pirozhki-s-kartoshkoy-i-gribami",
+      "destination": "/en/menu/baked-russian-pie-with-potato-and-mushroom",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/plov-lahm-baqari-uzbaki",
+      "destination": "/en/menu/uzbek-beef-plov",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/risovaya-kasha",
+      "destination": "/en/menu/rice-porridge",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/rulety-iz-baklazhana",
+      "destination": "/en/menu/eggplant-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/russkiy-obed",
+      "destination": "/en/menu/russian-lunch",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/rzhanoy-khleb-s-dzhemom",
+      "destination": "/en/menu/rye-bread-jam",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salat-iz-morkovi",
+      "destination": "/en/menu/carrot-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salata-yunaniya",
+      "destination": "/en/menu/greek-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salatat-al-jazar",
+      "destination": "/en/menu/carrot-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salatat-al-ringa-shuba",
+      "destination": "/en/menu/russian-herring-salad-shuba",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salatat-al-shamandar",
+      "destination": "/en/menu/beetroot-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salatat-olivye-al-rusiya",
+      "destination": "/en/menu/russian-olivier-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salatat-sharaih-al-lahm-al-harra",
+      "destination": "/en/menu/spicy-steak-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salatat-vinegret",
+      "destination": "/en/menu/vinegret",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salsa-khassa",
+      "destination": "/en/menu/house-special-sauce",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salsat-adjika",
+      "destination": "/en/menu/adjika-sauce",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salsat-al-khardal",
+      "destination": "/en/menu/mustard-sauce",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/salsat-al-tamatim-wal-thum",
+      "destination": "/en/menu/tomato-garlic-sauce",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sambusa-bil-lahm",
+      "destination": "/en/menu/samsa-with-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/samsa-iz-govyadiny",
+      "destination": "/en/menu/samsa-with-meat",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/seld-pod-shuboy",
+      "destination": "/en/menu/russian-herring-salad-shuba",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sgushchennoe-moloko",
+      "destination": "/en/menu/condensed-milk",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sharaih-dajaj",
+      "destination": "/en/menu/chicken-cutlets",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sharaih-lahm-baqari",
+      "destination": "/en/menu/beef-cutlets",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/shurbat-al-dajaj-bil-shairiya",
+      "destination": "/en/menu/chicken-noodles-soup",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/shurbat-kurat-al-lahm",
+      "destination": "/en/menu/meatball-soup",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sikh-dajaj",
+      "destination": "/en/menu/chicken-skewer",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sikh-lahm-baqari",
+      "destination": "/en/menu/beef-skewer",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sikh-lahm-dhan",
+      "destination": "/en/menu/lamb-skewer",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sladkiy-kartofel-fri",
+      "destination": "/en/menu/sweet-potato-fries",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/smetana",
+      "destination": "/en/menu/sour-cream",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/solenaya-kapusta",
+      "destination": "/en/menu/pickled-white-cabbage",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/solenaya-krasnaya-kapusta",
+      "destination": "/en/menu/pickled-red-cabbage",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/solenye-ogurtsy",
+      "destination": "/en/menu/pickled-cucumber",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/stroganoff-lahm-baqari",
+      "destination": "/en/menu/beef-stroganoff",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/sup-s-frikadelkami",
+      "destination": "/en/menu/meatball-soup",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/svekolnyy-salat",
+      "destination": "/en/menu/beetroot-salad",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/tamatim-mukhallala",
+      "destination": "/en/menu/pickled-tomato",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/tomatno-chesnochnyy-sous",
+      "destination": "/en/menu/tomato-garlic-sauce",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/ushshaq-al-zalabiya",
+      "destination": "/en/menu/dumpling-lovers",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/uzbekskiy-plov",
+      "destination": "/en/menu/uzbek-beef-plov",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/uzbekskoe-zastolye",
+      "destination": "/en/menu/uzbek-feast",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/uzhin-s-govyadinoy",
+      "destination": "/en/menu/beef-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/vareniki",
+      "destination": "/en/menu/vareniki-with-potato",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/vareniki-bil-batata",
+      "destination": "/en/menu/vareniki-with-potato",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/varenyy-ris",
+      "destination": "/en/menu/boiled-rice",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/walima-uzbakiya",
+      "destination": "/en/menu/uzbek-feast",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/yaichnitsa",
+      "destination": "/en/menu/scrambled-eggs",
+      "permanent": true
+    },
+    {
+      "source": "/en/menu/zharkoe-iz-govyadiny",
+      "destination": "/en/menu/hot-pan",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/achichuk-uzbaki",
+      "destination": "/ru/menu/achichuk",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/adjika-sauce",
+      "destination": "/ru/menu/adzhika",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/aruz-masluq",
+      "destination": "/ru/menu/varenyy-ris",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/asal",
+      "destination": "/ru/menu/myod",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/asha-dajaj",
+      "destination": "/ru/menu/kurinyy-uzhin",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/asha-lahm-baqari",
+      "destination": "/ru/menu/uzhin-s-govyadinoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/asidat-al-aruz",
+      "destination": "/ru/menu/risovaya-kasha",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/asidat-al-hinta-al-sawda",
+      "destination": "/ru/menu/grechnevaya-kasha",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/asidat-al-shufan",
+      "destination": "/ru/menu/ovsyanaya-kasha",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/assorted-pickles",
+      "destination": "/ru/menu/assorti-iz-soleniy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/baked-hot-dog",
+      "destination": "/ru/menu/khot-dog",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/baked-russian-pie-with-cabbage",
+      "destination": "/ru/menu/pirozhki-s-kapustoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/baked-russian-pie-with-potato-and-mushroom",
+      "destination": "/ru/menu/pirozhki-s-kartoshkoy-i-gribami",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/batata-hilwa-maqliya",
+      "destination": "/ru/menu/sladkiy-kartofel-fri",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/batatis-mahrusa",
+      "destination": "/ru/menu/kartofelnoe-pyure",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/batatis-manziliya-bil-fitr",
+      "destination": "/ru/menu/kartoshka-po-domashnemu-s-gribami",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/batatis-maqliya",
+      "destination": "/ru/menu/kartofel-fri",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/bayd-makhfuq",
+      "destination": "/ru/menu/yaichnitsa",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/beef-cutlets",
+      "destination": "/ru/menu/govyazhi-kotlety",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/beef-dinner",
+      "destination": "/ru/menu/uzhin-s-govyadinoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/beef-skewer",
+      "destination": "/ru/menu/govyazhiy-shashlyk",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/beef-stroganoff",
+      "destination": "/ru/menu/befstroganov",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/beetroot-salad",
+      "destination": "/ru/menu/svekolnyy-salat",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/boiled-rice",
+      "destination": "/ru/menu/varenyy-ris",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/borsh-rusi",
+      "destination": "/ru/menu/borshch",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/buckwheat",
+      "destination": "/ru/menu/grechka",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/buckwheat-porridge",
+      "destination": "/ru/menu/grechnevaya-kasha",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/buns-with-jam",
+      "destination": "/ru/menu/bulochka-s-dzhemom",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/cabbage-rolls-classic",
+      "destination": "/ru/menu/klassicheskie-golubtsy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/cabbage-rolls-with-rice-and-minced-meat",
+      "destination": "/ru/menu/golubtsy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/carrot-salad",
+      "destination": "/ru/menu/salat-iz-morkovi",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/cheburek-bil-lahm",
+      "destination": "/ru/menu/cheburek-iz-govyadiny",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/cheburek-with-meat",
+      "destination": "/ru/menu/cheburek-iz-govyadiny",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/chicken-cutlets",
+      "destination": "/ru/menu/kurinye-kotlety",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/chicken-dinner",
+      "destination": "/ru/menu/kurinyy-uzhin",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/chicken-kiev",
+      "destination": "/ru/menu/kotleta-po-po-kievski",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/chicken-noodles-soup",
+      "destination": "/ru/menu/kurinyy-sup-s-lapshoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/chicken-skewer",
+      "destination": "/ru/menu/kurinyy-shashlyk",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/condensed-milk",
+      "destination": "/ru/menu/sgushchennoe-moloko",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/cranbery-mors",
+      "destination": "/ru/menu/klyukvennyy-mors",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/dajaj-kiev",
+      "destination": "/ru/menu/kotleta-po-po-kievski",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/dumpling-lovers",
+      "destination": "/ru/menu/dlya-lyubiteley-pelmeney",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/eggplant-rolls",
+      "destination": "/ru/menu/rulety-iz-baklazhana",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/fatair-bil-halib-al-mukathaf",
+      "destination": "/ru/menu/bliny-so-sgushchenkoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/fatair-bil-murabba",
+      "destination": "/ru/menu/bliny-s-dzhemom",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/fatair-rusiya-bil-fitr",
+      "destination": "/ru/menu/bliny-s-gribami",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/fatair-rusiya-bil-jibn",
+      "destination": "/ru/menu/bliny-s-tvorogom",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/fatair-rusiya-bil-lahm-al-baqari",
+      "destination": "/ru/menu/bliny-s-govyadinoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/fatira-rusiya-bil-batata-wal-fitr",
+      "destination": "/ru/menu/pirozhki-s-kartoshkoy-i-gribami",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/fatira-rusiya-bil-malfuf",
+      "destination": "/ru/menu/pirozhki-s-kapustoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/french-fries",
+      "destination": "/ru/menu/kartofel-fri",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/ghada-rusi",
+      "destination": "/ru/menu/russkiy-obed",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/greek-salad",
+      "destination": "/ru/menu/grecheskiy-salat",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/grill-duo-for-two",
+      "destination": "/ru/menu/gril-duet-na-dvoikh",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/grilled-vegetable",
+      "destination": "/ru/menu/ovoshchi-na-grile",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/halib-mukathaf-muhalla",
+      "destination": "/ru/menu/sgushchennoe-moloko",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/hinta-sawda",
+      "destination": "/ru/menu/grechka",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/holodec",
+      "destination": "/ru/menu/kholodets",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/holodek",
+      "destination": "/ru/menu/kholodets",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/home-style-beef-pan",
+      "destination": "/ru/menu/govyadina-na-skovorode-po-domashnemu",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/home-style-potato-with-mushroom",
+      "destination": "/ru/menu/kartoshka-po-domashnemu-s-gribami",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/homemade-blueberry-jam",
+      "destination": "/ru/menu/domashnee-varenye-iz-golubiki",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/honey",
+      "destination": "/ru/menu/myod",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/honey-cake",
+      "destination": "/ru/menu/medovik",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/hot-dog-makhbuz",
+      "destination": "/ru/menu/khot-dog",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/hot-pan",
+      "destination": "/ru/menu/zharkoe-iz-govyadiny",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/house-special-sauce",
+      "destination": "/ru/menu/firmennyy-sous",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/kaakat-al-asal",
+      "destination": "/ru/menu/medovik",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/karima-hamida",
+      "destination": "/ru/menu/smetana",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/khiyar-mukhallal",
+      "destination": "/ru/menu/solenye-ogurtsy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/khubz-al-jawdar-bil-murabba",
+      "destination": "/ru/menu/rzhanoy-khleb-s-dzhemom",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/khubz-bil-murabba",
+      "destination": "/ru/menu/bulochka-s-dzhemom",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/khubz-musattah-uzbaki",
+      "destination": "/ru/menu/lepeshka",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/khudar-mashwiya",
+      "destination": "/ru/menu/ovoshchi-na-grile",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/lafaif-badhinjan",
+      "destination": "/ru/menu/rulety-iz-baklazhana",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/lamb-skewer",
+      "destination": "/ru/menu/baraniy-shashlyk",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/malfuf-abyad-mukhallal",
+      "destination": "/ru/menu/solenaya-kapusta",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/malfuf-ahmar-mukhallal",
+      "destination": "/ru/menu/solenaya-krasnaya-kapusta",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/malfuf-mahshi-bil-aruz-wal-lahm",
+      "destination": "/ru/menu/golubtsy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/malfuf-mahshi-klasiki",
+      "destination": "/ru/menu/klassicheskie-golubtsy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/manti-bil-lahm",
+      "destination": "/ru/menu/manty-iz-govyadiny",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/manti-with-meat",
+      "destination": "/ru/menu/manty-iz-govyadiny",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/mashawi-li-shakhsayn",
+      "destination": "/ru/menu/gril-duet-na-dvoikh",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/mashed-potatoes",
+      "destination": "/ru/menu/kartofelnoe-pyure",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/meatball-soup",
+      "destination": "/ru/menu/sup-s-frikadelkami",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/miqla-sakhina",
+      "destination": "/ru/menu/zharkoe-iz-govyadiny",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/miqlat-lahm-baqari-manziliya",
+      "destination": "/ru/menu/govyadina-na-skovorode-po-domashnemu",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/mors-al-tut-al-barri",
+      "destination": "/ru/menu/klyukvennyy-mors",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/mukhallalat-mutanawwia",
+      "destination": "/ru/menu/assorti-iz-soleniy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/murabba-tut-azraq-manzili",
+      "destination": "/ru/menu/domashnee-varenye-iz-golubiki",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/mustard-sauce",
+      "destination": "/ru/menu/gorchitsa",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/oatmeal-porridge",
+      "destination": "/ru/menu/ovsyanaya-kasha",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/omelette",
+      "destination": "/ru/menu/omlet",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/pancakes-with-condensed-milk",
+      "destination": "/ru/menu/bliny-so-sgushchenkoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/pancakes-with-jam",
+      "destination": "/ru/menu/bliny-s-dzhemom",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/pelmeni-bil-lahm",
+      "destination": "/ru/menu/pelmeni",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/pelmeni-with-meat",
+      "destination": "/ru/menu/pelmeni",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/pickled-cucumber",
+      "destination": "/ru/menu/solenye-ogurtsy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/pickled-red-cabbage",
+      "destination": "/ru/menu/solenaya-krasnaya-kapusta",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/pickled-tomato",
+      "destination": "/ru/menu/marinovannye-pomidory",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/pickled-white-cabbage",
+      "destination": "/ru/menu/solenaya-kapusta",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/plov-lahm-baqari-uzbaki",
+      "destination": "/ru/menu/uzbekskiy-plov",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/rice-porridge",
+      "destination": "/ru/menu/risovaya-kasha",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/russian-borscht",
+      "destination": "/ru/menu/borshch",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/russian-herring-salad-shuba",
+      "destination": "/ru/menu/seld-pod-shuboy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/russian-lunch",
+      "destination": "/ru/menu/russkiy-obed",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/russian-olivier-salad",
+      "destination": "/ru/menu/olive",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/russian-pancakes-with-beef",
+      "destination": "/ru/menu/bliny-s-govyadinoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/russian-pancakes-with-cottage-cheese",
+      "destination": "/ru/menu/bliny-s-tvorogom",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/russian-pancakes-with-mushroom",
+      "destination": "/ru/menu/bliny-s-gribami",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/rye-bread-jam",
+      "destination": "/ru/menu/rzhanoy-khleb-s-dzhemom",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salata-yunaniya",
+      "destination": "/ru/menu/grecheskiy-salat",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salatat-al-jazar",
+      "destination": "/ru/menu/salat-iz-morkovi",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salatat-al-ringa-shuba",
+      "destination": "/ru/menu/seld-pod-shuboy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salatat-al-shamandar",
+      "destination": "/ru/menu/svekolnyy-salat",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salatat-olivye-al-rusiya",
+      "destination": "/ru/menu/olive",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salatat-sharaih-al-lahm-al-harra",
+      "destination": "/ru/menu/ostryy-steyk-salat",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salatat-vinegret",
+      "destination": "/ru/menu/vinegret",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salsa-khassa",
+      "destination": "/ru/menu/firmennyy-sous",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salsat-adjika",
+      "destination": "/ru/menu/adzhika",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salsat-al-khardal",
+      "destination": "/ru/menu/gorchitsa",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/salsat-al-tamatim-wal-thum",
+      "destination": "/ru/menu/tomatno-chesnochnyy-sous",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/sambusa-bil-lahm",
+      "destination": "/ru/menu/samsa-iz-govyadiny",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/samsa-with-meat",
+      "destination": "/ru/menu/samsa-iz-govyadiny",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/scrambled-eggs",
+      "destination": "/ru/menu/yaichnitsa",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/sharaih-dajaj",
+      "destination": "/ru/menu/kurinye-kotlety",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/sharaih-lahm-baqari",
+      "destination": "/ru/menu/govyazhi-kotlety",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/shurbat-al-dajaj-bil-shairiya",
+      "destination": "/ru/menu/kurinyy-sup-s-lapshoy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/shurbat-kurat-al-lahm",
+      "destination": "/ru/menu/sup-s-frikadelkami",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/sikh-dajaj",
+      "destination": "/ru/menu/kurinyy-shashlyk",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/sikh-lahm-baqari",
+      "destination": "/ru/menu/govyazhiy-shashlyk",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/sikh-lahm-dhan",
+      "destination": "/ru/menu/baraniy-shashlyk",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/sour-cream",
+      "destination": "/ru/menu/smetana",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/spicy-steak-salad",
+      "destination": "/ru/menu/ostryy-steyk-salat",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/stroganoff-lahm-baqari",
+      "destination": "/ru/menu/befstroganov",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/sweet-potato-fries",
+      "destination": "/ru/menu/sladkiy-kartofel-fri",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/tamatim-mukhallala",
+      "destination": "/ru/menu/marinovannye-pomidory",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/tomato-garlic-sauce",
+      "destination": "/ru/menu/tomatno-chesnochnyy-sous",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/ushshaq-al-zalabiya",
+      "destination": "/ru/menu/dlya-lyubiteley-pelmeney",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/uzbek-achichuk",
+      "destination": "/ru/menu/achichuk",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/uzbek-beef-plov",
+      "destination": "/ru/menu/uzbekskiy-plov",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/uzbek-feast",
+      "destination": "/ru/menu/uzbekskoe-zastolye",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/uzbek-flatbread",
+      "destination": "/ru/menu/lepeshka",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/vareniki-bil-batata",
+      "destination": "/ru/menu/vareniki",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/vareniki-with-potato",
+      "destination": "/ru/menu/vareniki",
+      "permanent": true
+    },
+    {
+      "source": "/ru/menu/walima-uzbakiya",
+      "destination": "/ru/menu/uzbekskoe-zastolye",
       "permanent": true
     }
   ],

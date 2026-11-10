@@ -3,6 +3,7 @@ Small site fixes, no new writing from you
 Finish the old addresses we skipped: /about, /faq, /privacy-policy, /contact, /index.html, /feed, /category, and /author.
 
 Send a wrong-language dish link to the right one on the server. Today /ru/menu/russian-borscht only corrects itself after JavaScript runs, so a robot can keep the duplicate.
+
 Add the normal icons: favicon.ico, the Apple touch icon, and a small manifest. The site only has the SVG logo.
 Swap the Instagram footer icon from the 140 KB PNG to an SVG.
 Put each dish photo into the sitemap next to its address.
