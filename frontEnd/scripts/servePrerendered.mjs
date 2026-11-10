@@ -37,9 +37,15 @@ const isFile = async (file) => {
   }
 };
 
-// Vercel's order: an exact file, then a folder's index.html, then the app
-// shell - but the shell only for addresses with no dot and outside /assets
-// and /locales, the same rule as the rewrite in vercel.json.
+// Same three headers as vercel.json. They do not change the page.
+const SECURITY_HEADERS = {
+  "x-content-type-options": "nosniff",
+  "referrer-policy": "strict-origin-when-cross-origin",
+  "x-frame-options": "SAMEORIGIN",
+};
+
+// Vercel's order: an exact file, then a folder's index.html.
+// An address with no file is not the shell. The caller answers 404.
 const find = async (pathname) => {
   const target = path.join(DIST, pathname);
   if (!target.startsWith(DIST)) return null;
@@ -50,14 +56,15 @@ const find = async (pathname) => {
     return { file: index, served: pathname === "/" ? "shell" : "saved-page" };
   }
 
-  const isAppAddress =
-    !pathname.startsWith("/assets/") &&
-    !pathname.startsWith("/locales/") &&
-    !pathname.includes(".");
-  return isAppAddress
-    ? { file: path.join(DIST, "index.html"), served: "shell" }
-    : null;
+  return null;
 };
+
+// A missing page (no file extension) gets 404.html. A missing file, such as
+// a script, stays a plain 404 so the browser is not handed HTML as JavaScript.
+const isPageAddress = (pathname) =>
+  !pathname.startsWith("/assets/") &&
+  !pathname.startsWith("/locales/") &&
+  !pathname.includes(".");
 
 createServer(async (request, response) => {
   const { pathname } = new URL(request.url, "http://localhost");
@@ -70,12 +77,27 @@ createServer(async (request, response) => {
 
   const found = await find(decoded);
   if (!found) {
-    response.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
+    const notFoundPage = path.join(DIST, "404.html");
+    if (isPageAddress(decoded) && (await isFile(notFoundPage))) {
+      response.writeHead(404, {
+        ...SECURITY_HEADERS,
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store",
+        "x-served": "not-found",
+      });
+      response.end(await readFile(notFoundPage));
+      return;
+    }
+    response.writeHead(404, {
+      ...SECURITY_HEADERS,
+      "content-type": "text/plain; charset=utf-8",
+    });
     response.end("404 Not Found");
     return;
   }
 
   response.writeHead(200, {
+    ...SECURITY_HEADERS,
     "content-type":
       TYPES[path.extname(found.file)] ?? "application/octet-stream",
     "cache-control": "no-store",

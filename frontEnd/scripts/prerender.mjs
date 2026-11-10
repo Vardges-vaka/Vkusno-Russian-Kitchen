@@ -5,7 +5,7 @@
 // same empty shell, and crawlers that do not run JavaScript saw no text. This
 // step renders each address with the same React components and writes the
 // result to dist/<address>/index.html. Vercel serves that file first.
-// Addresses without a saved page still fall through to the shell.
+// An address with no saved page is a real 404 (dist/404.html), not the shell.
 import { existsSync } from "node:fs";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -225,3 +225,82 @@ const summary = Object.entries(counts)
 console.log(
   `saved pages: ${pages.length} (${summary}), ${(bytes / 1048576).toFixed(1)} MB, ${sharePictures.size} share pictures`,
 );
+
+// One 404 page for every address that was not saved. Vercel serves this file
+// with status 404. All three languages are in the file, so a robot sees the
+// words without running JavaScript. A short script shows the language that
+// matches the address.
+const notFound = {};
+for (const lang of ["en", "ru", "ar"]) {
+  notFound[lang] = await readJson(path.join(LOCALES, lang, "NotFound.json"));
+}
+const notFoundBlock = (lang, dir) => {
+  const copy = notFound[lang];
+  return `    <section data-lang="${lang}" dir="${dir}">
+      <h1>${escapeHtml(copy.title)}</h1>
+      <p>${escapeHtml(copy.message)}</p>
+      <p>
+        <a href="/${lang}">${escapeHtml(copy.home)}</a>
+        <a href="/${lang}/menu">${escapeHtml(copy.menu)}</a>
+        <a href="/${lang}/contact">${escapeHtml(copy.contact)}</a>
+      </p>
+    </section>`;
+};
+await writeFile(
+  path.join(DIST, "404.html"),
+  `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <title>${escapeHtml(notFound.en.title)} - Vkusno</title>
+    <style>
+      body { margin: 0; background: #faf6ef; color: #2b2118; font-family: "Segoe UI", Tahoma, sans-serif; }
+      header { padding: 20px 24px; }
+      a.brand { color: #100f0f; font-weight: 800; letter-spacing: 0.08em; text-decoration: none; }
+      main { max-width: 560px; margin: 0 auto; padding: 48px 24px 64px; text-align: center; }
+      .code { margin: 0; font-size: 96px; line-height: 1; font-weight: 800; color: #c99a2e; }
+      h1 { margin: 8px 0 0; font-size: 32px; }
+      p { color: #7a6a5c; line-height: 1.6; }
+      a { color: #b3001b; font-weight: 700; margin: 0 8px; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #16110d; color: #f2ece1; }
+        a.brand { color: #f2ece1; }
+        p { color: #b3a696; }
+        a { color: #e8b4bc; }
+      }
+    </style>
+  </head>
+  <body>
+    <header><a class="brand" href="/en">VKUSNO</a></header>
+    <main>
+      <p class="code">404</p>
+${notFoundBlock("en", "ltr")}
+${notFoundBlock("ru", "ltr")}
+${notFoundBlock("ar", "rtl")}
+    </main>
+    <script>
+      (function () {
+        var part = location.pathname.split("/")[1];
+        var saved = "";
+        try { saved = localStorage.getItem("language") || ""; } catch (e) {}
+        var lang = part === "ru" || part === "ar" || part === "en" ? part : (saved === "ru" || saved === "ar" ? saved : "en");
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        var blocks = document.querySelectorAll("[data-lang]");
+        for (var i = 0; i < blocks.length; i++) {
+          blocks[i].hidden = blocks[i].getAttribute("data-lang") !== lang;
+        }
+        var brand = document.querySelector("a.brand");
+        if (brand) brand.setAttribute("href", "/" + lang);
+        var shown = document.querySelector('[data-lang="' + lang + '"] h1');
+        if (shown) document.title = shown.textContent + " - Vkusno";
+      })();
+    </script>
+  </body>
+</html>
+`,
+  "utf8",
+);
+console.log("404.html: unknown addresses");

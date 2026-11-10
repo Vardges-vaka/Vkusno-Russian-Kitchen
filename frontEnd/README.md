@@ -379,23 +379,28 @@ Rules when adding things:
 - `npm run dev` never shows saved pages. Use `npm run build`, then
   `npm run preview:saved`.
 
-Addresses with no saved page (an unknown address, a hidden dish, a closed job)
-still get the shell and work as before. To switch saving off, change
-`postbuild` in `package.json` back to `npm run sitemap`.
+An address with no saved page (an unknown address, a hidden dish, a closed job)
+is `dist/404.html` with status 404. The words are in the file in English,
+Russian and Arabic. To switch saving off, change `postbuild` in
+`package.json` back to `npm run sitemap`.
 
 ## Deployment
 
-Vercel. `vercel.json` holds the SPA rewrite and cache headers: `/assets/*` is
-immutable (content-hashed), `/locales/*` must revalidate - otherwise a
-translation fix sits behind a stale cache.
+Vercel. `vercel.json` holds the cache headers: `/assets/*` is immutable
+(content-hashed), `/locales/*` must revalidate - otherwise a translation fix
+sits behind a stale cache. Every response also sends three safe headers:
+`X-Content-Type-Options`, `Referrer-Policy` and `X-Frame-Options`. They do
+not change how the site looks. There is no Content-Security-Policy, because
+a wrong rule can block Google Maps.
 
 Staging is `live.vkusno.ae`, production `vkusno.ae`. Canonical URLs are
 hardcoded to production in `00_config`, so staging pages point their canonical
 at the real site - which is what stops staging competing in search. **Staging
 must also carry `X-Robots-Tag: noindex`.**
 
-404s are soft: client routing means the server answers 200 for any path, so the
-NotFound page carries `noindex, follow`.
+An unknown address is a real 404. Vercel serves `dist/404.html` (status 404,
+`noindex, follow`). A link clicked inside the site still uses the React
+NotFound page, because the browser never asks the server again.
 
 ---
 
