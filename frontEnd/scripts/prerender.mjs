@@ -48,6 +48,8 @@ const PAGE_SOURCE = {
   job: "src/05_pages/public/careers/CareersJob.jsx",
   faq: "src/05_pages/public/legal/FAQ.jsx",
   privacy: "src/05_pages/public/legal/Privacy.jsx",
+  about: "src/05_pages/public/about/About.jsx",
+  delivery: "src/05_pages/public/delivery/Delivery.jsx",
 };
 
 const stop = (message) => {

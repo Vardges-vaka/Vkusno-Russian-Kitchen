@@ -73,6 +73,10 @@
           "answer": "Vkusno serves home-style Russian comfort food-hearty soups, dumplings, grilled dishes, salads, and familiar classics rooted in family recipes and Russia’s culinary heritage."
         },
         {
+          "question": "Is the food halal?",
+          "answer": "Our food is halal. The menu has no pork and no alcohol."
+        },
+        {
           "question": "Is the menu the same at every branch?",
           "answer": "Our website shows Vkusno’s full menu. At some branches, individual items may be temporarily unavailable. For the most up-to-date availability, check the menu on your delivery aggregator when you place an order."
         },

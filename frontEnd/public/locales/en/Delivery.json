@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Delivery",
+    "description": "Order Vkusno for delivery or pickup from five kitchens in Dubai. Choose a kitchen, then Talabat, Careem, Deliveroo, Noon, Keeta, or order directly from Arjan."
+  },
+  "hero": {
+    "title": "Delivery",
+    "lead": "Home-style Russian food from the kitchen nearest you. You choose the kitchen, then the app that kitchen uses. You pay in that app, not on this website.",
+    "menu": "Browse the menu"
+  },
+  "direct": {
+    "title": "Order from us",
+    "text": "From the Arjan kitchen you can order directly. Delivery covers about 30 km, with Careem or Slider riders, and the distance can be a little shorter at busy times. You can also call or message us on WhatsApp.",
+    "action": "Order directly"
+  },
+  "apps": {
+    "title": "Order on an app",
+    "text": "Talabat, Careem, Deliveroo, Noon and Keeta. Not every kitchen is on every app. The buttons on a kitchen are the ones that take an order there."
+  },
+  "pickup": {
+    "title": "Pickup",
+    "text": "Pickup is available at every kitchen. In the app, choose pickup when that option is shown."
+  },
+  "kitchens": {
+    "title": "Choose a kitchen",
+    "view": "Kitchen details",
+    "orderOn": "Order on {{name}}"
+  },
+  "note": "Vkusno does not take catering orders."
+}

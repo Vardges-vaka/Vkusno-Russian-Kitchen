@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "About",
+    "description": "Vkusno is a home-style Russian kitchen in Dubai, founded in 2021. Five kitchens, delivery, pickup, and casual self-service."
+  },
+  "title": "About",
+  "serve": {
+    "title": "How we serve",
+    "kitchens": "Five kitchens in Dubai. Each one has its own address and hours.",
+    "kitchensLink": "See the kitchens",
+    "order": "We deliver and we offer pickup. You order in a delivery app, or directly from the Arjan kitchen.",
+    "orderLink": "How delivery works",
+    "seating": "Some kitchens have casual self-service seating. We do not offer full table service.",
+    "menuLink": "Browse the menu"
+  },
+  "halal": "Our food is halal. The menu has no pork and no alcohol.",
+  "note": "Vkusno does not take catering orders."
+}

@@ -3,6 +3,10 @@
     "hash": "4a3b02fc2ba9389a",
     "lastmod": "2026-11-10"
   },
+  "ar|about": {
+    "hash": "ddd06bdb8e985767",
+    "lastmod": "2026-11-12"
+  },
   "ar|careers": {
     "hash": "7b51a7981c1fc7be",
     "lastmod": "2026-11-10"
@@ -11,9 +15,13 @@
     "hash": "92c891bfcefb0489",
     "lastmod": "2026-11-10"
   },
+  "ar|delivery": {
+    "hash": "9938aefc06d9e530",
+    "lastmod": "2026-11-12"
+  },
   "ar|faq": {
-    "hash": "614d436c436669a9",
-    "lastmod": "2026-11-10"
+    "hash": "c8f551150603237b",
+    "lastmod": "2026-11-12"
   },
   "ar|kitchens": {
     "hash": "eb73b2cb412637f6",
@@ -379,6 +387,10 @@
     "hash": "81e8950f446875e4",
     "lastmod": "2026-11-10"
   },
+  "en|about": {
+    "hash": "749a164e83686785",
+    "lastmod": "2026-11-12"
+  },
   "en|careers": {
     "hash": "ba09b3340b32b4df",
     "lastmod": "2026-11-10"
@@ -387,9 +399,13 @@
     "hash": "b54a6ece509b2b52",
     "lastmod": "2026-11-10"
   },
+  "en|delivery": {
+    "hash": "06f055b14f26af02",
+    "lastmod": "2026-11-12"
+  },
   "en|faq": {
-    "hash": "12994daa5b4f5d0b",
-    "lastmod": "2026-11-10"
+    "hash": "12aab63077286469",
+    "lastmod": "2026-11-12"
   },
   "en|kitchens": {
     "hash": "ca7344c3aab50657",
@@ -755,6 +771,10 @@
     "hash": "0b30f76b3bb9b876",
     "lastmod": "2026-11-10"
   },
+  "ru|about": {
+    "hash": "8da2a3d5d5f07b35",
+    "lastmod": "2026-11-12"
+  },
   "ru|careers": {
     "hash": "09e63612e9076d75",
     "lastmod": "2026-11-10"
@@ -763,9 +783,13 @@
     "hash": "f2700b77df8f3cb8",
     "lastmod": "2026-11-10"
   },
+  "ru|delivery": {
+    "hash": "114ce3259f68c08b",
+    "lastmod": "2026-11-12"
+  },
   "ru|faq": {
-    "hash": "b16fe87b983dfabd",
-    "lastmod": "2026-11-10"
+    "hash": "f12dc4b594542ed3",
+    "lastmod": "2026-11-12"
   },
   "ru|kitchens": {
     "hash": "cc2bf86eabf23134",

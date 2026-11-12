@@ -32,6 +32,12 @@ const Privacy = lazyWithPreload(
   () => import("../05_pages/public/legal/Privacy.jsx"),
 );
 const FAQ = lazyWithPreload(() => import("../05_pages/public/legal/FAQ.jsx"));
+const Delivery = lazyWithPreload(
+  () => import("../05_pages/public/delivery/Delivery.jsx"),
+);
+const About = lazyWithPreload(
+  () => import("../05_pages/public/about/About.jsx"),
+);
 const NotFound = lazyWithPreload(
   () => import("../05_pages/public/notFound/NotFound.jsx"),
 );
@@ -58,6 +64,8 @@ const UserRoutes = [
   { path: "kitchens/:slug", element: <Kitchen /> },
   { path: "privacy", element: <Privacy /> },
   { path: "faq", element: <FAQ /> },
+  { path: "delivery", element: <Delivery /> },
+  { path: "about", element: <About /> },
   { path: "*", element: <NotFound /> },
 ];
 

@@ -25,7 +25,7 @@ import { KITCHEN_SLUG } from "../src/05_pages/public/kitchens/04_kitchens_const/
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const SITE_URL = "https://vkusno.ae";
 const LANGS = ["en", "ru", "ar"];
-const STATIC_ROUTES = ["", "menu", "contact", "kitchens", "careers", "faq", "privacy"];
+const STATIC_ROUTES = ["", "menu", "contact", "kitchens", "careers", "faq", "privacy", "about", "delivery"];
 const KITCHEN_SLUGS = Object.values(KITCHEN_SLUG);
 
 const urlFor = (lang, route) =>

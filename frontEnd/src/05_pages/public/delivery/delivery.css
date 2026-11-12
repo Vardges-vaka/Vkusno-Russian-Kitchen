@@ -1,0 +1,145 @@
+.delivery {
+  padding-block: 32px 56px;
+}
+
+.delivery__title,
+.delivery__pathTitle,
+.delivery__kitchensTitle,
+.deliveryKitchen__name {
+  margin: 0;
+  color: var(--text_color);
+}
+
+.delivery__title {
+  font-size: 32px;
+  letter-spacing: 0.06em;
+}
+
+.delivery__title::after {
+  content: "";
+  display: block;
+  inline-size: 80px;
+  block-size: 3px;
+  margin-block-start: 12px;
+  border-radius: 2px;
+  background-color: var(--gold_color);
+}
+
+.delivery__lead,
+.delivery__pathText,
+.delivery__note {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text_muted_color);
+}
+
+.delivery__lead {
+  max-inline-size: 40rem;
+  margin-block-start: 16px;
+}
+
+.delivery__menu {
+  display: inline-block;
+  margin-block-start: 18px;
+  color: var(--accent_color);
+  font-weight: 700;
+}
+
+.delivery__paths {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-block-start: 28px;
+}
+
+.delivery__path,
+.delivery__pickup {
+  padding: 18px;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 14px;
+}
+
+.delivery__path--direct {
+  border-color: color-mix(in srgb, var(--accent_color) 35%, var(--border_color));
+}
+
+.delivery__pathTitle {
+  font-size: 18px;
+}
+
+.delivery__pathText {
+  margin-block-start: 8px;
+}
+
+.delivery__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 16px;
+  padding: 11px 18px;
+  color: var(--footer_text_color);
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--accent_color);
+  border-radius: 8px;
+}
+
+.delivery__action:hover,
+.delivery__action:focus-visible,
+.delivery__menu:focus-visible,
+.deliveryKitchen__more:focus-visible,
+.deliveryKitchen__app:focus-visible {
+  outline: 2px solid var(--gold_color);
+  outline-offset: 2px;
+}
+
+.delivery__kitchens {
+  margin-block-start: 36px;
+}
+
+.delivery__kitchensTitle {
+  margin-block-end: 16px;
+  font-size: 22px;
+}
+
+.delivery__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.delivery__note {
+  margin-block-start: 28px;
+  max-inline-size: 40rem;
+}
+
+@media (min-width: 768px) {
+  .delivery {
+    padding-block: 48px 64px;
+  }
+
+  .delivery__title {
+    font-size: 36px;
+  }
+
+  .delivery__paths {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .delivery__pickup {
+    grid-column: 1 / -1;
+  }
+
+  .delivery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .delivery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}

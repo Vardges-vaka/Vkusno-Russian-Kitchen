@@ -143,7 +143,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/faq"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/faq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/faq"/>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -152,7 +152,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/faq"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/faq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/faq"/>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -161,7 +161,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/faq"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/faq"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/faq"/>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -189,6 +189,60 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/privacy"/>
     <lastmod>2026-11-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/about"/>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/ru/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/about"/>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/ar/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/about"/>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/en/delivery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/delivery"/>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/ru/delivery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/delivery"/>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vkusno.ae/ar/delivery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vkusno.ae/en/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://vkusno.ae/ru/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://vkusno.ae/ar/delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vkusno.ae/en/delivery"/>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>

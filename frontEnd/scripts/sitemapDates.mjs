@@ -26,6 +26,8 @@ const STATIC_FILES = {
   careers: "Careers.json",
   faq: "FAQ.json",
   privacy: "Privacy.json",
+  about: "About.json",
+  delivery: "Delivery.json",
 };
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -96,6 +98,7 @@ export const buildSitemapDates = async ({
     ...new Set([
       ...Object.values(STATIC_FILES),
       "MenuItems.json",
+      "common.json",
       ...(kitchens.length ? ["Kitchens.json"] : []),
     ]),
   ];
@@ -139,7 +142,13 @@ export const buildSitemapDates = async ({
           })),
         );
       }
-      if (route === "contact" || route === "kitchens") parts.push(contactSource);
+      if (route === "contact" || route === "kitchens" || route === "delivery") {
+        parts.push(contactSource);
+      }
+      // The About page repeats the footer story, so a change there moves the date.
+      if (route === "about") {
+        parts.push(JSON.parse(localeText[`${lang}/common.json`]).footer?.about ?? null);
+      }
       if (route === "careers") {
         parts.push(commonFor(common, lang));
         parts.push(

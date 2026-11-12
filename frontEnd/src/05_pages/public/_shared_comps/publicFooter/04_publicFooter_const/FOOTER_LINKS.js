@@ -4,6 +4,8 @@ import { localePath } from "../../../../../00_config/_config.index.js";
 // Careers is not in this list. It sits under the social links.
 export const FOOTER_LINKS = (t, lang) => {
   return [
+    { to: localePath(lang, "about"), label: t("footer.nav_links.about") },
+    { to: localePath(lang, "delivery"), label: t("footer.nav_links.delivery") },
     { to: localePath(lang, "faq"), label: t("footer.nav_links.faq") },
     { to: localePath(lang, "privacy"), label: t("footer.nav_links.privacy") },
   ];
