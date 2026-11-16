@@ -37,12 +37,17 @@ const isFile = async (file) => {
   }
 };
 
-// Same three headers as vercel.json. They do not change the page.
-const SECURITY_HEADERS = {
-  "x-content-type-options": "nosniff",
-  "referrer-policy": "strict-origin-when-cross-origin",
-  "x-frame-options": "SAMEORIGIN",
-};
+// The headers vercel.json puts on every address, read from that file so this
+// local copy answers like the live site and the two cannot drift apart.
+const SITE_CONFIG = JSON.parse(
+  await readFile(new URL("../vercel.json", import.meta.url), "utf8"),
+);
+const SECURITY_HEADERS = Object.fromEntries(
+  (SITE_CONFIG.headers ?? [])
+    .filter((rule) => rule.source === "/(.*)" && !rule.has)
+    .flatMap((rule) => rule.headers)
+    .map(({ key, value }) => [key.toLowerCase(), value]),
+);
 
 // Vercel's order: an exact file, then a folder's index.html.
 // An address with no file is not the shell. The caller answers 404.

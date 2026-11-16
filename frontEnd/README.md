@@ -401,10 +401,18 @@ Russian and Arabic. To switch saving off, change `postbuild` in
 
 Vercel. `vercel.json` holds the cache headers: `/assets/*` is immutable
 (content-hashed), `/locales/*` must revalidate - otherwise a translation fix
-sits behind a stale cache. Every response also sends three safe headers:
-`X-Content-Type-Options`, `Referrer-Policy` and `X-Frame-Options`. They do
-not change how the site looks. There is no Content-Security-Policy, because
-a wrong rule can block Google Maps.
+sits behind a stale cache. Every response also sends five security headers:
+`X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`,
+`Permissions-Policy` (no camera, microphone or location) and a
+`Content-Security-Policy`. They do not change how the site looks.
+
+The Content-Security-Policy holds only rules that cannot stop a file from
+loading: who may frame the site, where a `<base>` tag or a form may point, and
+no plugins. It has no list of allowed outside addresses, on purpose - a wrong
+or outdated list silently blocks Google Maps or the statistics tools, and only
+on the live site. `scripts/securityHeaders.test.mjs` explains this and fails
+if such a list is added. `npm run preview:saved` reads the same headers from
+`vercel.json`, so the local copy answers like the live site.
 
 Staging is `live.vkusno.ae`, production `vkusno.ae`. Canonical URLs are
 hardcoded to production in `00_config`, so staging pages point their canonical
@@ -422,8 +430,9 @@ NotFound page, because the browser never asks the server again.
 - Menu images ship at 1200×900 (above).
 - No dietary tags. **Halal status and vegetarian** are not derivable and need
   kitchen confirmation. (Allergens are shown since 18 Oct 2026 - see Menu data.)
-- No analytics. Note that the privacy policy currently states none are used -
-  that copy must change first, in all three languages.
+- Analytics: Google Analytics and Microsoft Clarity are in `index.html` since
+  16 Nov 2026, and the privacy page names both. They also run on localhost, so
+  visits made while developing are counted too.
 - Share pictures exist for dish pages only (cut from the dish photo at build time). Home, menu, contact, kitchens, careers, FAQ and privacy share a title and text but no picture, until a site picture is chosen.
 - `src/` still contains zero-byte placeholder files and commented-out admin
   routes from an earlier plan.
