@@ -64,6 +64,22 @@ const MAX_WIDTH = {
   "src/01_assets": 1920,
 };
 
+// The homepage hero is the first and biggest picture the homepage needs. It
+// is shown enlarged under a dark layer (Home.css, .Home_hero_overlay: 50-70%
+// black), which hides fine detail, so q40 halves the file (280 KB -> 139 KB)
+// and looks the same there. Do not reuse this for a picture shown as it is.
+const HERO_DIR = "src/01_assets/images";
+const HERO_OPTIONS = { quality: 40, effort: 6, smartSubsample: true };
+
+// App logos are drawn at 26-32 px. These two were 500x500 PNGs of about
+// 200 KB each. A 128 px WebP is 2-3 KB and looks the same at that size.
+// The .png stays as the source; the app imports the .webp beside it.
+const SMALL_LOGOS = [
+  "src/01_assets/aggregatorLogos/Noon_Logo.png",
+  "src/01_assets/socialLogos/WhatsApp_Logo.png",
+];
+const LOGO_WIDTH = 128;
+
 // The bytes to write for one 1200x900 dish photo, and the quality they use.
 const encodeFullPhoto = async (source) => {
   // A photo that already fits at the plain q80 keeps exactly the bytes it had
@@ -132,7 +148,9 @@ for (const dir of DIRS) {
         pipeline.resize({ width: maxWidth, withoutEnlargement: true });
       }
 
-      await pipeline.webp({ quality: QUALITY }).toFile(target);
+      await pipeline
+        .webp(dir === HERO_DIR ? HERO_OPTIONS : { quality: QUALITY })
+        .toFile(target);
     }
 
     totalBefore += (await stat(source)).size;
@@ -154,6 +172,20 @@ for (const dir of DIRS) {
 const toMb = (bytes) => (bytes / 1024 / 1024).toFixed(1);
 console.log(
   `total: ${toMb(totalBefore)} MB (jpg) -> ${toMb(totalAfter)} MB (webp)`,
+);
+
+// --- small logos ---
+let logoBytes = 0;
+for (const source of SMALL_LOGOS) {
+  const target = source.replace(/\.png$/i, ".webp");
+  await sharp(source)
+    .resize({ width: LOGO_WIDTH, withoutEnlargement: true })
+    .webp({ quality: 90, effort: 6, smartSubsample: true })
+    .toFile(target);
+  logoBytes += (await stat(target)).size;
+}
+console.log(
+  `small logos: ${SMALL_LOGOS.length} files at ${LOGO_WIDTH}px -> ${(logoBytes / 1024).toFixed(1)} KB total`,
 );
 
 // --- derived tiers, generated from the full-size sources ---

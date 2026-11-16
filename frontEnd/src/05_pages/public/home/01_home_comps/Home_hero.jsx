@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { preload } from "react-dom";
 import { translateFn } from "../../../../04_hlprs/_hlprs.index.js";
 import { motion } from "framer-motion";
 import { heroBackground } from "../../../../01_assets/_assets.index.js";
@@ -6,6 +7,13 @@ import { DIRECT_ORDER } from "../../contact/04_contact_const/_contact_const.inde
 import { useAttachingToSavedPage } from "../02_home_hooks/useAttachingToSavedPage.js";
 
 const Home_hero = ({ t, onMenuClick, shouldReduceMotion }) => {
+  // The hero picture is a CSS background, so a browser only learns about it
+  // after it has read the styles - late, for the biggest thing on the page.
+  // This puts it in the saved page's <head> as one of the first files to
+  // fetch. The build keeps a preload only when it asks for high priority
+  // (scripts/prerenderHtml.mjs, keepInHead), so both options are needed.
+  preload(heroBackground, { as: "image", fetchPriority: "high" });
+
   // framer-motion animates from JS props, which the prefers-reduced-motion
   // media queries in the stylesheets cannot reach - so this staggered entrance
   // ran regardless of the OS setting. These collapse it to the final state.
