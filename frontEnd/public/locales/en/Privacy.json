@@ -1,6 +1,6 @@
 {
   "title": "Privacy Policy",
-  "lastUpdated": "Last updated: 10 November 2026",
+  "lastUpdated": "Last updated: 15 November 2026",
   "intro": "This Privacy Policy explains how Vkusno (“we”, “us”, “our”) handles information when you visit our website at vkusno.ae. We keep this policy clear and proportionate to what our site actually does: showcase our menu and locations and help you reach us or order through trusted delivery partners.",
   "sections": [
     {
@@ -25,6 +25,7 @@
       "bullets": [
         "Preferences you choose on the site, such as language and light/dark theme, stored in your browser’s local storage so your choices are remembered on return visits.",
         "Basic technical information that browsers and hosting services typically generate automatically, such as IP address, device type, browser type, and pages viewed. This helps keep the site secure and running reliably.",
+        "Usage information collected by the analytics tools described in section 5, such as the pages you view, how long you stay on them, what you click or tap, how far you scroll, the website or app that led you to us, and your approximate location (country or city, worked out from your IP address).",
         "Information you choose to share when you contact us by phone, email, or WhatsApp-for example, your name, phone number, or the content of your message."
       ]
     },
@@ -37,7 +38,8 @@
         "Displaying the site in your preferred language and theme.",
         "Showing branch locations on maps and helping you choose a kitchen for ordering.",
         "Answering questions and providing customer support when you contact us.",
-        "Protecting the security and performance of the website."
+        "Protecting the security and performance of the website.",
+        "Understanding how visitors find and use the website, so we can improve its pages and menu."
       ],
       "paragraphsAfter": [
         "We do not sell your personal data."
@@ -50,6 +52,8 @@
       ],
       "bullets": [
         "Google Maps - used to display branch locations and maps on our Menu and Contact pages. Google’s privacy policy applies to map-related data processing.",
+        "Google Analytics - used to count visits and understand how the site is found and used. It collects information such as the pages you view, the time you spend on them, the links you click (including links to delivery apps), files you download, the website that referred you, your device and browser type, your language, and your approximate location. It uses cookies to tell visitors apart. Google’s privacy policy applies.",
+        "Microsoft Clarity - used to see how visitors interact with our pages so we can make them easier to use. It records clicks, taps, scrolling and mouse movements, can replay a visit as a recording, and builds heatmaps. It also collects your device and browser type, your approximate location, and the website that referred you, and it uses first-party and third-party cookies. Microsoft may also use this data for its own purposes, including advertising, as described in the Microsoft Privacy Statement.",
         "Delivery aggregators - when you select a kitchen and open a delivery app (such as Talabat, Deliveroo, or similar partners listed on our site), you leave vkusno.ae and become subject to that app’s terms and privacy policy.",
         "WhatsApp, phone, and email - if you contact us through these channels, your communication is handled according to the provider’s policies as well as ours.",
         "Social media - links to platforms such as Instagram or LinkedIn are provided for convenience; those platforms process data under their own rules."
@@ -59,14 +63,16 @@
       "title": "6. Cookies and local storage",
       "paragraphs": [
         "Our site uses your browser’s local storage to remember language and theme preferences. i18next may also use storage mechanisms to remember your language choice.",
-        "We do not currently use advertising or cross-site tracking cookies on this website. If we introduce analytics or marketing tools in the future, we will update this policy and, where required, ask for your consent."
+        "Google Analytics and Microsoft Clarity place cookies in your browser so they can recognise a returning visitor and group the pages of one visit together. Some of these cookies are set under our own site address, and some are set by Microsoft’s own domains.",
+        "We do not show advertising on this website. You can block or delete cookies in your browser settings, and the site will still work. You can also stop Google Analytics from counting your visits with Google’s opt-out browser add-on at tools.google.com/dlpage/gaoptout."
       ]
     },
     {
       "title": "7. How long we keep information",
       "paragraphs": [
         "Preference data stored in your browser remains until you clear your browser storage or change your settings.",
-        "If you contact us directly, we keep your message and contact details only as long as needed to respond, maintain business records, and meet applicable legal or regulatory requirements."
+        "If you contact us directly, we keep your message and contact details only as long as needed to respond, maintain business records, and meet applicable legal or regulatory requirements.",
+        "Information collected by Google Analytics and Microsoft Clarity is kept by those providers for the periods set out in their own policies."
       ]
     },
     {
@@ -93,7 +99,7 @@
     {
       "title": "11. International processing",
       "paragraphs": [
-        "Some third-party providers (for example, Google) may process data on servers located outside the UAE. Where required, we rely on appropriate safeguards permitted under applicable law."
+        "Some third-party providers (for example, Google and Microsoft) may process data on servers located outside the UAE. Where required, we rely on appropriate safeguards permitted under applicable law."
       ]
     },
     {

@@ -4,6 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Visitor statistics: Google Analytics and Microsoft Clarity.
+         Both are named on the privacy page (public/locales/*/Privacy.json,
+         sections 3 to 7 and 11). Keep the two in step: do not add or remove a
+         tool here without changing that page in all three languages.
+         One copy only, and it lives here. scripts/prerender.mjs copies this
+         file onto every saved page, so a second copy inside a React component
+         would count each visit twice.
+         Vercel Web Analytics stays off - these two replace it. -->
+
+    <!-- Google Analytics. Property "vkusno.ae", measurement ID G-MWEZY00913.
+         This is Google's own snippet, unchanged. -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MCD9FN2G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+
+    <!-- Microsoft Clarity. Project "Vkusno website", project ID zdzlr40sqh.
+         This is Microsoft's own snippet, unchanged. -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "zdzlr40sqh");
+    </script>
+
     <!-- React 19 PREPENDS a hoisted <title>, so PageMeta's per-route title wins
          over this one. It stays as the pre-hydration fallback. -->
     <title>Vkusno - Russian Kitchen in Dubai</title>
