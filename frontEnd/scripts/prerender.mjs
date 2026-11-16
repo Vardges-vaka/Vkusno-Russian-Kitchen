@@ -90,9 +90,10 @@ const withTimeout = (promise, label) => {
 };
 
 // One 1200x630 JPEG per dish, cut from the dish photo, for WhatsApp and
-// Facebook cards. JPEG because not every app shows a WebP share picture.
-// A missing picture must never stop a deploy: any failure here is a warning,
-// and that dish is simply shared without a picture.
+// Facebook cards, plus one site picture that every other page shares
+// (src/04_hlprs/sharePicture.js). JPEG because not every app shows a WebP
+// share picture. A missing picture must never stop a deploy: any failure here
+// is a warning, and that page is simply shared without a picture.
 const makeSharePictures = async (pages) => {
   const wanted = new Map();
   for (const page of pages) {
@@ -165,6 +166,14 @@ const filesByKind = Object.fromEntries(
   ]),
 );
 const sharePictures = await makeSharePictures(pages);
+const noPicture = pages.filter(
+  (page) => !page.share || !sharePictures.has(page.share.name),
+);
+if (noPicture.length) {
+  console.warn(
+    `share pictures: ${noPicture.length} page(s) will be shared without a picture, for example ${noPicture[0].path}`,
+  );
+}
 
 let bytes = 0;
 const counts = {};
@@ -201,7 +210,11 @@ for (const page of pages) {
       tags,
       markup,
       files,
-      share: shareUrl ? { url: shareUrl, alt: page.heading } : null,
+      // A dish picture is described by the dish name, which is the page's
+      // heading. The site picture brings its own words.
+      share: shareUrl
+        ? { url: shareUrl, alt: page.share.alt ?? page.heading }
+        : null,
     });
   } catch (error) {
     stop(`${page.path}: ${error.message}`);

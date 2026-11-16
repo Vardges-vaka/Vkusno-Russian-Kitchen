@@ -105,6 +105,10 @@
   max-inline-size: 40rem;
 }
 
+.about__note--next {
+  margin-block-start: 8px;
+}
+
 @media (min-width: 768px) {
   .about {
     padding-block: 48px 64px;

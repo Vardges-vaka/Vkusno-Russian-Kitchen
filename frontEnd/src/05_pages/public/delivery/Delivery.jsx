@@ -35,6 +35,11 @@ const Delivery = () => {
       </header>
 
       <div className="delivery__paths">
+        <section className="delivery__path delivery__path--wide">
+          <h2 className="delivery__pathTitle">{t("areas.title")}</h2>
+          <p className="delivery__pathText">{t("areas.text")}</p>
+        </section>
+
         <section className="delivery__path delivery__path--direct">
           <h2 className="delivery__pathTitle">{t("direct.title")}</h2>
           <p className="delivery__pathText">{t("direct.text")}</p>

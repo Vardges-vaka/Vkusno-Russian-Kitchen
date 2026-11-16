@@ -8,6 +8,10 @@
     "lead": "Home-style Russian food from the kitchen nearest you. You choose the kitchen, then the app that kitchen uses. You pay in that app, not on this website.",
     "menu": "Browse the menu"
   },
+  "areas": {
+    "title": "Where we deliver",
+    "text": "We deliver to all areas of Dubai. Five kitchens cover the city between them: Arjan, Dubai Marina, two in Business Bay, and Dubai Silicon Oasis."
+  },
   "direct": {
     "title": "Order from us",
     "text": "From the Arjan kitchen you can order directly. Delivery covers about 30 km, with Careem or Slider riders, and the distance can be a little shorter at busy times. You can also call or message us on WhatsApp.",

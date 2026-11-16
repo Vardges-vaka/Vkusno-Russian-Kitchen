@@ -414,6 +414,16 @@ Rules when adding things:
 - `npm run dev` never shows saved pages. Use `npm run build`, then
   `npm run preview:saved`.
 
+Share pictures (the photo a link shows in WhatsApp or Facebook) are cut at
+build time to 1200x630 and saved as `dist/share/<name>.jpg`:
+
+- a dish page uses its own photo (`share/<english-slug>.jpg`);
+- every other page uses one site picture, `share/vkusno.jpg`. It is the
+  Borscht photo, the owner's choice of 16 Nov 2026. To change it, put another
+  dish's English slug in `SITE_PICTURE_DISH` in `src/04_hlprs/sharePicture.js`.
+
+A picture that cannot be made is a build warning, never a stopped build.
+
 An address with no saved page (an unknown address, a hidden dish, a closed job)
 is `dist/404.html` with status 404. The words are in the file in English,
 Russian and Arabic. To switch saving off, change `postbuild` in
@@ -455,6 +465,5 @@ NotFound page, because the browser never asks the server again.
 - Analytics: Google Analytics and Microsoft Clarity are in `index.html` since
   16 Nov 2026, and the privacy page names both. They also run on localhost, so
   visits made while developing are counted too.
-- Share pictures exist for dish pages only (cut from the dish photo at build time). Home, menu, contact, kitchens, careers, FAQ and privacy share a title and text but no picture, until a site picture is chosen.
 - `src/` still contains zero-byte placeholder files and commented-out admin
   routes from an earlier plan.

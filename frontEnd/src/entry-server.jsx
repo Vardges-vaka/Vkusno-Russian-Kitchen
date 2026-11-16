@@ -5,7 +5,11 @@ import App from "./App.jsx";
 import i18n, { initServerI18n } from "./i18n/i18n.server.js";
 import { SUPPORTED_LANGUAGES, localePath } from "./00_config/_config.index.js";
 import { pickLocale } from "./04_hlprs/_hlprs.index.js";
-import { MenuItems } from "./05_pages/public/menu/04_menu_const/menuItems.js";
+import { dishShare, siteShare } from "./04_hlprs/sharePicture.js";
+import {
+  AllMenuItems,
+  MenuItems,
+} from "./05_pages/public/menu/04_menu_const/menuItems.js";
 import { menuItemSlug } from "./05_pages/public/menu/03_menu_hlprs/_menu_hlprs.index.js";
 import { JOBS } from "./05_pages/public/careers/04_careers_const/_careers_const.index.js";
 import { BRANCHES } from "./05_pages/public/contact/04_contact_const/_contact_const.index.js";
@@ -32,36 +36,42 @@ const STATIC_PAGES = [
 
 // Every address the site can show, from the same data the pages use.
 // heading is the text the page must show in its <h1>; the build stops if it
-// is missing. share is the dish photo a share picture is cut from.
+// is missing. share is the photo a share picture is cut from: a dish page
+// uses its own photo, every other page uses the site picture
+// (04_hlprs/sharePicture.js).
 export const listPages = () =>
-  SUPPORTED_LANGUAGES.flatMap((lang) => [
-    ...STATIC_PAGES.map(([route, kind]) => ({
-      lang,
-      kind,
-      path: localePath(lang, route),
-    })),
-    ...MenuItems.map((item) => ({
-      lang,
-      kind: "dish",
-      path: localePath(lang, `menu/${menuItemSlug(item, lang)}`),
-      heading: pickLocale(item.name, lang),
-      share: item.images?.full
-        ? { name: item.slug.en, source: item.images.full }
-        : null,
-    })),
-    ...JOBS.map((job) => ({
-      lang,
-      kind: "job",
-      path: localePath(lang, `careers/${job.id}`),
-      heading: pickLocale(job.title, lang),
-    })),
-    ...BRANCHES.map((branch) => ({
-      lang,
-      kind: "kitchen",
-      path: localePath(lang, `kitchens/${branch.slug}`),
-      heading: pickLocale(branch.name, lang),
-    })),
-  ]);
+  SUPPORTED_LANGUAGES.flatMap((lang) => {
+    const share = siteShare(AllMenuItems, lang);
+    return [
+      ...STATIC_PAGES.map(([route, kind]) => ({
+        lang,
+        kind,
+        path: localePath(lang, route),
+        share,
+      })),
+      ...MenuItems.map((item) => ({
+        lang,
+        kind: "dish",
+        path: localePath(lang, `menu/${menuItemSlug(item, lang)}`),
+        heading: pickLocale(item.name, lang),
+        share: dishShare(item),
+      })),
+      ...JOBS.map((job) => ({
+        lang,
+        kind: "job",
+        path: localePath(lang, `careers/${job.id}`),
+        heading: pickLocale(job.title, lang),
+        share,
+      })),
+      ...BRANCHES.map((branch) => ({
+        lang,
+        kind: "kitchen",
+        path: localePath(lang, `kitchens/${branch.slug}`),
+        heading: pickLocale(branch.name, lang),
+        share,
+      })),
+    ];
+  });
 
 // Draws one address with the real App and returns React's HTML. prerender()
 // waits for every lazy page, so the result is the finished page.

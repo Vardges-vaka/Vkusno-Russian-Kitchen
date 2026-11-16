@@ -53,7 +53,10 @@ const About = () => {
         </ul>
       </section>
 
-      <p className="about__note">{t("note")}</p>
+      {/* The name is close to a Russian chain's, so the page says plainly
+          that the two are not connected. */}
+      <p className="about__note">{t("independent")}</p>
+      <p className="about__note about__note--next">{t("note")}</p>
     </div>
   );
 };
