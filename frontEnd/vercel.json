@@ -37,7 +37,7 @@
     },
     {
       "source": "/about",
-      "destination": "/en",
+      "destination": "/en/about",
       "permanent": true
     },
     {
