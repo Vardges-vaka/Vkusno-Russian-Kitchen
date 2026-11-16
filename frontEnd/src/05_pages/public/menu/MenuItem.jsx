@@ -110,7 +110,8 @@ const MenuItem = ({ variant = "page" }) => {
         jsonLd={graph(
           menuItemNode(item, lang),
           breadcrumbNode([
-            { name: t("meta.title"), path: localePath(lang, "menu") },
+            // The short word "Menu", not the menu page's long search title.
+            { name: t("meta.crumb"), path: localePath(lang, "menu") },
             { name, path: localePath(lang, `menu/${canonicalSlug}`) },
           ]),
         )}

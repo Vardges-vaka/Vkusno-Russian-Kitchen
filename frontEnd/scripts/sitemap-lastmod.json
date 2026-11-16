@@ -1,7 +1,7 @@
 {
   "ar|": {
-    "hash": "4a3b02fc2ba9389a",
-    "lastmod": "2026-11-10"
+    "hash": "7108fdf07d7181e0",
+    "lastmod": "2026-11-16"
   },
   "ar|about": {
     "hash": "098d068009a1da8e",
@@ -12,11 +12,11 @@
     "lastmod": "2026-11-10"
   },
   "ar|contact": {
-    "hash": "465ec4d2a3055915",
+    "hash": "fe396bc4e193597d",
     "lastmod": "2026-11-16"
   },
   "ar|delivery": {
-    "hash": "aca1a6ad54fe46c2",
+    "hash": "57a31f95f3dd55cb",
     "lastmod": "2026-11-16"
   },
   "ar|faq": {
@@ -24,32 +24,32 @@
     "lastmod": "2026-11-16"
   },
   "ar|kitchens": {
-    "hash": "5eed4454e12c799d",
+    "hash": "9bd925f8fb26ac7b",
     "lastmod": "2026-11-16"
   },
   "ar|kitchens/arjan": {
-    "hash": "fed66d3a514591ea",
+    "hash": "5cfb9b99aa178743",
     "lastmod": "2026-11-16"
   },
   "ar|kitchens/business-bay-cuisinette": {
-    "hash": "854ffe79366bf933",
+    "hash": "1210aaacec69f50c",
     "lastmod": "2026-11-16"
   },
   "ar|kitchens/business-bay-sol-avenue": {
-    "hash": "8b17971936b17dfa",
+    "hash": "0b301012acc5fadc",
     "lastmod": "2026-11-16"
   },
   "ar|kitchens/dso": {
-    "hash": "2f99a0ae4663a2f5",
+    "hash": "430ac593ba879983",
     "lastmod": "2026-11-16"
   },
   "ar|kitchens/marina": {
-    "hash": "cca5a97298723617",
+    "hash": "b39e0d8f739f2721",
     "lastmod": "2026-11-16"
   },
   "ar|menu": {
-    "hash": "9c98bf2c8f1aa2a1",
-    "lastmod": "2026-11-10"
+    "hash": "58144340c5b1820a",
+    "lastmod": "2026-11-16"
   },
   "ar|menu/achichuk-uzbaki": {
     "hash": "546f4de83b551749",
@@ -384,8 +384,8 @@
     "lastmod": "2026-11-15"
   },
   "en|": {
-    "hash": "81e8950f446875e4",
-    "lastmod": "2026-11-10"
+    "hash": "bd0da8e8d68e3f0a",
+    "lastmod": "2026-11-16"
   },
   "en|about": {
     "hash": "25613359f11c7de2",
@@ -396,11 +396,11 @@
     "lastmod": "2026-11-10"
   },
   "en|contact": {
-    "hash": "11f0f7091a7c62a9",
+    "hash": "edae7a21847696e1",
     "lastmod": "2026-11-16"
   },
   "en|delivery": {
-    "hash": "1b7a1531e6bac38c",
+    "hash": "c25e759ae1da3457",
     "lastmod": "2026-11-16"
   },
   "en|faq": {
@@ -408,32 +408,32 @@
     "lastmod": "2026-11-16"
   },
   "en|kitchens": {
-    "hash": "4cf4d236502c4ed7",
+    "hash": "1013a8caf5ca7811",
     "lastmod": "2026-11-16"
   },
   "en|kitchens/arjan": {
-    "hash": "ce5962d9c366d729",
+    "hash": "714600a41a2c3b2b",
     "lastmod": "2026-11-16"
   },
   "en|kitchens/business-bay-cuisinette": {
-    "hash": "3300af731d509d49",
+    "hash": "0eb860a41dc6362d",
     "lastmod": "2026-11-16"
   },
   "en|kitchens/business-bay-sol-avenue": {
-    "hash": "74aa907a51fd9c12",
+    "hash": "05afb4534a93b99e",
     "lastmod": "2026-11-16"
   },
   "en|kitchens/dso": {
-    "hash": "79e10889915bbb31",
+    "hash": "8a32c9fae3bb0c3d",
     "lastmod": "2026-11-16"
   },
   "en|kitchens/marina": {
-    "hash": "d79799d2706cd902",
+    "hash": "791b7196dfe23ccc",
     "lastmod": "2026-11-16"
   },
   "en|menu": {
-    "hash": "7e400161b5b725e9",
-    "lastmod": "2026-11-10"
+    "hash": "3984ed3b0610d37a",
+    "lastmod": "2026-11-16"
   },
   "en|menu/adjika-sauce": {
     "hash": "7569d29ee901ac07",
@@ -768,8 +768,8 @@
     "lastmod": "2026-11-15"
   },
   "ru|": {
-    "hash": "0b30f76b3bb9b876",
-    "lastmod": "2026-11-10"
+    "hash": "ed60c3f44d7af388",
+    "lastmod": "2026-11-16"
   },
   "ru|about": {
     "hash": "4ea43758ddd81326",
@@ -780,11 +780,11 @@
     "lastmod": "2026-11-10"
   },
   "ru|contact": {
-    "hash": "31da2b0e7f30d1ba",
+    "hash": "547406815d768394",
     "lastmod": "2026-11-16"
   },
   "ru|delivery": {
-    "hash": "b1eebbe3d1b7f6ee",
+    "hash": "ef4c8536b3e09168",
     "lastmod": "2026-11-16"
   },
   "ru|faq": {
@@ -792,32 +792,32 @@
     "lastmod": "2026-11-16"
   },
   "ru|kitchens": {
-    "hash": "0c4e5a5c82494a08",
+    "hash": "994d1ed493a6dc49",
     "lastmod": "2026-11-16"
   },
   "ru|kitchens/arjan": {
-    "hash": "e56cbd4a0216a732",
+    "hash": "081d38aa8576d6fb",
     "lastmod": "2026-11-16"
   },
   "ru|kitchens/business-bay-cuisinette": {
-    "hash": "2ebddb502ed6adb4",
+    "hash": "d0cb06bb11e3907e",
     "lastmod": "2026-11-16"
   },
   "ru|kitchens/business-bay-sol-avenue": {
-    "hash": "ffafbc47a88904f4",
+    "hash": "36795dec8d694262",
     "lastmod": "2026-11-16"
   },
   "ru|kitchens/dso": {
-    "hash": "2aab7cae37951a8c",
+    "hash": "08e7a26ef629c0a5",
     "lastmod": "2026-11-16"
   },
   "ru|kitchens/marina": {
-    "hash": "4c4e11151092aa5c",
+    "hash": "53cea400f0b13597",
     "lastmod": "2026-11-16"
   },
   "ru|menu": {
-    "hash": "cb3cf06ceca290d0",
-    "lastmod": "2026-11-10"
+    "hash": "1f8350d5f2fcbd16",
+    "lastmod": "2026-11-16"
   },
   "ru|menu/achichuk": {
     "hash": "45058b91c8e828e1",

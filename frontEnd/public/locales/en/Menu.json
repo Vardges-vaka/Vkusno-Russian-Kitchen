@@ -15,7 +15,7 @@
       "mapLabel": "Map of kitchens",
       "mapLoading": "Loading the map…",
       "mapUnavailable": "The map is temporarily unavailable. Pick a kitchen below.",
-      "open24": "Open 24/7",
+      "open24": "Open 24 hours, every day",
       "hours": "{{open}} – {{close}}",
       "orderOn": "Order on {{app}}",
       "orderFromUsAria": "Order directly from Vkusno online",
@@ -82,7 +82,8 @@
     }
   },
   "meta": {
-    "title": "Menu",
-    "description": "Home-style Russian dishes and combos - soups, dumplings, grills, baked favourites and classic desserts. Prices in AED."
+    "crumb": "Menu",
+    "title": "Russian Food Menu with Prices",
+    "description": "Home-style Russian food: borscht, pelmeni, blini, shashlik, pirozhki, syrniki and medovik. Combos too. Prices in AED. Halal."
   }
 }

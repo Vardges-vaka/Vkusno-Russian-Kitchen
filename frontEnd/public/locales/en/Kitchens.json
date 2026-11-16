@@ -25,7 +25,7 @@
     "other": "Other kitchens"
   },
   "hours": {
-    "open24": "Open 24/7",
+    "open24": "Open 24 hours, every day",
     "range": "Open {{open}} – {{close}}"
   }
 }
