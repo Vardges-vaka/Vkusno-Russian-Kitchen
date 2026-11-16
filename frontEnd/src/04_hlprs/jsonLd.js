@@ -1,7 +1,9 @@
 import { SITE_URL, absoluteUrl, localePath } from "../00_config/_config.index.js";
 import {
+  PUBLIC_DESCRIPTION,
   PUBLIC_EMAIL,
   PUBLIC_FACEBOOK,
+  PUBLIC_FOUNDING_YEAR,
   PUBLIC_INSTAGRAM,
   PUBLIC_PHONE,
 } from "../05_pages/public/contact/04_contact_const/publicIdentity.js";
@@ -10,7 +12,8 @@ import { pickLocale } from "./pickLocale.js";
 // Schema.org builders. Every field below already exists in the app's own data
 // - BRANCHES.js carries addresses, coordinates and opening hours; menuItems.js
 // carries names, prices and photos; publicIdentity.js carries the phone,
-// email and social links - so none of this is duplicated by hand.
+// email, social links, founding year and the one-line description - so none
+// of this is duplicated by hand.
 // Hours stay as published on the site. Ratings are not added.
 
 const ORGANISATION_ID = `${SITE_URL}/#organisation`;
@@ -91,7 +94,8 @@ export const organisationNode = (lang) => ({
   "@id": ORGANISATION_ID,
   name: "Vkusno",
   url: absoluteUrl(localePath(lang)),
-  description: "Home-style Russian cooking in Dubai.",
+  description: pickLocale(PUBLIC_DESCRIPTION, lang),
+  foundingDate: PUBLIC_FOUNDING_YEAR,
   logo: LOGO,
   image: LOGO.url,
   telephone: PUBLIC_PHONE,
