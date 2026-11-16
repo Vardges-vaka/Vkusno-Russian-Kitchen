@@ -13,7 +13,7 @@ import "./delivery.css";
 // The kitchens and app links come from BRANCHES, the same list the contact
 // and kitchen pages use, so a new app does not have to be typed twice.
 // The owner called the words final on 16 Nov 2026, so search engines may keep
-// this page. The About page is still a preview and still says noindex.
+// this page.
 const Delivery = () => {
   const { t, i18n } = useTranslation("Delivery");
   const { t: tKitchens } = useTranslation("Kitchens");

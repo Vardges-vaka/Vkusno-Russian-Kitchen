@@ -4,8 +4,9 @@ import { localePath } from "../../../00_config/_config.index.js";
 import { PageMeta } from "../../../02_comps/_comps.index.js";
 import "./about.css";
 
-// Preview page. The story is the same text already shown in the footer, so
-// the two places do not drift. Search engines should not keep this draft.
+// The story is the same text already shown in the footer, so the two places
+// do not drift. The owner called the page final on 16 Nov 2026, so search
+// engines may keep it.
 const About = () => {
   const { t, i18n } = useTranslation("About");
   const { t: tCommon } = useTranslation("common");
@@ -13,11 +14,7 @@ const About = () => {
 
   return (
     <div className="about">
-      <PageMeta
-        title={t("meta.title")}
-        description={t("meta.description")}
-        noindex
-      />
+      <PageMeta title={t("meta.title")} description={t("meta.description")} />
 
       <header className="about__hero">
         <h1 className="about__title">{t("title")}</h1>
