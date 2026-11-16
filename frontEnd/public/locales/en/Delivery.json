@@ -30,5 +30,10 @@
     "view": "Kitchen details",
     "orderOn": "Order on {{name}}"
   },
+  "links": {
+    "title": "Order from Vkusno",
+    "metaTitle": "Order Online: All Vkusno Links",
+    "metaDescription": "Every way to order Vkusno in one place: order directly, pick a kitchen and a delivery app, see the menu, call or message us on WhatsApp."
+  },
   "note": "Vkusno does not take catering orders."
 }

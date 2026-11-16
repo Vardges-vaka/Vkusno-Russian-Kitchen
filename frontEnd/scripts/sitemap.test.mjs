@@ -4,7 +4,7 @@ import { createSitemap } from "./generateSitemap.mjs";
 import { dateForContent } from "./sitemapDates.mjs";
 
 const LANGS = ["en", "ru", "ar"];
-const STATIC = ["", "menu", "contact", "kitchens", "careers", "faq", "privacy", "about", "delivery"];
+const STATIC = ["", "menu", "contact", "kitchens", "careers", "faq", "privacy", "about", "delivery", "links"];
 
 const datesFor = (extra = {}) => {
   const dates = { ...extra };

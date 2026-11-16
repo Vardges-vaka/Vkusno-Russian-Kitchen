@@ -32,6 +32,7 @@ const STATIC_PAGES = [
   ["privacy", "privacy"],
   ["about", "about"],
   ["delivery", "delivery"],
+  ["links", "links"],
 ];
 
 // Every address the site can show, from the same data the pages use.

@@ -344,6 +344,22 @@ A new kitchen can go live before it has a listing: leave `googleListingLink`
 out and the record falls back to the map pin. `scripts/kitchenListings.test.mjs`
 checks the links.
 
+### Links page
+
+`/{lang}/links` is one page with every way to order, made for the single link
+a social profile allows: the direct-order button, the menu, WhatsApp and
+phone, every kitchen with its delivery apps, and the social pages
+(`src/05_pages/public/links/Links.jsx`).
+
+It holds no data of its own. Kitchens and apps come from `BRANCHES.js`, the
+rest from the other contact constants, and the button words from the
+Delivery, Contact and Home files. Its three own lines (title and what Google
+shows) are in `Delivery.json` under `links`.
+
+The short address `vkusno.ae/links` sends a visitor to their language, the
+same way the bare address does (three `/links` rules in `vercel.json`,
+tested in `scripts/rootLanguageRedirect.test.mjs`).
+
 ---
 
 ## Routing
@@ -404,8 +420,11 @@ How it fits together:
 
 Rules when adding things:
 
-- A new page needs a row in `STATIC_PAGES` (`src/entry-server.jsx`), a row in
-  `PAGE_SOURCE` (`scripts/prerender.mjs`), and a sitemap entry.
+- A new page needs a route (`06_routes/userRoutes.jsx`), a row in
+  `STATIC_PAGES` (`src/entry-server.jsx`), a row in `PAGE_SOURCE`
+  (`scripts/prerender.mjs`), and a sitemap entry: `STATIC_ROUTES` in
+  `scripts/generateSitemap.mjs`, `STATIC_FILES` in `scripts/sitemapDates.mjs`
+  and the list at the top of `scripts/sitemap.test.mjs`.
 - A page that reads a translation file not listed in `ns`
   (`src/i18n/i18n.Config.js`) needs `namespaces: [...]` on its route in
   `06_routes/userRoutes.jsx`.

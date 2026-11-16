@@ -38,6 +38,9 @@ const Delivery = lazyWithPreload(
 const About = lazyWithPreload(
   () => import("../05_pages/public/about/About.jsx"),
 );
+const Links = lazyWithPreload(
+  () => import("../05_pages/public/links/Links.jsx"),
+);
 const NotFound = lazyWithPreload(
   () => import("../05_pages/public/notFound/NotFound.jsx"),
 );
@@ -66,6 +69,8 @@ const UserRoutes = [
   { path: "faq", element: <FAQ /> },
   { path: "delivery", element: <Delivery /> },
   { path: "about", element: <About /> },
+  // Every way to order on one page, for the link in a social profile.
+  { path: "links", element: <Links /> },
   { path: "*", element: <NotFound /> },
 ];
 

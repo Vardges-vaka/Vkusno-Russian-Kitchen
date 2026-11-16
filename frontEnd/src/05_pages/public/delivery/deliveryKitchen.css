@@ -8,8 +8,12 @@
   border-radius: 14px;
 }
 
+/* margin and colour are set here too, not only in delivery.css: the links
+   page shows these cards without loading that file. */
 .deliveryKitchen__name {
+  margin: 0;
   font-size: 18px;
+  color: var(--text_color);
 }
 
 .deliveryKitchen__hours,

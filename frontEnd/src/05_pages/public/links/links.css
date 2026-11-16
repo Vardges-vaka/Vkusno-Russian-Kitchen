@@ -1,0 +1,136 @@
+/* The links page: one narrow column of big buttons, made to be opened on a
+   phone from a social profile. The kitchen cards are the Delivery page's own
+   (deliveryKitchen.css). */
+
+/* 560px of content. The side gutter comes from the shared list in App.css,
+   like every other page, and sits outside this width. */
+.links {
+  max-inline-size: 560px;
+  margin-inline: auto;
+  padding-block: 32px 56px;
+}
+
+.links__hero {
+  text-align: center;
+}
+
+.links__title,
+.links__sectionTitle {
+  margin: 0;
+  color: var(--text_color);
+}
+
+.links__title {
+  font-size: 30px;
+  letter-spacing: 0.04em;
+}
+
+.links__title::after {
+  content: "";
+  display: block;
+  inline-size: 80px;
+  block-size: 3px;
+  margin-block-start: 12px;
+  margin-inline: auto;
+  border-radius: 2px;
+  background-color: var(--gold_color);
+}
+
+.links__lead {
+  margin: 16px 0 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text_muted_color);
+}
+
+.links__main,
+.links__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links__button,
+.links__social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 8px;
+  min-block-size: 52px;
+  padding: 12px 18px;
+  color: var(--text_color);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 12px;
+}
+
+.links__button:hover,
+.links__social:hover {
+  border-color: var(--accent_color);
+}
+
+.links__button:focus-visible,
+.links__social:focus-visible {
+  outline: 2px solid var(--gold_color);
+  outline-offset: 2px;
+}
+
+.links__button--primary {
+  color: var(--footer_text_color);
+  background-color: var(--accent_color);
+  border-color: var(--accent_color);
+}
+
+.links__icon {
+  flex: none;
+}
+
+.links__detail {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text_muted_color);
+}
+
+.links__section {
+  margin-block-start: 36px;
+}
+
+.links__sectionTitle {
+  font-size: 22px;
+  text-align: center;
+}
+
+.links__kitchens {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-block-start: 16px;
+}
+
+.links__socials {
+  margin-block-start: 16px;
+}
+
+.links__socialLogo {
+  inline-size: 20px;
+  block-size: 20px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .links {
+    padding-block: 48px 64px;
+  }
+
+  .links__title {
+    font-size: 34px;
+  }
+}

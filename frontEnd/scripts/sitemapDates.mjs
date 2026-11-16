@@ -28,6 +28,9 @@ const STATIC_FILES = {
   privacy: "Privacy.json",
   about: "About.json",
   delivery: "Delivery.json",
+  // The links page keeps its own three lines in Delivery.json ("links") and
+  // takes its button words from that file too.
+  links: "Delivery.json",
 };
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -142,7 +145,12 @@ export const buildSitemapDates = async ({
           })),
         );
       }
-      if (route === "contact" || route === "kitchens" || route === "delivery") {
+      if (
+        route === "contact" ||
+        route === "kitchens" ||
+        route === "delivery" ||
+        route === "links"
+      ) {
         parts.push(contactSource);
       }
       // The About page repeats the footer story, so a change there moves the date.

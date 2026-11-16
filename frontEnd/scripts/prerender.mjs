@@ -50,6 +50,7 @@ const PAGE_SOURCE = {
   privacy: "src/05_pages/public/legal/Privacy.jsx",
   about: "src/05_pages/public/about/About.jsx",
   delivery: "src/05_pages/public/delivery/Delivery.jsx",
+  links: "src/05_pages/public/links/Links.jsx",
 };
 
 const stop = (message) => {

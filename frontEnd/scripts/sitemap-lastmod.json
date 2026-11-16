@@ -16,7 +16,7 @@
     "lastmod": "2026-11-16"
   },
   "ar|delivery": {
-    "hash": "57a31f95f3dd55cb",
+    "hash": "c08e9eebf360226f",
     "lastmod": "2026-11-16"
   },
   "ar|faq": {
@@ -45,6 +45,10 @@
   },
   "ar|kitchens/marina": {
     "hash": "b39e0d8f739f2721",
+    "lastmod": "2026-11-16"
+  },
+  "ar|links": {
+    "hash": "c08e9eebf360226f",
     "lastmod": "2026-11-16"
   },
   "ar|menu": {
@@ -400,7 +404,7 @@
     "lastmod": "2026-11-16"
   },
   "en|delivery": {
-    "hash": "c25e759ae1da3457",
+    "hash": "49086f330587079d",
     "lastmod": "2026-11-16"
   },
   "en|faq": {
@@ -429,6 +433,10 @@
   },
   "en|kitchens/marina": {
     "hash": "791b7196dfe23ccc",
+    "lastmod": "2026-11-16"
+  },
+  "en|links": {
+    "hash": "49086f330587079d",
     "lastmod": "2026-11-16"
   },
   "en|menu": {
@@ -784,7 +792,7 @@
     "lastmod": "2026-11-16"
   },
   "ru|delivery": {
-    "hash": "ef4c8536b3e09168",
+    "hash": "1ad1a898d9bd0aef",
     "lastmod": "2026-11-16"
   },
   "ru|faq": {
@@ -813,6 +821,10 @@
   },
   "ru|kitchens/marina": {
     "hash": "53cea400f0b13597",
+    "lastmod": "2026-11-16"
+  },
+  "ru|links": {
+    "hash": "1ad1a898d9bd0aef",
     "lastmod": "2026-11-16"
   },
   "ru|menu": {

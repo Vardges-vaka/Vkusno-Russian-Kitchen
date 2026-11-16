@@ -19,9 +19,9 @@ const config = JSON.parse(
 
 // Where Vercel sends the bare address for one Accept-Language header.
 // The first rule that applies wins. The whole header has to match the value.
-const destinationFor = (acceptLanguage) => {
+const destinationFor = (acceptLanguage, source = "/") => {
   for (const rule of config.redirects) {
-    if (rule.source !== "/") continue;
+    if (rule.source !== source) continue;
     const conditions = rule.has ?? [];
     // The old WordPress /?p=1 rule looks at the query, not at the language.
     if (conditions.some((condition) => condition.type !== "header")) continue;
@@ -69,5 +69,16 @@ test("any other browser, and a robot that sends no language, goes to /en", () =>
   ];
   for (const header of headers) {
     assert.equal(destinationFor(header), "/en", String(header));
+  }
+});
+
+test("the short links address goes to the reader's language in the same way", () => {
+  // vkusno.ae/links is the address for a social profile. A phone sends its
+  // language exactly as a browser does, so the same three rules apply.
+  assert.equal(destinationFor("ru-RU,ru;q=0.9,en-US;q=0.8", "/links"), "/ru/links");
+  assert.equal(destinationFor("ru", "/links"), "/ru/links");
+  assert.equal(destinationFor("ar-AE,ar;q=0.9,en;q=0.8", "/links"), "/ar/links");
+  for (const header of [undefined, "", "en-US,en;q=0.9", "en-GB,en;q=0.9,ru;q=0.8"]) {
+    assert.equal(destinationFor(header, "/links"), "/en/links", String(header));
   }
 });
