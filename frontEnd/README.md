@@ -263,6 +263,12 @@ Source JPEGs live beside their WebP output; only WebP is imported.
 `node scripts/convertMenuImagesToWebp.mjs` regenerates everything and caps the
 hero at 1920px.
 
+The 1200×900 dish photos are the heaviest file a dish page loads, so each one
+is saved at the highest quality, from 80 down to 60, that fits in 100 KB. A
+photo too detailed to fit stays at 60 and is simply heavier (Mixed Grill is the
+heaviest, about 185 KB). Running the script again gives the same files, so a
+new dish photo is the only thing that changes.
+
 > **Known issue:** menu cards render the 1200×900 image because the only other
 > size is a 100×100 thumbnail. That is ~9.5 MB of photos on the menu page. The
 > fix is a ~400×300 tier plus `srcset`; the converter is the place to add it.

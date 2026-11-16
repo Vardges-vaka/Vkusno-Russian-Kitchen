@@ -1,7 +1,7 @@
 // Converts every source .jpg under src/01_assets to a .webp beside it.
 // Originals are kept as source files; the app imports only the .webp.
 // Run from frontEnd/: node scripts/convertMenuImagesToWebp.mjs
-import { mkdir, readdir, stat } from "node:fs/promises";
+import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
@@ -43,11 +43,57 @@ const DERIVED = [
 // 40-70% of the weight; thumbnails are 100x100 so quality barely matters.
 const QUALITY = 80;
 
+// The 1200x900 dish photos are the heaviest thing a dish page loads. At q80
+// they averaged 143 KB and the busiest (Mixed Grill) was 280 KB. Each one is
+// now saved at the highest quality, from 80 down to 60, that fits in 100 KB.
+// A photo too detailed to fit even at 60 stays at 60 and is simply heavier:
+// below that the meat and bread start to look soft, and the food has to look
+// the same. The card tiers below are made from the .jpg, so they do not change.
+const FULL_DIR = "src/01_assets/menuItems/full";
+const FULL_MAX_BYTES = 100 * 1024;
+const FULL_MIN_QUALITY = 60;
+// effort 6 packs the same picture a few percent smaller (slower to make, the
+// same to look at). smartSubsample keeps red and green edges crisp at lower
+// quality - tomato on lavash, herbs on borscht.
+const FULL_OPTIONS = { effort: 6, smartSubsample: true };
+
 // The hero is a full-bleed background: it never renders wider than a desktop
 // viewport, so shipping it at its native size is wasted bytes.
 const MAX_WIDTH = {
   "src/01_assets/images": 1920,
   "src/01_assets": 1920,
+};
+
+// The bytes to write for one 1200x900 dish photo, and the quality they use.
+const encodeFullPhoto = async (source) => {
+  // A photo that already fits at the plain q80 keeps exactly the bytes it had
+  // before the cap existed, so the light photos do not change at all.
+  const plain = await sharp(source).webp({ quality: QUALITY }).toBuffer();
+  if (plain.length <= FULL_MAX_BYTES) return { buffer: plain, quality: QUALITY };
+
+  const at = (quality) =>
+    sharp(source).webp({ quality, ...FULL_OPTIONS }).toBuffer();
+
+  const lowest = await at(FULL_MIN_QUALITY);
+  if (lowest.length > FULL_MAX_BYTES) {
+    return { buffer: lowest, quality: FULL_MIN_QUALITY };
+  }
+
+  // The file grows with quality, so halve the range until the best fit is left.
+  let fits = FULL_MIN_QUALITY;
+  let best = lowest;
+  let highest = QUALITY;
+  while (fits < highest) {
+    const middle = Math.ceil((fits + highest) / 2);
+    const buffer = await at(middle);
+    if (buffer.length <= FULL_MAX_BYTES) {
+      fits = middle;
+      best = buffer;
+    } else {
+      highest = middle - 1;
+    }
+  }
+  return { buffer: best, quality: fits };
 };
 
 let totalBefore = 0;
@@ -61,22 +107,48 @@ for (const dir of DIRS) {
     continue;
   }
 
+  // Only filled for the 1200x900 dish photos.
+  const fullPhotos = { plain: 0, fitted: 0, heavy: [] };
+
   for (const file of jpgs) {
     const source = path.join(dir, file);
     const target = source.replace(/\.jpg$/i, ".webp");
 
-    const pipeline = sharp(source);
-    const maxWidth = MAX_WIDTH[dir];
-    // withoutEnlargement: never upscale something already smaller.
-    if (maxWidth) pipeline.resize({ width: maxWidth, withoutEnlargement: true });
+    if (dir === FULL_DIR) {
+      const { buffer, quality } = await encodeFullPhoto(source);
+      await writeFile(target, buffer);
+      if (buffer.length > FULL_MAX_BYTES) {
+        fullPhotos.heavy.push(`${file} ${Math.round(buffer.length / 1024)} KB`);
+      } else if (quality === QUALITY) {
+        fullPhotos.plain += 1;
+      } else {
+        fullPhotos.fitted += 1;
+      }
+    } else {
+      const pipeline = sharp(source);
+      const maxWidth = MAX_WIDTH[dir];
+      // withoutEnlargement: never upscale something already smaller.
+      if (maxWidth) {
+        pipeline.resize({ width: maxWidth, withoutEnlargement: true });
+      }
 
-    await pipeline.webp({ quality: QUALITY }).toFile(target);
+      await pipeline.webp({ quality: QUALITY }).toFile(target);
+    }
 
     totalBefore += (await stat(source)).size;
     totalAfter += (await stat(target)).size;
   }
 
   console.log(`${dir}: ${jpgs.length} files converted`);
+  if (dir === FULL_DIR) {
+    const cap = FULL_MAX_BYTES / 1024;
+    console.log(
+      `  ${fullPhotos.plain} at q${QUALITY}, ` +
+        `${fullPhotos.fitted} lowered to fit ${cap} KB, ` +
+        `${fullPhotos.heavy.length} still over ${cap} KB at q${FULL_MIN_QUALITY}`,
+    );
+    for (const line of fullPhotos.heavy) console.log(`    ${line}`);
+  }
 }
 
 const toMb = (bytes) => (bytes / 1024 / 1024).toFixed(1);
