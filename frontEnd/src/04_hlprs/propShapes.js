@@ -102,6 +102,7 @@ export const branchShape = PropTypes.shape({
   location: PropTypes.shape({
     address: localizedStringShape.isRequired,
     googleMapsLink: PropTypes.string.isRequired,
+    googleListingLink: PropTypes.string,
     coordinates: PropTypes.shape({
       latitude: PropTypes.number.isRequired,
       longitude: PropTypes.number.isRequired,

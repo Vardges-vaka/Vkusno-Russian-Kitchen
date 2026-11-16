@@ -10,7 +10,8 @@ import {
 import { pickLocale } from "./pickLocale.js";
 
 // Schema.org builders. Every field below already exists in the app's own data
-// - BRANCHES.js carries addresses, coordinates and opening hours; menuItems.js
+// - BRANCHES.js carries addresses, coordinates, opening hours and each
+// kitchen's own Google listing; menuItems.js
 // carries names, prices and photos; publicIdentity.js carries the phone,
 // email, social links, founding year and the one-line description - so none
 // of this is duplicated by hand.
@@ -56,6 +57,10 @@ const openingHours = (timing) =>
 export const restaurantNode = (branch, lang, contactInfo = []) => {
   const phone = contactInfo.find((item) => item.name === "phone")?.label || PUBLIC_PHONE;
   const email = contactInfo.find((item) => item.name === "email")?.label || PUBLIC_EMAIL;
+  // The kitchen's own Google listing. It is the map the record points to, and
+  // one more page that says "this is the same kitchen". A kitchen with no
+  // listing yet keeps its map pin and the two social pages.
+  const listing = branch.location.googleListingLink;
 
   return {
     "@type": "Restaurant",
@@ -71,7 +76,7 @@ export const restaurantNode = (branch, lang, contactInfo = []) => {
     menu: absoluteUrl(localePath(lang, MENU_PATH)),
     logo: LOGO,
     image: LOGO.url,
-    sameAs: SAME_AS,
+    sameAs: listing ? [...SAME_AS, listing] : SAME_AS,
     address: {
       "@type": "PostalAddress",
       streetAddress: pickLocale(branch.location.address, lang),
@@ -83,7 +88,7 @@ export const restaurantNode = (branch, lang, contactInfo = []) => {
       latitude: branch.location.coordinates.latitude,
       longitude: branch.location.coordinates.longitude,
     },
-    hasMap: branch.location.googleMapsLink,
+    hasMap: listing || branch.location.googleMapsLink,
     openingHoursSpecification: openingHours(branch.timing),
     parentOrganization: { "@id": ORGANISATION_ID },
   };

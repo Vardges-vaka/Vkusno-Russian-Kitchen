@@ -324,6 +324,28 @@ same id in English, Russian and Arabic. Each job page carries one schema.org
 
 ---
 
+## Kitchens
+
+The five kitchens live in
+`src/05_pages/public/contact/04_contact_const/BRANCHES.js`: name, address, map
+point, opening hours and delivery-app links. The contact page, the kitchen
+pages and the hidden business record (`src/04_hlprs/jsonLd.js`) all read that
+one file.
+
+Each kitchen has two Google links:
+
+- `googleMapsLink` - the map pin the "Directions" buttons open.
+- `googleListingLink` - the kitchen's own "Vkusno Russian Kitchen" listing on
+  Google, as `https://www.google.com/maps?cid=NUMBER`. No button uses it. Only
+  the hidden business record does (`hasMap` and `sameAs`), so Google can tell
+  that the kitchen page and the listing are the same place.
+
+A new kitchen can go live before it has a listing: leave `googleListingLink`
+out and the record falls back to the map pin. `scripts/kitchenListings.test.mjs`
+checks the links.
+
+---
+
 ## Routing
 
 `App.jsx` → `LanguageLayout` (validates `:lang`, renders header/footer once) →

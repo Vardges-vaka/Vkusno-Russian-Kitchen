@@ -7,6 +7,15 @@ import {
 } from "../../../../01_assets/_assets.index.js";
 import { KITCHEN_SLUG } from "../../kitchens/04_kitchens_const/KITCHEN_SLUG.js";
 
+// Each kitchen carries two Google links:
+// - googleMapsLink: the map pin the "Directions" buttons open.
+// - googleListingLink: the kitchen's own "Vkusno Russian Kitchen" listing on
+//   Google. No button uses it. Only the hidden business record reads it
+//   (04_hlprs/jsonLd.js), so Google can tell that the kitchen page and the
+//   listing are the same place. The number after cid= is the listing's own
+//   id and stays the same when the listing's details change. Arjan, Marina
+//   and SOL Avenue show an address there; Cuisinette and DSO are
+//   delivery-only listings, so Google hides theirs.
 const BRANCHES = [
   {
     id: "arjan",
@@ -23,6 +32,7 @@ const BRANCHES = [
         ar: "روز بالاس ريزيدنسز، أرجان، محل 19",
       },
       googleMapsLink: "https://maps.app.goo.gl/FC3oBdAUzxtjvCGGA",
+      googleListingLink: "https://www.google.com/maps?cid=6431851529121558702",
       coordinates: {
         latitude: 25.0675273075463,
         longitude: 55.233676605285098,
@@ -76,6 +86,7 @@ const BRANCHES = [
         ar: "مرسى دبي - دبي مارينا - دبي",
       },
       googleMapsLink: "https://maps.app.goo.gl/9cureScPsEri3YWS6",
+      googleListingLink: "https://www.google.com/maps?cid=16493697892326585397",
       coordinates: {
         latitude: 25.0793896378215,
         longitude: 55.142703638096002,
@@ -129,6 +140,7 @@ const BRANCHES = [
         ar: "سول أفينيو - بيزنس باي - دبي",
       },
       googleMapsLink: "https://maps.app.goo.gl/qzprpsttPoS2EAQH8",
+      googleListingLink: "https://www.google.com/maps?cid=14670895118951301114",
       coordinates: {
         latitude: 25.179827838664799,
         longitude: 55.274647248169302,
@@ -162,6 +174,7 @@ const BRANCHES = [
         ar: "شارع مراسي - بيزنس باي - دبي",
       },
       googleMapsLink: "https://maps.app.goo.gl/HhooNnxAnfo2pFMj7",
+      googleListingLink: "https://www.google.com/maps?cid=11368663613142301572",
       coordinates: {
         latitude: 25.1892761497006,
         longitude: 55.269606593921999,
@@ -210,6 +223,7 @@ const BRANCHES = [
         ar: "ند حصة - واحة دبي للسيليكون - دبي",
       },
       googleMapsLink: "https://maps.app.goo.gl/QmCkv4KTTSAMV9mN6",
+      googleListingLink: "https://www.google.com/maps?cid=6720279363841937002",
       coordinates: {
         latitude: 25.128185885366602,
         longitude: 55.392207824603503,
