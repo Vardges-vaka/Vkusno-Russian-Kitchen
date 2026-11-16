@@ -209,7 +209,9 @@ const Home_featuredCarousel = ({
                     src={
                       item.images?.card || item.images?.full || dishPlaceholder
                     }
-                    alt=""
+                    /* The dish name, as on the menu cards. It was empty, so a
+                       search engine saw ten homepage photos of nothing. */
+                    alt={name}
                     loading="lazy"
                     onError={handleImageError}
                   />
