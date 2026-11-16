@@ -14,6 +14,10 @@
           "answer": "Yes! In the Menu order flow, use Order directly to order online via RestHero, call us, or WhatsApp. Even phone orders are placed through the RestHero platform so your order reaches our kitchen directly."
         },
         {
+          "question": "Where do you deliver?",
+          "answer": "We deliver to all areas of Dubai. Five kitchens cover the city between them: Arjan, Dubai Marina, two in Business Bay, and Dubai Silicon Oasis."
+        },
+        {
           "question": "How far does direct delivery from Arjan reach?",
           "answer": "Direct delivery from our Arjan kitchen covers roughly 30 km (delivered via RestHero using Careem or Slider riders). During peak hours the radius may be slightly reduced. For areas outside that range, choose another branch or a delivery app that serves your area."
         },
@@ -32,6 +36,10 @@
         {
           "question": "Can I pick up my order instead of delivery?",
           "answer": "Yes. Pickup is available at all listed Vkusno locations. Order through the delivery app that serves your chosen branch and select pickup if the app offers it, or contact the branch directly for guidance."
+        },
+        {
+          "question": "Do you take catering orders?",
+          "answer": "No. Vkusno does not take catering orders."
         }
       ]
     },

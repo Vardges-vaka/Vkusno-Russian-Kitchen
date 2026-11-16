@@ -10,9 +10,10 @@ import { hoursLabel } from "../kitchens/03_kitchens_hlprs/kitchenFacts.js";
 import DeliveryKitchen from "./DeliveryKitchen.jsx";
 import "./delivery.css";
 
-// Preview page. The words are a first draft, so search engines should not
-// keep it. The kitchens and app links come from BRANCHES, the same list the
-// contact and kitchen pages use, so a new app does not have to be typed twice.
+// The kitchens and app links come from BRANCHES, the same list the contact
+// and kitchen pages use, so a new app does not have to be typed twice.
+// The owner called the words final on 16 Nov 2026, so search engines may keep
+// this page. The About page is still a preview and still says noindex.
 const Delivery = () => {
   const { t, i18n } = useTranslation("Delivery");
   const { t: tKitchens } = useTranslation("Kitchens");
@@ -20,11 +21,7 @@ const Delivery = () => {
 
   return (
     <div className="delivery">
-      <PageMeta
-        title={t("meta.title")}
-        description={t("meta.description")}
-        noindex
-      />
+      <PageMeta title={t("meta.title")} description={t("meta.description")} />
 
       <header className="delivery__hero">
         <h1 className="delivery__title">{t("hero.title")}</h1>
