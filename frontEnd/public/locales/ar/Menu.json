@@ -7,6 +7,9 @@
     "currency": "د.إ",
     "close": "إغلاق",
     "order": "اطلب",
+    "related": {
+      "title": "المزيد من القائمة"
+    },
     "orderModal": {
       "subtitle": "اختاروا المطبخ ثم اطلبوا عبر تطبيق التوصيل",
       "pickKitchen": "المطابخ",

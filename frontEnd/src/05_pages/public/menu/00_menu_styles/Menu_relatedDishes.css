@@ -1,0 +1,89 @@
+/* "More from the menu": the row of other dishes at the foot of a dish page.
+   Two across on a phone, four across from a tablet up. */
+
+.Menu_related {
+  margin-block-start: 32px;
+}
+
+.Menu_related_title {
+  margin: 0 0 14px;
+  font-size: 22px;
+  color: var(--text_color);
+}
+
+.Menu_related_list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Menu_related_link {
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+  overflow: hidden;
+  color: var(--text_color);
+  text-decoration: none;
+  background-color: var(--surface_color);
+  border: 1px solid var(--border_color);
+  border-radius: 12px;
+}
+
+.Menu_related_link:hover {
+  border-color: var(--gold_color);
+}
+
+.Menu_related_link:focus-visible {
+  outline: 2px solid var(--gold_color);
+  outline-offset: 2px;
+}
+
+/* The photos are 4:3. The ratio keeps the row from jumping as they arrive. */
+.Menu_related_photo,
+.Menu_related_photoFallback {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.Menu_related_photoFallback {
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text_muted_color);
+  background-color: var(--border_color);
+}
+
+.Menu_related_name {
+  padding: 10px 12px 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.Menu_related_price {
+  margin-block-start: auto;
+  padding: 6px 12px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent_color);
+}
+
+.Menu_related_currency {
+  margin-inline-start: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text_muted_color);
+}
+
+@media (min-width: 640px) {
+  .Menu_related_list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

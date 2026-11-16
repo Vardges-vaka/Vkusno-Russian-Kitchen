@@ -14,12 +14,18 @@ import {
   menuItemNode,
   pickLocale,
 } from "../../../04_hlprs/_hlprs.index.js";
-import { findMenuItemBySlug, menuItemSlug } from "./03_menu_hlprs/_menu_hlprs.index.js";
+import {
+  findMenuItemBySlug,
+  menuItemSlug,
+  pickRelated,
+} from "./03_menu_hlprs/_menu_hlprs.index.js";
 import {
   Menu_itemDetail,
   Menu_itemModal,
   Menu_orderModal,
+  Menu_relatedDishes,
 } from "./01_menu_comps/_menu_comps.index.js";
+import { Categories } from "./04_menu_const/CATEGORIES.js";
 import "./00_menu_styles/MenuItem.css";
 
 // One dish, at /{lang}/menu/{slug}.
@@ -132,6 +138,14 @@ const MenuItem = ({ variant = "page" }) => {
           headingLevel="h1"
         />
       </article>
+
+      {/* Only on the page, not in the overlay: there the menu grid is right
+          behind the dish. */}
+      <Menu_relatedDishes
+        items={pickRelated(Categories, item)}
+        lang={lang}
+        t={t}
+      />
 
       {orderItem && (
         <Menu_orderModal

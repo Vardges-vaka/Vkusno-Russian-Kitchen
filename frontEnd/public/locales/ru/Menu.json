@@ -7,6 +7,9 @@
     "currency": "AED",
     "close": "Закрыть",
     "order": "Заказать",
+    "related": {
+      "title": "Ещё из меню"
+    },
     "orderModal": {
       "subtitle": "Выберите кухню, затем закажите в приложении доставки",
       "pickKitchen": "Кухни",

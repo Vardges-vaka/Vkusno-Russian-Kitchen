@@ -7,6 +7,9 @@
     "currency": "AED",
     "close": "Close",
     "order": "Order",
+    "related": {
+      "title": "More from the menu"
+    },
     "orderModal": {
       "subtitle": "Choose a kitchen, then order on a delivery app",
       "pickKitchen": "Kitchens",

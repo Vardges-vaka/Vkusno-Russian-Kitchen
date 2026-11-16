@@ -8,3 +8,4 @@ export { default as Menu_itemModal } from "./Menu_itemModal.jsx";
 export { default as Menu_orderModal } from "./Menu_orderModal.jsx";
 export { default as Menu_orderMap } from "./Menu_orderMap.jsx";
 export { default as Menu_searchBar } from "./Menu_searchBar.jsx";
+export { default as Menu_relatedDishes } from "./Menu_relatedDishes.jsx";
