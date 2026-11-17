@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { createSitemap } from "./generateSitemap.mjs";
-import { dateForContent } from "./sitemapDates.mjs";
+import { dateForContent, hashContent, sameLineEndings } from "./sitemapDates.mjs";
 
 const LANGS = ["en", "ru", "ar"];
 const STATIC = ["", "menu", "contact", "kitchens", "careers", "faq", "privacy", "about", "delivery", "links"];
@@ -21,6 +21,23 @@ test("a page keeps its lastmod until its words change", () => {
   assert.equal(dateForContent({ hash, lastmod: "nope" }, hash, "2026-11-10"), "2026-11-10");
   assert.equal(dateForContent(undefined, hash, "2026-11-10"), "2026-11-10");
   assert.throws(() => dateForContent(undefined, hash, "today"), /YYYY-MM-DD/);
+});
+
+// The same file is read with Windows line endings on a Windows PC and with
+// plain ones on the build server. Without sameLineEndings the two hashes
+// differ, and the server gives the page a new date on every deploy.
+test("Windows line endings do not give a page a new date", () => {
+  const onServer = "export const BRANCHES = [\n  { id: 1 },\n];\n";
+  const onWindows = onServer.replaceAll("\n", "\r\n");
+  assert.notEqual(hashContent([onWindows]), hashContent([onServer]));
+  assert.equal(hashContent([sameLineEndings(onWindows)]), hashContent([sameLineEndings(onServer)]));
+  assert.equal(sameLineEndings("a\rb\r\nc\n"), "a\nb\nc\n");
+
+  const saved = { hash: hashContent([sameLineEndings(onServer)]), lastmod: "2026-11-16" };
+  assert.equal(
+    dateForContent(saved, hashContent([sameLineEndings(onWindows)]), "2026-11-17"),
+    "2026-11-16",
+  );
 });
 
 test("createSitemap writes one lastmod per url when dates are supplied", () => {

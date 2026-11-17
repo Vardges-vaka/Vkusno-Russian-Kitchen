@@ -38,6 +38,14 @@ const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 export const hashContent = (value) =>
   createHash("sha256").update(JSON.stringify(value)).digest("hex").slice(0, 16);
 
+// Line endings are not words. The same file has Windows line endings in a
+// checkout on a Windows PC and plain ones on the build server. Hashing the
+// text as it was read gave a page one hash here and another there, so the
+// server found "changed words" on every deploy and stamped that day on the
+// Contact, Delivery, Links and kitchen pages (BRANCHES.js was the file).
+// Every file that is hashed as text goes through this first.
+export const sameLineEndings = (text) => text.replace(/\r\n?/g, "\n");
+
 // Same words keep the stored date. New or changed words get today.
 export const dateForContent = (previous, hash, today) => {
   if (previous?.hash === hash && ISO_DATE.test(previous.lastmod ?? "")) return previous.lastmod;
@@ -109,9 +117,8 @@ export const buildSitemapDates = async ({
   await Promise.all(
     langs.flatMap((lang) =>
       files.map(async (file) => {
-        localeText[`${lang}/${file}`] = await readFile(
-          path.join(ROOT, "public/locales", lang, file),
-          "utf8",
+        localeText[`${lang}/${file}`] = sameLineEndings(
+          await readFile(path.join(ROOT, "public/locales", lang, file), "utf8"),
         );
       }),
     ),
@@ -123,7 +130,7 @@ export const buildSitemapDates = async ({
       return [lang, parsed.long ?? {}];
     }),
   );
-  const contactSource = await readFile(CONTACT_SOURCE, "utf8");
+  const contactSource = sameLineEndings(await readFile(CONTACT_SOURCE, "utf8"));
 
   const dates = {};
   const next = {};
