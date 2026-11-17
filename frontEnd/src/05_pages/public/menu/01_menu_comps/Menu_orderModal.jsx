@@ -7,6 +7,10 @@ import {
   pickLocale,
   useFocusTrap,
   useBodyScrollLock,
+  noteOrderClick,
+  orderWayOf,
+  ORDER_PLACE,
+  ORDER_WAY,
 } from "../../../../04_hlprs/_hlprs.index.js";
 import { useMapContext } from "../../../../03_context/_context.index.js";
 import {
@@ -52,6 +56,9 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
   useBodyScrollLock();
   const { selectedBranchId, selectBranch } = useMapContext();
   const name = pickLocale(item.name, lang);
+  // The dish this window was opened from, in English, for the note each order
+  // button sends to Google Analytics (04_hlprs/orderClick.js).
+  const dish = pickLocale(item.name, "en");
   const selectedBranch = BRANCHES.find(
     (branch) => branch.id === selectedBranchId,
   );
@@ -167,7 +174,14 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
                 href={DIRECT_ORDER.link}
                 target="_blank"
                 rel="noreferrer"
-                aria-label={t("menu.orderModal.orderFromUsAria")}>
+                aria-label={t("menu.orderModal.orderFromUsAria")}
+                onClick={() =>
+                  noteOrderClick({
+                    app: ORDER_WAY.online,
+                    place: ORDER_PLACE.window,
+                    dish,
+                  })
+                }>
                 {t("menu.orderModal.online")}
               </a>
               {DIRECT_ACTIONS.map((action) => (
@@ -177,7 +191,14 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
                   href={action.link}
                   target={action.newTab ? "_blank" : undefined}
                   rel={action.newTab ? "noreferrer" : undefined}
-                  aria-label={`${t(action.labelKey)} - ${action.value}`}>
+                  aria-label={`${t(action.labelKey)} - ${action.value}`}
+                  onClick={() =>
+                    noteOrderClick({
+                      app: orderWayOf(action.name),
+                      place: ORDER_PLACE.window,
+                      dish,
+                    })
+                  }>
                   {t(action.labelKey)}
                 </a>
               ))}
@@ -189,7 +210,7 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
           <div
             className="Menu_orderModal_map"
             aria-label={t("menu.orderModal.mapLabel")}>
-            <Menu_orderMap branches={BRANCHES} lang={lang} t={t} />
+            <Menu_orderMap branches={BRANCHES} lang={lang} t={t} dish={dish} />
           </div>
 
           <div className="Menu_orderModal_panel">
@@ -268,7 +289,15 @@ const Menu_orderModal = ({ item, lang, t, onClose }) => {
                                 rel="noreferrer"
                                 aria-label={t("menu.orderModal.orderOn", {
                                   app: aggregator.name,
-                                })}>
+                                })}
+                                onClick={() =>
+                                  noteOrderClick({
+                                    app: aggregator.name,
+                                    kitchen: pickLocale(selectedBranch.name, "en"),
+                                    place: ORDER_PLACE.window,
+                                    dish,
+                                  })
+                                }>
                                 <img
                                   className="Menu_orderModal_app_logo"
                                   src={aggregator.logo}

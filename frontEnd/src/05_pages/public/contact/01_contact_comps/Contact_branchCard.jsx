@@ -7,6 +7,8 @@ import {
   langShape,
   translateFn,
   pickLocale,
+  noteOrderClick,
+  ORDER_PLACE,
 } from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_contact_styles/Contact_branchCard.css";
 
@@ -64,7 +66,16 @@ const Contact_branchCard = ({ branch, lang, t, isSelected, onSelect }) => {
               rel="noreferrer"
               aria-label={aggregator.name}
               title={aggregator.name}
-              onClick={stopCardClick}>
+              onClick={(event) => {
+                stopCardClick(event);
+                // Stopping the press here also hides it from Google
+                // Analytics' own link counting, so the site sends the note.
+                noteOrderClick({
+                  app: aggregator.name,
+                  kitchen: pickLocale(branch.name, "en"),
+                  place: ORDER_PLACE.contact,
+                });
+              }}>
               <img
                 className="Contact_branchCard_aggregatorLogo"
                 src={aggregator.logo}

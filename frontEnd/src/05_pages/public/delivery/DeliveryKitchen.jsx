@@ -6,11 +6,15 @@ import {
   langShape,
   pickLocale,
   translateFn,
+  noteOrderClick,
 } from "../../../04_hlprs/_hlprs.index.js";
 import "./deliveryKitchen.css";
 
 // One kitchen, with only the apps that kitchen actually accepts.
-const DeliveryKitchen = ({ branch, lang, hours, t }) => {
+// place: which page this card is on (the Delivery page or the Links page). It
+// only goes into the note an app button sends to Google Analytics
+// (04_hlprs/orderClick.js).
+const DeliveryKitchen = ({ branch, lang, hours, t, place }) => {
   const name = pickLocale(branch.name, lang);
 
   return (
@@ -29,7 +33,14 @@ const DeliveryKitchen = ({ branch, lang, hours, t }) => {
               href={aggregator.link}
               target="_blank"
               rel="noreferrer"
-              aria-label={t("kitchens.orderOn", { name: aggregator.name })}>
+              aria-label={t("kitchens.orderOn", { name: aggregator.name })}
+              onClick={() =>
+                noteOrderClick({
+                  app: aggregator.name,
+                  kitchen: pickLocale(branch.name, "en"),
+                  place,
+                })
+              }>
               <img
                 className="deliveryKitchen__logo"
                 src={aggregator.logo}
@@ -56,6 +67,7 @@ DeliveryKitchen.propTypes = {
   lang: langShape.isRequired,
   hours: PropTypes.string.isRequired,
   t: translateFn.isRequired,
+  place: PropTypes.string.isRequired,
 };
 
 export default DeliveryKitchen;

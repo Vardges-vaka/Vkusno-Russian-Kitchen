@@ -18,6 +18,8 @@ import {
   langShape,
   translateFn,
   pickLocale,
+  noteOrderClick,
+  ORDER_PLACE,
 } from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_menu_styles/Menu_orderMap.css";
 
@@ -62,7 +64,7 @@ const Menu_orderMap_fitter = ({ branches }) => {
   return null;
 };
 
-const Menu_orderMap_marker = ({ branch, lang, t, isSelected, onSelect }) => {
+const Menu_orderMap_marker = ({ branch, lang, t, dish, isSelected, onSelect }) => {
   const [markerRef, marker] = useAdvancedMarkerRef();
   const name = pickLocale(branch.name, lang);
 
@@ -106,7 +108,15 @@ const Menu_orderMap_marker = ({ branch, lang, t, isSelected, onSelect }) => {
                   aria-label={t("menu.orderModal.orderOn", {
                     app: aggregator.name,
                   })}
-                  title={aggregator.name}>
+                  title={aggregator.name}
+                  onClick={() =>
+                    noteOrderClick({
+                      app: aggregator.name,
+                      kitchen: pickLocale(branch.name, "en"),
+                      place: ORDER_PLACE.map,
+                      dish,
+                    })
+                  }>
                   <img
                     className="Menu_orderMap_infoWindow_logo"
                     src={aggregator.logo}
@@ -124,7 +134,7 @@ const Menu_orderMap_marker = ({ branch, lang, t, isSelected, onSelect }) => {
 
 // The map itself. Renders inside <MapSdk>, which is required for
 // useApiIsLoaded() to see whether Google's script has arrived.
-const Menu_orderMap_view = ({ branches, lang, t }) => {
+const Menu_orderMap_view = ({ branches, lang, t, dish }) => {
   const { mapId, dubaiCenter, defaultZoom, selectedBranchId, selectBranch } =
     useMapContext();
   const isMapReady = useApiIsLoaded();
@@ -154,6 +164,7 @@ const Menu_orderMap_view = ({ branches, lang, t }) => {
             branch={branch}
             lang={lang}
             t={t}
+            dish={dish}
             isSelected={selectedBranchId === branch.id}
             onSelect={selectBranch}
           />
@@ -165,7 +176,9 @@ const Menu_orderMap_view = ({ branches, lang, t }) => {
 
 // Google's script is asked for here, when the order window puts this map on
 // the page - not when the menu page loads. See MapSdk.jsx.
-const Menu_orderMap = ({ branches, lang, t }) => {
+// dish: the dish the order window was opened from, in English. It only goes
+// into the note an app button sends to Google Analytics (orderClick.js).
+const Menu_orderMap = ({ branches, lang, t, dish }) => {
   const { hasApiKey } = useMapContext();
 
   // Shown in the map's place when there is no key, and by MapSdk when
@@ -183,7 +196,7 @@ const Menu_orderMap = ({ branches, lang, t }) => {
 
   return (
     <MapSdk fallback={unavailable}>
-      <Menu_orderMap_view branches={branches} lang={lang} t={t} />
+      <Menu_orderMap_view branches={branches} lang={lang} t={t} dish={dish} />
     </MapSdk>
   );
 };
@@ -196,6 +209,7 @@ Menu_orderMap_marker.propTypes = {
   branch: branchShape.isRequired,
   lang: langShape.isRequired,
   t: translateFn.isRequired,
+  dish: PropTypes.string,
   isSelected: PropTypes.bool,
   onSelect: PropTypes.func.isRequired,
 };
@@ -204,12 +218,14 @@ Menu_orderMap_view.propTypes = {
   branches: PropTypes.arrayOf(branchShape).isRequired,
   lang: langShape.isRequired,
   t: translateFn.isRequired,
+  dish: PropTypes.string,
 };
 
 Menu_orderMap.propTypes = {
   branches: PropTypes.arrayOf(branchShape).isRequired,
   lang: langShape.isRequired,
   t: translateFn.isRequired,
+  dish: PropTypes.string,
 };
 
 export default Menu_orderMap;

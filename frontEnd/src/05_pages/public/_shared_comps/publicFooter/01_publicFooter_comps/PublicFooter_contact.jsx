@@ -1,6 +1,9 @@
 import {
   langShape,
   translateFn,
+  noteOrderClick,
+  orderWayOf,
+  ORDER_PLACE,
 } from "../../../../../04_hlprs/_hlprs.index.js";
 import { CONTACT_INFO } from "../../../contact/04_contact_const/_contact_const.index.js";
 import PublicFooter_careers from "./PublicFooter_careers.jsx";
@@ -27,7 +30,15 @@ const PublicFooter_contact = ({ t, lang, tContact }) => {
                 href={item.link}
                 target={opensNewTab ? "_blank" : undefined}
                 rel={opensNewTab ? "noreferrer" : undefined}
-                aria-label={`${tContact(`contact.infoPanel.${item.name}`)} - ${item.label}`}>
+                aria-label={`${tContact(`contact.infoPanel.${item.name}`)} - ${item.label}`}
+                // Phone and WhatsApp send a note to Google Analytics
+                // (04_hlprs/orderClick.js). The email row sends none.
+                onClick={() =>
+                  noteOrderClick({
+                    app: orderWayOf(item.name),
+                    place: ORDER_PLACE.footer,
+                  })
+                }>
                 <Icon className="PublicFooter_contact_icon" size={16} aria-hidden="true" />
                 <span className="PublicFooter_contact_text">
                   <span className="PublicFooter_contact_action">

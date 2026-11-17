@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 import { preload } from "react-dom";
-import { translateFn } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  translateFn,
+  noteOrderClick,
+  ORDER_PLACE,
+  ORDER_WAY,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import { motion } from "framer-motion";
 import { heroBackground } from "../../../../01_assets/_assets.index.js";
 import { DIRECT_ORDER } from "../../contact/04_contact_const/_contact_const.index.js";
@@ -89,7 +94,13 @@ const Home_hero = ({ t, onMenuClick, shouldReduceMotion }) => {
                 href={DIRECT_ORDER.link}
                 target="_blank"
                 rel="noreferrer"
-                aria-label={t("hero.orderNowAria")}>
+                aria-label={t("hero.orderNowAria")}
+                onClick={() =>
+                  noteOrderClick({
+                    app: ORDER_WAY.online,
+                    place: ORDER_PLACE.home,
+                  })
+                }>
                 {t("hero.orderNow")}
               </a>
 

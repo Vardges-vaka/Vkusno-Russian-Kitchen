@@ -7,7 +7,12 @@ import {
   Contact_branchCard,
 } from "./01_contact_comps/_contact_comps.index.js";
 import { PageMeta } from "../../../02_comps/_comps.index.js";
-import { graph, organisationNode, restaurantNode } from "../../../04_hlprs/_hlprs.index.js";
+import {
+  graph,
+  organisationNode,
+  restaurantNode,
+  ORDER_PLACE,
+} from "../../../04_hlprs/_hlprs.index.js";
 import "./00_contact_styles/Contact.css";
 
 const Contact = () => {
@@ -48,7 +53,11 @@ const Contact = () => {
             <h2 className="Contact_connect_heading">
               {t("contact.infoPanel.label")}
             </h2>
-            <Contact_infoPanel contactInfo={contactInfo} t={t} />
+            <Contact_infoPanel
+              contactInfo={contactInfo}
+              t={t}
+              place={ORDER_PLACE.contact}
+            />
           </div>
 
           <hr className="Contact_connect_divider" />

@@ -3,6 +3,12 @@ import { useTranslation } from "react-i18next";
 import { localePath } from "../../../00_config/_config.index.js";
 import { PageMeta } from "../../../02_comps/_comps.index.js";
 import {
+  noteOrderClick,
+  orderWayOf,
+  ORDER_PLACE,
+  ORDER_WAY,
+} from "../../../04_hlprs/_hlprs.index.js";
+import {
   BRANCHES,
   CONTACT_INFO,
   DIRECT_ORDER,
@@ -50,7 +56,13 @@ const Links = () => {
             className="links__button links__button--primary"
             href={DIRECT_ORDER.link}
             target="_blank"
-            rel="noreferrer">
+            rel="noreferrer"
+            onClick={() =>
+              noteOrderClick({
+                app: ORDER_WAY.online,
+                place: ORDER_PLACE.links,
+              })
+            }>
             {t("direct.action")}
           </a>
         </li>
@@ -68,7 +80,13 @@ const Links = () => {
                 className="links__button"
                 href={item.link}
                 target={opensNewTab ? "_blank" : undefined}
-                rel={opensNewTab ? "noreferrer" : undefined}>
+                rel={opensNewTab ? "noreferrer" : undefined}
+                onClick={() =>
+                  noteOrderClick({
+                    app: orderWayOf(item.name),
+                    place: ORDER_PLACE.links,
+                  })
+                }>
                 <Icon className="links__icon" size={18} aria-hidden="true" />
                 <span>{tContact(`contact.infoPanel.${item.name}`)}</span>
                 {/* A phone number reads left to right in Arabic too. It has
@@ -94,6 +112,7 @@ const Links = () => {
               lang={lang}
               hours={hoursLabel(branch, tKitchens)}
               t={t}
+              place={ORDER_PLACE.links}
             />
           ))}
         </div>

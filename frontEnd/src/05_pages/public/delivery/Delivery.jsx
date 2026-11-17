@@ -3,6 +3,11 @@ import { useTranslation } from "react-i18next";
 import { localePath } from "../../../00_config/_config.index.js";
 import { PageMeta } from "../../../02_comps/_comps.index.js";
 import {
+  noteOrderClick,
+  ORDER_PLACE,
+  ORDER_WAY,
+} from "../../../04_hlprs/_hlprs.index.js";
+import {
   BRANCHES,
   DIRECT_ORDER,
 } from "../contact/04_contact_const/_contact_const.index.js";
@@ -44,7 +49,13 @@ const Delivery = () => {
             className="delivery__action"
             href={DIRECT_ORDER.link}
             target="_blank"
-            rel="noreferrer">
+            rel="noreferrer"
+            onClick={() =>
+              noteOrderClick({
+                app: ORDER_WAY.online,
+                place: ORDER_PLACE.delivery,
+              })
+            }>
             {t("direct.action")}
           </a>
         </section>
@@ -70,6 +81,7 @@ const Delivery = () => {
               lang={lang}
               hours={hoursLabel(branch, tKitchens)}
               t={t}
+              place={ORDER_PLACE.delivery}
             />
           ))}
         </div>

@@ -6,6 +6,7 @@ import {
   graph,
   pickLocale,
   restaurantNode,
+  ORDER_PLACE,
 } from "../../../04_hlprs/_hlprs.index.js";
 import { Contact_branchesMap, Contact_infoPanel } from "../contact/01_contact_comps/_contact_comps.index.js";
 import { Kitchen_orders } from "./01_kitchens_comps/_kitchens_comps.index.js";
@@ -18,6 +19,9 @@ const Kitchen = () => {
   if (!branch) return <Navigate to={localePath(lang, "kitchens")} replace />;
 
   const name = pickLocale(branch.name, lang);
+  // In English, for the note the order buttons send to Google Analytics
+  // (04_hlprs/orderClick.js). People never see it.
+  const kitchenLabel = pickLocale(branch.name, "en");
   const address = pickLocale(branch.location.address, lang);
 
   return (
@@ -58,10 +62,19 @@ const Kitchen = () => {
 
           <section className="Kitchen_block" aria-label={t("detail.contact")}>
             <h2 className="Kitchen_heading">{t("detail.contact")}</h2>
-            <Contact_infoPanel contactInfo={contactInfo} t={tContact} />
+            <Contact_infoPanel
+              contactInfo={contactInfo}
+              t={tContact}
+              place={ORDER_PLACE.kitchen}
+              kitchen={kitchenLabel}
+            />
           </section>
 
-          <Kitchen_orders aggregators={branch.aggregators} t={t} />
+          <Kitchen_orders
+            aggregators={branch.aggregators}
+            kitchen={kitchenLabel}
+            t={t}
+          />
         </div>
 
         <Contact_branchesMap branches={[branch]} lang={lang} t={tContact} />

@@ -1,8 +1,15 @@
 import PropTypes from "prop-types";
-import { aggregatorShape, translateFn } from "../../../../04_hlprs/_hlprs.index.js";
+import {
+  aggregatorShape,
+  translateFn,
+  noteOrderClick,
+  ORDER_PLACE,
+} from "../../../../04_hlprs/_hlprs.index.js";
 import "../00_kitchens_styles/Kitchen_orders.css";
 
-const Kitchen_orders = ({ aggregators, t }) => {
+// kitchen: this kitchen's name in English. It only goes into the note an app
+// button sends to Google Analytics (04_hlprs/orderClick.js).
+const Kitchen_orders = ({ aggregators, kitchen, t }) => {
   if (!aggregators.length) return null;
 
   return (
@@ -15,7 +22,14 @@ const Kitchen_orders = ({ aggregators, t }) => {
               className="Kitchen_orders_link"
               href={aggregator.link}
               target="_blank"
-              rel="noreferrer">
+              rel="noreferrer"
+              onClick={() =>
+                noteOrderClick({
+                  app: aggregator.name,
+                  kitchen,
+                  place: ORDER_PLACE.kitchen,
+                })
+              }>
               <img
                 className="Kitchen_orders_logo"
                 src={aggregator.logo}
@@ -33,6 +47,7 @@ const Kitchen_orders = ({ aggregators, t }) => {
 
 Kitchen_orders.propTypes = {
   aggregators: PropTypes.arrayOf(aggregatorShape).isRequired,
+  kitchen: PropTypes.string.isRequired,
   t: translateFn.isRequired,
 };
 
