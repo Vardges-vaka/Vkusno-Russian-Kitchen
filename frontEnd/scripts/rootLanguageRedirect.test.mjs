@@ -12,6 +12,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { KITCHEN_SLUG } from "../src/05_pages/public/kitchens/04_kitchens_const/KITCHEN_SLUG.js";
 
 const config = JSON.parse(
   await readFile(new URL("../vercel.json", import.meta.url), "utf8"),
@@ -81,4 +82,101 @@ test("the short links address goes to the reader's language in the same way", ()
   for (const header of [undefined, "", "en-US,en;q=0.9", "en-GB,en;q=0.9,ru;q=0.8"]) {
     assert.equal(destinationFor(header, "/links"), "/en/links", String(header));
   }
+});
+
+// The pages a person may type without a language: vkusno.ae/careers from a job
+// ad, vkusno.ae/delivery, vkusno.ae/kitchens/arjan. Until November 2026 four
+// of them and every kitchen page answered "page not found", while /menu,
+// /about, /contact, /faq and /links forwarded (second website audit, 16 Nov
+// 2026). They now follow the /links rules.
+const SHORT_PAGES = ["delivery", "kitchens", "careers", "privacy"];
+
+test("delivery, kitchens, careers and privacy open in the reader's language", () => {
+  for (const page of SHORT_PAGES) {
+    const source = `/${page}`;
+    assert.equal(destinationFor("ru-RU,ru;q=0.9,en-US;q=0.8", source), `/ru/${page}`);
+    assert.equal(destinationFor("ru", source), `/ru/${page}`);
+    assert.equal(destinationFor("ar-AE,ar;q=0.9,en;q=0.8", source), `/ar/${page}`);
+    assert.equal(destinationFor("ar", source), `/ar/${page}`);
+    for (const header of [undefined, "", "*", "en-US,en;q=0.9", "en-GB,en;q=0.9,ru;q=0.8", "de"]) {
+      assert.equal(destinationFor(header, source), `/en/${page}`, `${source} ${String(header)}`);
+    }
+  }
+});
+
+test("each kitchen's short address opens that kitchen's page in the reader's language", () => {
+  const slugs = Object.values(KITCHEN_SLUG);
+  assert.equal(slugs.length, 5);
+  for (const slug of slugs) {
+    const source = `/kitchens/${slug}`;
+    assert.equal(destinationFor("ru-RU,ru;q=0.9,en-US;q=0.8", source), `/ru/kitchens/${slug}`);
+    assert.equal(destinationFor("ar-AE,ar;q=0.9,en;q=0.8", source), `/ar/kitchens/${slug}`);
+    for (const header of [undefined, "en-US,en;q=0.9", "en-GB,en;q=0.9,ru;q=0.8"]) {
+      assert.equal(destinationFor(header, source), `/en/kitchens/${slug}`, `${source} ${String(header)}`);
+    }
+  }
+});
+
+const sitemap = await readFile(new URL("../public/sitemap.xml", import.meta.url), "utf8");
+const sitePages = new Set(
+  [...sitemap.matchAll(/<loc>https:\/\/vkusno\.ae(\/[^<]*)<\/loc>/g)].map((match) => match[1]),
+);
+
+test("every page of the site, except a dish or a job, has a short address", () => {
+  // Dish and job addresses are different words in each language, so they have
+  // no single short form.
+  const pages = [...sitePages]
+    .filter((page) => page.startsWith("/en/"))
+    .map((page) => page.slice("/en/".length))
+    .filter((page) => !/^(menu|careers)\/./.test(page));
+  assert.ok(pages.length >= 14, `only ${pages.length} pages found in the sitemap`);
+  for (const page of pages) {
+    // A robot sends no language. It must reach the English page in one step.
+    assert.equal(destinationFor(undefined, `/${page}`), `/en/${page}`, `/${page} is not forwarded`);
+  }
+});
+
+test("a rule that looks at the language is temporary and leads to a real page", () => {
+  const looksAtLanguage = (rule) =>
+    (rule.has ?? []).some(
+      (condition) => condition.type === "header" && condition.key === "accept-language",
+    );
+  const sources = [...new Set(config.redirects.filter(looksAtLanguage).map((rule) => rule.source))];
+  // The bare address, /links, the four pages above and the five kitchens.
+  assert.equal(sources.length, 11);
+  for (const source of sources) {
+    const rules = config.redirects.filter(
+      (rule) =>
+        rule.source === source &&
+        (rule.has ?? []).every((condition) => condition.type === "header"),
+    );
+    const page = source === "/" ? "" : source;
+    // Russian, Arabic, then everyone else: the first rule that applies wins,
+    // so the rule without a condition has to come last.
+    assert.deepEqual(
+      rules.map((rule) => [rule.destination, looksAtLanguage(rule)]),
+      [
+        [`/ru${page}`, true],
+        [`/ar${page}`, true],
+        [`/en${page}`, false],
+      ],
+      source,
+    );
+    for (const rule of rules) {
+      // A permanent answer is remembered by the browser. The next reader on
+      // that phone, in another language, would be sent to the wrong page.
+      assert.equal(rule.permanent, false, `${source} -> ${rule.destination} must stay temporary`);
+      assert.ok(sitePages.has(rule.destination), `${rule.destination} is not a page of the site`);
+    }
+  }
+});
+
+test("a short address never hides a real page or another rule", () => {
+  const counts = new Map();
+  for (const rule of config.redirects) {
+    const key = `${rule.source} ${JSON.stringify(rule.has ?? null)}`;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+    assert.ok(!sitePages.has(rule.source), `${rule.source} is a real page and is also forwarded`);
+  }
+  for (const [key, count] of counts) assert.equal(count, 1, `the same rule twice: ${key}`);
 });

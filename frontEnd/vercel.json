@@ -170,6 +170,267 @@
       "permanent": false
     },
     {
+      "source": "/delivery",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/delivery",
+      "permanent": false
+    },
+    {
+      "source": "/delivery",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/delivery",
+      "permanent": false
+    },
+    {
+      "source": "/delivery",
+      "destination": "/en/delivery",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/kitchens",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/kitchens",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens",
+      "destination": "/en/kitchens",
+      "permanent": false
+    },
+    {
+      "source": "/careers",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/careers",
+      "permanent": false
+    },
+    {
+      "source": "/careers",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/careers",
+      "permanent": false
+    },
+    {
+      "source": "/careers",
+      "destination": "/en/careers",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/privacy",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/privacy",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "destination": "/en/privacy",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/arjan",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/kitchens/arjan",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/arjan",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/kitchens/arjan",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/arjan",
+      "destination": "/en/kitchens/arjan",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/marina",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/kitchens/marina",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/marina",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/kitchens/marina",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/marina",
+      "destination": "/en/kitchens/marina",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/business-bay-sol-avenue",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/kitchens/business-bay-sol-avenue",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/business-bay-sol-avenue",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/kitchens/business-bay-sol-avenue",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/business-bay-sol-avenue",
+      "destination": "/en/kitchens/business-bay-sol-avenue",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/business-bay-cuisinette",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/kitchens/business-bay-cuisinette",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/business-bay-cuisinette",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/kitchens/business-bay-cuisinette",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/business-bay-cuisinette",
+      "destination": "/en/kitchens/business-bay-cuisinette",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/dso",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Rr][Uu]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ru/kitchens/dso",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/dso",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^[Aa][Rr]([-,;_].*)?$"
+        }
+      ],
+      "destination": "/ar/kitchens/dso",
+      "permanent": false
+    },
+    {
+      "source": "/kitchens/dso",
+      "destination": "/en/kitchens/dso",
+      "permanent": false
+    },
+    {
       "source": "/wp-:path*",
       "destination": "/en",
       "permanent": true
