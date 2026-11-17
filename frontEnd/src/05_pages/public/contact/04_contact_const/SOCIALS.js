@@ -3,7 +3,11 @@ import {
   Facebook_logo,
   linkedIn_logo,
 } from "../../../../01_assets/_assets.index.js";
-import { PUBLIC_FACEBOOK, PUBLIC_INSTAGRAM } from "./publicIdentity.js";
+import {
+  PUBLIC_FACEBOOK,
+  PUBLIC_INSTAGRAM,
+  PUBLIC_LINKEDIN,
+} from "./publicIdentity.js";
 
 const SOCIALS = [
   {
@@ -19,7 +23,7 @@ const SOCIALS = [
   {
     name: "LinkedIn",
     logo: linkedIn_logo,
-    link: "https://www.linkedin.com/company/vkusnorussiankitchen/?viewAsMember=true",
+    link: PUBLIC_LINKEDIN,
   },
 ];
 

@@ -32,16 +32,17 @@ test("every kitchen has its own Google listing link", () => {
   assert.equal(new Set(links).size, branches.length, "two kitchens share one listing link");
 });
 
-test("the hidden record points at the listing, next to the two social pages", () => {
+test("the hidden record points at the listing, next to the three social pages", () => {
   for (const branch of branches) {
     const listing = branch.location.googleListingLink;
     for (const lang of ["en", "ru", "ar"]) {
       const node = restaurantNode(branch, lang);
       assert.equal(node.hasMap, listing, `${branch.id} ${lang}`);
-      assert.equal(node.sameAs.length, 3, `${branch.id} ${lang}`);
-      assert.equal(node.sameAs[2], listing, `${branch.id} ${lang}`);
+      assert.equal(node.sameAs.length, 4, `${branch.id} ${lang}`);
+      assert.equal(node.sameAs[3], listing, `${branch.id} ${lang}`);
       assert.match(node.sameAs[0], /instagram\.com/, `${branch.id} ${lang}`);
       assert.match(node.sameAs[1], /facebook\.com/, `${branch.id} ${lang}`);
+      assert.match(node.sameAs[2], /linkedin\.com/, `${branch.id} ${lang}`);
     }
   }
 });
@@ -54,7 +55,7 @@ test("a kitchen with no listing yet falls back to its map pin", () => {
   };
   const node = restaurantNode(withoutListing, "en");
   assert.equal(node.hasMap, first.location.googleMapsLink);
-  assert.equal(node.sameAs.length, 2);
+  assert.equal(node.sameAs.length, 3);
 });
 
 test("the map pin for the Directions buttons is still there", () => {

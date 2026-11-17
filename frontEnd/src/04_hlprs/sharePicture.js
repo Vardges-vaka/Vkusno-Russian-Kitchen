@@ -8,8 +8,9 @@ import { pickLocale } from "./pickLocale.js";
 // another dish's English slug in SITE_PICTURE_DISH.
 //
 // scripts/prerender.mjs cuts each picture to 1200x630 at build time and
-// saves it as dist/share/<name>.jpg. Only src/entry-server.jsx reads this
-// file, so none of it reaches the browser.
+// saves it as dist/share/<name>.jpg. src/entry-server.jsx reads this file to
+// make the pictures; jsonLd.js reads only the site picture's name, to give
+// the same photo as the picture of the business in the hidden record.
 export const SITE_PICTURE_DISH = "russian-borscht";
 export const SITE_PICTURE_NAME = "vkusno";
 

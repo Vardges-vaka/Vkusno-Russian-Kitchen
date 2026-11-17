@@ -9,6 +9,7 @@ import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import * as publicIdentity from "../src/05_pages/public/contact/04_contact_const/publicIdentity.js";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const LEDGER_PATH = fileURLToPath(new URL("./sitemap-lastmod.json", import.meta.url));
@@ -32,6 +33,18 @@ const STATIC_FILES = {
   // takes its button words from that file too.
   links: "Delivery.json",
 };
+
+// The pages that carry the hidden business record (jsonLd.js: the company
+// and the kitchens): home, contact, kitchens, careers and each kitchen page.
+// The record's facts - phone, email, profile links, second name, founding
+// year, one-line description - count as these pages' words. Google's rule for
+// lastmod names a change to the structured data as a real change, so the date
+// moves when one of these facts changes. They are read as values, never as
+// file text, so a comment or a line ending in publicIdentity.js moves nothing.
+const RECORD_ROUTES = new Set(["", "contact", "kitchens", "careers"]);
+const IDENTITY_FACTS = Object.fromEntries(
+  Object.entries(publicIdentity).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)),
+);
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -160,6 +173,7 @@ export const buildSitemapDates = async ({
       ) {
         parts.push(contactSource);
       }
+      if (RECORD_ROUTES.has(route)) parts.push(IDENTITY_FACTS);
       // The About page repeats the footer story, so a change there moves the date.
       if (route === "about") {
         parts.push(JSON.parse(localeText[`${lang}/common.json`]).footer?.about ?? null);
@@ -184,6 +198,7 @@ export const buildSitemapDates = async ({
         localeText[`${lang}/Kitchens.json`],
         contactSource,
         slug,
+        IDENTITY_FACTS,
       ]);
     }
   }

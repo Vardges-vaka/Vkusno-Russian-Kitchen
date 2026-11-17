@@ -5,9 +5,12 @@ import {
   PUBLIC_FACEBOOK,
   PUBLIC_FOUNDING_YEAR,
   PUBLIC_INSTAGRAM,
+  PUBLIC_LINKEDIN,
+  PUBLIC_OTHER_NAME,
   PUBLIC_PHONE,
 } from "../05_pages/public/contact/04_contact_const/publicIdentity.js";
 import { pickLocale } from "./pickLocale.js";
+import { SITE_PICTURE_NAME } from "./sharePicture.js";
 
 // Schema.org builders. Every field below already exists in the app's own data
 // - BRANCHES.js carries addresses, coordinates, opening hours and each
@@ -25,7 +28,17 @@ const LOGO = {
   width: 512,
   height: 512,
 };
-const SAME_AS = [PUBLIC_INSTAGRAM, PUBLIC_FACEBOOK];
+// The picture of the business: a photo of the food, not the logo. Google asks
+// for a photo here, and there are no kitchen photos, so this is the site
+// picture the owner chose - the Borscht, the same file every non-dish page is
+// shared with (sharePicture.js; the build saves it as /share/vkusno.jpg).
+// The logo keeps its own field.
+const PHOTO = `${SITE_URL}/share/${SITE_PICTURE_NAME}.jpg`;
+const SAME_AS = [PUBLIC_INSTAGRAM, PUBLIC_FACEBOOK, PUBLIC_LINKEDIN];
+
+// One address for "the menu" as a thing, so a kitchen can point at it and the
+// menu page can say "that is me". Same form as the kitchens' own ids.
+const menuId = (lang) => `${absoluteUrl(localePath(lang, MENU_PATH))}#menu`;
 
 // "07:00"/"23:00" -> schema.org opening hours. 24/7 branches get the
 // all-days-all-hours form Google expects rather than an omitted field.
@@ -66,6 +79,7 @@ export const restaurantNode = (branch, lang, contactInfo = []) => {
     "@type": "Restaurant",
     "@id": `${SITE_URL}/#branch-${branch.id}`,
     name: `Vkusno - ${pickLocale(branch.name, lang)}`,
+    alternateName: PUBLIC_OTHER_NAME,
     servesCuisine: ["Russian", "Central Asian"],
     priceRange: "$$",
     url: absoluteUrl(
@@ -74,8 +88,16 @@ export const restaurantNode = (branch, lang, contactInfo = []) => {
     telephone: phone,
     email,
     menu: absoluteUrl(localePath(lang, MENU_PATH)),
+    // The same menu as a thing with dishes and prices (menuNode below carries
+    // this id on the menu page). "menu" above stays: it is the plain link
+    // Google's own guide asks for.
+    hasMenu: {
+      "@type": "Menu",
+      "@id": menuId(lang),
+      url: absoluteUrl(localePath(lang, MENU_PATH)),
+    },
     logo: LOGO,
-    image: LOGO.url,
+    image: PHOTO,
     sameAs: listing ? [...SAME_AS, listing] : SAME_AS,
     address: {
       "@type": "PostalAddress",
@@ -98,11 +120,12 @@ export const organisationNode = (lang) => ({
   "@type": "Organization",
   "@id": ORGANISATION_ID,
   name: "Vkusno",
+  alternateName: PUBLIC_OTHER_NAME,
   url: absoluteUrl(localePath(lang)),
   description: pickLocale(PUBLIC_DESCRIPTION, lang),
   foundingDate: PUBLIC_FOUNDING_YEAR,
   logo: LOGO,
-  image: LOGO.url,
+  image: PHOTO,
   telephone: PUBLIC_PHONE,
   email: PUBLIC_EMAIL,
   sameAs: SAME_AS,
@@ -134,6 +157,8 @@ export const menuItemNode = (item, lang) => ({
 
 export const menuNode = (categories, lang) => ({
   "@type": "Menu",
+  // The id each kitchen's record points at (hasMenu in restaurantNode).
+  "@id": menuId(lang),
   name: "Vkusno menu",
   url: absoluteUrl(localePath(lang, "menu")),
   hasMenuSection: categories.map((category) => ({
