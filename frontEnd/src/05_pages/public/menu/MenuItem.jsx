@@ -15,6 +15,7 @@ import {
   pickLocale,
 } from "../../../04_hlprs/_hlprs.index.js";
 import {
+  dishSearchLine,
   findMenuItemBySlug,
   menuItemSlug,
   pickRelated,
@@ -39,6 +40,11 @@ import "./00_menu_styles/MenuItem.css";
 // The dish content itself is Menu_itemDetail in both cases.
 const MenuItem = ({ variant = "page" }) => {
   const { t, i18n } = useTranslation("Menu");
+  // The dishes' longer texts, for the search line below. Same file and same
+  // way of reading it as Menu_itemDetail.
+  const { t: tItems, ready: itemsReady } = useTranslation("MenuItems", {
+    useSuspense: false,
+  });
   const { lang: langParam, slug } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
@@ -101,12 +107,25 @@ const MenuItem = ({ variant = "page" }) => {
     );
   }
 
+  // The line under this dish's title in search results, and under its picture
+  // when the dish is shared - see dishSearchLine.js. The longer text is in
+  // memory when pages are saved and before a saved page is attached
+  // (main.jsx), so a robot always reads the full line. Arriving from another
+  // page, the short card line stands in for a moment until the text loads.
+  const searchLine = dishSearchLine({
+    long: itemsReady ? tItems(`long.${item.id}`, { defaultValue: "" }) : "",
+    short: pickLocale(item.description?.short, lang),
+    price: item.price,
+    currency: t("menu.currency"),
+    lang,
+  });
+
   return (
     <div className="MenuItem_container">
 
       <PageMeta
         title={name}
-        description={pickLocale(item.description?.short, lang)}
+        description={searchLine}
         alternates={Object.fromEntries(
           SUPPORTED_LANGUAGES.map((code) => [
             code,
