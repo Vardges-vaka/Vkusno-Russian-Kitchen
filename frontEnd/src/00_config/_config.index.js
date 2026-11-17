@@ -50,13 +50,14 @@ export const localePath = (lang, path = "") => {
   return rest ? `/${safeLang}/${rest}` : `/${safeLang}`;
 };
 
-// Sections that actually render a Google map: the Contact page, and the order
-// modal reachable from anywhere under /menu.
+// Sections that can show a Google map: the Contact page, a kitchen page, and
+// the order window reachable from anywhere under /menu.
 //
-// MapProvider mounts <APIProvider>, which downloads and parses the Maps JS SDK
-// the moment it mounts. It used to wrap the whole app, so Home, FAQ, Privacy
-// and the 404 page all paid for a script they never used. App consults this to
-// mount the provider only where a map can appear.
+// App consults this to mount MapProvider only there. MapProvider is small: it
+// keeps which kitchen is picked and the map settings. Google's Maps script is
+// not loaded by it. Each map asks for the script when it is put on the page
+// (03_context/mapContext/MapSdk.jsx), so the menu and the dish pages no longer
+// pay for a map that is only inside the order window.
 const MAP_ROUTE_SEGMENTS = ["menu", "contact", "kitchens"];
 
 export const routeNeedsMap = (pathname = "") => {

@@ -8,8 +8,11 @@ import {
   useMap,
   useMapsLibrary,
   useAdvancedMarkerRef,
+  useApiIsLoaded,
 } from "@vis.gl/react-google-maps";
 import { useMapContext } from "../../../../03_context/_context.index.js";
+// Loads Google's script when this map is put on the page - see MapSdk.jsx.
+import MapSdk from "../../../../03_context/mapContext/MapSdk.jsx";
 import {
   branchShape,
   langShape,
@@ -119,26 +122,12 @@ const Menu_orderMap_marker = ({ branch, lang, t, isSelected, onSelect }) => {
   );
 };
 
-const Menu_orderMap = ({ branches, lang, t }) => {
-  const {
-    mapId,
-    hasApiKey,
-    isMapReady,
-    dubaiCenter,
-    defaultZoom,
-    selectedBranchId,
-    selectBranch,
-  } = useMapContext();
-
-  if (!hasApiKey) {
-    return (
-      <div className="Menu_orderMap">
-        <p className="Menu_orderMap_fallback" role="status">
-          {t("menu.orderModal.mapUnavailable")}
-        </p>
-      </div>
-    );
-  }
+// The map itself. Renders inside <MapSdk>, which is required for
+// useApiIsLoaded() to see whether Google's script has arrived.
+const Menu_orderMap_view = ({ branches, lang, t }) => {
+  const { mapId, dubaiCenter, defaultZoom, selectedBranchId, selectBranch } =
+    useMapContext();
+  const isMapReady = useApiIsLoaded();
 
   return (
     <div className="Menu_orderMap">
@@ -174,6 +163,31 @@ const Menu_orderMap = ({ branches, lang, t }) => {
   );
 };
 
+// Google's script is asked for here, when the order window puts this map on
+// the page - not when the menu page loads. See MapSdk.jsx.
+const Menu_orderMap = ({ branches, lang, t }) => {
+  const { hasApiKey } = useMapContext();
+
+  // Shown in the map's place when there is no key, and by MapSdk when
+  // Google's map cannot be shown. The kitchens and the order buttons beside
+  // it are plain parts of the window and keep working.
+  const unavailable = (
+    <div className="Menu_orderMap">
+      <p className="Menu_orderMap_fallback" role="status">
+        {t("menu.orderModal.mapUnavailable")}
+      </p>
+    </div>
+  );
+
+  if (!hasApiKey) return unavailable;
+
+  return (
+    <MapSdk fallback={unavailable}>
+      <Menu_orderMap_view branches={branches} lang={lang} t={t} />
+    </MapSdk>
+  );
+};
+
 Menu_orderMap_fitter.propTypes = {
   branches: PropTypes.arrayOf(branchShape).isRequired,
 };
@@ -184,6 +198,12 @@ Menu_orderMap_marker.propTypes = {
   t: translateFn.isRequired,
   isSelected: PropTypes.bool,
   onSelect: PropTypes.func.isRequired,
+};
+
+Menu_orderMap_view.propTypes = {
+  branches: PropTypes.arrayOf(branchShape).isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
 };
 
 Menu_orderMap.propTypes = {

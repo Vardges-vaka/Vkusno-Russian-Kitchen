@@ -51,6 +51,10 @@ export default defineConfig({
             return "vendor-motion";
           }
           // Only the Menu and Contact routes mount this, and it is heavy.
+          // The build also places react-dom's small base module in this
+          // file, so every page still fetches the file itself (16.6 kB
+          // gzip). What has to stay off the other pages is Google's own
+          // Maps script - see 03_context/mapContext/MapSdk.jsx.
           if (id.includes("@vis.gl") || id.includes("google-maps")) {
             return "vendor-maps";
           }

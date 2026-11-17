@@ -7,8 +7,11 @@ import {
   InfoWindow,
   useMap,
   useAdvancedMarkerRef,
+  useApiIsLoaded,
 } from "@vis.gl/react-google-maps";
 import { useMapContext } from "../../../../03_context/_context.index.js";
+// Loads Google's script when this map is put on the page - see MapSdk.jsx.
+import MapSdk from "../../../../03_context/mapContext/MapSdk.jsx";
 import {
   branchShape,
   langShape,
@@ -90,28 +93,14 @@ const Contact_branchesMap_marker = ({
   );
 };
 
-const Contact_branchesMap = ({ branches, lang, t }) => {
-  const {
-    mapId,
-    hasApiKey,
-    isMapReady,
-    dubaiCenter,
-    defaultZoom,
-    selectedBranchId,
-    selectBranch,
-  } = useMapContext();
+// The map itself. Renders inside <MapSdk>, which is required for
+// useApiIsLoaded() to see whether Google's script has arrived.
+const Contact_branchesMap_view = ({ branches, lang, t }) => {
+  const { mapId, dubaiCenter, defaultZoom, selectedBranchId, selectBranch } =
+    useMapContext();
+  const isMapReady = useApiIsLoaded();
 
   const deselectBranch = () => selectBranch(null);
-
-  if (!hasApiKey) {
-    return (
-      <div className="Contact_branchesMap">
-        <p className="Contact_branchesMap_fallback" role="status">
-          {t("contact.branches.mapUnavailable")}
-        </p>
-      </div>
-    );
-  }
 
   return (
     <div className="Contact_branchesMap">
@@ -148,6 +137,30 @@ const Contact_branchesMap = ({ branches, lang, t }) => {
   );
 };
 
+// Google's script is asked for here, when this map is put on the page - not
+// by the whole page section. See MapSdk.jsx.
+const Contact_branchesMap = ({ branches, lang, t }) => {
+  const { hasApiKey } = useMapContext();
+
+  // Shown in the map's place when there is no key, and by MapSdk when
+  // Google's map cannot be shown. The page around it keeps working.
+  const unavailable = (
+    <div className="Contact_branchesMap">
+      <p className="Contact_branchesMap_fallback" role="status">
+        {t("contact.branches.mapUnavailable")}
+      </p>
+    </div>
+  );
+
+  if (!hasApiKey) return unavailable;
+
+  return (
+    <MapSdk fallback={unavailable}>
+      <Contact_branchesMap_view branches={branches} lang={lang} t={t} />
+    </MapSdk>
+  );
+};
+
 Contact_branchesMap_panner.propTypes = {
   branches: PropTypes.arrayOf(branchShape).isRequired,
   selectedBranchId: PropTypes.string,
@@ -160,6 +173,12 @@ Contact_branchesMap_marker.propTypes = {
   isSelected: PropTypes.bool,
   onSelect: PropTypes.func.isRequired,
   onDeselect: PropTypes.func.isRequired,
+};
+
+Contact_branchesMap_view.propTypes = {
+  branches: PropTypes.arrayOf(branchShape).isRequired,
+  lang: langShape.isRequired,
+  t: translateFn.isRequired,
 };
 
 Contact_branchesMap.propTypes = {

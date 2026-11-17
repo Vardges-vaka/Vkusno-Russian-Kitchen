@@ -79,8 +79,7 @@ const AppRoutes = () => {
   );
 
   // One provider wrapping BOTH route trees, rather than one per tree: the
-  // overlay and the grid beneath it must share a single Maps context, or the
-  // order modal would load the SDK a second time.
+  // dish overlay and the grid beneath it must share one kitchen selection.
   return routeNeedsMap(location.pathname) ? (
     <MapProvider>{routes}</MapProvider>
   ) : (
